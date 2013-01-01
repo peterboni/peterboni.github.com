@@ -4,7 +4,7 @@
   <title><![CDATA[Peter Boni]]></title>
   <link href="http://www.peterboni.net/atom.xml" rel="self"/>
   <link href="http://www.peterboni.net/"/>
-  <updated>2013-01-01T11:05:21+08:00</updated>
+  <updated>2013-01-01T14:28:49+08:00</updated>
   <id>http://www.peterboni.net/</id>
   <author>
     <name><![CDATA[Peter Boni]]></name>
@@ -40,11 +40,11 @@
 
 <p>The customer web client was built using Sencha ExtJS 3 and supports all major browsers. It was designed &amp; built from scratch to provide a <em>fast</em> UX (User Experience) for browsing stores &amp; ordering, unlike most classic page request &amp; response web stores. ExtJS is an amazing platform, but has a steep learning curve, and ExtJS 4 broke compatibility for ExtJS 3 apps; there is significant work required to upgrade your app.</p>
 
-<p><img class="center" src="http://www.peterboni.net/media/images/2013-01-01-failmeaningfully/WebClient1.png" width="1138" height="859" title="Redistore Web Site" ></p>
+<p><img class="center" src="http://www.peterboni.net/media/images/2013-01-01-failmeaningfully/WebClient1.png" width="795" height="600" title="Redistore Web Site" ></p>
 
-<p><img class="center" src="http://www.peterboni.net/media/images/2013-01-01-failmeaningfully/WebClient2.png" width="1138" height="859" title="Redistore Web Site" ></p>
+<p><img class="center" src="http://www.peterboni.net/media/images/2013-01-01-failmeaningfully/WebClient2.png" width="795" height="600" title="Redistore Web Site" ></p>
 
-<p><img class="center" src="http://www.peterboni.net/media/images/2013-01-01-failmeaningfully/WebClient3.png" width="1138" height="859" title="Redistore Web Site" ></p>
+<p><img class="center" src="http://www.peterboni.net/media/images/2013-01-01-failmeaningfully/WebClient3.png" width="795" height="600" title="Redistore Web Site" ></p>
 
 <p>The now defunct customer mobile client was built using Sencha Touch 1. The native vs. web app mobile holy war was raging, and we decided to build a web app. It was a mistake. The mobile client worked adequately on iOS, but on Android it was unusable. The tools were not ready. Facebook had not yet <a href="http://techcrunch.com/2012/09/11/mark-zuckerberg-our-biggest-mistake-with-mobile-was-betting-too-much-on-html5/">admitted their mistake</a>, nor Sencha fired their <a href="http://www.sencha.com/blog/the-making-of-fastbook-an-html5-love-story/">Fastbook</a> return. We needed a <em>great</em> customer UX, and didn&#8217;t have it.</p>
 
