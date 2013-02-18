@@ -1,4 +1,5 @@
-(function($){
+$.noConflict();
+jQuery(document).ready(function($) {
 
   $('.entry-content').each(function(i){
       var _i = i;
@@ -16,4 +17,4 @@
   });
   $('.fancybox').fancybox();
 
-})(jQuery);
+});
