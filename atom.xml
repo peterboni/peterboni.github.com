@@ -4,7 +4,7 @@
   <title><![CDATA[Peter Boni]]></title>
   <link href="http://www.peterboni.net/atom.xml" rel="self"/>
   <link href="http://www.peterboni.net/"/>
-  <updated>2013-02-24T11:46:27+08:00</updated>
+  <updated>2013-02-25T17:10:12+08:00</updated>
   <id>http://www.peterboni.net/</id>
   <author>
     <name><![CDATA[Peter Boni]]></name>
@@ -48,7 +48,7 @@
 
 <p>Processes can be complex, and so can the dizzying universe of technology which is created &amp; wielded by people.</p>
 
-<p>Programming languages are used to build operating systems on top of hardware, and platforms, frameworks, libraries, or applications on top of operating systems &amp; each other. Each one is complex, and working software is a complex web of relationships between them. Just how complex can be highlighted by a seemingly absurd comparison.</p>
+<p>Programming languages are used to build software. Operating systems are software that manage hardware and provide services for other software. Platforms, frameworks, libraries, and applications are software that use operating systems, and each other. Each one is complex, and working software is a complex web of relationships between them. Just how complex can be highlighted by a seemingly absurd comparison.</p>
 
 <blockquote><p>&#8216;For decades computer scientists have strived to build machines that can calculate faster than the human brain and store more information. The contraptions have won. &#8230; Biology does a lot with a little: the human genome, which grows our body and directs us through years of complex life, requires less data than a laptop operating system.&#8217;</p>
 
