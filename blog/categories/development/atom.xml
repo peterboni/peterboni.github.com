@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Development | Peter Boni]]></title>
   <link href="http://www.peterboni.net/blog/categories/development/atom.xml" rel="self"/>
   <link href="http://www.peterboni.net/"/>
-  <updated>2013-02-25T17:10:12+08:00</updated>
+  <updated>2013-02-28T20:51:39+08:00</updated>
   <id>http://www.peterboni.net/</id>
   <author>
     <name><![CDATA[Peter Boni]]></name>
@@ -44,11 +44,19 @@
 
 <p>But this didn't stop people from using it. <em>Still hasn't.</em> Perhaps there is perceived safety in process. If you follow instructions, surely you will achieve the desired end result?</p>
 
+<p>On my first agile project we delivered a green fields software system in 8 months, which would have taken <em>years</em> using our traditional software development process, and this included learning an agile process, tools &amp; techniques. After the project ended I returned to one of the traditional software development areas. Two things struck me like physical blows to the head &amp; left me with a feeling of complete loss &amp; bewilderment.</p>
+
+<p>The first was that email was my process again. I sent more emails in that first day than in the previous 8 months. The second thing was when I was sitting in my little cubicle, nicely partitioned, I overheard a convesation betweeen two developers - "Reject defect #534. That's not a defect because..." I forget the specifics, but remember that it was two developers, an absurd defect number, and they literally talked about it for 10 - 15 minutes. It never occured to them that they should go find the tester &amp; <em>talk</em> to them.</p>
+
 <h2>Technology</h2>
 
 <p>Processes can be complex, and so can the dizzying universe of technology which is created &amp; wielded by people.</p>
 
-<p>Programming languages are used to build software. Operating systems are software that manage hardware and provide services for other software. Platforms, frameworks, libraries, and applications are software that use operating systems, and each other. Each one is complex, and working software is a complex web of relationships between them. Just how complex can be highlighted by a seemingly absurd comparison.</p>
+<p>Programming languages are used to build software, and there are thousands of them, with more being created every year. Each one has it's own syntax (form) and semantics (meaning) for expressing it's instructions to a machine.</p>
+
+<p>There are different types of software. For example operating systems manage hardware and provide services for other software. Platforms, frameworks, libraries, and applications use operating systems, and each other.</p>
+
+<p>Each piece of software can be complex, and working software can be a complex web of relationships between them. Just how complex can be highlighted by a seemingly absurd comparison.</p>
 
 <blockquote><p>'For decades computer scientists have strived to build machines that can calculate faster than the human brain and store more information. The contraptions have won. ... Biology does a lot with a little: the human genome, which grows our body and directs us through years of complex life, requires less data than a laptop operating system.'</p>
 
