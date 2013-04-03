@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Development | Peter Boni]]></title>
-  <link href="http://www.peterboni.net/blog/categories/development/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Dev | Peter Boni]]></title>
+  <link href="http://www.peterboni.net/blog/categories/dev/atom.xml" rel="self"/>
   <link href="http://www.peterboni.net/"/>
-  <updated>2013-03-12T19:28:52+08:00</updated>
+  <updated>2013-04-03T10:44:16+08:00</updated>
   <id>http://www.peterboni.net/</id>
   <author>
     <name><![CDATA[Peter Boni]]></name>
@@ -12,6 +12,34 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[App Dev is not Rapid]]></title>
+    <link href="http://www.peterboni.net/blog/2013/04/03/app-dev-is-not-rapid/"/>
+    <updated>2013-04-03T07:00:00+08:00</updated>
+    <id>http://www.peterboni.net/blog/2013/04/03/app-dev-is-not-rapid</id>
+    <content type="html"><![CDATA[<p>Application Development is not Rapid. There, I finally typed it. It feels like a weight off my fingers. I have been creating applications for over 20 years, and do a damn good job of it. I'm not arrogant, there are many developers that are smarter, more creative, or more productive. If I was to describe myself as a developer in one word I'd say simple, which is kind of funny, because fear of being labelled that has stopped me writing this in the past. This is a post based on my thoughts &amp; feelings at the state of application development.</p>
+
+<!--more-->
+
+
+<p>I have written before about why I <a href="/blog/2013/02/24/creating-software/">create software</a>, and my struggle with software development complexity. I'm going to tell a story about my experience with the Technology, and it's contribution to the People, Process &amp; Technology triad when building applications.</p>
+
+<p>My first job out of university was doing Microsoft Access 'database' development for a large mining company. I put database in quotes because I didn't think of Access as strictly a database at the time. We built tables with constraints &amp; relationships, queries, forms, reports, and logic (macros &amp; VBA). Mostly via point &amp; click, and writing simple code. We built applications. It was and still is amazing to me how much two Access developers built, with one of them being so naive &amp; inexperienced.</p>
+
+<p>I then progressed to building a web application, using HTML, CSS, JavaScript, ColdFusion (version 4.0 from 1999) &amp; SQL Server. There's a few more technologies there than my Microsoft Access experience, but ColdFusion rocked. It joined the other technologies together seamlessly, and it made creating an application rapid. I felt productive.</p>
+
+<blockquote><p>To me rapid development meant quickly building working application software that fulfilled a need with simple, powerful tools. It meant building &amp; joining together the parts in an easily learned, understood, and consistent way that supported change.</p></blockquote>
+
+<p>Where did I find myself after a few experiences of rapid application development? I found myself in the distinctly non-rapid world of enterprise systems development. There was titanic Sun, IBM, Oracle &amp; Microsoft technologies. I found myself submerged in Sun Java, J2SE, J2EE, IBM WebSphere, Oracle Database, and Microsoft .NET &amp; Servers. Within each one I used a dizzying array of technologies - to use an abstract term to describe the things you could use &amp; the ways you could use them. There were plenty of acronyms that made you feel accomplished if you knew what they stood for, even if you didn't know what they did.</p>
+
+<p>My view of web application architecture had exploded from a few technologies to many, many layers of them. ColdFusion was replaced by an astoundingly complex maze of choices. Want to display a database field on the screen? Oh, not so quick Mr Simple Developer. We need to do it in a modern, best practice, scalable way. I did not feel productive.</p>
+
+<p>This is where some people would stop me in my story, call me a non-believer, and then begin to preach the virtues of their given religion. I have no desire to go into any of them here. All I will say is that I've seen people wield them as weapons, instead of collaborating with people to use them. The criteria I evaluate technology by is pretty simple. Can I understand it? Does it make sense in my gut? This may seem like a simpletons view, but it's proven correct time &amp; again. Is it simple to understand &amp; work with quickly? How many layers of abstraction or indirection are there? What value do they add? Is there a simpler way to do it? Would other people understand what it's doing? How about in 5 years? Is it closed, open, popular? What does it feel like to use?</p>
+
+<p>Microsoft Access &amp; ColdFusion still exist 13 years after I used them. Access 2013 looks like it's been given new Metro (sorry, Windows 8-style UI) &amp; web coats, but underneath it looks like the same animal that has not evolved in over a decade. There are rapid application development platforms &amp; tools out there, but why haven't they evolved, and become more widely used for application development? particularly enterprise systems development?</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Creating Software]]></title>
