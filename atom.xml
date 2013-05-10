@@ -4,7 +4,7 @@
   <title><![CDATA[Peter Boni]]></title>
   <link href="http://www.peterboni.net/atom.xml" rel="self"/>
   <link href="http://www.peterboni.net/"/>
-  <updated>2013-04-03T10:44:16+08:00</updated>
+  <updated>2013-05-10T20:58:45+08:00</updated>
   <id>http://www.peterboni.net/</id>
   <author>
     <name><![CDATA[Peter Boni]]></name>
@@ -18,26 +18,26 @@
     <link href="http://www.peterboni.net/blog/2013/04/03/app-dev-is-not-rapid/"/>
     <updated>2013-04-03T07:00:00+08:00</updated>
     <id>http://www.peterboni.net/blog/2013/04/03/app-dev-is-not-rapid</id>
-    <content type="html"><![CDATA[<p>Application Development is not Rapid. There, I finally typed it. It feels like a weight off my fingers. I have been creating applications for over 20 years, and do a damn good job of it. I&#8217;m not arrogant, there are many developers that are smarter, more creative, or more productive. If I was to describe myself as a developer in one word I&#8217;d say simple, which is kind of funny, because fear of being labelled that has stopped me writing this in the past. This is a post based on my thoughts &amp; feelings at the state of application development.</p>
+    <content type="html"><![CDATA[<p>Application Development is not Rapid. There, I finally typed it. It feels like a weight off my fingers. I have been creating applications for over 20 years, and do a damn good job of it. I&rsquo;m not arrogant, there are many developers that are smarter, more creative, or more productive. If I was to describe myself as a developer in one word I&rsquo;d say simple, which is kind of funny, because fear of being labelled that has stopped me writing this in the past. This is a post based on my thoughts &amp; feelings at the state of application development.</p>
 
 <!--more-->
 
 
-<p>I have written before about why I <a href="http://www.peterboni.net/blog/2013/02/24/creating-software/">create software</a>, and my struggle with software development complexity. I&#8217;m going to tell a story about my experience with the Technology, and it&#8217;s contribution to the People, Process &amp; Technology triad when building applications.</p>
+<p>I have written before about why I <a href="http://www.peterboni.net/blog/2013/02/24/creating-software/">create software</a>, and my struggle with software development complexity. I&rsquo;m going to tell a story about my experience with the Technology, and it&rsquo;s contribution to the People, Process &amp; Technology triad when building applications.</p>
 
-<p>My first job out of university was doing Microsoft Access &#8216;database&#8217; development for a large mining company. I put database in quotes because I didn&#8217;t think of Access as strictly a database at the time. We built tables with constraints &amp; relationships, queries, forms, reports, and logic (macros &amp; VBA). Mostly via point &amp; click, and writing simple code. We built applications. It was and still is amazing to me how much two Access developers built, with one of them being so naive &amp; inexperienced.</p>
+<p>My first job out of university was doing Microsoft Access &lsquo;database&rsquo; development for a large mining company. I put database in quotes because I didn&rsquo;t think of Access as strictly a database at the time. We built tables with constraints &amp; relationships, queries, forms, reports, and logic (macros &amp; VBA). Mostly via point &amp; click, and writing simple code. We built applications. It was and still is amazing to me how much two Access developers built, with one of them being so naive &amp; inexperienced.</p>
 
-<p>I then progressed to building a web application, using HTML, CSS, JavaScript, ColdFusion (version 4.0 from 1999) &amp; SQL Server. There&#8217;s a few more technologies there than my Microsoft Access experience, but ColdFusion rocked. It joined the other technologies together seamlessly, and it made creating an application rapid. I felt productive.</p>
+<p>I then progressed to building a web application, using HTML, CSS, JavaScript, ColdFusion (version 4.0 from 1999) &amp; SQL Server. There&rsquo;s a few more technologies there than my Microsoft Access experience, but ColdFusion rocked. It joined the other technologies together seamlessly, and it made creating an application rapid. I felt productive.</p>
 
 <blockquote><p>To me rapid development meant quickly building working application software that fulfilled a need with simple, powerful tools. It meant building &amp; joining together the parts in an easily learned, understood, and consistent way that supported change.</p></blockquote>
 
-<p>Where did I find myself after a few experiences of rapid application development? I found myself in the distinctly non-rapid world of enterprise systems development. There was titanic Sun, IBM, Oracle &amp; Microsoft technologies. I found myself submerged in Sun Java, J2SE, J2EE, IBM WebSphere, Oracle Database, and Microsoft .NET &amp; Servers. Within each one I used a dizzying array of technologies - to use an abstract term to describe the things you could use &amp; the ways you could use them. There were plenty of acronyms that made you feel accomplished if you knew what they stood for, even if you didn&#8217;t know what they did.</p>
+<p>Where did I find myself after a few experiences of rapid application development? I found myself in the distinctly non-rapid world of enterprise systems development. There was titanic Sun, IBM, Oracle &amp; Microsoft technologies. I found myself submerged in Sun Java, J2SE, J2EE, IBM WebSphere, Oracle Database, and Microsoft .NET &amp; Servers. Within each one I used a dizzying array of technologies &ndash; to use an abstract term to describe the things you could use &amp; the ways you could use them. There were plenty of acronyms that made you feel accomplished if you knew what they stood for, even if you didn&rsquo;t know what they did.</p>
 
 <p>My view of web application architecture had exploded from a few technologies to many, many layers of them. ColdFusion was replaced by an astoundingly complex maze of choices. Want to display a database field on the screen? Oh, not so quick Mr Simple Developer. We need to do it in a modern, best practice, scalable way. I did not feel productive.</p>
 
-<p>This is where some people would stop me in my story, call me a non-believer, and then begin to preach the virtues of their given religion. I have no desire to go into any of them here. All I will say is that I&#8217;ve seen people wield them as weapons, instead of collaborating with people to use them. The criteria I evaluate technology by is pretty simple. Can I understand it? Does it make sense in my gut? This may seem like a simpletons view, but it&#8217;s proven correct time &amp; again. Is it simple to understand &amp; work with quickly? How many layers of abstraction or indirection are there? What value do they add? Is there a simpler way to do it? Would other people understand what it&#8217;s doing? How about in 5 years? Is it closed, open, popular? What does it feel like to use?</p>
+<p>This is where some people would stop me in my story, call me a non-believer, and then begin to preach the virtues of their given religion. I have no desire to go into any of them here. All I will say is that I&rsquo;ve seen people wield them as weapons, instead of collaborating with people to use them. The criteria I evaluate technology by is pretty simple. Can I understand it? Does it make sense in my gut? This may seem like a simpletons view, but it&rsquo;s proven correct time &amp; again. Is it simple to understand &amp; work with quickly? How many layers of abstraction or indirection are there? What value do they add? Is there a simpler way to do it? Would other people understand what it&rsquo;s doing? How about in 5 years? Is it closed, open, popular? What does it feel like to use?</p>
 
-<p>Microsoft Access &amp; ColdFusion still exist 13 years after I used them. Access 2013 looks like it&#8217;s been given new Metro (sorry, Windows 8-style UI) &amp; web coats, but underneath it looks like the same animal that has not evolved in over a decade. There are rapid application development platforms &amp; tools out there, but why haven&#8217;t they evolved, and become more widely used for application development? particularly enterprise systems development?</p>
+<p>Microsoft Access &amp; ColdFusion still exist 13 years after I used them. Access 2013 looks like it&rsquo;s been given new Metro (sorry, Windows 8-style UI) &amp; web coats, but underneath it looks like the same animal that has not evolved in over a decade. There are rapid application development platforms &amp; tools out there, but why haven&rsquo;t they evolved, and become more widely used for application development? particularly enterprise systems development?</p>
 ]]></content>
   </entry>
   
@@ -55,9 +55,9 @@
 
 <p>He chuckled to himself, as to them he appeared as Astro Boy. These young kids had no originality, thinking they could psych older runners. But this was serious. If he let them gain ground he risked his level 7 standing in the league.</p>
 
-<p>&#8216;Show my last ghost&#8217; he said out loud while running, seemingly to himself. His previous self spawned in front of him, running his previous run. He could see he was slacking off &amp; the two wolf like ghosts were gaining. He forced his legs to increase his pace, and sucked in more oxygen. He started gaining on his past ghost &amp; pulling away from his pursuers.</p>
+<p>&lsquo;Show my last ghost&rsquo; he said out loud while running, seemingly to himself. His previous self spawned in front of him, running his previous run. He could see he was slacking off &amp; the two wolf like ghosts were gaining. He forced his legs to increase his pace, and sucked in more oxygen. He started gaining on his past ghost &amp; pulling away from his pursuers.</p>
 
-<p>Suddenly his vision went black, and then it was back, but instead of the familiar scene in front of him he saw trees densely packed together. He was in a forest. The scene was moving fast, bouncing up and down, left and right. He kept running straight along the path he was on, but couldn&#8217;t see where he was going. His v-band was showing him someone from somewhere else. What the frak was happening!</p>
+<p>Suddenly his vision went black, and then it was back, but instead of the familiar scene in front of him he saw trees densely packed together. He was in a forest. The scene was moving fast, bouncing up and down, left and right. He kept running straight along the path he was on, but couldn&rsquo;t see where he was going. His v-band was showing him someone from somewhere else. What the frak was happening!</p>
 
 <p>All this happened in seconds, so he kept running, confused, and expecting that the v-band would correct itself. The scene from his v-band lurched as if the person fell, and then was facing up looking at the trees &amp; dark sky. The vision started to darken, but before it went completely dark he saw what looked like a primitive hunter standing over him. He looked big, muscly, but with short arms, and was carrying a large spear.</p>
 
@@ -70,9 +70,9 @@
     <link href="http://www.peterboni.net/blog/2013/02/24/creating-software/"/>
     <updated>2013-02-24T07:00:00+08:00</updated>
     <id>http://www.peterboni.net/blog/2013/02/24/creating-software</id>
-    <content type="html"><![CDATA[<p>Hi my name is Peter and I&#8217;m a developer, now playing an architect, and still trying to figure out what that means. But that&#8217;s a post for another day. Probably many posts.</p>
+    <content type="html"><![CDATA[<p>Hi my name is Peter and I&rsquo;m a developer, now playing an architect, and still trying to figure out what that means. But that&rsquo;s a post for another day. Probably many posts.</p>
 
-<p>To put this post in context my background is mostly &#8216;front end&#8217; software development in DOS, Windows, Web, and Mobile; mostly with software that has a user interface, but occasionally not.</p>
+<p>To put this post in context my background is mostly &lsquo;front end&rsquo; software development in DOS, Windows, Web, and Mobile; mostly with software that has a user interface, but occasionally not.</p>
 
 <!--more-->
 
@@ -87,44 +87,44 @@
 
 <h2>Process</h2>
 
-<p>Complexity can exist at many different steps in the software development journey. What do you do with something that&#8217;s complex? You create a process to perform it of course.</p>
+<p>Complexity can exist at many different steps in the software development journey. What do you do with something that&rsquo;s complex? You create a process to perform it of course.</p>
 
 <p>Perhaps the most infamous process is the <a href="http://en.wikipedia.org/wiki/Waterfall_model">waterfall model</a>.</p>
 
-<blockquote><p>&#8216;The waterfall model is a sequential design process, often used in software development processes, in which progress is seen as flowing steadily downwards (like a waterfall) through the phases of Conception, Initiation, Analysis, Design, Construction, Testing, Production/Implementation, and Maintenance.&#8217;</p></blockquote>
+<blockquote><p>&lsquo;The waterfall model is a sequential design process, often used in software development processes, in which progress is seen as flowing steadily downwards (like a waterfall) through the phases of Conception, Initiation, Analysis, Design, Construction, Testing, Production/Implementation, and Maintenance.&rsquo;</p></blockquote>
 
-<p>Sounds great doesn&#8217;t it? Follow a detailed plan, err &#8230; &#8216;phases in a waterfall&#8217;, and you will have software at the end of the process that fulfils your need. People have been following it for <em>decades</em>. There&#8217;s only one problem.</p>
+<p>Sounds great doesn&rsquo;t it? Follow a detailed plan, err &hellip; &lsquo;phases in a waterfall&rsquo;, and you will have software at the end of the process that fulfils your need. People have been following it for <em>decades</em>. There&rsquo;s only one problem.</p>
 
-<blockquote><p>&#8216;The first formal description of the waterfall model is often cited as a 1970 article by Winston W. Royce, although Royce did not use the term &#8220;waterfall&#8221; in this article. Royce presented this model as an example of a flawed, non-working model.&#8217;</p></blockquote>
+<blockquote><p>&lsquo;The first formal description of the waterfall model is often cited as a 1970 article by Winston W. Royce, although Royce did not use the term &ldquo;waterfall&rdquo; in this article. Royce presented this model as an example of a flawed, non-working model.&rsquo;</p></blockquote>
 
-<p>But this didn&#8217;t stop people from using it. <em>Still hasn&#8217;t.</em> Perhaps there is perceived safety in process. If you follow instructions, surely you will achieve the desired end result?</p>
+<p>But this didn&rsquo;t stop people from using it. <em>Still hasn&rsquo;t.</em> Perhaps there is perceived safety in process. If you follow instructions, surely you will achieve the desired end result?</p>
 
 <p>On my first agile project we delivered a green fields software system in 8 months, which would have taken <em>years</em> using our traditional software development process, and this included learning an agile process, tools &amp; techniques. After the project ended I returned to one of the traditional software development areas. Two things struck me like physical blows, and left me with a feeling of complete loss &amp; bewilderment.</p>
 
-<p>The first was that email was my process again. I sent more emails in that first day than in the previous 8 months. The second thing was when I was sitting in my little cubicle, nicely partitioned, I overheard a conversation between two developers - &#8220;Reject defect #537. That&#8217;s not a defect because&#8230;&#8221; I forget the specifics, but remember that it was two developers, an absurd defect number, and they literally talked about it for 10 - 15 minutes. It never occurred to them that they should go find the tester &amp; <em>talk</em> to them.</p>
+<p>The first was that email was my process again. I sent more emails in that first day than in the previous 8 months. The second thing was when I was sitting in my little cubicle, nicely partitioned, I overheard a conversation between two developers &ndash; &ldquo;Reject defect #537. That&rsquo;s not a defect because&hellip;&rdquo; I forget the specifics, but remember that it was two developers, an absurd defect number, and they literally talked about it for 10 &ndash; 15 minutes. It never occurred to them that they should go find the tester &amp; <em>talk</em> to them.</p>
 
 <h2>Technology</h2>
 
 <p>Processes can be complex, and so can the dizzying universe of technology which is created &amp; wielded by people.</p>
 
-<p>Programming languages are used to build software, and there are thousands of them, with more being created every year. Each one has it&#8217;s own syntax (form) and semantics (meaning) for expressing it&#8217;s instructions to a machine.</p>
+<p>Programming languages are used to build software, and there are thousands of them, with more being created every year. Each one has it&rsquo;s own syntax (form) and semantics (meaning) for expressing it&rsquo;s instructions to a machine.</p>
 
 <p>There are different types of software. For example operating systems manage hardware and provide services for other software. Platforms, frameworks, libraries, and applications use operating systems, and each other.</p>
 
 <p>Each piece of software can be complex, and working software can be a complex web of relationships between them. Just how complex can be highlighted by a seemingly absurd comparison.</p>
 
-<blockquote><p>&#8216;For decades computer scientists have strived to build machines that can calculate faster than the human brain and store more information. The contraptions have won. &#8230; Biology does a lot with a little: the human genome, which grows our body and directs us through years of complex life, requires less data than a laptop operating system.&#8217;</p>
+<blockquote><p>&lsquo;For decades computer scientists have strived to build machines that can calculate faster than the human brain and store more information. The contraptions have won. &hellip; Biology does a lot with a little: the human genome, which grows our body and directs us through years of complex life, requires less data than a laptop operating system.&rsquo;</p>
 
 <p>Mark Fischetti, <a href="http://www.scientificamerican.com/article.cfm?id=computers-vs-brains">Computers versus Brains</a><br/>
 Scientific American, November, 2011</p></blockquote>
 
 <p>It takes time to understand technology, when to use it, and how to apply it, and people often come away with different understanding, and a different level of skill in using it.</p>
 
-<p>Early in my career I was working on a project when it was decided a well known services company (name withheld) would come in, save the day, and show us how to do it properly. There was one <em>recognised expert</em> I will always remember. He sat quietly aloof at his desk every day, apart from the occasional very important closed door meeting. Each day he would take from his desk a book from the vast array of &#8216;software development&#8217; books on it (his personal collection), sit there with it in front of his computer and implement some new form of <em>best practice</em> code or <em>pattern</em> for the part of the project he was working on. He was seen as highly productive.</p>
+<p>Early in my career I was working on a project when it was decided a well known services company (name withheld) would come in, save the day, and show us how to do it properly. There was one <em>recognised expert</em> I will always remember. He sat quietly aloof at his desk every day, apart from the occasional very important closed door meeting. Each day he would take from his desk a book from the vast array of &lsquo;software development&rsquo; books on it (his personal collection), sit there with it in front of his computer and implement some new form of <em>best practice</em> code or <em>pattern</em> for the part of the project he was working on. He was seen as highly productive.</p>
 
-<p>When he left his masterpiece was given to me, with no hand over. You can guess the outcome. It was either the most brilliant code I have ever seen in my entire life, and I was unworthy to begin to comprehend it&#8217;s magnificence, or it was a pile of shit. The truth was probably somewhere in the middle.</p>
+<p>When he left his masterpiece was given to me, with no hand over. You can guess the outcome. It was either the most brilliant code I have ever seen in my entire life, and I was unworthy to begin to comprehend it&rsquo;s magnificence, or it was a pile of shit. The truth was probably somewhere in the middle.</p>
 
-<p>The sad thing is I&#8217;ve seen this behaviour to varying degrees <em>consistently</em> over the years. It&#8217;s something I have been guilty of as well. People wielding technology, rather than collaborating with people using technology.</p>
+<p>The sad thing is I&rsquo;ve seen this behaviour to varying degrees <em>consistently</em> over the years. It&rsquo;s something I have been guilty of as well. People wielding technology, rather than collaborating with people using technology.</p>
 
 <h2>Simplicity</h2>
 
@@ -161,7 +161,7 @@ Simplicity.</p>
     <link href="http://www.peterboni.net/blog/2013/02/15/running/"/>
     <updated>2013-02-15T07:00:00+08:00</updated>
     <id>http://www.peterboni.net/blog/2013/02/15/running</id>
-    <content type="html"><![CDATA[<p>He was running. <em>Hard.</em> He knew instinctively to the very fibre of his being why he was running. Survival. His life. If he didn&#8217;t run, and run fast, he was dead.</p>
+    <content type="html"><![CDATA[<p>He was running. <em>Hard.</em> He knew instinctively to the very fibre of his being why he was running. Survival. His life. If he didn&rsquo;t run, and run fast, he was dead.</p>
 
 <p>They were after him, howling for blood, and a more primal drive, the thrill of the hunt, and the kill. He was the prey.</p>
 
@@ -172,15 +172,15 @@ Simplicity.</p>
 
 <p>He knew they were getting closer. The sounds of their heavy footfalls rang through the dense forest. Their garbled grunts &amp; taunts echoed all around him, their purpose to intimidate, to frighten, but they caused the opposite reaction, it triggered his survival instinct. He ran faster.</p>
 
-<p>Suddenly he tripped over a branch, and fell hard hitting his head on a rock. As his vision darkened, he felt like he was being thrown through something strange. And then there was total darkness. An enveloped feeling. No sound. No predators. And then, again, strangely, but differently &#8230;</p>
+<p>Suddenly he tripped over a branch, and fell hard hitting his head on a rock. As his vision darkened, he felt like he was being thrown through something strange. And then there was total darkness. An enveloped feeling. No sound. No predators. And then, again, strangely, but differently &hellip;</p>
 
-<p>He was running. Steadily. Consistently. Really concentrating on his breathing, his stride, the way his feet hit the ground, and his overall rhythm. He was running for fitness, competing against imagined binary ghosts, some of other souls - thousands of them scattered around the planet, but also some of himself at different places in time, but in his mind mostly against ones from the past.</p>
+<p>He was running. Steadily. Consistently. Really concentrating on his breathing, his stride, the way his feet hit the ground, and his overall rhythm. He was running for fitness, competing against imagined binary ghosts, some of other souls &ndash; thousands of them scattered around the planet, but also some of himself at different places in time, but in his mind mostly against ones from the past.</p>
 
 <p>His mind created the purpose &amp; the urgency for his running. The small computing device attached to his body was capable of storing &amp; processing massive amounts of data. While he ran it was working to pump high beats per minute music to his ears which when combined with his brain increased his heart rate &amp; blood flow.</p>
 
 <p>The small computing device was also working to receive signals being broadcast from an array of satellites orbiting the planet, to triangulate his exact location on the planet every second. It then sent this information back into the airwaves, to be captured by a vast array of computing devices &amp; software, which then stored &amp; analysed the information, and sent back statistics &amp; insights that he could analyse, share, and interact with later.</p>
 
-<p>He looked ahead as he ran at the scenery slowly bobbing up &amp; down, up &amp; down. He pulled more air into his lungs. This was different. Strange. Somewhat lonely, but not. He couldn&#8217;t figure out why, but it felt good to run.</p>
+<p>He looked ahead as he ran at the scenery slowly bobbing up &amp; down, up &amp; down. He pulled more air into his lungs. This was different. Strange. Somewhat lonely, but not. He couldn&rsquo;t figure out why, but it felt good to run.</p>
 ]]></content>
   </entry>
   
@@ -189,26 +189,26 @@ Simplicity.</p>
     <link href="http://www.peterboni.net/blog/2013/01/01/failmeaningfully/"/>
     <updated>2013-01-01T07:00:00+08:00</updated>
     <id>http://www.peterboni.net/blog/2013/01/01/failmeaningfully</id>
-    <content type="html"><![CDATA[<p>It was August 2010. Over 2 years ago. My beautiful daughter Abigail was 2 years old. The iPhone 4 had just come out, and the smartphone revolution was in full swing. All I needed was an idea. Somehow I found myself become part of a like minded, passionate &amp; committed team, with some of the best people I have ever had the privilege or pleasure to work with. I say somehow because I&#8217;ve always tried to go with the flow. It just happened. Redistore was born.</p>
+    <content type="html"><![CDATA[<p>It was August 2010. Over 2 years ago. My beautiful daughter Abigail was 2 years old. The iPhone 4 had just come out, and the smartphone revolution was in full swing. All I needed was an idea. Somehow I found myself become part of a like minded, passionate &amp; committed team, with some of the best people I have ever had the privilege or pleasure to work with. I say somehow because I&rsquo;ve always tried to go with the flow. It just happened. Redistore was born.</p>
 
 <p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-01-01-failmeaningfully/WebSite1.png" width="569" height="635" title="Redistore Web Site" ></p>
 
 <!--more-->
 
 
-<p>The idea &amp; vision was simple. Wouldn&#8217;t it be cool if you could order &amp; pay for your coffee <em>before</em> you arrived at the store, just waltz in, bypass the queue, pick it up &amp; go. It&#8217;s paid for so there&#8217;s no fumbling around for change, or paying with a card which was time consuming before contactless payment, e.g. MasterCard PayPass. I thought the idea had potential. The team thought the idea had potential. People we talked to thought the idea had potential. We decided as a team to take a risk. &#8217;<a href="http://en.wikipedia.org/wiki/Field_of_Dreams">If you build it, he will come</a>&#8217;, we all heard the voice whisper. Others were skeptical, but not us. We built it.</p>
+<p>The idea &amp; vision was simple. Wouldn&rsquo;t it be cool if you could order &amp; pay for your coffee <em>before</em> you arrived at the store, just waltz in, bypass the queue, pick it up &amp; go. It&rsquo;s paid for so there&rsquo;s no fumbling around for change, or paying with a card which was time consuming before contactless payment, e.g. MasterCard PayPass. I thought the idea had potential. The team thought the idea had potential. People we talked to thought the idea had potential. We decided as a team to take a risk. &lsquo;<a href="http://en.wikipedia.org/wiki/Field_of_Dreams">If you build it, he will come</a>&rsquo;, we all heard the voice whisper. Others were skeptical, but not us. We built it.</p>
 
 <p>2 years later, and Redistore has failed. This is what I learnt.</p>
 
 <h2>Reality</h2>
 
-<p>I can still remember how it started. The excitement of exploring the idea. Formulating it. Talking about it. Becoming a team. It felt awesome. That&#8217;s the Hollywood beginning.</p>
+<p>I can still remember how it started. The excitement of exploring the idea. Formulating it. Talking about it. Becoming a team. It felt awesome. That&rsquo;s the Hollywood beginning.</p>
 
-<p>The reality was a hard slog of trying to work two jobs. 15 to 16 hour days, 5 to 6 days a week. Rise at 6am, cycle to work &amp; be working by 7am. Leave at 4pm. Be home &amp; sorted by 5pm. Two hours to spend with my family, which I&#8217;m guilty of not doing enough of. At work by 7pm. Work till 9pm or 10pm. Rinse &amp; repeat. And don&#8217;t forget the weekends. You get the picture. I had no life.</p>
+<p>The reality was a hard slog of trying to work two jobs. 15 to 16 hour days, 5 to 6 days a week. Rise at 6am, cycle to work &amp; be working by 7am. Leave at 4pm. Be home &amp; sorted by 5pm. Two hours to spend with my family, which I&rsquo;m guilty of not doing enough of. At work by 7pm. Work till 9pm or 10pm. Rinse &amp; repeat. And don&rsquo;t forget the weekends. You get the picture. I had no life.</p>
 
 <h2>Tech</h2>
 
-<p><em>But</em> we built something that&#8217;s bloody cool &amp; has possibility. A fully customisable, real time online ordering system for low value, high volume consumables. Coffee stores. Take away food. The order is paid for by the customer using their Redistore account which they can &#8216;top up&#8217; using PayPal or a Credit Card. The store gets a verified order. It&#8217;s in real time. There&#8217;s no queueing. Win win.</p>
+<p><em>But</em> we built something that&rsquo;s bloody cool &amp; has possibility. A fully customisable, real time online ordering system for low value, high volume consumables. Coffee stores. Take away food. The order is paid for by the customer using their Redistore account which they can &lsquo;top up&rsquo; using PayPal or a Credit Card. The store gets a verified order. It&rsquo;s in real time. There&rsquo;s no queueing. Win win.</p>
 
 <p>The technology &amp; platform that we built was the fun part.</p>
 
@@ -220,13 +220,13 @@ Simplicity.</p>
 
 <p><img class="fancybox" src="http://www.peterboni.net/media/images/2013-01-01-failmeaningfully/WebClient3.png" width="795" height="600" title="Redistore Web Site" ></p>
 
-<p>The now defunct customer mobile client was built using Sencha Touch 1. The native vs. web app mobile holy war was raging, and we decided to build a web app. It was a mistake. The mobile client worked adequately on iOS, but on Android it was unusable. The tools were not ready. Facebook had not yet <a href="http://techcrunch.com/2012/09/11/mark-zuckerberg-our-biggest-mistake-with-mobile-was-betting-too-much-on-html5/">admitted their mistake</a>, nor Sencha fired their <a href="http://www.sencha.com/blog/the-making-of-fastbook-an-html5-love-story/">Fastbook</a> return. We needed a <em>great</em> customer UX, and didn&#8217;t have it.</p>
+<p>The now defunct customer mobile client was built using Sencha Touch 1. The native vs. web app mobile holy war was raging, and we decided to build a web app. It was a mistake. The mobile client worked adequately on iOS, but on Android it was unusable. The tools were not ready. Facebook had not yet <a href="http://techcrunch.com/2012/09/11/mark-zuckerberg-our-biggest-mistake-with-mobile-was-betting-too-much-on-html5/">admitted their mistake</a>, nor Sencha fired their <a href="http://www.sencha.com/blog/the-making-of-fastbook-an-html5-love-story/">Fastbook</a> return. We needed a <em>great</em> customer UX, and didn&rsquo;t have it.</p>
 
 <p><img class="fancybox left" src="http://www.peterboni.net/media/images/2013-01-01-failmeaningfully/iPhoneApp1.png" width="320" height="548" title="Redistore iPhone App" ></p>
 
 <p>The store receiver client was also built with Sencha Touch, and performs adequately for stores on an iPod.</p>
 
-<p>The web clients communicate via Ajax to the back end action style JSON based web services developed using .NET WCF. If building using the same core technology now, we&#8217;d seriously look at Web API &amp; RESTful services. There&#8217;s also a ton of awesome back-end enterprise system type stuff (database, reconciliation, reporting, MI etc.), that was built by a <a href="http://en.wikipedia.org/wiki/Cylon_(Battlestar_Galactica)">Cylon</a>. Seriously. They work <em>hard</em>, I guess because they don&#8217;t need to sleep.</p>
+<p>The web clients communicate via Ajax to the back end action style JSON based web services developed using .NET WCF. If building using the same core technology now, we&rsquo;d seriously look at Web API &amp; RESTful services. There&rsquo;s also a ton of awesome back-end enterprise system type stuff (database, reconciliation, reporting, MI etc.), that was built by a <a href="http://en.wikipedia.org/wiki/Cylon_(Battlestar_Galactica)">Cylon</a>. Seriously. They work <em>hard</em>, I guess because they don&rsquo;t need to sleep.</p>
 
 <p>To address the <em>great</em> customer mobile UX, after go-live we spent 3 months building a native iPhone app, and 3 months building a native Android app. It was a great learning experience at the cost of 6 months of effort. Without getting into details of our approach, or religious debates, I hope that we (the industry) can move <strong>forward</strong> to <em>the web</em>. How we do that is for <a href="http://www.okito.net/post/38255553240/the-mobile-web">smart people</a> to <a href="http://lilly.tumblr.com/post/38309067913/asymmetry">work out</a>.</p>
 
@@ -236,7 +236,7 @@ Simplicity.</p>
 
 <p>We tried to sell it mostly to coffee stores the old fashioned way, by approaching them, talking to them about it, showing them what it could do. Once we had a store on board we did really simple customer advertising at the store.</p>
 
-<p>Although it&#8217;s <em>far</em> from being a runaway success, it has &amp; continues to be <em>successful</em>, in that it ticks along &amp; is used every single business day, with no issues.</p>
+<p>Although it&rsquo;s <em>far</em> from being a runaway success, it has &amp; continues to be <em>successful</em>, in that it ticks along &amp; is used every single business day, with no issues.</p>
 
 <p>Over 18 months in production, what are the stats?</p>
 
@@ -252,18 +252,18 @@ Simplicity.</p>
 
 <h2>Reflection</h2>
 
-<p>The enthusiasm &amp; commitment for the idea &amp; vision has dispersed. What it could have been didn&#8217;t materialise, and not by lack of effort.</p>
+<p>The enthusiasm &amp; commitment for the idea &amp; vision has dispersed. What it could have been didn&rsquo;t materialise, and not by lack of effort.</p>
 
-<p>I don&#8217;t think we really understood our customer, as we really just replaced phone orders. We didn&#8217;t have an automated store onboarding process, so bringing stores on was a long complicated process. We didn&#8217;t do marketing.</p>
+<p>I don&rsquo;t think we really understood our customer, as we really just replaced phone orders. We didn&rsquo;t have an automated store onboarding process, so bringing stores on was a long complicated process. We didn&rsquo;t do marketing.</p>
 
-<p>We took a gamble, and it didn&#8217;t pay off. We failed.</p>
+<p>We took a gamble, and it didn&rsquo;t pay off. We failed.</p>
 
 <h2>End</h2>
 
-<p>It&#8217;s time to move on. To take what I&#8217;ve learnt &amp; move forward. I&#8217;m excited about seeking new ideas &amp; projects. Exploring. Finding. Trying. I love the process of creating things. I&#8217;ve heard the expression &#8217;<strong>fail fast</strong>&#8217;, but I think you should &#8217;<strong>fail meaningfully</strong>&#8217; at something you choose, have <a href="http://www.zurb.com/article/1131/passion-to-fail-fast">passion</a>
+<p>It&rsquo;s time to move on. To take what I&rsquo;ve learnt &amp; move forward. I&rsquo;m excited about seeking new ideas &amp; projects. Exploring. Finding. Trying. I love the process of creating things. I&rsquo;ve heard the expression &lsquo;<strong>fail fast</strong>&rsquo;, but I think you should &lsquo;<strong>fail meaningfully</strong>&rsquo; at something you choose, have <a href="http://www.zurb.com/article/1131/passion-to-fail-fast">passion</a>
  for, believe in, and work hard at. Learning takes quality time.</p>
 
-<p>It&#8217;s time to move on … <em>after</em> I finish reading <a href="http://theleanstartup.com">The Lean Startup</a> by Eric Ries.</p>
+<p>It&rsquo;s time to move on … <em>after</em> I finish reading <a href="http://theleanstartup.com">The Lean Startup</a> by Eric Ries.</p>
 ]]></content>
   </entry>
   
@@ -275,7 +275,7 @@ Simplicity.</p>
     <content type="html"><![CDATA[<p>In early 1995 (17 years ago) I created an <a href="http://en.wikipedia.org/wiki/MS-DOS">MS-DOS</a>
 app called Demon Hacker.</p>
 
-<p>It&#8217;s purpose was to enable a user to patch (rather crudely, but effectively)
+<p>It&rsquo;s purpose was to enable a user to patch (rather crudely, but effectively)
 PC games files &amp; their created saved game files to cheat.</p>
 
 <p>I got more of a kick out of building the app using
@@ -307,11 +307,11 @@ I download &amp; opened DOSBox on Mac OS X.</p>
 
 <p><img class="fancybox" src="http://www.peterboni.net/media/images/2012-09-01-demon-hacker/dir.png" title="Demon Hacker" ></p>
 
-<p>Check out DEMON.EXE. That&#8217;s 29,408 bytes for the main application.
+<p>Check out DEMON.EXE. That&rsquo;s 29,408 bytes for the main application.
 UI (User Interface).
 Logic.
 Everything.
-That&#8217;s 29 kilobytes (KB).</p>
+That&rsquo;s 29 kilobytes (KB).</p>
 
 <p><em>Holy crap!</em></p>
 
@@ -324,7 +324,7 @@ MAC OS X system.</p>
 
 <p><img class="fancybox" src="http://www.peterboni.net/media/images/2012-09-01-demon-hacker/run.png" title="Demon Hacker" ></p>
 
-<p>Here&#8217;s the proof - the help screen. You have to admit, it&#8217;s very helpful :)</p>
+<p>Here&rsquo;s the proof &ndash; the help screen. You have to admit, it&rsquo;s very helpful :)</p>
 
 <p><img class="fancybox" src="http://www.peterboni.net/media/images/2012-09-01-demon-hacker/run-help.png" title="Demon Hacker" ></p>
 
@@ -379,12 +379,12 @@ for games by editing the DEMON.DAT text file.</p>
 <p><img class="fancybox" src="http://www.peterboni.net/media/images/2012-09-01-demon-hacker/hack.png" title="Demon Hacker" ></p>
 
 <p>If only GitHub had existed back in 1995 the source code may not have been lost.
-If you&#8217;re feeling nostalgic get DOSBox, your old games, and get
+If you&rsquo;re feeling nostalgic get DOSBox, your old games, and get
 <a href="http://www.github.com/peterboni/demonhacker">Demon Hacker</a>.</p>
 
 <p>This trip back down memory lane has reminded me of a few things.
 The Internet, WWW, Google &amp; technology are amazing things.
-Also that i&#8217;m a hacker, and always will be.</p>
+Also that i&rsquo;m a hacker, and always will be.</p>
 ]]></content>
   </entry>
   
