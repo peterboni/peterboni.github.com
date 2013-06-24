@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mobile | Peter Boni]]></title>
   <link href="http://www.peterboni.net/blog/categories/mobile/atom.xml" rel="self"/>
   <link href="http://www.peterboni.net/"/>
-  <updated>2013-06-24T21:41:36+08:00</updated>
+  <updated>2013-06-24T22:07:08+08:00</updated>
   <id>http://www.peterboni.net/</id>
   <author>
     <name><![CDATA[Peter Boni]]></name>
@@ -159,7 +159,7 @@ runtime dynamically colour each piggy bank. We define the colour groups &amp; co
 <h2>5. Add Item (with selected Icon &amp; Colour)</h2>
 
 <p>She taps the red piggy bank in the Ocean Five colour group, and is taken back to the
-#2 &ndash; Add Item view, with her red piggy bank there waiting for her. She can now enter the
+2. Add Item view, with her red piggy bank there waiting for her. She can now enter the
 other information and tap Save.</p>
 
 <p><img class="fancybox center" src="/media/images/2013-06-24-ios-7-userxlistview/app-5-add-item.png" width="396" height="744" title="5. Add Item (with selected Icon &amp; Colour)" ></p>
