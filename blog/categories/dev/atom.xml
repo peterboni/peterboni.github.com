@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Dev | Peter Boni]]></title>
   <link href="http://www.peterboni.net/blog/categories/dev/atom.xml" rel="self"/>
   <link href="http://www.peterboni.net/"/>
-  <updated>2013-06-07T20:12:29+08:00</updated>
+  <updated>2013-06-24T19:55:10+08:00</updated>
   <id>http://www.peterboni.net/</id>
   <author>
     <name><![CDATA[Peter Boni]]></name>
@@ -12,6 +12,212 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[iOS 7 UserXListView]]></title>
+    <link href="http://www.peterboni.net/blog/2013/06/24/ios-7-userxlistview/"/>
+    <updated>2013-06-24T07:00:00+08:00</updated>
+    <id>http://www.peterboni.net/blog/2013/06/24/ios-7-userxlistview</id>
+    <content type="html"><![CDATA[<p>I believe the best way to understand something is to get your hands dirty, so I decided
+to build the front end part of an app idea that I&rsquo;ve had for a while as an iOS 7 app.</p>
+
+<p>While using iOS 7 for the last week or so, I&rsquo;ve been thinking about the UI &amp; UX.
+Of course, Metro (design language) has been around for a while thanks to Microsoft, but
+the Metro apps I&rsquo;ve used feel dull. iOS 7 feels surprisingly refreshing.</p>
+
+<!--more-->
+
+
+<p>One of the views in the app I&rsquo;m building needs a list of <em>things</em> that the user creates &ndash;
+a typical pattern in many apps. iOS has a UITableViewController, so technically it&rsquo;s an
+easy problem to solve. In terms of the design of the UI &amp; UX it&rsquo;s a little bit more complicated.</p>
+
+<p>Let me talk you through what I call the UserXListView&trade; pattern in 7 images of the
+iOS 7 app I&rsquo;ve started building.</p>
+
+<h2>1. Empty List View</h2>
+
+<p>Ok. We have a list view. That + in the top right corner is staring at her.
+Tap me! Tap me!</p>
+
+<p><img class="fancybox center" src="/media/images/2013-06-24-ios-7-userxlistview/app-1-list-view.png" width="396" height="744" title="1. Empty List View" ></p>
+
+<h2>2. Add Item (with default Icon &amp; Colour)</h2>
+
+<p>She taps +. She knows that she&rsquo;s going to create something. What&rsquo;s the first
+decision? What to name it? No. The first decision is an emotional one. What&rsquo;s this thing
+going to look like.</p>
+
+<p><img class="fancybox center" src="/media/images/2013-06-24-ios-7-userxlistview/app-2-add-item.png" width="396" height="744" title="2. Add Item (with default Icon &amp; Colour)" ></p>
+
+<p>Technically this is a modal segue; either Cancel and go back, or enter the required
+information &amp; Save.</p>
+
+<h2>3. Item Icon</h2>
+
+<p>She taps Change Icon. This is where it gets interesting. The icons are in groups &amp; are
+all black so that they are easy for her to judge equally. In this instance there&rsquo;s only one
+group of simple icons from The Noun Project, that are visually related to the thing that
+she is creating.</p>
+
+<p><img class="fancybox center" src="/media/images/2013-06-24-ios-7-userxlistview/app-3-icons.png" width="396" height="744" title="3. Item Icon" ></p>
+
+<p>Once again this is a modal segue; either Cancel and go back, or give the required
+information, which in this case is selecting an icon. We use a UICollectionViewController
+that&rsquo;s dynamic. We define the icon groups &amp; icons as follows.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>icons = [NSArray arrayWithObjects:&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>        [NSArray arrayWithObjects:@"The Noun Project", @"airplane", @"beachumbrella", @"bucket", @"car", @"cocktail", @"coins", @"college", @"creditcard", @"house", @"island", @"piggybank", @"rain", @"ring", @"sailboat", @"school", @"shoppingbag", @"smartcard", @"stroller", @"tree", @"umbrella", @"wallet", nil],
+</span><span class='line'>     nil];
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h2>4. Item Icon Colour</h2>
+
+<p>She taps the piggy bank icon (they&rsquo;re cute). Now she can personalise the icon even further
+by selecting a colour. If she doesn&rsquo;t like the icon in any of these colours she can
+either tap &lt; Icon, or as a nice feature of iOS 7, swipe left to right inside where the
+icons are located and the view will slide off the top to the right and she will be taken
+back to the black icons.</p>
+
+<p><img class="fancybox center" src="/media/images/2013-06-24-ios-7-userxlistview/app-4-colours.png" width="396" height="744" title="4. Item Icon Colour" ></p>
+
+<p>This time we do a push segue and display the piggy bank icon using different groups of
+colour palettes. We use a UICollectionViewController that&rsquo;s dynamic, and some Core
+Graphics help. In the app we only store one black piggy bank icon .png file, and at
+runtime dynamically colour each piggy bank. We define the colour groups &amp; colours as follows.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>colors = [NSArray arrayWithObjects:&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>         [NSArray arrayWithObjects:@"Winter Sunset", @"#A8AB9B", @"#172A38", @"#EC4B5D", @"#F48773", @"#E0C590", nil],
+</span><span class='line'>         [NSArray arrayWithObjects:@"Ocean Five", @"#00A0B0", @"#6A4A3C", @"#CC333F", @"#EB6841", @"#EDC951", nil],
+</span><span class='line'>     nil];
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>And then do some magic with the black piggy bank icon with a helper.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>+ (UIImage &lt;em>) getIcon:(NSString &lt;/em>)iconName withColor:(NSString *)iconColorHex
+</span><span class='line'>{&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png", iconName]];
+</span><span class='line'>
+</span><span class='line'>CGRect rect = CGRectMake(0, 0, image.size.width, image.size.height);
+</span><span class='line'>UIGraphicsBeginImageContext(rect.size);
+</span><span class='line'>
+</span><span class='line'>CGContextRef context = UIGraphicsGetCurrentContext();
+</span><span class='line'>CGContextClipToMask(context, rect, image.CGImage);
+</span><span class='line'>CGContextSetFillColorWithColor(context, [[UIColor colorFromHexCode:iconColorHex] CGColor]);
+</span><span class='line'>CGContextFillRect(context, rect);
+</span><span class='line'>
+</span><span class='line'>UIImage *img = UIGraphicsGetImageFromCurrentImageContext();   
+</span><span class='line'>UIGraphicsEndImageContext();
+</span><span class='line'>
+</span><span class='line'>return [UIImage imageWithCGImage:img.CGImage scale:1.0 orientation:UIImageOrientationDownMirrored];
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>}</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h2>5. Add Item (with selected Icon &amp; Colour)</h2>
+
+<p>She taps the red piggy bank in the Ocean Five colour group, and is taken back to the
+#2 &ndash; Add Item view, with her red piggy bank there waiting for her. She can now enter the
+other information and tap Save.</p>
+
+<p><img class="fancybox center" src="/media/images/2013-06-24-ios-7-userxlistview/app-5-add-item.png" width="396" height="744" title="5. Add Item (with selected Icon &amp; Colour)" ></p>
+
+<h2>6. Item in List View</h2>
+
+<p>She taps Save, and her new red piggy bank is waiting for her in the list view. All that&rsquo;s
+left to do is to add some more.</p>
+
+<p><img class="fancybox center" src="/media/images/2013-06-24-ios-7-userxlistview/app-6-list-view.png" width="396" height="744" title="6. Item in List View" ></p>
+
+<h2>7. List View with Items</h2>
+
+<p>As she looks at the list of her <em>things</em>, she instantly recognises &amp; associates with each
+one, as it has her personal identifying touch.</p>
+
+<p><img class="fancybox center" src="/media/images/2013-06-24-ios-7-userxlistview/app-7-list-view-lots.png" width="396" height="744" title="7. List View with Items" ></p>
+
+<p>As you can see it&rsquo;s easy to give the user power over their <em>things</em> by a simple mobile
+UI &amp; UX pattern, hereby called the UserXListView&trade; pattern.</p>
+
+<h2>Storyboard</h2>
+
+<p>For reference here&rsquo;s how the views hang together in the Storyboard. Excluding the
+UINavigationControlers we have a UITableViewController, UIViewController, and
+two UICollectionViewControllers.</p>
+
+<p><img class="fancybox center" src="/media/images/2013-06-24-ios-7-userxlistview/storyboard.png" width="624" height="1" title="Xcode5 Storyboard" ></p>
+
+<h2>Sources</h2>
+
+<p><a href="http://en.wikipedia.org/wiki/Metro_(design_language)">Metro (design language)</a></p>
+
+<p><a href="http://www.apple.com/au/ios/ios7/design/">iOS 7 Design</a></p>
+
+<p>If you use resources, remember to do the right thing and attribute where required!</p>
+
+<p><a href="http://thenounproject.com">The Noun Project</a></p>
+
+<blockquote><p><a href="http://thenounproject.com/noun/beach-umbrella/#icon-No2020" target="_blank">Beach Umbrella</a> designed by <a href="http://thenounproject.com/____Lo" target="_blank">Laurent Patain</a> from The Noun Project<br/>
+<a href="http://thenounproject.com/noun/bucket/#icon-No2142" target="_blank">Bucket</a> designed by <a href="http://thenounproject.com/anandgrafiti" target="_blank">Anand A Nair</a> from The Noun Project<br/>
+<a href="http://thenounproject.com/noun/cocktail/#icon-No482" target="_blank">Cocktail</a>  from The Noun Project<br/>
+<a href="http://thenounproject.com/noun/coins/#icon-No16888" target="_blank">Coins</a> designed by <a href="http://thenounproject.com/jevgeni.striganov" target="_blank">Jevgeni Striganov</a> from The Noun Project<br/>
+<a href="http://thenounproject.com/noun/credit-card/#icon-No14358" target="_blank">Credit Card</a> designed by <a href="http://thenounproject.com/Oppenlander" target="_blank">Brian Oppenlander</a> from The Noun Project<br/>
+<a href="http://thenounproject.com/noun/house/#icon-No6783" target="_blank">House</a> designed by <a href="http://thenounproject.com/olynleroy" target="_blank">Olyn LeRoy</a> from The Noun Project<br/>
+<a href="http://thenounproject.com/noun/island/#icon-No8624" target="_blank">Island</a> designed by <a href="http://thenounproject.com/Avalanche" target="_blank">Athena Manolopoulos</a> from The Noun Project<br/>
+<a href="http://thenounproject.com/noun/rain/#icon-No9400" target="_blank">Rain</a> designed by <a href="http://thenounproject.com/iconify" target="_blank">Scott Lewis</a> from The Noun Project<br/>
+<a href="http://thenounproject.com/noun/ring/#icon-No1118" target="_blank">Ring</a> designed by <a href="http://thenounproject.com/mimosa.cb" target="_blank">Christopher T. Howlett</a> from The Noun Project<br/>
+<a href="http://thenounproject.com/noun/sail-boat/#icon-No2026" target="_blank">Sail Boat</a> designed by <a href="http://thenounproject.com/____Lo" target="_blank">Laurent Patain</a> from The Noun Project<br/>
+<a href="http://thenounproject.com/noun/shopping-bag/#icon-No17663" target="_blank">Shopping Bag</a> designed by <a href="http://thenounproject.com/tinyxl" target="_blank">Erin Standley</a> from The Noun Project<br/>
+<a href="http://thenounproject.com/noun/smart-card/#icon-No1804" target="_blank">Smart Card</a> designed by <a href="http://thenounproject.com/andrewforrester" target="_blank">Andrew Forrester</a> from The Noun Project<br/>
+<a href="http://thenounproject.com/noun/stroller/#icon-No601" target="_blank">Stroller</a>  from The Noun Project<br/>
+<a href="http://thenounproject.com/noun/umbrella/#icon-No142" target="_blank">Umbrella</a>  from The Noun Project<br/>
+<a href="http://thenounproject.com/noun/wallet/#icon-No3055" target="_blank">Wallet</a> designed by <a href="http://thenounproject.com/hakan" target="_blank">Hakan Yalcin</a> from The Noun Project</p></blockquote>
+
+<p><a href="http://www.colourlovers.com">COLOURlovers</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[App Dev is not Rapid]]></title>
