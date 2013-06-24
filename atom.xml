@@ -4,7 +4,7 @@
   <title><![CDATA[Peter Boni]]></title>
   <link href="http://www.peterboni.net/atom.xml" rel="self"/>
   <link href="http://www.peterboni.net/"/>
-  <updated>2013-06-24T19:55:10+08:00</updated>
+  <updated>2013-06-24T21:41:36+08:00</updated>
   <id>http://www.peterboni.net/</id>
   <author>
     <name><![CDATA[Peter Boni]]></name>
@@ -63,7 +63,7 @@ she is creating.</p>
 <p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-06-24-ios-7-userxlistview/app-3-icons.png" width="396" height="744" title="3. Item Icon" ></p>
 
 <p>Once again this is a modal segue; either Cancel and go back, or give the required
-information, which in this case is selecting an icon. We use a UICollectionViewController
+information, which in this instance is selecting an icon. We use a UICollectionViewController
 that&rsquo;s dynamic. We define the icon groups &amp; icons as follows.</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
