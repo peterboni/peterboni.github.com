@@ -4,7 +4,7 @@
   <title><![CDATA[Peter Boni]]></title>
   <link href="http://www.peterboni.net/atom.xml" rel="self"/>
   <link href="http://www.peterboni.net/"/>
-  <updated>2013-06-24T22:07:08+08:00</updated>
+  <updated>2013-06-26T20:07:21+08:00</updated>
   <id>http://www.peterboni.net/</id>
   <author>
     <name><![CDATA[Peter Boni]]></name>
@@ -77,16 +77,17 @@ that&rsquo;s dynamic. We define the icon groups &amp; icons as follows.</p>
 <h2>4. Item Icon Colour</h2>
 
 <p>She taps the piggy bank icon (they&rsquo;re cute). Now she can personalise the icon even further
-by selecting a colour. If she doesn&rsquo;t like the icon in any of these colours she can
-either tap &lt; Icon, or as a nice feature of iOS 7, swipe left to right inside where the
-icons are located and the view will slide off the top to the right and she will be taken
+by selecting a colour from different groups of colour palettes. She can select a colour
+from the same palette to match all her <em>things</em>, or mix &amp; match colours from different
+colour palettes. The choice is hers. If she doesn&rsquo;t like the icon in any of these colours
+she can either tap &lt; Icon, or as a nice feature of iOS 7, swipe left to right inside where
+the icons are located and the view will slide off the top to the right and she will be taken
 back to the black icons.</p>
 
 <p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-06-24-ios-7-userxlistview/app-4-colours.png" width="396" height="744" title="4. Item Icon Colour" ></p>
 
-<p>This time we do a push segue and display the piggy bank icon using different groups of
-colour palettes. We use a UICollectionViewController that&rsquo;s dynamic, and some Core
-Graphics help. In the app we only store one black piggy bank icon .png file, and at
+<p>This time we do a push segue. We use a UICollectionViewController that&rsquo;s dynamic, and some
+Core Graphics help. In the app we only store one black piggy bank icon .png file, and at
 runtime dynamically colour each piggy bank. We define the colour groups &amp; colours as follows.</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
