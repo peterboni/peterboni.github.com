@@ -4,7 +4,7 @@
   <title><![CDATA[Peter Boni]]></title>
   <link href="http://www.peterboni.net/atom.xml" rel="self"/>
   <link href="http://www.peterboni.net/"/>
-  <updated>2013-06-26T20:07:21+08:00</updated>
+  <updated>2013-06-29T17:04:08+08:00</updated>
   <id>http://www.peterboni.net/</id>
   <author>
     <name><![CDATA[Peter Boni]]></name>
@@ -12,6 +12,180 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[iOS 7 Dynamic Type]]></title>
+    <link href="http://www.peterboni.net/blog/2013/06/29/ios-7-dynamic-type/"/>
+    <updated>2013-06-29T07:00:00+08:00</updated>
+    <id>http://www.peterboni.net/blog/2013/06/29/ios-7-dynamic-type</id>
+    <content type="html"><![CDATA[<p>iOS 7 introduces Dynamic Type, which if apps choose to support it, gives the user
+control over text size in an app. Web pages have had this feature for free since the early
+days of the web, but web browsers moved away from dynamic text sizing.
+<a href="http://www.codinghorror.com/blog/2009/01/the-two-types-of-browser-zoom.html">The Two Types of Browser Zoom</a>.</p>
+
+<p>iOS7 Dynamic Type automatically adjusts weight, letter spacing, and line height for every font
+size. It looks <strong>stunning</strong>, but there&rsquo;s work to make your app support it.</p>
+
+<!--more-->
+
+
+<h2>Default Size</h2>
+
+<p>Here&rsquo;s what <a href="http://www.peterboni.net/blog/2013/06/24/ios-7-userxlistview/">UserXListView</a> looks like with the Text Size
+(Settings &ndash; General &ndash; Text Size) set to the default size in the <em>iPhone Retina (3.5-inch)</em>
+iOS Simulator.</p>
+
+<p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-06-29-ios-7-dynamic-type/1-text-size-normal.png" width="500" height="713" title="Text Size Normal" ></p>
+
+<p>We get 3 &amp; &lsquo;a bit&rsquo; cells in the UITableView.</p>
+
+<p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-06-29-ios-7-dynamic-type/2-UserXListView-normal.png" width="500" height="713" title="UserXListView Normal" ></p>
+
+<h2>Smallest Size</h2>
+
+<p>Changing the Text Size to the smallest size means we can fit slightly more.</p>
+
+<p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-06-29-ios-7-dynamic-type/3-text-size-small.png" width="500" height="713" title="Text Size Small" ></p>
+
+<p>Nearly 4 cells in the UITableView.</p>
+
+<p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-06-29-ios-7-dynamic-type/4-UserXListView-small.png" width="500" height="713" title="UserXListView Small" ></p>
+
+<h2>Largest Size</h2>
+
+<p>Changing the Text Size to the largest size means we can fit slightly less, but get big
+beautiful type.</p>
+
+<p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-06-29-ios-7-dynamic-type/5-text-size-large.png" width="500" height="713" title="Text Size Large" ></p>
+
+<p>3 cells in the UITableView.</p>
+
+<p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-06-29-ios-7-dynamic-type/6-UserXListView-large.png" width="500" height="713" title="UserXListView Large" ></p>
+
+<h2>Implementation, The Easy Part</h2>
+
+<p>That&rsquo;s how it looks, but how hard is it to make your app support it. Let&rsquo;s look at
+<a href="http://www.peterboni.net/blog/2013/06/24/ios-7-userxlistview/">UserXListView</a>. The cell layout makes use of Auto
+Layout Constraints, which are very powerful.</p>
+
+<p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-06-29-ios-7-dynamic-type/7-UserXListView-cell-layout.png" width="381" height="674" title="UserXListView Cell Layout" ></p>
+
+<p>iOS 7 has defined Text Styles &ndash; Body, Caption 1, Caption 2, Footnote, Headline 1,
+Headline 2, Subhead 1, and Subhead 2. We assign a Text Style to each label in the cell
+layout via the attribute inspector as shown below.</p>
+
+<p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-06-29-ios-7-dynamic-type/8-UserXListView-cell-label-attribute-inspector.png" width="316" height="196" title="UserXListView Cell Label Attribute Inspector" ></p>
+
+<p>Once the label Text Styles &amp; Auto Layout Constraints are set, we&rsquo;re ready for the hard
+part.</p>
+
+<h2>Implementation, The Hard Part</h2>
+
+<p>Unlike Auto Layout in this example, there&rsquo;s more work to do to support
+Dynamic Type.</p>
+
+<p>We need to make the Controller aware of a Text Size change by hooking into the
+UIContentSizeCategoryDidChangeNotification.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="nf">viewDidLoad</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">super</span> <span class="n">viewDidLoad</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">[[</span><span class="n">NSNotificationCenter</span> <span class="n">defaultCenter</span><span class="p">]</span> <span class="nl">addObserver:</span><span class="n">self</span> <span class="nl">selector:</span><span class="k">@selector</span><span class="p">(</span><span class="nl">preferredContentSizeChanged:</span><span class="p">)</span> <span class="nl">name:</span><span class="n">UIContentSizeCategoryDidChangeNotification</span> <span class="nl">object:</span><span class="nb">nil</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="nf">preferredContentSizeChanged:</span><span class="p">(</span><span class="n">NSNotification</span> <span class="o">*</span><span class="p">)</span><span class="nv">aNotification</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="c1">// adjust the layout of the cells</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">view</span> <span class="n">setNeedsLayout</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1">// refresh view...</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>We need to calculate the height of the row/cell based on it&rsquo;s content, and as each label
+in the cell can change height we need to calculate the total height of the cell required.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="n">CGFloat</span><span class="p">)</span> <span class="nf">tableView:</span><span class="p">(</span><span class="n">UITableView</span> <span class="o">*</span><span class="p">)</span><span class="nv">tableView</span> <span class="nf">heightForRowAtIndexPath:</span><span class="p">(</span><span class="n">NSIndexPath</span> <span class="o">*</span><span class="p">)</span><span class="nv">indexPath</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="n">Account</span> <span class="o">*</span><span class="n">account</span> <span class="o">=</span> <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">fetchedResultsController</span> <span class="nl">objectAtIndexPath:</span><span class="n">indexPath</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">UIFont</span> <span class="o">*</span><span class="n">nameLabelFont</span> <span class="o">=</span> <span class="p">[</span><span class="n">UIFont</span> <span class="nl">preferredFontForTextStyle:</span><span class="n">UIFontTextStyleHeadline1</span><span class="p">];</span>
+</span><span class='line'>    <span class="n">CGSize</span> <span class="n">nameLabelFontSize</span> <span class="o">=</span> <span class="p">[[</span><span class="n">account</span> <span class="n">name</span><span class="p">]</span> <span class="nl">sizeWithAttributes:</span><span class="p">[</span><span class="n">NSDictionary</span> <span class="nl">dictionaryWithObject:</span><span class="n">nameLabelFont</span> <span class="nl">forKey:</span><span class="n">NSFontAttributeName</span><span class="p">]];</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1">// ...</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">CGFloat</span> <span class="n">totalHeight</span> <span class="o">=</span> <span class="n">nameLabelFontSize</span><span class="p">.</span><span class="n">height</span> <span class="o">+</span> <span class="p">...;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">return</span> <span class="n">totalHeight</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>We also need to programmatically assign (or re-assign because we already did it in
+the Storyboard) the cell label Text Style values.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="n">UITableViewCell</span> <span class="o">*</span><span class="p">)</span> <span class="nf">tableView:</span><span class="p">(</span><span class="n">UITableView</span> <span class="o">*</span><span class="p">)</span><span class="nv">tableView</span> <span class="nf">cellForRowAtIndexPath:</span><span class="p">(</span><span class="n">NSIndexPath</span> <span class="o">*</span><span class="p">)</span><span class="nv">indexPath</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="n">AccountCell</span> <span class="o">*</span><span class="n">cell</span> <span class="o">=</span> <span class="p">(</span><span class="n">AccountCell</span> <span class="o">*</span><span class="p">)[</span><span class="n">tableView</span> <span class="nl">dequeueReusableCellWithIdentifier:</span><span class="s">@&quot;AccountCell&quot;</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">Account</span> <span class="o">*</span><span class="n">account</span> <span class="o">=</span> <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">fetchedResultsController</span> <span class="nl">objectAtIndexPath:</span><span class="n">indexPath</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">cell</span><span class="p">.</span><span class="n">nameLabel</span><span class="p">.</span><span class="n">text</span> <span class="o">=</span> <span class="p">[</span><span class="n">account</span> <span class="n">name</span><span class="p">];</span>
+</span><span class='line'>    <span class="n">cell</span><span class="p">.</span><span class="n">nameLabel</span><span class="p">.</span><span class="n">font</span> <span class="o">=</span> <span class="p">[</span><span class="n">UIFont</span> <span class="nl">preferredFontForTextStyle:</span><span class="n">UIFontTextStyleHeadline1</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1">// ...</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Final Thoughts</h2>
+
+<p>That&rsquo;s it. iOS 7 determines &amp; applies the font attributes for each label based on the
+Text Style for each label, and the iOS 7 Text Size system setting selected by the user,
+and it&rsquo;s left to us (the developer) to cater for the changes in the layout to the view.</p>
+
+<p>As you can see there&rsquo;s a bit of extra work to support Dynamic Type. It would be nice if
+it was a bit smarter, a bit more automatic, but with great power comes great responsibility.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[iOS 7 UserXListView]]></title>
@@ -66,12 +240,13 @@ she is creating.</p>
 information, which in this instance is selecting an icon. We use a UICollectionViewController
 that&rsquo;s dynamic. We define the icon groups &amp; icons as follows.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>icons = [NSArray arrayWithObjects:
-</span><span class='line'>          [NSArray arrayWithObjects:@"The Noun Project", @"airplane", @"beachumbrella", @"bucket", @"car", @"cocktail", @"coins", @"college", @"creditcard", @"house", @"island", @"piggybank", @"rain", @"ring", @"sailboat", @"school", @"shoppingbag", @"smartcard", @"stroller", @"tree", @"umbrella", @"wallet", nil],
-</span><span class='line'>       nil];</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">icons</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSArray</span> <span class="nl">arrayWithObjects:</span>
+</span><span class='line'>          <span class="p">[</span><span class="n">NSArray</span> <span class="nl">arrayWithObjects:</span><span class="s">@&quot;The Noun Project&quot;</span><span class="p">,</span> <span class="s">@&quot;airplane&quot;</span><span class="p">,</span> <span class="s">@&quot;beachumbrella&quot;</span><span class="p">,</span> <span class="s">@&quot;bucket&quot;</span><span class="p">,</span> <span class="s">@&quot;car&quot;</span><span class="p">,</span> <span class="s">@&quot;cocktail&quot;</span><span class="p">,</span> <span class="s">@&quot;coins&quot;</span><span class="p">,</span> <span class="s">@&quot;college&quot;</span><span class="p">,</span> <span class="s">@&quot;creditcard&quot;</span><span class="p">,</span> <span class="s">@&quot;house&quot;</span><span class="p">,</span> <span class="s">@&quot;island&quot;</span><span class="p">,</span> <span class="s">@&quot;piggybank&quot;</span><span class="p">,</span> <span class="s">@&quot;rain&quot;</span><span class="p">,</span> <span class="s">@&quot;ring&quot;</span><span class="p">,</span> <span class="s">@&quot;sailboat&quot;</span><span class="p">,</span> <span class="s">@&quot;school&quot;</span><span class="p">,</span> <span class="s">@&quot;shoppingbag&quot;</span><span class="p">,</span> <span class="s">@&quot;smartcard&quot;</span><span class="p">,</span> <span class="s">@&quot;stroller&quot;</span><span class="p">,</span> <span class="s">@&quot;tree&quot;</span><span class="p">,</span> <span class="s">@&quot;umbrella&quot;</span><span class="p">,</span> <span class="s">@&quot;wallet&quot;</span><span class="p">,</span> <span class="nb">nil</span><span class="p">],</span>
+</span><span class='line'>       <span class="nb">nil</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <h2>4. Item Icon Colour</h2>
@@ -90,19 +265,20 @@ back to the black icons.</p>
 Core Graphics help. In the app we only store one black piggy bank icon .png file, and at
 runtime dynamically colour each piggy bank. We define the colour groups &amp; colours as follows.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>colors = [NSArray arrayWithObjects:
-</span><span class='line'>           [NSArray arrayWithObjects:@"Winter Sunset", @"#A8AB9B", @"#172A38", @"#EC4B5D", @"#F48773", @"#E0C590", nil],
-</span><span class='line'>           [NSArray arrayWithObjects:@"Ocean Five", @"#00A0B0", @"#6A4A3C", @"#CC333F", @"#EB6841", @"#EDC951", nil],
-</span><span class='line'>       nil];</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSArray</span> <span class="nl">arrayWithObjects:</span>
+</span><span class='line'>           <span class="p">[</span><span class="n">NSArray</span> <span class="nl">arrayWithObjects:</span><span class="s">@&quot;Winter Sunset&quot;</span><span class="p">,</span> <span class="s">@&quot;#A8AB9B&quot;</span><span class="p">,</span> <span class="s">@&quot;#172A38&quot;</span><span class="p">,</span> <span class="s">@&quot;#EC4B5D&quot;</span><span class="p">,</span> <span class="s">@&quot;#F48773&quot;</span><span class="p">,</span> <span class="s">@&quot;#E0C590&quot;</span><span class="p">,</span> <span class="nb">nil</span><span class="p">],</span>
+</span><span class='line'>           <span class="p">[</span><span class="n">NSArray</span> <span class="nl">arrayWithObjects:</span><span class="s">@&quot;Ocean Five&quot;</span><span class="p">,</span> <span class="s">@&quot;#00A0B0&quot;</span><span class="p">,</span> <span class="s">@&quot;#6A4A3C&quot;</span><span class="p">,</span> <span class="s">@&quot;#CC333F&quot;</span><span class="p">,</span> <span class="s">@&quot;#EB6841&quot;</span><span class="p">,</span> <span class="s">@&quot;#EDC951&quot;</span><span class="p">,</span> <span class="nb">nil</span><span class="p">],</span>
+</span><span class='line'>       <span class="nb">nil</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>And then do some magic with the black piggy bank icon with a helper.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -119,23 +295,24 @@ runtime dynamically colour each piggy bank. We define the colour groups &amp; co
 <span class='line-number'>15</span>
 <span class='line-number'>16</span>
 <span class='line-number'>17</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>+ (UIImage *) getIcon:(NSString *)iconName withColor:(NSString *)iconColorHex
-</span><span class='line'>{
-</span><span class='line'>    UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png", iconName]];
-</span><span class='line'>    
-</span><span class='line'>    CGRect rect = CGRectMake(0, 0, image.size.width, image.size.height);
-</span><span class='line'>    UIGraphicsBeginImageContext(rect.size);
-</span><span class='line'>    
-</span><span class='line'>    CGContextRef context = UIGraphicsGetCurrentContext();
-</span><span class='line'>    CGContextClipToMask(context, rect, image.CGImage);
-</span><span class='line'>    CGContextSetFillColorWithColor(context, [[UIColor colorFromHexCode:iconColorHex] CGColor]);
-</span><span class='line'>    CGContextFillRect(context, rect);
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">+</span> <span class="p">(</span><span class="n">UIImage</span> <span class="o">*</span><span class="p">)</span> <span class="nf">getIcon:</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">iconName</span> <span class="nf">withColor:</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">iconColorHex</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="n">UIImage</span> <span class="o">*</span><span class="n">image</span> <span class="o">=</span> <span class="p">[</span><span class="n">UIImage</span> <span class="nl">imageNamed:</span><span class="p">[</span><span class="n">NSString</span> <span class="nl">stringWithFormat:</span><span class="s">@&quot;%@.png&quot;</span><span class="p">,</span> <span class="n">iconName</span><span class="p">]];</span>
 </span><span class='line'>
-</span><span class='line'>    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();   
-</span><span class='line'>    UIGraphicsEndImageContext();
-</span><span class='line'>    
-</span><span class='line'>    return [UIImage imageWithCGImage:img.CGImage scale:1.0 orientation:UIImageOrientationDownMirrored];
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>    <span class="n">CGRect</span> <span class="n">rect</span> <span class="o">=</span> <span class="n">CGRectMake</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">image</span><span class="p">.</span><span class="n">size</span><span class="p">.</span><span class="n">width</span><span class="p">,</span> <span class="n">image</span><span class="p">.</span><span class="n">size</span><span class="p">.</span><span class="n">height</span><span class="p">);</span>
+</span><span class='line'>    <span class="n">UIGraphicsBeginImageContext</span><span class="p">(</span><span class="n">rect</span><span class="p">.</span><span class="n">size</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">CGContextRef</span> <span class="n">context</span> <span class="o">=</span> <span class="n">UIGraphicsGetCurrentContext</span><span class="p">();</span>
+</span><span class='line'>    <span class="n">CGContextClipToMask</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">rect</span><span class="p">,</span> <span class="n">image</span><span class="p">.</span><span class="n">CGImage</span><span class="p">);</span>
+</span><span class='line'>    <span class="n">CGContextSetFillColorWithColor</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="p">[[</span><span class="n">UIColor</span> <span class="nl">colorFromHexCode:</span><span class="n">iconColorHex</span><span class="p">]</span> <span class="n">CGColor</span><span class="p">]);</span>
+</span><span class='line'>    <span class="n">CGContextFillRect</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">rect</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">UIImage</span> <span class="o">*</span><span class="n">img</span> <span class="o">=</span> <span class="n">UIGraphicsGetImageFromCurrentImageContext</span><span class="p">();</span>
+</span><span class='line'>    <span class="n">UIGraphicsEndImageContext</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">return</span> <span class="p">[</span><span class="n">UIImage</span> <span class="nl">imageWithCGImage:</span><span class="n">img</span><span class="p">.</span><span class="n">CGImage</span> <span class="nl">scale:</span><span class="mf">1.0</span> <span class="nl">orientation:</span><span class="n">UIImageOrientationDownMirrored</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <h2>5. Add Item (with selected Icon &amp; Colour)</h2>

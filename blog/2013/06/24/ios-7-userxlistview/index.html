@@ -155,12 +155,13 @@ she is creating.</p>
 information, which in this instance is selecting an icon. We use a UICollectionViewController
 that&rsquo;s dynamic. We define the icon groups &amp; icons as follows.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>icons = [NSArray arrayWithObjects:
-</span><span class='line'>          [NSArray arrayWithObjects:@"The Noun Project", @"airplane", @"beachumbrella", @"bucket", @"car", @"cocktail", @"coins", @"college", @"creditcard", @"house", @"island", @"piggybank", @"rain", @"ring", @"sailboat", @"school", @"shoppingbag", @"smartcard", @"stroller", @"tree", @"umbrella", @"wallet", nil],
-</span><span class='line'>       nil];</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">icons</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSArray</span> <span class="nl">arrayWithObjects:</span>
+</span><span class='line'>          <span class="p">[</span><span class="n">NSArray</span> <span class="nl">arrayWithObjects:</span><span class="s">@&quot;The Noun Project&quot;</span><span class="p">,</span> <span class="s">@&quot;airplane&quot;</span><span class="p">,</span> <span class="s">@&quot;beachumbrella&quot;</span><span class="p">,</span> <span class="s">@&quot;bucket&quot;</span><span class="p">,</span> <span class="s">@&quot;car&quot;</span><span class="p">,</span> <span class="s">@&quot;cocktail&quot;</span><span class="p">,</span> <span class="s">@&quot;coins&quot;</span><span class="p">,</span> <span class="s">@&quot;college&quot;</span><span class="p">,</span> <span class="s">@&quot;creditcard&quot;</span><span class="p">,</span> <span class="s">@&quot;house&quot;</span><span class="p">,</span> <span class="s">@&quot;island&quot;</span><span class="p">,</span> <span class="s">@&quot;piggybank&quot;</span><span class="p">,</span> <span class="s">@&quot;rain&quot;</span><span class="p">,</span> <span class="s">@&quot;ring&quot;</span><span class="p">,</span> <span class="s">@&quot;sailboat&quot;</span><span class="p">,</span> <span class="s">@&quot;school&quot;</span><span class="p">,</span> <span class="s">@&quot;shoppingbag&quot;</span><span class="p">,</span> <span class="s">@&quot;smartcard&quot;</span><span class="p">,</span> <span class="s">@&quot;stroller&quot;</span><span class="p">,</span> <span class="s">@&quot;tree&quot;</span><span class="p">,</span> <span class="s">@&quot;umbrella&quot;</span><span class="p">,</span> <span class="s">@&quot;wallet&quot;</span><span class="p">,</span> <span class="nb">nil</span><span class="p">],</span>
+</span><span class='line'>       <span class="nb">nil</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <h2>4. Item Icon Colour</h2>
@@ -179,19 +180,20 @@ back to the black icons.</p>
 Core Graphics help. In the app we only store one black piggy bank icon .png file, and at
 runtime dynamically colour each piggy bank. We define the colour groups &amp; colours as follows.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>colors = [NSArray arrayWithObjects:
-</span><span class='line'>           [NSArray arrayWithObjects:@"Winter Sunset", @"#A8AB9B", @"#172A38", @"#EC4B5D", @"#F48773", @"#E0C590", nil],
-</span><span class='line'>           [NSArray arrayWithObjects:@"Ocean Five", @"#00A0B0", @"#6A4A3C", @"#CC333F", @"#EB6841", @"#EDC951", nil],
-</span><span class='line'>       nil];</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSArray</span> <span class="nl">arrayWithObjects:</span>
+</span><span class='line'>           <span class="p">[</span><span class="n">NSArray</span> <span class="nl">arrayWithObjects:</span><span class="s">@&quot;Winter Sunset&quot;</span><span class="p">,</span> <span class="s">@&quot;#A8AB9B&quot;</span><span class="p">,</span> <span class="s">@&quot;#172A38&quot;</span><span class="p">,</span> <span class="s">@&quot;#EC4B5D&quot;</span><span class="p">,</span> <span class="s">@&quot;#F48773&quot;</span><span class="p">,</span> <span class="s">@&quot;#E0C590&quot;</span><span class="p">,</span> <span class="nb">nil</span><span class="p">],</span>
+</span><span class='line'>           <span class="p">[</span><span class="n">NSArray</span> <span class="nl">arrayWithObjects:</span><span class="s">@&quot;Ocean Five&quot;</span><span class="p">,</span> <span class="s">@&quot;#00A0B0&quot;</span><span class="p">,</span> <span class="s">@&quot;#6A4A3C&quot;</span><span class="p">,</span> <span class="s">@&quot;#CC333F&quot;</span><span class="p">,</span> <span class="s">@&quot;#EB6841&quot;</span><span class="p">,</span> <span class="s">@&quot;#EDC951&quot;</span><span class="p">,</span> <span class="nb">nil</span><span class="p">],</span>
+</span><span class='line'>       <span class="nb">nil</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>And then do some magic with the black piggy bank icon with a helper.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -208,23 +210,24 @@ runtime dynamically colour each piggy bank. We define the colour groups &amp; co
 <span class='line-number'>15</span>
 <span class='line-number'>16</span>
 <span class='line-number'>17</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>+ (UIImage *) getIcon:(NSString *)iconName withColor:(NSString *)iconColorHex
-</span><span class='line'>{
-</span><span class='line'>    UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png", iconName]];
-</span><span class='line'>    
-</span><span class='line'>    CGRect rect = CGRectMake(0, 0, image.size.width, image.size.height);
-</span><span class='line'>    UIGraphicsBeginImageContext(rect.size);
-</span><span class='line'>    
-</span><span class='line'>    CGContextRef context = UIGraphicsGetCurrentContext();
-</span><span class='line'>    CGContextClipToMask(context, rect, image.CGImage);
-</span><span class='line'>    CGContextSetFillColorWithColor(context, [[UIColor colorFromHexCode:iconColorHex] CGColor]);
-</span><span class='line'>    CGContextFillRect(context, rect);
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">+</span> <span class="p">(</span><span class="n">UIImage</span> <span class="o">*</span><span class="p">)</span> <span class="nf">getIcon:</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">iconName</span> <span class="nf">withColor:</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">iconColorHex</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="n">UIImage</span> <span class="o">*</span><span class="n">image</span> <span class="o">=</span> <span class="p">[</span><span class="n">UIImage</span> <span class="nl">imageNamed:</span><span class="p">[</span><span class="n">NSString</span> <span class="nl">stringWithFormat:</span><span class="s">@&quot;%@.png&quot;</span><span class="p">,</span> <span class="n">iconName</span><span class="p">]];</span>
 </span><span class='line'>
-</span><span class='line'>    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();   
-</span><span class='line'>    UIGraphicsEndImageContext();
-</span><span class='line'>    
-</span><span class='line'>    return [UIImage imageWithCGImage:img.CGImage scale:1.0 orientation:UIImageOrientationDownMirrored];
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>    <span class="n">CGRect</span> <span class="n">rect</span> <span class="o">=</span> <span class="n">CGRectMake</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">image</span><span class="p">.</span><span class="n">size</span><span class="p">.</span><span class="n">width</span><span class="p">,</span> <span class="n">image</span><span class="p">.</span><span class="n">size</span><span class="p">.</span><span class="n">height</span><span class="p">);</span>
+</span><span class='line'>    <span class="n">UIGraphicsBeginImageContext</span><span class="p">(</span><span class="n">rect</span><span class="p">.</span><span class="n">size</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">CGContextRef</span> <span class="n">context</span> <span class="o">=</span> <span class="n">UIGraphicsGetCurrentContext</span><span class="p">();</span>
+</span><span class='line'>    <span class="n">CGContextClipToMask</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">rect</span><span class="p">,</span> <span class="n">image</span><span class="p">.</span><span class="n">CGImage</span><span class="p">);</span>
+</span><span class='line'>    <span class="n">CGContextSetFillColorWithColor</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="p">[[</span><span class="n">UIColor</span> <span class="nl">colorFromHexCode:</span><span class="n">iconColorHex</span><span class="p">]</span> <span class="n">CGColor</span><span class="p">]);</span>
+</span><span class='line'>    <span class="n">CGContextFillRect</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">rect</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">UIImage</span> <span class="o">*</span><span class="n">img</span> <span class="o">=</span> <span class="n">UIGraphicsGetImageFromCurrentImageContext</span><span class="p">();</span>
+</span><span class='line'>    <span class="n">UIGraphicsEndImageContext</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">return</span> <span class="p">[</span><span class="n">UIImage</span> <span class="nl">imageWithCGImage:</span><span class="n">img</span><span class="p">.</span><span class="n">CGImage</span> <span class="nl">scale:</span><span class="mf">1.0</span> <span class="nl">orientation:</span><span class="n">UIImageOrientationDownMirrored</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <h2>5. Add Item (with selected Icon &amp; Colour)</h2>
@@ -339,6 +342,8 @@ two UICollectionViewControllers.</p>
         <a class="basic-alignment left" href="/blog/2013/06/07/all-along-the-watchtower/" title="Previous Post: All Along the Watchtower">&laquo; All Along the Watchtower</a>
       
       
+        <a class="basic-alignment right" href="/blog/2013/06/29/ios-7-dynamic-type/" title="Next Post: iOS 7 Dynamic Type">iOS 7 Dynamic Type &raquo;</a>
+      
     </p>
   </footer>
 </article>
@@ -350,6 +355,10 @@ two UICollectionViewControllers.</p>
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/06/29/ios-7-dynamic-type/">iOS 7 Dynamic Type</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2013/06/24/ios-7-userxlistview/">iOS 7 UserXListView</a>
@@ -365,10 +374,6 @@ two UICollectionViewControllers.</p>
     
       <li class="post">
         <a href="/blog/2013/05/11/this-is-water/">This Is Water</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/04/03/app-dev-is-not-rapid/">App Dev Is Not Rapid</a>
       </li>
     
   </ul>
