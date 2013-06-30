@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Dev | Peter Boni]]></title>
   <link href="http://www.peterboni.net/blog/categories/dev/atom.xml" rel="self"/>
   <link href="http://www.peterboni.net/"/>
-  <updated>2013-06-30T08:38:02+08:00</updated>
+  <updated>2013-06-30T10:40:10+08:00</updated>
   <id>http://www.peterboni.net/</id>
   <author>
     <name><![CDATA[Peter Boni]]></name>
@@ -35,32 +35,32 @@ size. It looks <strong>stunning</strong>, but there&rsquo;s work to make your ap
 (Settings &ndash; General &ndash; Text Size) set to the default size in the <em>iPhone Retina (3.5-inch)</em>
 iOS Simulator.</p>
 
-<p><img class="fancybox center" src="/media/images/2013-06-29-ios-7-dynamic-type/1-text-size-normal.png" width="500" height="713" title="Text Size Normal" ></p>
+<p><img class="fancybox center" src="/media/images/2013-06-29-ios-7-dynamic-type/1-text-size-normal.png" width="500" height="713" title="Text Size Default" ></p>
 
 <p>We get 3 &amp; &lsquo;a bit&rsquo; cells in the UITableView.</p>
 
-<p><img class="fancybox center" src="/media/images/2013-06-29-ios-7-dynamic-type/2-UserXListView-normal.png" width="500" height="713" title="UserXListView Normal" ></p>
+<p><img class="fancybox center" src="/media/images/2013-06-29-ios-7-dynamic-type/2-UserXListView-normal.png" width="500" height="713" title="UserXListView Default" ></p>
 
 <h2>Smallest Size</h2>
 
 <p>Changing the Text Size to the smallest size means we can fit slightly more.</p>
 
-<p><img class="fancybox center" src="/media/images/2013-06-29-ios-7-dynamic-type/3-text-size-small.png" width="500" height="713" title="Text Size Small" ></p>
+<p><img class="fancybox center" src="/media/images/2013-06-29-ios-7-dynamic-type/3-text-size-small.png" width="500" height="713" title="Text Size Smallest" ></p>
 
 <p>Nearly 4 cells in the UITableView.</p>
 
-<p><img class="fancybox center" src="/media/images/2013-06-29-ios-7-dynamic-type/4-UserXListView-small.png" width="500" height="713" title="UserXListView Small" ></p>
+<p><img class="fancybox center" src="/media/images/2013-06-29-ios-7-dynamic-type/4-UserXListView-small.png" width="500" height="713" title="UserXListView Smallest" ></p>
 
 <h2>Largest Size</h2>
 
 <p>Changing the Text Size to the largest size means we can fit slightly less, but get big
 beautiful type.</p>
 
-<p><img class="fancybox center" src="/media/images/2013-06-29-ios-7-dynamic-type/5-text-size-large.png" width="500" height="713" title="Text Size Large" ></p>
+<p><img class="fancybox center" src="/media/images/2013-06-29-ios-7-dynamic-type/5-text-size-large.png" width="500" height="713" title="Text Size Largest" ></p>
 
 <p>3 cells in the UITableView.</p>
 
-<p><img class="fancybox center" src="/media/images/2013-06-29-ios-7-dynamic-type/6-UserXListView-large.png" width="500" height="713" title="UserXListView Large" ></p>
+<p><img class="fancybox center" src="/media/images/2013-06-29-ios-7-dynamic-type/6-UserXListView-large.png" width="500" height="713" title="UserXListView Largest" ></p>
 
 <h2>Implementation, The Easy Part</h2>
 
@@ -139,6 +139,7 @@ in the cell can change height we need to calculate the total height of the cell 
 <span class='line-number'>13</span>
 <span class='line-number'>14</span>
 <span class='line-number'>15</span>
+<span class='line-number'>16</span>
 </pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="p">(</span><span class="n">CGFloat</span><span class="p">)</span><span class="nl">tableView:</span><span class="p">(</span><span class="n">UITableView</span> <span class="o">&lt;</span><span class="n">em</span><span class="o">&gt;</span><span class="p">)</span><span class="n">tableView</span> <span class="nl">heightForRowAtIndexPath:</span><span class="p">(</span><span class="n">NSIndexPath</span> <span class="o">&lt;/</span><span class="n">em</span><span class="o">&gt;</span><span class="p">)</span><span class="n">indexPath</span> <span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">Account</span> <span class="o">*</span><span class="n">account</span> <span class="o">=</span> <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">fetchedResultsController</span> <span class="nl">objectAtIndexPath:</span><span class="n">indexPath</span><span class="p">];</span>
@@ -147,6 +148,7 @@ in the cell can change height we need to calculate the total height of the cell 
 </span><span class='line'><span class="n">CGSize</span> <span class="n">nameLabelFontSize</span> <span class="o">=</span> <span class="p">[[</span><span class="n">account</span> <span class="n">name</span><span class="p">]</span> <span class="nl">sizeWithAttributes:</span><span class="p">[</span><span class="n">NSDictionary</span> <span class="nl">dictionaryWithObject:</span><span class="n">nameLabelFont</span> <span class="nl">forKey:</span><span class="n">NSFontAttributeName</span><span class="p">]];</span>
 </span><span class='line'>
 </span><span class='line'><span class="c1">// ...</span>
+</span><span class='line'>
 </span><span class='line'><span class="n">CGFloat</span> <span class="n">PADDING_OUTER</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
 </span><span class='line'><span class="n">CGFloat</span> <span class="n">totalHeight</span> <span class="o">=</span> <span class="n">PADDING_OUTER</span> <span class="o">+</span> <span class="n">nameLabelFontSize</span><span class="p">.</span><span class="n">height</span> <span class="o">+</span> <span class="p">...</span> <span class="o">+</span> <span class="n">PADDING_OUTER</span><span class="p">;</span>
 </span><span class='line'>
