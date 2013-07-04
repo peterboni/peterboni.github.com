@@ -4,7 +4,7 @@
   <title><![CDATA[Category: UX | Peter Boni]]></title>
   <link href="http://www.peterboni.net/blog/categories/ux/atom.xml" rel="self"/>
   <link href="http://www.peterboni.net/"/>
-  <updated>2013-06-30T13:59:35+08:00</updated>
+  <updated>2013-07-04T20:33:57+08:00</updated>
   <id>http://www.peterboni.net/</id>
   <author>
     <name><![CDATA[Peter Boni]]></name>
@@ -14,10 +14,82 @@
 
   
   <entry>
+    <title type="html"><![CDATA[iOS Formatted Currency Input]]></title>
+    <link href="http://www.peterboni.net/blog/2013/07/04/ios-formatted-currency-input/"/>
+    <updated>2013-07-04T07:00:00+08:00</updated>
+    <id>http://www.peterboni.net/blog/2013/07/04/ios-formatted-currency-input</id>
+    <content type="html"><![CDATA[<p>You&rsquo;re building an iOS app, and need the user to enter a money value. You start by using
+a UITextField. If you want a basic user experience, then you&rsquo;re done.</p>
+
+<p>If you want to give the user <em>something better</em>, then the pain begins. The pain is worth
+it because <strong>small details matter</strong>. I&rsquo;ve taken ideas from a few places &amp; combined them
+into this experience &amp; open source code.</p>
+
+<!--more-->
+
+
+<h2>The Experience in 9 images</h2>
+
+<p>1.We start &amp; sit there, begging the user to enter something. We&rsquo;re showing $0.00, so we have
+sent a signal to them that they are entering a money value. The cursor is flashing at them
+after the last 0 at the end of the formatted money value.</p>
+
+<p><img class="fancybox center" src="/media/images/2013-07-04-ios-formatted-currency-input/1.png" width="396" height="744" title="Start, Shows $0.00" ></p>
+
+<p>2.The user taps the 1 key on the number pad. The display value changes to $0.01</p>
+
+<p><img class="fancybox center" src="/media/images/2013-07-04-ios-formatted-currency-input/2.png" width="396" height="744" title="Tap 1, Changes to $0.01" ></p>
+
+<p>3.The user taps the 2 key on the number pad. The display value changes to $0.12</p>
+
+<p><img class="fancybox center" src="/media/images/2013-07-04-ios-formatted-currency-input/3.png" width="396" height="744" title="Tap 2, Changes to $0.12" ></p>
+
+<p>4.The user taps the 3 key on the number pad. The display value changes to $1.23</p>
+
+<p>They haven&rsquo;t had to enter in a dot. They are just tapping numbers, and the displayed
+money value is formatting itself in front of their eyes.</p>
+
+<p><img class="fancybox center" src="/media/images/2013-07-04-ios-formatted-currency-input/4.png" width="396" height="744" title="Tap 3, Changes to $1.23" ></p>
+
+<p>5.The user taps some more numbers &ndash; 4, 5, and then 6. The display value changes to $1,234.56</p>
+
+<p>We have a comma! The money value is formatted.</p>
+
+<p><img class="fancybox center" src="/media/images/2013-07-04-ios-formatted-currency-input/5.png" width="396" height="744" title="Tap 4, 5, 6, Changes to $1,234.56" ></p>
+
+<p>6.The user taps Delete. The display value changes to $123.45</p>
+
+<p><img class="fancybox center" src="/media/images/2013-07-04-ios-formatted-currency-input/6.png" width="396" height="744" title="Tap Delete, Deletes 6" ></p>
+
+<p>7.The user moves the cursor to after 1, taps Delete. The display value changes to $23.45</p>
+
+<p><img class="fancybox center" src="/media/images/2013-07-04-ios-formatted-currency-input/7.png" width="396" height="744" title="Move cursor to after 1, and Tap Delete, Deletes 1" ></p>
+
+<p>8.From start the user gets ready to paste in &lsquo;$1,000&rsquo; (without quotes) from somewhere else.</p>
+
+<p><img class="fancybox center" src="/media/images/2013-07-04-ios-formatted-currency-input/8.png" width="396" height="744" title="From Start, Get ready to Paste $1,000" ></p>
+
+<p>9.The &lsquo;$1,000&rsquo; gets pasted in &amp; the display value changes to $1,000.00.</p>
+
+<p>Note that the display value didn&rsquo;t change to $10.00, which would have happened if we
+didn&rsquo;t trap the paste and format the value before updating the display value.</p>
+
+<p>Also note that the user could also paste in &lsquo;1000&rsquo; or &lsquo;$1000&rsquo;.</p>
+
+<p><img class="fancybox center" src="/media/images/2013-07-04-ios-formatted-currency-input/9.png" width="396" height="744" title="Paste in $1,000, Changes to $1,000.00" ></p>
+
+<h2>The Code</h2>
+
+<p>Go get it &ndash; <a href="https://github.com/peterboni/FormattedCurrencyInput">FormattedCurrencyInput on GitHub</a>.<br/>
+Fork it, or submit a Pull Request, and let&rsquo;s make it better for others together!</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[iOS 7 Dynamic Type]]></title>
-    <link href="http://www.peterboni.net/blog/2013/06/29/ios-7-dynamic-type/"/>
+    <link href="http://www.peterboni.net/blog/2013/06/29/ios-7-dynamic-type+copy/"/>
     <updated>2013-06-29T07:00:00+08:00</updated>
-    <id>http://www.peterboni.net/blog/2013/06/29/ios-7-dynamic-type</id>
+    <id>http://www.peterboni.net/blog/2013/06/29/ios-7-dynamic-type copy</id>
     <content type="html"><![CDATA[<p>iOS 7 introduces Dynamic Type, which if apps choose to support it, gives the user
 control over text size in an app. Web pages have had this feature for free since the early
 days of the web, but web browsers moved away from dynamic text sizing.

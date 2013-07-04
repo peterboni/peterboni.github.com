@@ -5,11 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Glitch in the Matrix - Peter Boni</title>
+  <title>iOS Formatted Currency Input - Peter Boni</title>
   <meta name="author" content="Peter Boni">
 
   
-  <meta name="description" content="He sprinted, his powerful legs heaving with the strain of propelling his massive 6 foot 3 inch frame forward. His lungs sucked in as much air as they &hellip;">
+  <meta name="description" content="You&rsquo;re building an iOS app, and need the user to enter a money value. You start by using
+a UITextField. If you want a basic user experience, &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://www.peterboni.net/blog/2013/03/09/glitch-in-the-matrix">
+  <link rel="canonical" href="http://www.peterboni.net/blog/2013/07/04/ios-formatted-currency-input">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Peter Boni" type="application/atom+xml">
@@ -83,7 +84,7 @@
   
   <header>
     
-      <h1 class="entry-title">Glitch in the Matrix</h1>
+      <h1 class="entry-title">iOS Formatted Currency Input</h1>
     
     
       <p class="meta">
@@ -99,29 +100,77 @@
   
 
 
-<time datetime="2013-03-09T07:00:00+08:00" pubdate data-updated="true">Mar 9<span>th</span>, 2013</time>
+<time datetime="2013-07-04T07:00:00+08:00" pubdate data-updated="true">Jul 4<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>He sprinted, his powerful legs heaving with the strain of propelling his massive 6 foot 3 inch frame forward. His lungs sucked in as much air as they could in the short span they were allowed. They were gaining on him. Two distinct shapes in the distance. 17.2 meters &amp; closing.</p>
+<div class="entry-content"><p>You&rsquo;re building an iOS app, and need the user to enter a money value. You start by using
+a UITextField. If you want a basic user experience, then you&rsquo;re done.</p>
+
+<p>If you want to give the user <em>something better</em>, then the pain begins. The pain is worth
+it because <strong>small details matter</strong>. I&rsquo;ve taken ideas from a few places &amp; combined them
+into this experience &amp; open source code.</p>
 
 <!--more-->
 
 
-<p>As he glanced back a few moments before he could just make out their features with the ambient lighting from the houses &amp; dim street lights. Their faces were wolf like, but sinister, hideously contorted. They were howling, but only he could hear it. Long ethereal tormented howls filled his night. His v-band augmented reality display identified them as level 6 ghosts. They were there, but not really there. The two runners were also wearing v-bands, and running in another part of the world. They were chosen by v-net as competitors and spawned on his run.</p>
+<h2>The Experience in 9 images</h2>
 
-<p>He chuckled to himself, as to them he appeared as Astro Boy. These young kids had no originality, thinking they could psych older runners. But this was serious. If he let them gain ground he risked his level 7 standing in the league.</p>
+<p>1.We start &amp; sit there, begging the user to enter something. We&rsquo;re showing $0.00, so we have
+sent a signal to them that they are entering a money value. The cursor is flashing at them
+after the last 0 at the end of the formatted money value.</p>
 
-<p>&lsquo;Show my last ghost&rsquo; he said out loud while running, seemingly to himself. His previous self spawned in front of him, running his previous run. He could see he was slacking off &amp; the two wolf like ghosts were gaining. He forced his legs to increase his pace, and sucked in more oxygen. He started gaining on his past ghost &amp; pulling away from his pursuers.</p>
+<p><img class="fancybox center" src="/media/images/2013-07-04-ios-formatted-currency-input/1.png" width="396" height="744" title="Start, Shows $0.00" ></p>
 
-<p>Suddenly his vision went black, and then it was back, but instead of the familiar scene in front of him he saw trees densely packed together. He was in a forest. The scene was moving fast, bouncing up and down, left and right. He kept running straight along the path he was on, but couldn&rsquo;t see where he was going. His v-band was showing him someone from somewhere else. What the frak was happening!</p>
+<p>2.The user taps the 1 key on the number pad. The display value changes to $0.01</p>
 
-<p>All this happened in seconds, so he kept running, confused, and expecting that the v-band would correct itself. The scene from his v-band lurched as if the person fell, and then was facing up looking at the trees &amp; dark sky. The vision started to darken, but before it went completely dark he saw what looked like a primitive hunter standing over him. He looked big, muscly, but with short arms, and was carrying a large spear.</p>
+<p><img class="fancybox center" src="/media/images/2013-07-04-ios-formatted-currency-input/2.png" width="396" height="744" title="Tap 1, Changes to $0.01" ></p>
 
-<p><a href="/blog/2013/02/15/running/">Running</a></p>
+<p>3.The user taps the 2 key on the number pad. The display value changes to $0.12</p>
+
+<p><img class="fancybox center" src="/media/images/2013-07-04-ios-formatted-currency-input/3.png" width="396" height="744" title="Tap 2, Changes to $0.12" ></p>
+
+<p>4.The user taps the 3 key on the number pad. The display value changes to $1.23</p>
+
+<p>They haven&rsquo;t had to enter in a dot. They are just tapping numbers, and the displayed
+money value is formatting itself in front of their eyes.</p>
+
+<p><img class="fancybox center" src="/media/images/2013-07-04-ios-formatted-currency-input/4.png" width="396" height="744" title="Tap 3, Changes to $1.23" ></p>
+
+<p>5.The user taps some more numbers &ndash; 4, 5, and then 6. The display value changes to $1,234.56</p>
+
+<p>We have a comma! The money value is formatted.</p>
+
+<p><img class="fancybox center" src="/media/images/2013-07-04-ios-formatted-currency-input/5.png" width="396" height="744" title="Tap 4, 5, 6, Changes to $1,234.56" ></p>
+
+<p>6.The user taps Delete. The display value changes to $123.45</p>
+
+<p><img class="fancybox center" src="/media/images/2013-07-04-ios-formatted-currency-input/6.png" width="396" height="744" title="Tap Delete, Deletes 6" ></p>
+
+<p>7.The user moves the cursor to after 1, taps Delete. The display value changes to $23.45</p>
+
+<p><img class="fancybox center" src="/media/images/2013-07-04-ios-formatted-currency-input/7.png" width="396" height="744" title="Move cursor to after 1, and Tap Delete, Deletes 1" ></p>
+
+<p>8.From start the user gets ready to paste in &lsquo;$1,000&rsquo; (without quotes) from somewhere else.</p>
+
+<p><img class="fancybox center" src="/media/images/2013-07-04-ios-formatted-currency-input/8.png" width="396" height="744" title="From Start, Get ready to Paste $1,000" ></p>
+
+<p>9.The &lsquo;$1,000&rsquo; gets pasted in &amp; the display value changes to $1,000.00.</p>
+
+<p>Note that the display value didn&rsquo;t change to $10.00, which would have happened if we
+didn&rsquo;t trap the paste and format the value before updating the display value.</p>
+
+<p>Also note that the user could also paste in &lsquo;1000&rsquo; or &lsquo;$1000&rsquo;.</p>
+
+<p><img class="fancybox center" src="/media/images/2013-07-04-ios-formatted-currency-input/9.png" width="396" height="744" title="Paste in $1,000, Changes to $1,000.00" ></p>
+
+<h2>The Code</h2>
+
+<p>Go get it &ndash; <a href="https://github.com/peterboni/FormattedCurrencyInput">FormattedCurrencyInput on GitHub</a>.<br/>
+Fork it, or submit a Pull Request, and let&rsquo;s make it better for others together!</p>
 </div>
 
 
@@ -144,12 +193,12 @@
   
 
 
-<time datetime="2013-03-09T07:00:00+08:00" pubdate data-updated="true">Mar 9<span>th</span>, 2013</time>
+<time datetime="2013-07-04T07:00:00+08:00" pubdate data-updated="true">Jul 4<span>th</span>, 2013</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/story/'>Story</a>
+    <a class='category' href='/blog/categories/dev/'>Dev</a>, <a class='category' href='/blog/categories/mobile/'>Mobile</a>, <a class='category' href='/blog/categories/ui/'>UI</a>, <a class='category' href='/blog/categories/ux/'>UX</a>
   
 </span>
 
@@ -158,7 +207,7 @@
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://www.peterboni.net/blog/2013/03/09/glitch-in-the-matrix/" data-via="peterboni" data-counturl="http://www.peterboni.net/blog/2013/03/09/glitch-in-the-matrix/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://www.peterboni.net/blog/2013/07/04/ios-formatted-currency-input/" data-via="peterboni" data-counturl="http://www.peterboni.net/blog/2013/07/04/ios-formatted-currency-input/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -171,10 +220,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2013/02/24/creating-software/" title="Previous Post: Creating Software">&laquo; Creating Software</a>
+        <a class="basic-alignment left" href="/blog/2013/06/29/ios-7-dynamic-type+copy/" title="Previous Post: iOS 7 Dynamic Type">&laquo; iOS 7 Dynamic Type</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2013/04/03/app-dev-is-not-rapid/" title="Next Post: App Dev is not Rapid">App Dev is not Rapid &raquo;</a>
       
     </p>
   </footer>

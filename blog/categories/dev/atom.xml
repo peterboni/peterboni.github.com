@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Dev | Peter Boni]]></title>
   <link href="http://www.peterboni.net/blog/categories/dev/atom.xml" rel="self"/>
   <link href="http://www.peterboni.net/"/>
-  <updated>2013-06-30T13:59:35+08:00</updated>
+  <updated>2013-07-04T20:33:57+08:00</updated>
   <id>http://www.peterboni.net/</id>
   <author>
     <name><![CDATA[Peter Boni]]></name>
@@ -14,10 +14,82 @@
 
   
   <entry>
+    <title type="html"><![CDATA[iOS Formatted Currency Input]]></title>
+    <link href="http://www.peterboni.net/blog/2013/07/04/ios-formatted-currency-input/"/>
+    <updated>2013-07-04T07:00:00+08:00</updated>
+    <id>http://www.peterboni.net/blog/2013/07/04/ios-formatted-currency-input</id>
+    <content type="html"><![CDATA[<p>You&rsquo;re building an iOS app, and need the user to enter a money value. You start by using
+a UITextField. If you want a basic user experience, then you&rsquo;re done.</p>
+
+<p>If you want to give the user <em>something better</em>, then the pain begins. The pain is worth
+it because <strong>small details matter</strong>. I&rsquo;ve taken ideas from a few places &amp; combined them
+into this experience &amp; open source code.</p>
+
+<!--more-->
+
+
+<h2>The Experience in 9 images</h2>
+
+<p>1.We start &amp; sit there, begging the user to enter something. We&rsquo;re showing $0.00, so we have
+sent a signal to them that they are entering a money value. The cursor is flashing at them
+after the last 0 at the end of the formatted money value.</p>
+
+<p><img class="fancybox center" src="/media/images/2013-07-04-ios-formatted-currency-input/1.png" width="396" height="744" title="Start, Shows $0.00" ></p>
+
+<p>2.The user taps the 1 key on the number pad. The display value changes to $0.01</p>
+
+<p><img class="fancybox center" src="/media/images/2013-07-04-ios-formatted-currency-input/2.png" width="396" height="744" title="Tap 1, Changes to $0.01" ></p>
+
+<p>3.The user taps the 2 key on the number pad. The display value changes to $0.12</p>
+
+<p><img class="fancybox center" src="/media/images/2013-07-04-ios-formatted-currency-input/3.png" width="396" height="744" title="Tap 2, Changes to $0.12" ></p>
+
+<p>4.The user taps the 3 key on the number pad. The display value changes to $1.23</p>
+
+<p>They haven&rsquo;t had to enter in a dot. They are just tapping numbers, and the displayed
+money value is formatting itself in front of their eyes.</p>
+
+<p><img class="fancybox center" src="/media/images/2013-07-04-ios-formatted-currency-input/4.png" width="396" height="744" title="Tap 3, Changes to $1.23" ></p>
+
+<p>5.The user taps some more numbers &ndash; 4, 5, and then 6. The display value changes to $1,234.56</p>
+
+<p>We have a comma! The money value is formatted.</p>
+
+<p><img class="fancybox center" src="/media/images/2013-07-04-ios-formatted-currency-input/5.png" width="396" height="744" title="Tap 4, 5, 6, Changes to $1,234.56" ></p>
+
+<p>6.The user taps Delete. The display value changes to $123.45</p>
+
+<p><img class="fancybox center" src="/media/images/2013-07-04-ios-formatted-currency-input/6.png" width="396" height="744" title="Tap Delete, Deletes 6" ></p>
+
+<p>7.The user moves the cursor to after 1, taps Delete. The display value changes to $23.45</p>
+
+<p><img class="fancybox center" src="/media/images/2013-07-04-ios-formatted-currency-input/7.png" width="396" height="744" title="Move cursor to after 1, and Tap Delete, Deletes 1" ></p>
+
+<p>8.From start the user gets ready to paste in &lsquo;$1,000&rsquo; (without quotes) from somewhere else.</p>
+
+<p><img class="fancybox center" src="/media/images/2013-07-04-ios-formatted-currency-input/8.png" width="396" height="744" title="From Start, Get ready to Paste $1,000" ></p>
+
+<p>9.The &lsquo;$1,000&rsquo; gets pasted in &amp; the display value changes to $1,000.00.</p>
+
+<p>Note that the display value didn&rsquo;t change to $10.00, which would have happened if we
+didn&rsquo;t trap the paste and format the value before updating the display value.</p>
+
+<p>Also note that the user could also paste in &lsquo;1000&rsquo; or &lsquo;$1000&rsquo;.</p>
+
+<p><img class="fancybox center" src="/media/images/2013-07-04-ios-formatted-currency-input/9.png" width="396" height="744" title="Paste in $1,000, Changes to $1,000.00" ></p>
+
+<h2>The Code</h2>
+
+<p>Go get it &ndash; <a href="https://github.com/peterboni/FormattedCurrencyInput">FormattedCurrencyInput on GitHub</a>.<br/>
+Fork it, or submit a Pull Request, and let&rsquo;s make it better for others together!</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[iOS 7 Dynamic Type]]></title>
-    <link href="http://www.peterboni.net/blog/2013/06/29/ios-7-dynamic-type/"/>
+    <link href="http://www.peterboni.net/blog/2013/06/29/ios-7-dynamic-type+copy/"/>
     <updated>2013-06-29T07:00:00+08:00</updated>
-    <id>http://www.peterboni.net/blog/2013/06/29/ios-7-dynamic-type</id>
+    <id>http://www.peterboni.net/blog/2013/06/29/ios-7-dynamic-type copy</id>
     <content type="html"><![CDATA[<p>iOS 7 introduces Dynamic Type, which if apps choose to support it, gives the user
 control over text size in an app. Web pages have had this feature for free since the early
 days of the web, but web browsers moved away from dynamic text sizing.
@@ -524,89 +596,6 @@ Simplicity.</p>
 <p>If only we had all of these things, all of the time.</p>
 
 <p>You can create software without some of these things, but not <em>great</em> software.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[#failmeaningfully]]></title>
-    <link href="http://www.peterboni.net/blog/2013/01/01/failmeaningfully/"/>
-    <updated>2013-01-01T07:00:00+08:00</updated>
-    <id>http://www.peterboni.net/blog/2013/01/01/failmeaningfully</id>
-    <content type="html"><![CDATA[<p>It was August 2010. Over 2 years ago. My beautiful daughter Abigail was 2 years old. The iPhone 4 had just come out, and the smartphone revolution was in full swing. All I needed was an idea. Somehow I found myself become part of a like minded, passionate &amp; committed team, with some of the best people I have ever had the privilege or pleasure to work with. I say somehow because I&rsquo;ve always tried to go with the flow. It just happened. Redistore was born.</p>
-
-<p><img class="fancybox center" src="/media/images/2013-01-01-failmeaningfully/WebSite1.png" width="569" height="635" title="Redistore Web Site" ></p>
-
-<!--more-->
-
-
-<p>The idea &amp; vision was simple. Wouldn&rsquo;t it be cool if you could order &amp; pay for your coffee <em>before</em> you arrived at the store, just waltz in, bypass the queue, pick it up &amp; go. It&rsquo;s paid for so there&rsquo;s no fumbling around for change, or paying with a card which was time consuming before contactless payment, e.g. MasterCard PayPass. I thought the idea had potential. The team thought the idea had potential. People we talked to thought the idea had potential. We decided as a team to take a risk. &lsquo;<a href="http://en.wikipedia.org/wiki/Field_of_Dreams">If you build it, he will come</a>&rsquo;, we all heard the voice whisper. Others were skeptical, but not us. We built it.</p>
-
-<p>2 years later, and Redistore has failed. This is what I learnt.</p>
-
-<h2>Reality</h2>
-
-<p>I can still remember how it started. The excitement of exploring the idea. Formulating it. Talking about it. Becoming a team. It felt awesome. That&rsquo;s the Hollywood beginning.</p>
-
-<p>The reality was a hard slog of trying to work two jobs. 15 to 16 hour days, 5 to 6 days a week. Rise at 6am, cycle to work &amp; be working by 7am. Leave at 4pm. Be home &amp; sorted by 5pm. Two hours to spend with my family, which I&rsquo;m guilty of not doing enough of. At work by 7pm. Work till 9pm or 10pm. Rinse &amp; repeat. And don&rsquo;t forget the weekends. You get the picture. I had no life.</p>
-
-<h2>Tech</h2>
-
-<p><em>But</em> we built something that&rsquo;s bloody cool &amp; has possibility. A fully customisable, real time online ordering system for low value, high volume consumables. Coffee stores. Take away food. The order is paid for by the customer using their Redistore account which they can &lsquo;top up&rsquo; using PayPal or a Credit Card. The store gets a verified order. It&rsquo;s in real time. There&rsquo;s no queueing. Win win.</p>
-
-<p>The technology &amp; platform that we built was the fun part.</p>
-
-<p>The customer web client was built using Sencha ExtJS 3 and supports all major browsers. It was designed &amp; built from scratch to provide a <em>fast</em> UX (User Experience) for browsing stores &amp; ordering, unlike most classic page request &amp; response web stores. ExtJS is an amazing platform, but has a steep learning curve, and ExtJS 4 broke compatibility for ExtJS 3 apps; there is significant work required to upgrade your app.</p>
-
-<p><img class="fancybox" src="/media/images/2013-01-01-failmeaningfully/WebClient1.png" width="795" height="600" title="Redistore Web Site" ></p>
-
-<p><img class="fancybox" src="/media/images/2013-01-01-failmeaningfully/WebClient2.png" width="795" height="600" title="Redistore Web Site" ></p>
-
-<p><img class="fancybox" src="/media/images/2013-01-01-failmeaningfully/WebClient3.png" width="795" height="600" title="Redistore Web Site" ></p>
-
-<p>The now defunct customer mobile client was built using Sencha Touch 1. The native vs. web app mobile holy war was raging, and we decided to build a web app. It was a mistake. The mobile client worked adequately on iOS, but on Android it was unusable. The tools were not ready. Facebook had not yet <a href="http://techcrunch.com/2012/09/11/mark-zuckerberg-our-biggest-mistake-with-mobile-was-betting-too-much-on-html5/">admitted their mistake</a>, nor Sencha fired their <a href="http://www.sencha.com/blog/the-making-of-fastbook-an-html5-love-story/">Fastbook</a> return. We needed a <em>great</em> customer UX, and didn&rsquo;t have it.</p>
-
-<p><img class="fancybox left" src="/media/images/2013-01-01-failmeaningfully/iPhoneApp1.png" width="320" height="548" title="Redistore iPhone App" ></p>
-
-<p>The store receiver client was also built with Sencha Touch, and performs adequately for stores on an iPod.</p>
-
-<p>The web clients communicate via Ajax to the back end action style JSON based web services developed using .NET WCF. If building using the same core technology now, we&rsquo;d seriously look at Web API &amp; RESTful services. There&rsquo;s also a ton of awesome back-end enterprise system type stuff (database, reconciliation, reporting, MI etc.), that was built by a <a href="http://en.wikipedia.org/wiki/Cylon_(Battlestar_Galactica)">Cylon</a>. Seriously. They work <em>hard</em>, I guess because they don&rsquo;t need to sleep.</p>
-
-<p>To address the <em>great</em> customer mobile UX, after go-live we spent 3 months building a native iPhone app, and 3 months building a native Android app. It was a great learning experience at the cost of 6 months of effort. Without getting into details of our approach, or religious debates, I hope that we (the industry) can move <strong>forward</strong> to <em>the web</em>. How we do that is for <a href="http://www.okito.net/post/38255553240/the-mobile-web">smart people</a> to <a href="http://lilly.tumblr.com/post/38309067913/asymmetry">work out</a>.</p>
-
-<h2>Go Live</h2>
-
-<p>We went live on Friday 1st April 2011 (oh the irony) after 8 months of intense development. There were teething problems as with any new production system, and we worked through them to get it to a stable state.</p>
-
-<p>We tried to sell it mostly to coffee stores the old fashioned way, by approaching them, talking to them about it, showing them what it could do. Once we had a store on board we did really simple customer advertising at the store.</p>
-
-<p>Although it&rsquo;s <em>far</em> from being a runaway success, it has &amp; continues to be <em>successful</em>, in that it ticks along &amp; is used every single business day, with no issues.</p>
-
-<p>Over 18 months in production, what are the stats?</p>
-
-<ul>
-<li>250 accounts. 43 active in November 2012. 68 with a balance > $5.</li>
-<li>5 stores. 2 active.</li>
-<li>4,712 orders (multiple items per order). 63% using web. 36% using mobile.</li>
-<li>1,900 top ups (min $5 per top up).</li>
-</ul>
-
-
-<p>The order percentages between web &amp; mobile are interesting. The 2 active stores are located in office buildings, and it implies customers prefer using the web client to order from their desks, before going down to pickup their order.</p>
-
-<h2>Reflection</h2>
-
-<p>The enthusiasm &amp; commitment for the idea &amp; vision has dispersed. What it could have been didn&rsquo;t materialise, and not by lack of effort.</p>
-
-<p>I don&rsquo;t think we really understood our customer, as we really just replaced phone orders. We didn&rsquo;t have an automated store onboarding process, so bringing stores on was a long complicated process. We didn&rsquo;t do marketing.</p>
-
-<p>We took a gamble, and it didn&rsquo;t pay off. We failed.</p>
-
-<h2>End</h2>
-
-<p>It&rsquo;s time to move on. To take what I&rsquo;ve learnt &amp; move forward. I&rsquo;m excited about seeking new ideas &amp; projects. Exploring. Finding. Trying. I love the process of creating things. I&rsquo;ve heard the expression &lsquo;<strong>fail fast</strong>&rsquo;, but I think you should &lsquo;<strong>fail meaningfully</strong>&rsquo; at something you choose, have <a href="http://www.zurb.com/article/1131/passion-to-fail-fast">passion</a>
- for, believe in, and work hard at. Learning takes quality time.</p>
-
-<p>It&rsquo;s time to move on … <em>after</em> I finish reading <a href="http://theleanstartup.com">The Lean Startup</a> by Eric Ries.</p>
 ]]></content>
   </entry>
   
