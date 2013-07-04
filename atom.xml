@@ -4,7 +4,7 @@
   <title><![CDATA[Peter Boni]]></title>
   <link href="http://www.peterboni.net/atom.xml" rel="self"/>
   <link href="http://www.peterboni.net/"/>
-  <updated>2013-07-04T20:33:57+08:00</updated>
+  <updated>2013-07-04T20:39:27+08:00</updated>
   <id>http://www.peterboni.net/</id>
   <author>
     <name><![CDATA[Peter Boni]]></name>
@@ -87,9 +87,9 @@ Fork it, or submit a Pull Request, and let&rsquo;s make it better for others tog
   
   <entry>
     <title type="html"><![CDATA[iOS 7 Dynamic Type]]></title>
-    <link href="http://www.peterboni.net/blog/2013/06/29/ios-7-dynamic-type+copy/"/>
+    <link href="http://www.peterboni.net/blog/2013/06/29/ios-7-dynamic-type/"/>
     <updated>2013-06-29T07:00:00+08:00</updated>
-    <id>http://www.peterboni.net/blog/2013/06/29/ios-7-dynamic-type copy</id>
+    <id>http://www.peterboni.net/blog/2013/06/29/ios-7-dynamic-type</id>
     <content type="html"><![CDATA[<p>iOS 7 introduces Dynamic Type, which if apps choose to support it, gives the user
 control over text size in an app. Web pages have had this feature for free since the early
 days of the web, but web browsers moved away from dynamic text sizing.
