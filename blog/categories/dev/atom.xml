@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Dev | Peter Boni]]></title>
   <link href="http://www.peterboni.net/blog/categories/dev/atom.xml" rel="self"/>
   <link href="http://www.peterboni.net/"/>
-  <updated>2013-10-20T14:26:06+08:00</updated>
+  <updated>2013-12-07T10:41:23+08:00</updated>
   <id>http://www.peterboni.net/</id>
   <author>
     <name><![CDATA[Peter Boni]]></name>
@@ -12,6 +12,503 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[A Cloud Backend using Node.js on AWS]]></title>
+    <link href="http://www.peterboni.net/blog/2013/12/07/a-cloud-backend-using-nodejs-on-aws/"/>
+    <updated>2013-12-07T07:00:00+08:00</updated>
+    <id>http://www.peterboni.net/blog/2013/12/07/a-cloud-backend-using-nodejs-on-aws</id>
+    <content type="html"><![CDATA[<p>What?! You&rsquo;re building an awesome mobile app, like this one &ndash;
+<a href="/blog/2013/06/29/ios-7-dynamic-type/">iOS 7 Dynamic Type</a>, and <a href="/blog/2013/06/24/ios-7-userxlistview/">iOS 7 UserXListView</a>,
+and get to the point where you need a <em>backend</em>.
+Oh no! Your complexity just increased exponentially.</p>
+
+<p>Luckily the latest cloud computing XaaS (Everything as a service) is called a
+<a href="http://en.wikipedia.org/wiki/Backend_as_a_service">BaaS</a> (Backend as a service).
+BaaS offerings include <a href="https://parse.com">Parse</a> (which was acquired by Facebook earlier this year),
+and the open source <a href="http://www.baasbox.com">BaasBox</a>.
+The idea is that a BaaS abstracts the complexity of building a backend.</p>
+
+<p>But is building a backend really all that difficult using cloud computing?
+Let&rsquo;s find out &amp; build a cloud backend using <a href="http://nodejs.org">node.js</a> on <a href="http://aws.amazon.com">AWS</a>.
+Let&rsquo;s get started.</p>
+
+<!--more-->
+
+
+<h2>Node.js</h2>
+
+<p>First download &amp; install <a href="http://nodejs.org">Node.js</a>, which is a platform for building applications in JavaScript.
+It&rsquo;s powered by the Google Chrome V8 JavaScript engine.
+We&rsquo;re going to use Node.js &amp; node packages to expose web services for our awesome mobile app.</p>
+
+<p>Yes, we&rsquo;re going to use JavaScript to power our cloud backend. Cool!</p>
+
+<p>The goal is to build a cloud backend &ndash; expose a RESTful web API that supports OAuth 2.0, with a database.
+This blog post should serve as the foundation to start you on that journey.</p>
+
+<p>We will be using OS X Mavericks (Version 10.9), Terminal, and <a href="http://www.barebones.com/products/textwrangler/">TextWrangler</a>
+which is available free from the App Store.</p>
+
+<p>Create &amp; change to a new folder called <strong>cloudbackend</strong> from your Documents folder.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="gp">peters-mac-mini:Documents peterboni$</span> mkdir cloudbackend
+</span><span class='line'><span class="gp">peters-mac-mini:Documents peterboni$</span> <span class="nb">cd </span>cloudbackend/
+</span><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Create a file called <strong>package.json</strong> and put the following JSON data object in it.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">name</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span><span class="o">:</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">cloudbackend</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;,</span>
+</span><span class='line'>  <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">description</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span><span class="o">:</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;,</span>
+</span><span class='line'>  <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">version</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span><span class="o">:</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="mf">0.0</span><span class="p">.</span><span class="mi">1</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;,</span>
+</span><span class='line'>  <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="kr">private</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>  <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">scripts</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span><span class="o">:</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="s2">&quot;start&quot;</span><span class="o">:</span> <span class="s2">&quot;node app&quot;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="p">},</span>
+</span><span class='line'>  <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">dependencies</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span><span class="o">:</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="s2">&quot;express&quot;</span><span class="o">:</span> <span class="s2">&quot;3.x&quot;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Use npm (Node Package Manager) to install <a href="http://expressjs.com">Express</a>, which is the
+dependency you identified in the above package.json file. Express is a web
+application framework. Enter &lsquo;npm install&rsquo;.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span> npm install
+</span><span class='line'><span class="go">npm http GET &lt;a href=&quot;https://registry.npmjs.org/express&quot;&gt;https://registry.npmjs.org/express&lt;/a&gt;</span>
+</span><span class='line'><span class="go">&amp;hellip;</span>
+</span><span class='line'><span class="go">&lt;a href=&quot;&amp;#109;&amp;#97;&amp;#x69;&amp;#108;&amp;#x74;&amp;#111;&amp;#x3a;&amp;#x65;&amp;#x78;&amp;#x70;&amp;#x72;&amp;#101;&amp;#x73;&amp;#115;&amp;#x40;&amp;#x33;&amp;#x2e;&amp;#x34;&amp;#x2e;&amp;#x36;&quot;&gt;&amp;#101;&amp;#x78;&amp;#x70;&amp;#114;&amp;#x65;&amp;#115;&amp;#115;&amp;#64;&amp;#51;&amp;#46;&amp;#x34;&amp;#46;&amp;#x36;&lt;/a&gt; node_modules/express</span>
+</span><span class='line'><span class="go">├── &lt;a href=&quot;&amp;#x6d;&amp;#97;&amp;#105;&amp;#x6c;&amp;#116;&amp;#x6f;&amp;#x3a;&amp;#x6d;&amp;#101;&amp;#x74;&amp;#104;&amp;#111;&amp;#100;&amp;#x73;&amp;#x40;&amp;#x30;&amp;#x2e;&amp;#49;&amp;#46;&amp;#48;&quot;&gt;&amp;#109;&amp;#101;&amp;#x74;&amp;#104;&amp;#x6f;&amp;#x64;&amp;#115;&amp;#x40;&amp;#x30;&amp;#46;&amp;#49;&amp;#46;&amp;#48;&lt;/a&gt;</span>
+</span><span class='line'><span class="go">&amp;hellip;</span>
+</span><span class='line'><span class="go">└── &lt;a href=&quot;&amp;#x6d;&amp;#x61;&amp;#105;&amp;#108;&amp;#116;&amp;#x6f;&amp;#x3a;&amp;#x63;&amp;#x6f;&amp;#x6e;&amp;#110;&amp;#x65;&amp;#x63;&amp;#x74;&amp;#64;&amp;#x32;&amp;#x2e;&amp;#49;&amp;#x31;&amp;#46;&amp;#50;&quot;&gt;&amp;#x63;&amp;#x6f;&amp;#x6e;&amp;#x6e;&amp;#101;&amp;#99;&amp;#x74;&amp;#x40;&amp;#50;&amp;#46;&amp;#49;&amp;#49;&amp;#46;&amp;#50;&lt;/a&gt; (uid2@0.0.3, pause@0.0.1, qs@0.6.5, bytes@0.2.1, raw-body@1.1.2, negotiator@0.3.0, &lt;a href=&quot;&amp;#109;&amp;#97;&amp;#x69;&amp;#108;&amp;#x74;&amp;#x6f;&amp;#58;&amp;#109;&amp;#117;&amp;#x6c;&amp;#116;&amp;#x69;&amp;#x70;&amp;#x61;&amp;#x72;&amp;#x74;&amp;#x79;&amp;#64;&amp;#50;&amp;#46;&amp;#50;&amp;#46;&amp;#x30;&quot;&gt;&amp;#x6d;&amp;#x75;&amp;#x6c;&amp;#x74;&amp;#x69;&amp;#x70;&amp;#97;&amp;#114;&amp;#116;&amp;#121;&amp;#x40;&amp;#50;&amp;#x2e;&amp;#50;&amp;#46;&amp;#48;&lt;/a&gt;)</span>
+</span><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Create a file called <strong>app.js</strong> with the following content.
+All we are doing here is exposing one HTTP GET method request, available at &lsquo;/test&rsquo;,
+which returns a JSON data object. A simple test.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">express</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;),</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;http&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">app</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">port</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;,</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">PORT</span> <span class="o">||</span> <span class="mi">3000</span><span class="p">);</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="err">/test&amp;rsquo;, function(req, res) {</span>
+</span><span class='line'>  <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">({</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">message</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;</span><span class="o">:&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">hi</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;});</span>
+</span><span class='line'><span class="p">});</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="nx">app</span><span class="p">).</span><span class="nx">listen</span><span class="p">(</span><span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">port</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;),</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">Cloudbackend</span> <span class="nx">listening</span> <span class="nx">on</span> <span class="nx">port</span> <span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span> <span class="o">+</span> <span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">port</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;));</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Let&rsquo;s test it!
+Enter &lsquo;node app&rsquo;.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span> node app
+</span><span class='line'><span class="go">Cloudbackend listening on port 3000</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Now open your favourite web browser, and navigate to <a href="http://localhost:3000/test">http://localhost:3000/test</a></p>
+
+<p><img class="fancybox center" src="/media/images/2013-12-07-a-cloud-backend-using-nodejs-on-aws/1-node-app.png" width="914" height="468"></p>
+
+<p>Congratulations! You&rsquo;ve just successfully built a RESTful web API with a single <em>resource</em>
+called <em>test</em> which is responding to a HTTP GET method request, and is returning a
+JSON data object.</p>
+
+<p>Let&rsquo;s deploy our backend to the cloud.</p>
+
+<h2>AWS</h2>
+
+<p>With <a href="http://aws.amazon.com">AWS</a> (Amazon Web Services) we can easily deploy our backend to the cloud while
+still keeping flexibility &amp; control &ndash; things that a BaaS takes away by abstracting the complexity.</p>
+
+<p>First sign up for the very generous <a href="http://aws.amazon.com/free/">AWS Free Usage Tier</a>.
+This simple tutorial should not result in charges to your account.</p>
+
+<p>We are going to deploy <strong>cloudbackend</strong> as an Application into EB (<a href="http://aws.amazon.com/elasticbeanstalk/">Elastic Beanstalk</a>)
+which is an AWS <em>Application Container</em>. The <a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.concepts.architecture.html">Architectural Overview</a> shows &amp;
+explains what Elastic Beanstalk is.</p>
+
+<ol>
+<li>You deploy your application to EB and it gets a unique URL &ndash; <a href="http://myapp.elasticbeanstalk.com">http://myapp.elasticbeanstalk.com</a></li>
+<li>An Auto Scaling Group is created with at least 1 <a href="http://aws.amazon.com/ec2/">EC2</a> Instance (basically a VM &ndash; Virtual Machine).</li>
+<li>Traffic to your application URL first goes through the ELB (Elastic Load Balancer), and then to an EC2 Instance.</li>
+</ol>
+
+
+<p>Once setup all AWS resources are automatically provisioned &amp; configured.
+You have a fully <strong>auto load balanced, auto scaled cloud application environment</strong>.</p>
+
+<p>Next, download &amp; install <a href="http://git-scm.com/">Git</a>.</p>
+
+<p>Initialise your <strong>cloudbackend</strong> Git repository. Enter &lsquo;git init&rsquo;, followed by
+the other commands in the following console code block.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span> git init
+</span><span class='line'><span class="go">Initialized empty Git repository in /Users/peterboni/Documents/cloudbackend/.git/</span>
+</span><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span> cat &gt; .gitignore &amp;lt;&amp;lt;EOT
+</span><span class='line'><span class="go">node_modules/</span>
+</span><span class='line'><span class="go">.gitignore</span>
+</span><span class='line'><span class="go">.elasticbeanstalk/</span>
+</span><span class='line'><span class="go">EOT</span>
+</span><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span> git add .
+</span><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span> git commit -m &amp;ldquo;initial app&amp;rdquo;
+</span><span class='line'><span class="go">[master (root-commit) 889e876] initial app</span>
+</span><span class='line'><span class="go"> 2 files changed, 26 insertions(+)</span>
+</span><span class='line'><span class="go"> create mode 100644 app.js</span>
+</span><span class='line'><span class="go"> create mode 100644 package.json</span>
+</span><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Next download &amp; extract the <a href="http://aws.amazon.com/code/6752709412171743">AWS Elastic Beanstalk Command Line Tool</a> to
+your Documents folder (the cloudbackend folder should be in your Documents folder).</p>
+
+<p>Next add the appropriate EB Python folder to your PATH.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span> <span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/Users/peterboni/Documents/AWS-ElasticBeanstalk-CLI-2.5.1/eb/macosx/python2.7/
+</span><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>If you have OS X Mavericks (Version 10.9) then you already have Python 2.7.5, else you
+will need to download &amp; install it.</p>
+
+<p>Next we&rsquo;re going to create &amp; configure the <strong>cloudbackend</strong> AWS Elastic Beanstalk
+Application Container. You basically enter &lsquo;eb init&rsquo; and then follow the prompts.</p>
+
+<ol>
+<li>You will need to enter your AWS Access Key ID and Secret Access Key, which
+can be found at the URL given after you enter &lsquo;eb init&rsquo;.</li>
+<li>Select an AWS service region. I entered &lsquo;7&rsquo; for &lsquo;Asia Pacific (Sydney)&rsquo;.</li>
+<li>Accept the default application &amp; environment names by pressing return.</li>
+<li>Enter &lsquo;8&rsquo;, for &lsquo;64bit Amazon Linux 2013.09 running Node.js&rsquo;.</li>
+<li>Enter &lsquo;1&rsquo;, for &lsquo;LoadBalanced&rsquo;.</li>
+<li>Enter &lsquo;n&rsquo;, to skip creating an &lsquo;RDS DB Instance&rsquo;.</li>
+<li>Enter &lsquo;1&rsquo;, for &lsquo;Create a default instance profile&rsquo;.</li>
+</ol>
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span> eb init
+</span><span class='line'><span class="go">To get your AWS Access Key ID and Secret Access Key,</span>
+</span><span class='line'><span class="go">  visit &amp;ldquo;&lt;a href=&quot;https://aws-portal.amazon.com/gp/aws/securityCredentials&quot;&gt;https://aws-portal.amazon.com/gp/aws/securityCredentials&lt;/a&gt;&amp;rdquo;.</span>
+</span><span class='line'><span class="go">Enter your AWS Access Key ID (current value is &amp;ldquo;AKIAJ&lt;strong&gt;&lt;strong&gt;&lt;em&gt;GBOHQ&amp;rdquo;): [enter yours here]</span>
+</span><span class='line'><span class="go">Enter your AWS Secret Access Key (current value is &amp;ldquo;MhYxu&lt;/em&gt;&lt;/strong&gt;&lt;/strong&gt;rJfZx&amp;rdquo;): [enter yours here]</span>
+</span><span class='line'><span class="go">Select an AWS Elastic Beanstalk service region.</span>
+</span><span class='line'><span class="go">Available service regions are:</span>
+</span><span class='line'><span class="go">1) US East (Virginia)</span>
+</span><span class='line'><span class="go">2) US West (Oregon)</span>
+</span><span class='line'><span class="go">3) US West (North California)</span>
+</span><span class='line'><span class="go">4) EU West (Ireland)</span>
+</span><span class='line'><span class="go">5) Asia Pacific (Singapore)</span>
+</span><span class='line'><span class="go">6) Asia Pacific (Tokyo)</span>
+</span><span class='line'><span class="go">7) Asia Pacific (Sydney)</span>
+</span><span class='line'><span class="go">8) South America (Sao Paulo)</span>
+</span><span class='line'><span class="go">Select (1 to 8): 7</span>
+</span><span class='line'><span class="go">Enter an AWS Elastic Beanstalk application name (auto-generated value is &amp;ldquo;cloudbackend&amp;rdquo;):</span>
+</span><span class='line'><span class="go">Enter an AWS Elastic Beanstalk environment name (auto-generated value is &amp;ldquo;cloudbackend-env&amp;rdquo;):</span>
+</span><span class='line'><span class="go">Select a solution stack.</span>
+</span><span class='line'><span class="go">Available solution stacks are:</span>
+</span><span class='line'><span class="go">1) 32bit Amazon Linux 2013.09 running PHP 5.4</span>
+</span><span class='line'><span class="go">2) 64bit Amazon Linux 2013.09 running PHP 5.4</span>
+</span><span class='line'><span class="go">3) 32bit Amazon Linux 2013.09 running PHP 5.5</span>
+</span><span class='line'><span class="go">4) 64bit Amazon Linux 2013.09 running PHP 5.5</span>
+</span><span class='line'><span class="go">5) 32bit Amazon Linux running PHP 5.3</span>
+</span><span class='line'><span class="go">6) 64bit Amazon Linux running PHP 5.3</span>
+</span><span class='line'><span class="go">7) 32bit Amazon Linux 2013.09 running Node.js</span>
+</span><span class='line'><span class="go">8) 64bit Amazon Linux 2013.09 running Node.js</span>
+</span><span class='line'><span class="go">9) 64bit Windows Server 2008 R2 running IIS 7.5</span>
+</span><span class='line'><span class="go">10) 64bit Windows Server 2012 running IIS 8</span>
+</span><span class='line'><span class="go">11) 32bit Amazon Linux 2013.09 running Tomcat 7 Java 7</span>
+</span><span class='line'><span class="go">12) 64bit Amazon Linux 2013.09 running Tomcat 7 Java 7</span>
+</span><span class='line'><span class="go">13) 32bit Amazon Linux 2013.09 running Tomcat 7 Java 6</span>
+</span><span class='line'><span class="go">14) 64bit Amazon Linux 2013.09 running Tomcat 7 Java 6</span>
+</span><span class='line'><span class="go">15) 32bit Amazon Linux running Tomcat 7</span>
+</span><span class='line'><span class="go">16) 64bit Amazon Linux running Tomcat 7</span>
+</span><span class='line'><span class="go">17) 32bit Amazon Linux running Tomcat 6</span>
+</span><span class='line'><span class="go">18) 64bit Amazon Linux running Tomcat 6</span>
+</span><span class='line'><span class="go">19) 32bit Amazon Linux 2013.09 running Python 2.7</span>
+</span><span class='line'><span class="go">20) 64bit Amazon Linux 2013.09 running Python 2.7</span>
+</span><span class='line'><span class="go">21) 32bit Amazon Linux 2013.09 running Python</span>
+</span><span class='line'><span class="go">22) 64bit Amazon Linux 2013.09 running Python</span>
+</span><span class='line'><span class="go">23) 32bit Amazon Linux running Python</span>
+</span><span class='line'><span class="go">24) 64bit Amazon Linux running Python</span>
+</span><span class='line'><span class="go">25) 32bit Amazon Linux 2013.09 running Ruby 1.8.7</span>
+</span><span class='line'><span class="go">26) 64bit Amazon Linux 2013.09 running Ruby 1.8.7</span>
+</span><span class='line'><span class="go">27) 32bit Amazon Linux 2013.09 running Ruby 1.9.3</span>
+</span><span class='line'><span class="go">28) 64bit Amazon Linux 2013.09 running Ruby 1.9.3</span>
+</span><span class='line'><span class="go">Select (1 to 28): 8</span>
+</span><span class='line'><span class="go">Select an environment type.</span>
+</span><span class='line'><span class="go">Available environment types are:</span>
+</span><span class='line'><span class="go">1) LoadBalanced</span>
+</span><span class='line'><span class="go">2) SingleInstance</span>
+</span><span class='line'><span class="go">Select (1 to 2): 1</span>
+</span><span class='line'><span class="go">Create an RDS DB Instance? [y/n]: n</span>
+</span><span class='line'><span class="go">Attach an instance profile (current value is &amp;ldquo;[Create a default instance profile]&amp;rdquo;):</span>
+</span><span class='line'><span class="go">1) [Create a default instance profile]</span>
+</span><span class='line'><span class="go">2) aws-elasticbeanstalk-ec2-role</span>
+</span><span class='line'><span class="go">3) [Other instance profile]</span>
+</span><span class='line'><span class="go">Select (1 to 3): 1</span>
+</span><span class='line'><span class="go">Updated AWS Credential file at &amp;ldquo;/Users/peterboni/.elasticbeanstalk/aws_credential_file&amp;rdquo;.&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="go">&lt;p&gt;peters-mac-mini:cloudbackend peterboni$</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Now we just start it. Be patient as this will take a few minutes.</p>
+
+<ol>
+<li>Enter &lsquo;eb start&rsquo;.</li>
+<li>Enter &lsquo;y&rsquo;, to &lsquo;deploy the latest Git commit to your environment&rsquo;.</li>
+</ol>
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span> eb start
+</span><span class='line'><span class="go">Starting application &amp;ldquo;cloudbackend&amp;rdquo;.</span>
+</span><span class='line'><span class="go">Would you like to deploy the latest Git commit to your environment? [y/n]: y</span>
+</span><span class='line'><span class="go">remote:</span>
+</span><span class='line'><span class="go">remote: error: Unable to deploy application version: No Environment found for EnvironmentName = &amp;lsquo;cloudbackend-env&amp;rsquo;.</span>
+</span><span class='line'><span class="go">remote:</span>
+</span><span class='line'><span class="go">To &lt;a href=&quot;https://...:...@git.elasticbeanstalk.ap-southeast-2.amazonaws.com/v1/repos/.../commitid/.../environment/...&quot;&gt;https://...:...@git.elasticbeanstalk.ap-southeast-2.amazonaws.com/v1/repos/.../commitid/.../environment/...&lt;/a&gt;</span>
+</span><span class='line'><span class="go"> * [new branch]      HEAD &amp;ndash;&gt; master&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="go">&lt;p&gt;Waiting for environment &amp;ldquo;cloudbackend-env&amp;rdquo; to launch.</span>
+</span><span class='line'><span class="go">2013-12-07 08:21:09 INFO    createEnvironment is starting.</span>
+</span><span class='line'><span class="go">2013-12-07 08:21:14 INFO    Using elasticbeanstalk-ap-southeast-2-558573496878 as Amazon S3 storage bucket for environment data.</span>
+</span><span class='line'><span class="go">2013-12-07 08:21:46 INFO    Created load balancer named: awseb-e-i-AWSEBLoa-SNLC5NAHWZWP</span>
+</span><span class='line'><span class="go">2013-12-07 08:22:06 INFO    Created security group named: awseb-e-ib22smbwaz-stack-AWSEBSecurityGroup-1DE3TWOH4AYLK</span>
+</span><span class='line'><span class="go">2013-12-07 08:22:10 INFO    Created Auto Scaling launch configuration named: awseb-e-ib22smbwaz-stack-AWSEBAutoScalingLaunchConfiguration-1NPGUDUWIC5YP</span>
+</span><span class='line'><span class="go">2013-12-07 08:23:07 INFO    Waiting for EC2 instances to launch. This may take a few minutes.</span>
+</span><span class='line'><span class="go">2013-12-07 08:23:07 INFO    Created Auto Scaling group named: awseb-e-ib22smbwaz-stack-AWSEBAutoScalingGroup-1BTN5S4LQA5BD</span>
+</span><span class='line'><span class="go">2013-12-07 08:23:10 INFO    Created Auto Scaling group policy named: arn:aws:autoscaling:ap-southeast-2:558573496878:scalingPolicy:5c8b171d-262b-4286-8bbd-76ff9db15845:autoScalingGroupName/awseb-e-ib22smbwaz-stack-AWSEBAutoScalingGroup-1BTN5S4LQA5BD:policyName/awseb-e-ib22smbwaz-stack-AWSEBAutoScalingScaleDownPolicy-18LWCZMRA7I4G</span>
+</span><span class='line'><span class="go">2013-12-07 08:23:11 INFO    Created Auto Scaling group policy named: arn:aws:autoscaling:ap-southeast-2:558573496878:scalingPolicy:d9a9f3df-b813-4ffe-9556-f2a7136aa69d:autoScalingGroupName/awseb-e-ib22smbwaz-stack-AWSEBAutoScalingGroup-1BTN5S4LQA5BD:policyName/awseb-e-ib22smbwaz-stack-AWSEBAutoScalingScaleUpPolicy-ZSDGPZ6KHCRQ</span>
+</span><span class='line'><span class="go">2013-12-07 08:23:14 INFO    Created CloudWatch alarm named: awseb-e-ib22smbwaz-stack-AWSEBCloudwatchAlarmHigh-1AAZW8L054YWY</span>
+</span><span class='line'><span class="go">2013-12-07 08:23:14 INFO    Created CloudWatch alarm named: awseb-e-ib22smbwaz-stack-AWSEBCloudwatchAlarmLow-1OAGDWAQFGJTO</span>
+</span><span class='line'><span class="go">2013-12-07 08:27:02 INFO    Successfully launched environment: cloudbackend-env</span>
+</span><span class='line'><span class="go">Application is available at &amp;ldquo;cloudbackend-env-yey9npuvjz.elasticbeanstalk.com&amp;rdquo;.</span>
+</span><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Let&rsquo;s test it!</p>
+
+<p>Open your favourite web browser, and navigate to <a href="http://cloudbackend-env-yey9npuvjz.elasticbeanstalk.com/test">http://cloudbackend-env-yey9npuvjz.elasticbeanstalk.com/test</a></p>
+
+<blockquote><p>Replace the domain part of the above URL with the domain you were given at the end of
+the &lsquo;eb start&rsquo; process &hellip;
+&lsquo;Application is available at cloudbackend-env-*.elasticbeanstalk.com&rsquo;.)</p></blockquote>
+
+<p><img class="fancybox center" src="/media/images/2013-12-07-a-cloud-backend-using-nodejs-on-aws/2-node-app.png" width="1138" height="714"></p>
+
+<p><strong>Congratulations! You&rsquo;re cloud backend is working.</strong></p>
+
+<p>Now to work on that awesome mobile app!</p>
+
+<p>Lastly if you want to stop &amp; delete the environment, use the following EB command.
+Enter &lsquo;eb stop&rsquo;, and then &lsquo;y&rsquo; to terminate the environment.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span> eb stop
+</span><span class='line'><span class="go">Terminate environment? [y/n]: y</span>
+</span><span class='line'><span class="go">Stopping environment &amp;ldquo;cloudbackend-env&amp;rdquo;. This may take a few minutes.</span>
+</span><span class='line'><span class="go">2013-12-07 09:24:44 INFO    terminateEnvironment is starting.</span>
+</span><span class='line'><span class="go">2013-12-07 09:24:57 INFO    Deleted CloudWatch alarm named: awseb-e-ib22smbwaz-stack-AWSEBCloudwatchAlarmLow-1OAGDWAQFGJTO</span>
+</span><span class='line'><span class="go">2013-12-07 09:24:57 INFO    Deleted CloudWatch alarm named: awseb-e-ib22smbwaz-stack-AWSEBCloudwatchAlarmHigh-1AAZW8L054YWY</span>
+</span><span class='line'><span class="go">2013-12-07 09:25:00 INFO    Deleted Auto Scaling group policy named: arn:aws:autoscaling:ap-southeast-2:558573496878:scalingPolicy:d9a9f3df-b813-4ffe-9556-f2a7136aa69d:autoScalingGroupName/awseb-e-ib22smbwaz-stack-AWSEBAutoScalingGroup-1BTN5S4LQA5BD:policyName/awseb-e-ib22smbwaz-stack-AWSEBAutoScalingScaleUpPolicy-ZSDGPZ6KHCRQ</span>
+</span><span class='line'><span class="go">2013-12-07 09:25:00 INFO    Deleted Auto Scaling group policy named: arn:aws:autoscaling:ap-southeast-2:558573496878:scalingPolicy:5c8b171d-262b-4286-8bbd-76ff9db15845:autoScalingGroupName/awseb-e-ib22smbwaz-stack-AWSEBAutoScalingGroup-1BTN5S4LQA5BD:policyName/awseb-e-ib22smbwaz-stack-AWSEBAutoScalingScaleDownPolicy-18LWCZMRA7I4G</span>
+</span><span class='line'><span class="go">2013-12-07 09:25:03 INFO    Waiting for EC2 instances to terminate. This may take a few minutes.</span>
+</span><span class='line'><span class="go">2013-12-07 09:26:15 INFO    Deleted Auto Scaling group named: awseb-e-ib22smbwaz-stack-AWSEBAutoScalingGroup-1BTN5S4LQA5BD</span>
+</span><span class='line'><span class="go">2013-12-07 09:26:19 INFO    Deleted Auto Scaling launch configuration named: awseb-e-ib22smbwaz-stack-AWSEBAutoScalingLaunchConfiguration-1NPGUDUWIC5YP</span>
+</span><span class='line'><span class="go">2013-12-07 09:26:22 INFO    Deleted security group named: awseb-e-ib22smbwaz-stack-AWSEBSecurityGroup-1DE3TWOH4AYLK</span>
+</span><span class='line'><span class="go">2013-12-07 09:26:25 INFO    Deleted load balancer named: awseb-e-i-AWSEBLoa-SNLC5NAHWZWP</span>
+</span><span class='line'><span class="go">2013-12-07 09:26:28 INFO    Deleting SNS topic for environment cloudbackend-env.</span>
+</span><span class='line'><span class="go">Stop of environment &amp;ldquo;cloudbackend-env&amp;rdquo; has completed.</span>
+</span><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>If you get stuck, you can always try checking out the Amazon documentation &ndash;
+<a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_nodejs_express.html">Deploying an Express Application to AWS Elastic Beanstalk</a>.</p>
+
+<p>I may cover topics like adding a custom domain name, SSL, OAuth 2.0 support, a
+database, or web pages to your cloud backend in future posts if there is interest.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[iOS Formatted Currency Input]]></title>
@@ -505,97 +1002,6 @@ two UICollectionViewControllers.</p>
 <p>This is where some people would stop me in my story, call me a non-believer, and then begin to preach the virtues of their given religion. I have no desire to go into any of them here. All I will say is that I&rsquo;ve seen people wield them as weapons, instead of collaborating with people to use them. The criteria I evaluate technology by is pretty simple. Can I understand it? Does it make sense in my gut? This may seem like a simpletons view, but it&rsquo;s proven correct time &amp; again. Is it simple to understand &amp; work with quickly? How many layers of abstraction or indirection are there? What value do they add? Is there a simpler way to do it? Would other people understand what it&rsquo;s doing? How about in 5 years? Is it closed, open, popular? What does it feel like to use?</p>
 
 <p>Microsoft Access &amp; ColdFusion still exist 13 years after I used them. Access 2013 looks like it&rsquo;s been given new Metro (sorry, Windows 8-style UI) &amp; web coats, but underneath it looks like the same animal that has not evolved in over a decade. There are rapid application development platforms &amp; tools out there, but why haven&rsquo;t they evolved, and become more widely used for application development? particularly enterprise systems development?</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Creating Software]]></title>
-    <link href="http://www.peterboni.net/blog/2013/02/24/creating-software/"/>
-    <updated>2013-02-24T07:00:00+08:00</updated>
-    <id>http://www.peterboni.net/blog/2013/02/24/creating-software</id>
-    <content type="html"><![CDATA[<p>Hi my name is Peter and I&rsquo;m a developer, now playing an architect, and still trying to figure out what that means. But that&rsquo;s a post for another day. Probably many posts.</p>
-
-<p>To put this post in context my background is mostly &lsquo;front end&rsquo; software development in DOS, Windows, Web, and Mobile; mostly with software that has a user interface, but occasionally not.</p>
-
-<!--more-->
-
-
-<h2>Complexity</h2>
-
-<p>I have always struggled with software development complexity.</p>
-
-<p>I love software development. Communicating &amp; collaborating with people and computers, thinking, planning, modelling, designing, delving into my creative mind &amp; soul, engineering and <em>crafting</em> software that fulfils a need, creating is … awesome!</p>
-
-<p>Software development is complex, but I believe <em>we make it more complex</em>. In our quest to make software development better, we lose focus, and we end up creating complexity.</p>
-
-<h2>Process</h2>
-
-<p>Complexity can exist at many different steps in the software development journey. What do you do with something that&rsquo;s complex? You create a process to perform it of course.</p>
-
-<p>Perhaps the most infamous process is the <a href="http://en.wikipedia.org/wiki/Waterfall_model">waterfall model</a>.</p>
-
-<blockquote><p>&lsquo;The waterfall model is a sequential design process, often used in software development processes, in which progress is seen as flowing steadily downwards (like a waterfall) through the phases of Conception, Initiation, Analysis, Design, Construction, Testing, Production/Implementation, and Maintenance.&rsquo;</p></blockquote>
-
-<p>Sounds great doesn&rsquo;t it? Follow a detailed plan, err &hellip; &lsquo;phases in a waterfall&rsquo;, and you will have software at the end of the process that fulfils your need. People have been following it for <em>decades</em>. There&rsquo;s only one problem.</p>
-
-<blockquote><p>&lsquo;The first formal description of the waterfall model is often cited as a 1970 article by Winston W. Royce, although Royce did not use the term &ldquo;waterfall&rdquo; in this article. Royce presented this model as an example of a flawed, non-working model.&rsquo;</p></blockquote>
-
-<p>But this didn&rsquo;t stop people from using it. <em>Still hasn&rsquo;t.</em> Perhaps there is perceived safety in process. If you follow instructions, surely you will achieve the desired end result?</p>
-
-<p>On my first agile project we delivered a green fields software system in 8 months, which would have taken <em>years</em> using our traditional software development process, and this included learning an agile process, tools &amp; techniques. After the project ended I returned to one of the traditional software development areas. Two things struck me like physical blows, and left me with a feeling of complete loss &amp; bewilderment.</p>
-
-<p>The first was that email was my process again. I sent more emails in that first day than in the previous 8 months. The second thing was when I was sitting in my little cubicle, nicely partitioned, I overheard a conversation between two developers &ndash; &ldquo;Reject defect #537. That&rsquo;s not a defect because&hellip;&rdquo; I forget the specifics, but remember that it was two developers, an absurd defect number, and they literally talked about it for 10 &ndash; 15 minutes. It never occurred to them that they should go find the tester &amp; <em>talk</em> to them.</p>
-
-<h2>Technology</h2>
-
-<p>Processes can be complex, and so can the dizzying universe of technology which is created &amp; wielded by people.</p>
-
-<p>Programming languages are used to build software, and there are thousands of them, with more being created every year. Each one has it&rsquo;s own syntax (form) and semantics (meaning) for expressing it&rsquo;s instructions to a machine.</p>
-
-<p>There are different types of software. For example operating systems manage hardware and provide services for other software. Platforms, frameworks, libraries, and applications use operating systems, and each other.</p>
-
-<p>Each piece of software can be complex, and working software can be a complex web of relationships between them. Just how complex can be highlighted by a seemingly absurd comparison.</p>
-
-<blockquote><p>&lsquo;For decades computer scientists have strived to build machines that can calculate faster than the human brain and store more information. The contraptions have won. &hellip; Biology does a lot with a little: the human genome, which grows our body and directs us through years of complex life, requires less data than a laptop operating system.&rsquo;</p>
-
-<p>Mark Fischetti, <a href="http://www.scientificamerican.com/article.cfm?id=computers-vs-brains">Computers versus Brains</a><br/>
-Scientific American, November, 2011</p></blockquote>
-
-<p>It takes time to understand technology, when to use it, and how to apply it, and people often come away with different understanding, and a different level of skill in using it.</p>
-
-<p>Early in my career I was working on a project when it was decided a well known services company (name withheld) would come in, save the day, and show us how to do it properly. There was one <em>recognised expert</em> I will always remember. He sat quietly aloof at his desk every day, apart from the occasional very important closed door meeting. Each day he would take from his desk a book from the vast array of &lsquo;software development&rsquo; books on it (his personal collection), sit there with it in front of his computer and implement some new form of <em>best practice</em> code or <em>pattern</em> for the part of the project he was working on. He was seen as highly productive.</p>
-
-<p>When he left his masterpiece was given to me, with no hand over. You can guess the outcome. It was either the most brilliant code I have ever seen in my entire life, and I was unworthy to begin to comprehend it&rsquo;s magnificence, or it was a pile of shit. The truth was probably somewhere in the middle.</p>
-
-<p>The sad thing is I&rsquo;ve seen this behaviour to varying degrees <em>consistently</em> over the years. It&rsquo;s something I have been guilty of as well. People wielding technology, rather than collaborating with people using technology.</p>
-
-<h2>Simplicity</h2>
-
-<p>When I think about software development I think about the following words in a positive, <em>great</em> context.</p>
-
-<p>People.<br/>
-Purpose.<br/>
-Knowledge.<br/>
-Capability.<br/>
-Humility.<br/>
-Communication.<br/>
-Collaboration.<br/>
-Compromise.<br/>
-Consistency.<br/>
-Passion.<br/>
-Time.<br/>
-Technology.<br/>
-Simplicity.</p>
-
-<p>I put people first. They are the enduring <em>thread</em> that ties man to machine, and getting it to do what they want. Process &amp; Technology seem to forget that sometimes.</p>
-
-<p>I put technology second last. Without everything before it, it is useless.</p>
-
-<p>I put simplicity last. I believe it will <em>emerge</em> if you have the rest.</p>
-
-<p>If only we had all of these things, all of the time.</p>
-
-<p>You can create software without some of these things, but not <em>great</em> software.</p>
 ]]></content>
   </entry>
   
