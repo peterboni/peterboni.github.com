@@ -4,7 +4,7 @@
   <title><![CDATA[Peter Boni]]></title>
   <link href="http://www.peterboni.net/atom.xml" rel="self"/>
   <link href="http://www.peterboni.net/"/>
-  <updated>2013-12-08T11:28:09+08:00</updated>
+  <updated>2013-12-09T17:05:17+08:00</updated>
   <id>http://www.peterboni.net/</id>
   <author>
     <name><![CDATA[Peter Boni]]></name>
@@ -415,7 +415,7 @@ Application is available at &ldquo;cloudbackend-env-*.elasticbeanstalk.com&rdquo
 
 <p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-12-07-a-cloud-backend-using-nodejs-on-aws/2-node-app.png" width="1138" height="714"></p>
 
-<p><strong>Congratulations! You&rsquo;re cloud backend is working.</strong></p>
+<p><strong>Congratulations! Your cloud backend is now working.</strong></p>
 
 <p>Now to work on that awesome mobile app!</p>
 
