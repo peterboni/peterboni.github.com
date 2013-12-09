@@ -4,7 +4,7 @@
   <title><![CDATA[Peter Boni]]></title>
   <link href="http://www.peterboni.net/atom.xml" rel="self"/>
   <link href="http://www.peterboni.net/"/>
-  <updated>2013-12-09T17:05:17+08:00</updated>
+  <updated>2013-12-09T19:52:21+08:00</updated>
   <id>http://www.peterboni.net/</id>
   <author>
     <name><![CDATA[Peter Boni]]></name>
@@ -39,10 +39,27 @@ Let&rsquo;s get started.</p>
 <h2>Node.js</h2>
 
 <p>First download &amp; install <a href="http://nodejs.org">Node.js</a>, which is a platform for building applications in JavaScript.
-It&rsquo;s powered by the Google Chrome V8 JavaScript engine.
-We&rsquo;re going to use Node.js &amp; node packages to expose web services for our awesome mobile app.</p>
+It&rsquo;s powered by the Google Chrome V8 JavaScript engine.</p>
 
-<p>Yes, we&rsquo;re going to use JavaScript to power our cloud backend. Cool!</p>
+<p>Isn&rsquo;t JavaScript slow? No!</p>
+
+<blockquote><p>&ldquo;V8 compiles JavaScript source code directly into machine code when it is first executed.
+There are no intermediate byte codes, no interpreter.&rdquo;, <a href="https://developers.google.com/v8/design">https://developers.google.com/v8/design</a></p></blockquote>
+
+<p>Node.js is fast.</p>
+
+<p>We&rsquo;re going to use Node.js &amp; node packages to expose web services for our awesome mobile app.</p>
+
+<p>Why? There are lots of good articles that explain what Node.js is and what it&rsquo;s good for.
+Here&rsquo;s my simple take:</p>
+
+<ol>
+<li>The web has changed from consumption (viewing web pages) to interaction (apps, social media, chat). We need better client/server technology.</li>
+<li>Node.js is JavaScript on the server, which lowers the learning curve for developers.</li>
+<li>Node.js has a strong open source community. NPM (Node Package Manager) is a repository
+of reusable components. There are currently over 50 <em>thousand</em>, with over 3 <em>million</em> downloads per day.</li>
+</ol>
+
 
 <p>The goal is to build a cloud backend &ndash; expose a RESTful web API that supports OAuth 2.0, with a database.
 This blog post should serve as the foundation to start you on that journey.</p>
