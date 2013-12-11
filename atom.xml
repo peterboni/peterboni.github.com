@@ -4,7 +4,7 @@
   <title><![CDATA[Peter Boni]]></title>
   <link href="http://www.peterboni.net/atom.xml" rel="self"/>
   <link href="http://www.peterboni.net/"/>
-  <updated>2013-12-09T19:52:21+08:00</updated>
+  <updated>2013-12-11T21:44:30+08:00</updated>
   <id>http://www.peterboni.net/</id>
   <author>
     <name><![CDATA[Peter Boni]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[A Cloud Backend using Node.js on AWS]]></title>
+    <title type="html"><![CDATA[A Cloud Backend Using Node.js on AWS]]></title>
     <link href="http://www.peterboni.net/blog/2013/12/07/a-cloud-backend-using-nodejs-on-aws/"/>
     <updated>2013-12-07T07:00:00+08:00</updated>
     <id>http://www.peterboni.net/blog/2013/12/07/a-cloud-backend-using-nodejs-on-aws</id>
@@ -69,7 +69,7 @@ which is available free from the App Store.</p>
 
 <p>Create &amp; change to a new folder called <strong>cloudbackend</strong> from your Documents folder.</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 </pre></td><td class='code'><pre><code class='console'><span class='line'><span class="gp">peters-mac-mini:Documents peterboni$</span> mkdir cloudbackend
@@ -80,7 +80,7 @@ which is available free from the App Store.</p>
 
 <p>Create a file called <strong>package.json</strong> and put the following JSON data object in it.</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -111,7 +111,7 @@ which is available free from the App Store.</p>
 dependency you identified in the above package.json file. Express is a web
 application framework. Enter &lsquo;npm install&rsquo;.</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -134,7 +134,7 @@ application framework. Enter &lsquo;npm install&rsquo;.</p>
 All we are doing here is exposing one HTTP GET method request, available at &lsquo;/test&rsquo;,
 which returns a JSON data object. A simple test.</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -168,7 +168,7 @@ which returns a JSON data object. A simple test.</p>
 <p>Let&rsquo;s test it!
 Enter &lsquo;node app&rsquo;.</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class='console'><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span> node app
 </span><span class='line'><span class="go">Cloudbackend listening on port 3000</span>
@@ -212,7 +212,7 @@ You have a fully <strong>auto load balanced, auto scaled cloud application envir
 <p>Initialise your <strong>cloudbackend</strong> Git repository. Enter &lsquo;git init&rsquo;, followed by
 the other commands in the following console code block.</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -248,7 +248,7 @@ your Documents folder (the cloudbackend folder should be in your Documents folde
 
 <p>Next add the appropriate EB Python folder to your PATH.</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class='console'><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span> <span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/Users/peterboni/Documents/AWS-ElasticBeanstalk-CLI-2.5.1/eb/macosx/python2.7/
 </span><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span>
@@ -273,7 +273,7 @@ can be found at the URL given after you enter &lsquo;eb init&rsquo;.</li>
 </ol>
 
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -372,7 +372,7 @@ can be found at the URL given after you enter &lsquo;eb init&rsquo;.</li>
 </ol>
 
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -439,7 +439,7 @@ Application is available at &ldquo;cloudbackend-env-*.elasticbeanstalk.com&rdquo
 <p>Lastly if you want to stop &amp; delete the environment, use the following EB command.
 Enter &lsquo;eb stop&rsquo;, and then &lsquo;y&rsquo; to terminate the environment.</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -483,7 +483,7 @@ database, or web pages to your cloud backend in future posts if there is interes
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Cylon Style: A short funny lesson about differences]]></title>
+    <title type="html"><![CDATA[Cylon Style: A Short Funny Lesson About Differences]]></title>
     <link href="http://www.peterboni.net/blog/2013/10/19/cylon-style/"/>
     <updated>2013-10-19T07:00:00+08:00</updated>
     <id>http://www.peterboni.net/blog/2013/10/19/cylon-style</id>
@@ -804,7 +804,7 @@ Dynamic Type.</p>
 <p>We need to make the Controller aware of a Text Size change by hooking into the
 UIContentSizeCategoryDidChangeNotification.</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -832,7 +832,7 @@ UIContentSizeCategoryDidChangeNotification.</p>
 <p>We need to calculate the height of the row/cell based on it&rsquo;s content, and as each label
 in the cell can change height we need to calculate the total height of the cell required.</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -864,7 +864,7 @@ in the cell can change height we need to calculate the total height of the cell 
 <p>We also need to programmatically assign (or re-assign because we already did it in
 the Storyboard) the cell label Text Style values.</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -951,7 +951,7 @@ she is creating.</p>
 information, which in this instance is selecting an icon. We use a UICollectionViewController
 that&rsquo;s dynamic. We define the icon groups &amp; icons as follows.</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 </pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">icons</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSArray</span> <span class="nl">arrayWithObjects:</span>
@@ -976,7 +976,7 @@ back to the black icons.</p>
 Core Graphics help. In the app we only store one black piggy bank icon .png file, and at
 runtime dynamically colour each piggy bank. We define the colour groups &amp; colours as follows.</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -989,7 +989,7 @@ runtime dynamically colour each piggy bank. We define the colour groups &amp; co
 
 <p>And then do some magic with the black piggy bank icon with a helper.</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -1162,7 +1162,7 @@ two UICollectionViewControllers.</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[App Dev is not Rapid]]></title>
+    <title type="html"><![CDATA[App Dev Is Not Rapid]]></title>
     <link href="http://www.peterboni.net/blog/2013/04/03/app-dev-is-not-rapid/"/>
     <updated>2013-04-03T07:00:00+08:00</updated>
     <id>http://www.peterboni.net/blog/2013/04/03/app-dev-is-not-rapid</id>

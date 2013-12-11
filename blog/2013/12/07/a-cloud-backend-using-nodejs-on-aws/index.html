@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>A Cloud Backend using Node.js on AWS - Peter Boni</title>
+  <title>A Cloud Backend Using Node.js on AWS - Peter Boni</title>
   <meta name="author" content="Peter Boni">
 
   
@@ -26,7 +26,7 @@ and get to the point where you &hellip;">
   <link href="/atom.xml" rel="alternate" title="Peter Boni" type="application/atom+xml">
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -159,7 +159,7 @@ which is available free from the App Store.</p>
 
 <p>Create &amp; change to a new folder called <strong>cloudbackend</strong> from your Documents folder.</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 </pre></td><td class='code'><pre><code class='console'><span class='line'><span class="gp">peters-mac-mini:Documents peterboni$</span> mkdir cloudbackend
@@ -170,7 +170,7 @@ which is available free from the App Store.</p>
 
 <p>Create a file called <strong>package.json</strong> and put the following JSON data object in it.</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -201,7 +201,7 @@ which is available free from the App Store.</p>
 dependency you identified in the above package.json file. Express is a web
 application framework. Enter &lsquo;npm install&rsquo;.</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -224,7 +224,7 @@ application framework. Enter &lsquo;npm install&rsquo;.</p>
 All we are doing here is exposing one HTTP GET method request, available at &lsquo;/test&rsquo;,
 which returns a JSON data object. A simple test.</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -258,7 +258,7 @@ which returns a JSON data object. A simple test.</p>
 <p>Let&rsquo;s test it!
 Enter &lsquo;node app&rsquo;.</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class='console'><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span> node app
 </span><span class='line'><span class="go">Cloudbackend listening on port 3000</span>
@@ -302,7 +302,7 @@ You have a fully <strong>auto load balanced, auto scaled cloud application envir
 <p>Initialise your <strong>cloudbackend</strong> Git repository. Enter &lsquo;git init&rsquo;, followed by
 the other commands in the following console code block.</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -338,7 +338,7 @@ your Documents folder (the cloudbackend folder should be in your Documents folde
 
 <p>Next add the appropriate EB Python folder to your PATH.</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class='console'><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span> <span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/Users/peterboni/Documents/AWS-ElasticBeanstalk-CLI-2.5.1/eb/macosx/python2.7/
 </span><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span>
@@ -363,7 +363,7 @@ can be found at the URL given after you enter &lsquo;eb init&rsquo;.</li>
 </ol>
 
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -462,7 +462,7 @@ can be found at the URL given after you enter &lsquo;eb init&rsquo;.</li>
 </ol>
 
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -529,7 +529,7 @@ Application is available at &ldquo;cloudbackend-env-*.elasticbeanstalk.com&rdquo
 <p>Lastly if you want to stop &amp; delete the environment, use the following EB command.
 Enter &lsquo;eb stop&rsquo;, and then &lsquo;y&rsquo; to terminate the environment.</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>

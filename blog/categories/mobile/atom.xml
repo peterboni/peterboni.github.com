@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mobile | Peter Boni]]></title>
   <link href="http://www.peterboni.net/blog/categories/mobile/atom.xml" rel="self"/>
   <link href="http://www.peterboni.net/"/>
-  <updated>2013-12-09T19:52:21+08:00</updated>
+  <updated>2013-12-11T21:44:30+08:00</updated>
   <id>http://www.peterboni.net/</id>
   <author>
     <name><![CDATA[Peter Boni]]></name>
@@ -243,7 +243,7 @@ Dynamic Type.</p>
 <p>We need to make the Controller aware of a Text Size change by hooking into the
 UIContentSizeCategoryDidChangeNotification.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -280,7 +280,7 @@ UIContentSizeCategoryDidChangeNotification.</p>
 <p>We need to calculate the height of the row/cell based on it&rsquo;s content, and as each label
 in the cell can change height we need to calculate the total height of the cell required.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -317,7 +317,7 @@ in the cell can change height we need to calculate the total height of the cell 
 <p>We also need to programmatically assign (or re-assign because we already did it in
 the Storyboard) the cell label Text Style values.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -409,7 +409,7 @@ she is creating.</p>
 information, which in this instance is selecting an icon. We use a UICollectionViewController
 that&rsquo;s dynamic. We define the icon groups &amp; icons as follows.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -441,7 +441,7 @@ back to the black icons.</p>
 Core Graphics help. In the app we only store one black piggy bank icon .png file, and at
 runtime dynamically colour each piggy bank. We define the colour groups &amp; colours as follows.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -461,7 +461,7 @@ runtime dynamically colour each piggy bank. We define the colour groups &amp; co
 
 <p>And then do some magic with the black piggy bank icon with a helper.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
