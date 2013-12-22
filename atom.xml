@@ -4,7 +4,7 @@
   <title><![CDATA[Peter Boni]]></title>
   <link href="http://www.peterboni.net/atom.xml" rel="self"/>
   <link href="http://www.peterboni.net/"/>
-  <updated>2013-12-11T21:44:30+08:00</updated>
+  <updated>2013-12-22T14:04:16+08:00</updated>
   <id>http://www.peterboni.net/</id>
   <author>
     <name><![CDATA[Peter Boni]]></name>
@@ -511,7 +511,7 @@ database, or web pages to your cloud backend in future posts if there is interes
     <link href="http://www.peterboni.net/blog/2013/10/01/ihealth-renaissance/"/>
     <updated>2013-10-01T07:00:00+08:00</updated>
     <id>http://www.peterboni.net/blog/2013/10/01/ihealth-renaissance</id>
-    <content type="html"><![CDATA[<p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-10-01-ihealth-renaissance/IMG_1181.jpg" width="640" height="365" title="iHealth" ></p>
+    <content type="html"><![CDATA[<p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-10-01-ihealth-renaissance/img_1181.jpg" width="640" height="365" title="iHealth" ></p>
 
 <p>I have experienced a personal health renaissance over the last year. My iPhone<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> is teaching me how to change my health, both body &amp; mind. It has offered motivation when I needed it. I believe that the iHealth Renaissance is just getting started. It could do the same for you if you let it. Let me explain how.</p>
 
@@ -528,7 +528,7 @@ database, or web pages to your cloud backend in future posts if there is interes
 
 <p>With 4 fitness apps installed &amp; being used regularly next came changing what I put into my body. My wife installed &amp; started using MyNetDiary which is essentially calorie counting, with once again, plenty of feedback that gave me a sense of progress. I could visually see how many calories I was consuming against how many I should consume to meet my target weight. What it did more than that though was teach me about what I was eating. I was shocked at a few things, for example almonds &hellip; holy crap! It hasn&rsquo;t changed what I eat, as I still enjoy beer &amp; chocolate, but it has changed my behaviour. I now think about the quality &amp; quantity of what I will put into my body.</p>
 
-<p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-10-01-ihealth-renaissance/IMG_1137.jpg" width="500" height="500" title="Breakfast" ></p>
+<p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-10-01-ihealth-renaissance/img_1137.jpg" width="500" height="500" title="Breakfast" ></p>
 
 <p>With 5 health apps installed &amp; being used regularly I started seeing changes. 8 months of running, and 1.5 months of changing the way I eat I had dropped over 8 kg in weight, and could now comfortably run 5 km at a pace of 5:30 per km, with nice steep hills thrown in.</p>
 
@@ -566,7 +566,7 @@ database, or web pages to your cloud backend in future posts if there is interes
 
 <p>I did a quick review of headphones with remote &amp; microphone in the Apple Store and purchased the Sennheiser OCX 685i In-Ear Sports Headphones.</p>
 
-<p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-09-22-design-little-things-matter/IMG_2357.jpg" width="600" height="400" title="Sennheiser OCX 685i In-Ear Sports Headphones" ></p>
+<p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-09-22-design-little-things-matter/img_2357.jpg" width="600" height="400" title="Sennheiser OCX 685i In-Ear Sports Headphones" ></p>
 
 <p>The ear clip design, combined with the lightweight cord &amp; clip means that they stay secure while running. No more falling out. The remote &amp; microphone work &ndash; I have full control over music. I can also use Siri to listen to incoming messages, and dictate a reply. I can even use Siri to <a href="https://twitter.com/peterboni/status/379924494527131649">Tweet</a>. The headphones are also sweat &amp; water resistant. Nearly perfect.</p>
 
@@ -574,7 +574,7 @@ database, or web pages to your cloud backend in future posts if there is interes
 
 <p>Compare the design of the remote on the Sennheiser in the above picture to the remote on the Apple EarPods in the below picture.</p>
 
-<p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-09-22-design-little-things-matter/IMG_2360.jpg" width="600" height="400" title="Apple EarPods with Remote and Mic" ></p>
+<p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-09-22-design-little-things-matter/img_2360.jpg" width="600" height="400" title="Apple EarPods with Remote and Mic" ></p>
 
 <p>Can you guess what the problem is? When I&rsquo;m running &amp; listening to music, I&rsquo;m watching the road ahead. I move my fingers to the remote near my neck, grab it, and feel for the controls. They&rsquo;re all placed together &amp; feel like they blend into each other. It feels like one button. This is the exact opposite experience with the Apple EarPods remote. On the Apple EarPods remote the clear indent in the middle means I feel immediately by touch the distinction between the 3 buttons, and hence how to activate the different functions that the 3 buttons enable.</p>
 
@@ -756,7 +756,7 @@ iOS Simulator.</p>
 
 <p>We get 3 &amp; &lsquo;a bit&rsquo; cells in the UITableView.</p>
 
-<p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-06-29-ios-7-dynamic-type/2-UserXListView-normal.png" width="500" height="713" title="UserXListView Default" ></p>
+<p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-06-29-ios-7-dynamic-type/2-userxlistview-normal.png" width="500" height="713" title="UserXListView Default" ></p>
 
 <h2>Smallest Size</h2>
 
@@ -766,7 +766,7 @@ iOS Simulator.</p>
 
 <p>Nearly 4 cells in the UITableView.</p>
 
-<p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-06-29-ios-7-dynamic-type/4-UserXListView-small.png" width="500" height="713" title="UserXListView Smallest" ></p>
+<p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-06-29-ios-7-dynamic-type/4-userxlistview-small.png" width="500" height="713" title="UserXListView Smallest" ></p>
 
 <h2>Largest Size</h2>
 
@@ -777,7 +777,7 @@ beautiful type.</p>
 
 <p>3 cells in the UITableView.</p>
 
-<p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-06-29-ios-7-dynamic-type/6-UserXListView-large.png" width="500" height="713" title="UserXListView Largest" ></p>
+<p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-06-29-ios-7-dynamic-type/6-userxlistview-large.png" width="500" height="713" title="UserXListView Largest" ></p>
 
 <h2>Implementation, The Easy Part</h2>
 
@@ -785,13 +785,13 @@ beautiful type.</p>
 <a href="http://www.peterboni.net/blog/2013/06/24/ios-7-userxlistview/">UserXListView</a>. The cell layout makes use of Auto
 Layout Constraints, which are very powerful.</p>
 
-<p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-06-29-ios-7-dynamic-type/7-UserXListView-cell-layout.png" width="381" height="674" title="UserXListView Cell Layout" ></p>
+<p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-06-29-ios-7-dynamic-type/7-userxlistview-cell-layout.png" width="381" height="674" title="UserXListView Cell Layout" ></p>
 
 <p>iOS 7 has defined Text Styles &ndash; Body, Caption 1, Caption 2, Footnote, Headline 1,
 Headline 2, Subhead 1, and Subhead 2. We assign a Text Style to each label in the cell
 layout via the attribute inspector as shown below.</p>
 
-<p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-06-29-ios-7-dynamic-type/8-UserXListView-cell-label-attribute-inspector.png" width="316" height="196" title="UserXListView Cell Label Attribute Inspector" ></p>
+<p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-06-29-ios-7-dynamic-type/8-userxlistview-cell-label-attribute-inspector.png" width="316" height="196" title="UserXListView Cell Label Attribute Inspector" ></p>
 
 <p>Once the label Text Styles &amp; Auto Layout Constraints are set, we&rsquo;re ready for the hard
 part.</p>
@@ -1339,7 +1339,7 @@ Simplicity.</p>
     <id>http://www.peterboni.net/blog/2013/01/01/failmeaningfully</id>
     <content type="html"><![CDATA[<p>It was August 2010. Over 2 years ago. My beautiful daughter Abigail was 2 years old. The iPhone 4 had just come out, and the smartphone revolution was in full swing. All I needed was an idea. Somehow I found myself become part of a like minded, passionate &amp; committed team, with some of the best people I have ever had the privilege or pleasure to work with. I say somehow because I&rsquo;ve always tried to go with the flow. It just happened. Redistore was born.</p>
 
-<p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-01-01-failmeaningfully/WebSite1.png" width="569" height="635" title="Redistore Web Site" ></p>
+<p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-01-01-failmeaningfully/website.png" width="569" height="635" title="Redistore Web Site" ></p>
 
 <!--more-->
 
@@ -1362,15 +1362,15 @@ Simplicity.</p>
 
 <p>The customer web client was built using Sencha ExtJS 3 and supports all major browsers. It was designed &amp; built from scratch to provide a <em>fast</em> UX (User Experience) for browsing stores &amp; ordering, unlike most classic page request &amp; response web stores. ExtJS is an amazing platform, but has a steep learning curve, and ExtJS 4 broke compatibility for ExtJS 3 apps; there is significant work required to upgrade your app.</p>
 
-<p><img class="fancybox" src="http://www.peterboni.net/media/images/2013-01-01-failmeaningfully/WebClient1.png" width="795" height="600" title="Redistore Web Site" ></p>
+<p><img class="fancybox" src="http://www.peterboni.net/media/images/2013-01-01-failmeaningfully/webclient1.png" width="795" height="600" title="Redistore Web Site" ></p>
 
-<p><img class="fancybox" src="http://www.peterboni.net/media/images/2013-01-01-failmeaningfully/WebClient2.png" width="795" height="600" title="Redistore Web Site" ></p>
+<p><img class="fancybox" src="http://www.peterboni.net/media/images/2013-01-01-failmeaningfully/webclient2.png" width="795" height="600" title="Redistore Web Site" ></p>
 
-<p><img class="fancybox" src="http://www.peterboni.net/media/images/2013-01-01-failmeaningfully/WebClient3.png" width="795" height="600" title="Redistore Web Site" ></p>
+<p><img class="fancybox" src="http://www.peterboni.net/media/images/2013-01-01-failmeaningfully/webclient3.png" width="795" height="600" title="Redistore Web Site" ></p>
 
 <p>The now defunct customer mobile client was built using Sencha Touch 1. The native vs. web app mobile holy war was raging, and we decided to build a web app. It was a mistake. The mobile client worked adequately on iOS, but on Android it was unusable. The tools were not ready. Facebook had not yet <a href="http://techcrunch.com/2012/09/11/mark-zuckerberg-our-biggest-mistake-with-mobile-was-betting-too-much-on-html5/">admitted their mistake</a>, nor Sencha fired their <a href="http://www.sencha.com/blog/the-making-of-fastbook-an-html5-love-story/">Fastbook</a> return. We needed a <em>great</em> customer UX, and didn&rsquo;t have it.</p>
 
-<p><img class="fancybox left" src="http://www.peterboni.net/media/images/2013-01-01-failmeaningfully/iPhoneApp1.png" width="320" height="548" title="Redistore iPhone App" ></p>
+<p><img class="fancybox left" src="http://www.peterboni.net/media/images/2013-01-01-failmeaningfully/iphone-app.png" width="320" height="548" title="Redistore iPhone App" ></p>
 
 <p>The store receiver client was also built with Sencha Touch, and performs adequately for stores on an iPod.</p>
 
@@ -1418,9 +1418,9 @@ Simplicity.</p>
 <p>PayPal released their updated app for iOS, version 5.0.1 on <strong>September 5, 2013</strong>.
 It&rsquo;s shown below next to Redistore for iOS, which introduced store distance features in version 1.3 released on <strong>April 23, 2012</strong>. Looks like there is some similarity.</p>
 
-<p><img class="fancybox left" src="http://www.peterboni.net/media/images/2013-01-01-failmeaningfully/IMG_1157.jpg" width="320" height="548" title="Redistore for iOS introduced store distance features in version 1.3 released on April 23, 2012" ></p>
+<p><img class="fancybox left" src="http://www.peterboni.net/media/images/2013-01-01-failmeaningfully/redistore-ios.jpg" width="320" height="548" title="Redistore for iOS introduced store distance features in version 1.3 released on April 23, 2012" ></p>
 
-<p><img class="fancybox left" src="http://www.peterboni.net/media/images/2013-01-01-failmeaningfully/IMG_1156.jpg" width="320" height="548" title="PayPal for iOS version 5.0.1 released on September 5, 2013" ></p>
+<p><img class="fancybox left" src="http://www.peterboni.net/media/images/2013-01-01-failmeaningfully/paypal.jpg" width="320" height="548" title="PayPal for iOS version 5.0.1 released on September 5, 2013" ></p>
 ]]></content>
   </entry>
   
