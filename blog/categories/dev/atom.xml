@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Dev | Peter Boni]]></title>
   <link href="http://www.peterboni.net/blog/categories/dev/atom.xml" rel="self"/>
   <link href="http://www.peterboni.net/"/>
-  <updated>2014-01-01T08:32:30+08:00</updated>
+  <updated>2014-01-11T11:05:58+08:00</updated>
   <id>http://www.peterboni.net/</id>
   <author>
     <name><![CDATA[Peter Boni]]></name>
@@ -12,6 +12,155 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Mobile Design Details: Hide/Show Passwords - iOS Implementation and Thoughts]]></title>
+    <link href="http://www.peterboni.net/blog/2014/01/11/mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts/"/>
+    <updated>2014-01-11T07:00:00+08:00</updated>
+    <id>http://www.peterboni.net/blog/2014/01/11/mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts</id>
+    <content type="html"><![CDATA[<p>I read a tweet from Luke Wroblewski this morning, which lead to a blog post he
+published on November 7, 2012 called <a href="http://www.lukew.com/ff/entry.asp?1653">Mobile Design Details: Hide/Show Passwords</a>.</p>
+
+<p>The fact that I have to manually enter passwords on mobile has been a constant source
+of frustration for me, with this only making it worse.
+Sadly his advice has not caught on much with app/site designers &amp; developers.
+I decided to see how hard it was to quickly implement on iOS with a few thoughts along the way.</p>
+
+<!--more-->
+
+
+<h2>Implementation</h2>
+
+<p>It turns out it&rsquo;s very simple.</p>
+
+<p>Using Xcode 5.0.2, do File &ndash; New &ndash; Project &ndash; Application: Single View Application.</p>
+
+<p>Add a Text Field to the single <strong>View Controller</strong> in <strong>Main.storyboard</strong>. You can add
+Placeholder text to give the user a visual indication of what they should be doing
+with the field.</p>
+
+<p>Create an Outlet Connection in <strong>ViewController.h</strong> called <strong>password</strong>, which should look
+like this.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">@interface</span> <span class="nc">ViewController</span> : <span class="nc">UIViewController</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">@property</span> <span class="p">(</span><span class="n">weak</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="kt">IBOutlet</span> <span class="n">UITextField</span> <span class="o">*</span><span class="n">password</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">@end</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>In <strong>ViewController.m</strong>, put the following code into <strong>viewDidLoad</strong>.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">viewDidLoad</span>
+</span><span class='line'><span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="p">[</span><span class="n">super</span> <span class="n">viewDidLoad</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">CGSize</span> <span class="n">hideShowSize</span> <span class="o">=</span> <span class="p">[</span><span class="s">@&quot;SHOWX&quot;</span> <span class="nl">sizeWithAttributes:</span><span class="err">@</span><span class="p">{</span><span class="nl">NSFontAttributeName:</span><span class="p">[</span><span class="n">UIFont</span> <span class="nl">systemFontOfSize:</span><span class="mf">14.0f</span><span class="p">]}];</span>
+</span><span class='line'><span class="n">UIButton</span> <span class="o">*</span><span class="n">hideShow</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UIButton</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithFrame:</span><span class="n">CGRectMake</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">hideShowSize</span><span class="p">.</span><span class="n">width</span><span class="p">,</span> <span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">frame</span><span class="p">.</span><span class="n">size</span><span class="p">.</span><span class="n">height</span><span class="p">)];</span>
+</span><span class='line'><span class="p">[</span><span class="n">hideShow</span><span class="p">.</span><span class="n">titleLabel</span> <span class="nl">setFont:</span><span class="p">[</span><span class="n">UIFont</span> <span class="nl">systemFontOfSize:</span><span class="mf">14.0f</span><span class="p">]];</span>
+</span><span class='line'><span class="p">[</span><span class="n">hideShow</span> <span class="nl">setTitle:</span><span class="s">@&quot;HIDE&quot;</span> <span class="nl">forState:</span><span class="n">UIControlStateNormal</span><span class="p">];</span>
+</span><span class='line'><span class="p">[</span><span class="n">hideShow</span> <span class="nl">setTitleColor:</span><span class="p">[</span><span class="n">UIColor</span> <span class="n">grayColor</span><span class="p">]</span> <span class="nl">forState:</span><span class="n">UIControlStateNormal</span><span class="p">];</span>
+</span><span class='line'><span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">rightView</span> <span class="o">=</span> <span class="n">hideShow</span><span class="p">;</span>
+</span><span class='line'><span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">rightViewMode</span> <span class="o">=</span> <span class="n">UITextFieldViewModeAlways</span><span class="p">;</span>
+</span><span class='line'><span class="p">[</span><span class="n">hideShow</span> <span class="nl">addTarget:</span><span class="n">self</span> <span class="nl">action:</span><span class="k">@selector</span><span class="p">(</span><span class="nl">hideShow:</span><span class="p">)</span> <span class="nl">forControlEvents:</span><span class="n">UIControlEventTouchUpInside</span><span class="p">];</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>And then create <strong>hideShow</strong>.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nl">hideShow:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="n">sender</span>
+</span><span class='line'><span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">UIButton</span> <span class="o">*</span><span class="n">hideShow</span> <span class="o">=</span> <span class="p">(</span><span class="n">UIButton</span> <span class="o">*</span><span class="p">)</span><span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">rightView</span><span class="p">;</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">secureTextEntry</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">secureTextEntry</span> <span class="o">=</span> <span class="n">YES</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">hideShow</span> <span class="nl">setTitle:</span><span class="s">@&quot;SHOW&quot;</span> <span class="nl">forState:</span><span class="n">UIControlStateNormal</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="k">else</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">secureTextEntry</span> <span class="o">=</span> <span class="n">NO</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">hideShow</span> <span class="nl">setTitle:</span><span class="s">@&quot;HIDE&quot;</span> <span class="nl">forState:</span><span class="n">UIControlStateNormal</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">password</span> <span class="n">becomeFirstResponder</span><span class="p">];</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>You should get something like this.</p>
+
+<p><img class="fancybox center" src="/media/images/2014-01-11-mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts/1.png" width="594" height="270"></p>
+
+<p>You can immediately touch &amp; start entering your un-obfuscated password.</p>
+
+<p><img class="fancybox center" src="/media/images/2014-01-11-mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts/2.png" width="594" height="270"></p>
+
+<p>If you touch &lsquo;HIDE&rsquo; then your password is obfuscated, and similarly touching &lsquo;SHOW&rsquo; will
+go back to your un-obfuscated password.</p>
+
+<p><img class="fancybox center" src="/media/images/2014-01-11-mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts/3.png" width="594" height="270"></p>
+
+<h2>Thoughts</h2>
+
+<p>It&rsquo;s important to remember that we&rsquo;re simply toggling the iOS UITextField &lsquo;Secure&rsquo;
+functionality, so when the UITextField is not secure, the user can copy the contents
+of the UITextField.</p>
+
+<p>Therefore you should <strong>only</strong> use this pattern in Sign Up &amp; Login views, <strong>not</strong> views
+where you can view/edit account details for a service.</p>
+
+<p><img class="fancybox center" src="/media/images/2014-01-11-mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts/4.png" width="594" height="270"></p>
+
+<p><img class="fancybox center" src="/media/images/2014-01-11-mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts/5.png" width="594" height="270"></p>
+
+<p>This still doesn&rsquo;t remove the frustration of having to manually enter passwords on mobile.
+It would be great to see Apple take the lead with iOS, and extend the iCloud Keychain /
+Safari Password AutoFill (and generator) features to native apps.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[A Cloud Backend using Node.js on AWS]]></title>
@@ -132,10 +281,10 @@ application framework. Enter &lsquo;npm install&rsquo;.</p>
 </pre></td><td class='code'><pre><code class='console'><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span> npm install
 </span><span class='line'><span class="go">npm http GET &lt;a href=&quot;https://registry.npmjs.org/express&quot;&gt;https://registry.npmjs.org/express&lt;/a&gt;</span>
 </span><span class='line'><span class="go">&amp;hellip;</span>
-</span><span class='line'><span class="go">&lt;a href=&quot;&amp;#x6d;&amp;#97;&amp;#105;&amp;#x6c;&amp;#116;&amp;#x6f;&amp;#x3a;&amp;#x65;&amp;#120;&amp;#112;&amp;#x72;&amp;#101;&amp;#x73;&amp;#115;&amp;#x40;&amp;#x33;&amp;#46;&amp;#52;&amp;#46;&amp;#x36;&quot;&gt;&amp;#101;&amp;#120;&amp;#x70;&amp;#114;&amp;#x65;&amp;#x73;&amp;#115;&amp;#x40;&amp;#x33;&amp;#x2e;&amp;#52;&amp;#46;&amp;#x36;&lt;/a&gt; node_modules/express</span>
-</span><span class='line'><span class="go">├── &lt;a href=&quot;&amp;#109;&amp;#97;&amp;#x69;&amp;#108;&amp;#x74;&amp;#111;&amp;#58;&amp;#x6d;&amp;#x65;&amp;#116;&amp;#x68;&amp;#x6f;&amp;#x64;&amp;#115;&amp;#64;&amp;#48;&amp;#x2e;&amp;#x31;&amp;#46;&amp;#x30;&quot;&gt;&amp;#109;&amp;#101;&amp;#x74;&amp;#x68;&amp;#111;&amp;#100;&amp;#x73;&amp;#64;&amp;#48;&amp;#x2e;&amp;#x31;&amp;#x2e;&amp;#x30;&lt;/a&gt;</span>
+</span><span class='line'><span class="go">&lt;a href=&quot;&amp;#x6d;&amp;#x61;&amp;#x69;&amp;#108;&amp;#x74;&amp;#x6f;&amp;#58;&amp;#x65;&amp;#120;&amp;#x70;&amp;#x72;&amp;#101;&amp;#115;&amp;#x73;&amp;#x40;&amp;#51;&amp;#46;&amp;#x34;&amp;#x2e;&amp;#54;&quot;&gt;&amp;#101;&amp;#120;&amp;#112;&amp;#114;&amp;#101;&amp;#115;&amp;#115;&amp;#64;&amp;#x33;&amp;#x2e;&amp;#52;&amp;#46;&amp;#54;&lt;/a&gt; node_modules/express</span>
+</span><span class='line'><span class="go">├── &lt;a href=&quot;&amp;#109;&amp;#x61;&amp;#x69;&amp;#x6c;&amp;#x74;&amp;#111;&amp;#58;&amp;#x6d;&amp;#x65;&amp;#116;&amp;#x68;&amp;#111;&amp;#x64;&amp;#115;&amp;#64;&amp;#48;&amp;#x2e;&amp;#49;&amp;#46;&amp;#x30;&quot;&gt;&amp;#x6d;&amp;#x65;&amp;#116;&amp;#x68;&amp;#x6f;&amp;#100;&amp;#x73;&amp;#64;&amp;#48;&amp;#x2e;&amp;#49;&amp;#46;&amp;#48;&lt;/a&gt;</span>
 </span><span class='line'><span class="go">&amp;hellip;</span>
-</span><span class='line'><span class="go">└── &lt;a href=&quot;&amp;#x6d;&amp;#x61;&amp;#105;&amp;#x6c;&amp;#x74;&amp;#111;&amp;#x3a;&amp;#99;&amp;#x6f;&amp;#110;&amp;#x6e;&amp;#x65;&amp;#99;&amp;#x74;&amp;#64;&amp;#x32;&amp;#x2e;&amp;#49;&amp;#x31;&amp;#46;&amp;#x32;&quot;&gt;&amp;#x63;&amp;#111;&amp;#x6e;&amp;#110;&amp;#101;&amp;#99;&amp;#x74;&amp;#64;&amp;#x32;&amp;#x2e;&amp;#x31;&amp;#49;&amp;#x2e;&amp;#50;&lt;/a&gt; (uid2@0.0.3, pause@0.0.1, qs@0.6.5, bytes@0.2.1, raw-body@1.1.2, negotiator@0.3.0, &lt;a href=&quot;&amp;#x6d;&amp;#x61;&amp;#x69;&amp;#x6c;&amp;#116;&amp;#111;&amp;#x3a;&amp;#109;&amp;#117;&amp;#108;&amp;#116;&amp;#105;&amp;#112;&amp;#97;&amp;#x72;&amp;#116;&amp;#x79;&amp;#64;&amp;#50;&amp;#x2e;&amp;#50;&amp;#x2e;&amp;#x30;&quot;&gt;&amp;#109;&amp;#x75;&amp;#108;&amp;#x74;&amp;#105;&amp;#112;&amp;#97;&amp;#114;&amp;#x74;&amp;#121;&amp;#64;&amp;#x32;&amp;#46;&amp;#50;&amp;#46;&amp;#48;&lt;/a&gt;)</span>
+</span><span class='line'><span class="go">└── &lt;a href=&quot;&amp;#x6d;&amp;#97;&amp;#105;&amp;#x6c;&amp;#116;&amp;#x6f;&amp;#58;&amp;#99;&amp;#111;&amp;#110;&amp;#110;&amp;#101;&amp;#99;&amp;#116;&amp;#x40;&amp;#x32;&amp;#x2e;&amp;#x31;&amp;#49;&amp;#46;&amp;#x32;&quot;&gt;&amp;#x63;&amp;#x6f;&amp;#x6e;&amp;#110;&amp;#x65;&amp;#x63;&amp;#116;&amp;#x40;&amp;#50;&amp;#46;&amp;#49;&amp;#49;&amp;#46;&amp;#x32;&lt;/a&gt; (uid2@0.0.3, pause@0.0.1, qs@0.6.5, bytes@0.2.1, raw-body@1.1.2, negotiator@0.3.0, &lt;a href=&quot;&amp;#109;&amp;#x61;&amp;#x69;&amp;#108;&amp;#116;&amp;#x6f;&amp;#58;&amp;#109;&amp;#x75;&amp;#x6c;&amp;#116;&amp;#105;&amp;#112;&amp;#x61;&amp;#114;&amp;#116;&amp;#121;&amp;#64;&amp;#x32;&amp;#x2e;&amp;#50;&amp;#46;&amp;#48;&quot;&gt;&amp;#109;&amp;#x75;&amp;#108;&amp;#x74;&amp;#x69;&amp;#112;&amp;#x61;&amp;#114;&amp;#116;&amp;#x79;&amp;#x40;&amp;#x32;&amp;#x2e;&amp;#50;&amp;#x2e;&amp;#x30;&lt;/a&gt;)</span>
 </span><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
@@ -952,34 +1101,6 @@ two UICollectionViewControllers.</p>
 <a href="http://thenounproject.com/noun/wallet/#icon-No3055" target="_blank">Wallet</a> designed by <a href="http://thenounproject.com/hakan" target="_blank">Hakan Yalcin</a> from The Noun Project</p></blockquote>
 
 <p><a href="http://www.colourlovers.com">COLOURlovers</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[App Dev is not Rapid]]></title>
-    <link href="http://www.peterboni.net/blog/2013/04/03/app-dev-is-not-rapid/"/>
-    <updated>2013-04-03T07:00:00+08:00</updated>
-    <id>http://www.peterboni.net/blog/2013/04/03/app-dev-is-not-rapid</id>
-    <content type="html"><![CDATA[<p>Application Development is not Rapid. There, I finally typed it. It feels like a weight off my fingers. I have been creating applications for over 20 years, and do a damn good job of it. I&rsquo;m not arrogant, there are many developers that are smarter, more creative, or more productive. If I was to describe myself as a developer in one word I&rsquo;d say simple, which is kind of funny, because fear of being labelled that has stopped me writing this in the past. This is a post based on my thoughts &amp; feelings at the state of application development.</p>
-
-<!--more-->
-
-
-<p>I have written before about why I <a href="/blog/2013/02/24/creating-software/">create software</a>, and my struggle with software development complexity. I&rsquo;m going to tell a story about my experience with the Technology, and it&rsquo;s contribution to the People, Process &amp; Technology triad when building applications.</p>
-
-<p>My first job out of university was doing Microsoft Access &lsquo;database&rsquo; development for a large mining company. I put database in quotes because I didn&rsquo;t think of Access as strictly a database at the time. We built tables with constraints &amp; relationships, queries, forms, reports, and logic (macros &amp; VBA). Mostly via point &amp; click, and writing simple code. We built applications. It was and still is amazing to me how much two Access developers built, with one of them being so naive &amp; inexperienced.</p>
-
-<p>I then progressed to building a web application, using HTML, CSS, JavaScript, ColdFusion (version 4.0 from 1999) &amp; SQL Server. There&rsquo;s a few more technologies there than my Microsoft Access experience, but ColdFusion rocked. It joined the other technologies together seamlessly, and it made creating an application rapid. I felt productive.</p>
-
-<blockquote><p>To me rapid development meant quickly building working application software that fulfilled a need with simple, powerful tools. It meant building &amp; joining together the parts in an easily learned, understood, and consistent way that supported change.</p></blockquote>
-
-<p>Where did I find myself after a few experiences of rapid application development? I found myself in the distinctly non-rapid world of enterprise systems development. There was titanic Sun, IBM, Oracle &amp; Microsoft technologies. I found myself submerged in Sun Java, J2SE, J2EE, IBM WebSphere, Oracle Database, and Microsoft .NET &amp; Servers. Within each one I used a dizzying array of technologies &ndash; to use an abstract term to describe the things you could use &amp; the ways you could use them. There were plenty of acronyms that made you feel accomplished if you knew what they stood for, even if you didn&rsquo;t know what they did.</p>
-
-<p>My view of web application architecture had exploded from a few technologies to many, many layers of them. ColdFusion was replaced by an astoundingly complex maze of choices. Want to display a database field on the screen? Oh, not so quick Mr Simple Developer. We need to do it in a modern, best practice, scalable way. I did not feel productive.</p>
-
-<p>This is where some people would stop me in my story, call me a non-believer, and then begin to preach the virtues of their given religion. I have no desire to go into any of them here. All I will say is that I&rsquo;ve seen people wield them as weapons, instead of collaborating with people to use them. The criteria I evaluate technology by is pretty simple. Can I understand it? Does it make sense in my gut? This may seem like a simpletons view, but it&rsquo;s proven correct time &amp; again. Is it simple to understand &amp; work with quickly? How many layers of abstraction or indirection are there? What value do they add? Is there a simpler way to do it? Would other people understand what it&rsquo;s doing? How about in 5 years? Is it closed, open, popular? What does it feel like to use?</p>
-
-<p>Microsoft Access &amp; ColdFusion still exist 13 years after I used them. Access 2013 looks like it&rsquo;s been given new Metro (sorry, Windows 8-style UI) &amp; web coats, but underneath it looks like the same animal that has not evolved in over a decade. There are rapid application development platforms &amp; tools out there, but why haven&rsquo;t they evolved, and become more widely used for application development? particularly enterprise systems development?</p>
 ]]></content>
   </entry>
   

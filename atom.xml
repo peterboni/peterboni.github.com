@@ -4,7 +4,7 @@
   <title><![CDATA[Peter Boni]]></title>
   <link href="http://www.peterboni.net/atom.xml" rel="self"/>
   <link href="http://www.peterboni.net/"/>
-  <updated>2014-01-01T08:32:30+08:00</updated>
+  <updated>2014-01-11T11:05:58+08:00</updated>
   <id>http://www.peterboni.net/</id>
   <author>
     <name><![CDATA[Peter Boni]]></name>
@@ -12,6 +12,146 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Mobile Design Details: Hide/Show Passwords - iOS Implementation and Thoughts]]></title>
+    <link href="http://www.peterboni.net/blog/2014/01/11/mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts/"/>
+    <updated>2014-01-11T07:00:00+08:00</updated>
+    <id>http://www.peterboni.net/blog/2014/01/11/mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts</id>
+    <content type="html"><![CDATA[<p>I read a tweet from Luke Wroblewski this morning, which lead to a blog post he
+published on November 7, 2012 called <a href="http://www.lukew.com/ff/entry.asp?1653">Mobile Design Details: Hide/Show Passwords</a>.</p>
+
+<p>The fact that I have to manually enter passwords on mobile has been a constant source
+of frustration for me, with this only making it worse.
+Sadly his advice has not caught on much with app/site designers &amp; developers.
+I decided to see how hard it was to quickly implement on iOS with a few thoughts along the way.</p>
+
+<!--more-->
+
+
+<h2>Implementation</h2>
+
+<p>It turns out it&rsquo;s very simple.</p>
+
+<p>Using Xcode 5.0.2, do File &ndash; New &ndash; Project &ndash; Application: Single View Application.</p>
+
+<p>Add a Text Field to the single <strong>View Controller</strong> in <strong>Main.storyboard</strong>. You can add
+Placeholder text to give the user a visual indication of what they should be doing
+with the field.</p>
+
+<p>Create an Outlet Connection in <strong>ViewController.h</strong> called <strong>password</strong>, which should look
+like this.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">@interface</span> <span class="nc">ViewController</span> : <span class="nc">UIViewController</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">@property</span> <span class="p">(</span><span class="n">weak</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="kt">IBOutlet</span> <span class="n">UITextField</span> <span class="o">*</span><span class="n">password</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">@end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>In <strong>ViewController.m</strong>, put the following code into <strong>viewDidLoad</strong>.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">viewDidLoad</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">super</span> <span class="n">viewDidLoad</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">CGSize</span> <span class="n">hideShowSize</span> <span class="o">=</span> <span class="p">[</span><span class="s">@&quot;SHOWX&quot;</span> <span class="nl">sizeWithAttributes:</span><span class="err">@</span><span class="p">{</span><span class="nl">NSFontAttributeName:</span><span class="p">[</span><span class="n">UIFont</span> <span class="nl">systemFontOfSize:</span><span class="mf">14.0f</span><span class="p">]}];</span>
+</span><span class='line'>    <span class="n">UIButton</span> <span class="o">*</span><span class="n">hideShow</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UIButton</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithFrame:</span><span class="n">CGRectMake</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">hideShowSize</span><span class="p">.</span><span class="n">width</span><span class="p">,</span> <span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">frame</span><span class="p">.</span><span class="n">size</span><span class="p">.</span><span class="n">height</span><span class="p">)];</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">hideShow</span><span class="p">.</span><span class="n">titleLabel</span> <span class="nl">setFont:</span><span class="p">[</span><span class="n">UIFont</span> <span class="nl">systemFontOfSize:</span><span class="mf">14.0f</span><span class="p">]];</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">hideShow</span> <span class="nl">setTitle:</span><span class="s">@&quot;HIDE&quot;</span> <span class="nl">forState:</span><span class="n">UIControlStateNormal</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">hideShow</span> <span class="nl">setTitleColor:</span><span class="p">[</span><span class="n">UIColor</span> <span class="n">grayColor</span><span class="p">]</span> <span class="nl">forState:</span><span class="n">UIControlStateNormal</span><span class="p">];</span>
+</span><span class='line'>    <span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">rightView</span> <span class="o">=</span> <span class="n">hideShow</span><span class="p">;</span>
+</span><span class='line'>    <span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">rightViewMode</span> <span class="o">=</span> <span class="n">UITextFieldViewModeAlways</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">hideShow</span> <span class="nl">addTarget:</span><span class="n">self</span> <span class="nl">action:</span><span class="k">@selector</span><span class="p">(</span><span class="nl">hideShow:</span><span class="p">)</span> <span class="nl">forControlEvents:</span><span class="n">UIControlEventTouchUpInside</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>And then create <strong>hideShow</strong>.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">hideShow:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">sender</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="n">UIButton</span> <span class="o">*</span><span class="n">hideShow</span> <span class="o">=</span> <span class="p">(</span><span class="n">UIButton</span> <span class="o">*</span><span class="p">)</span><span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">rightView</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">secureTextEntry</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">secureTextEntry</span> <span class="o">=</span> <span class="n">YES</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">[</span><span class="n">hideShow</span> <span class="nl">setTitle:</span><span class="s">@&quot;SHOW&quot;</span> <span class="nl">forState:</span><span class="n">UIControlStateNormal</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">else</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">secureTextEntry</span> <span class="o">=</span> <span class="n">NO</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">[</span><span class="n">hideShow</span> <span class="nl">setTitle:</span><span class="s">@&quot;HIDE&quot;</span> <span class="nl">forState:</span><span class="n">UIControlStateNormal</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">password</span> <span class="n">becomeFirstResponder</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You should get something like this.</p>
+
+<p><img class="fancybox center" src="http://www.peterboni.net/media/images/2014-01-11-mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts/1.png" width="594" height="270"></p>
+
+<p>You can immediately touch &amp; start entering your un-obfuscated password.</p>
+
+<p><img class="fancybox center" src="http://www.peterboni.net/media/images/2014-01-11-mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts/2.png" width="594" height="270"></p>
+
+<p>If you touch &lsquo;HIDE&rsquo; then your password is obfuscated, and similarly touching &lsquo;SHOW&rsquo; will
+go back to your un-obfuscated password.</p>
+
+<p><img class="fancybox center" src="http://www.peterboni.net/media/images/2014-01-11-mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts/3.png" width="594" height="270"></p>
+
+<h2>Thoughts</h2>
+
+<p>It&rsquo;s important to remember that we&rsquo;re simply toggling the iOS UITextField &lsquo;Secure&rsquo;
+functionality, so when the UITextField is not secure, the user can copy the contents
+of the UITextField.</p>
+
+<p>Therefore you should <strong>only</strong> use this pattern in Sign Up &amp; Login views, <strong>not</strong> views
+where you can view/edit account details for a service.</p>
+
+<p><img class="fancybox center" src="http://www.peterboni.net/media/images/2014-01-11-mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts/4.png" width="594" height="270"></p>
+
+<p><img class="fancybox center" src="http://www.peterboni.net/media/images/2014-01-11-mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts/5.png" width="594" height="270"></p>
+
+<p>This still doesn&rsquo;t remove the frustration of having to manually enter passwords on mobile.
+It would be great to see Apple take the lead with iOS, and extend the iCloud Keychain /
+Safari Password AutoFill (and generator) features to native apps.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Running Numbers]]></title>
