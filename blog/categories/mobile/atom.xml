@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mobile | Peter Boni]]></title>
   <link href="http://www.peterboni.net/blog/categories/mobile/atom.xml" rel="self"/>
   <link href="http://www.peterboni.net/"/>
-  <updated>2014-01-11T11:09:40+08:00</updated>
+  <updated>2014-02-15T16:22:08+08:00</updated>
   <id>http://www.peterboni.net/</id>
   <author>
     <name><![CDATA[Peter Boni]]></name>
@@ -12,6 +12,100 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[PhotoArchive for iPhone]]></title>
+    <link href="http://www.peterboni.net/blog/2014/02/15/photoarchive/"/>
+    <updated>2014-02-15T07:00:00+08:00</updated>
+    <id>http://www.peterboni.net/blog/2014/02/15/photoarchive</id>
+    <content type="html"><![CDATA[<p>I take a lot of photos &amp; videos with my iPhone.
+It&rsquo;s always with me, so it&rsquo;s convenient, and the quality is good.
+My DSLR body &amp; lenses produce superior quality, but are usually left at home gathering dust.</p>
+
+<p>When I take new photos or videos, often of my family, I worry that if something were to happen to my iPhone, those irreplaceable memories will be lost forever.</p>
+
+<p>There are many solutions for this need, for example iCloud Backup, the Dropbox app, or the Amazon Cloud Drive app, but they all have varying costs &amp; limitations.
+I wanted a simple solution for me, and that&rsquo;s why I decided to build an app as a side project &ndash; PhotoArchive for iPhone.
+When released, PhotoArchive will be free for everyone on the App Store.</p>
+
+<!--more-->
+
+
+<h2>What it looks like</h2>
+
+<div align="center">
+<img src="http://www.peterboni.net/media/images/2014-02-15-photoarchive/black.png" style="border:none !important;">
+<img src="http://www.peterboni.net/media/images/2014-02-15-photoarchive/white.png" style="border:none !important;">
+</div>
+
+
+<p></p>
+
+
+<h2>What it does</h2>
+
+<p>I have a Western Digital My Book NAS (Network Attached Storage) at home that is always on.
+I use it for file storage for computers on the network, and DLNA streaming to the living room TV via the PS3.</p>
+
+<p>I copy new photos &amp; videos from my &amp; my wife&rsquo;s iPhones by manually connecting them to a computer via USB, and downloading the new ones.
+Because it&rsquo;s a tedious manual process I don&rsquo;t do it as often as I should.</p>
+
+<p>What PhotoArchive does is copy new photos &amp; videos from your iOS device to an FTP server, over Wi-Fi.
+The Western Digital My Book NAS, like most NAS, supports FTP (File Transfer Protocol).</p>
+
+<p>This means that when I get home I can effortlessly back up new photos &amp; videos I&rsquo;ve taken that day &ndash; no turning on computers, no USB cables etc.</p>
+
+<h2>What it does (marketing version)</h2>
+
+<blockquote><p>PhotoArchive saves your irreplaceable memories, your photos &amp; videos from your iOS device Camera Roll to your FTP server over Wi-Fi.</p></blockquote>
+
+<p>Most NAS (Network Attached Storage) devices support FTP (File Transfer Protocol), so you can PhotoArchive directly to your NAS.
+FTP should only be used on Wi-Fi with WPA2 security. Be security smart.</p>
+
+<ol>
+<li><p><strong>Save Money</strong> &ndash; When you use PhotoArchive you can turn off the Camera Roll from iCloud Backup, and stay under the 5.0 GB free limit. Use iCloud Backup to back up your accounts, documents, and settings.</p></li>
+<li><p><strong>Save Time</strong> &ndash; Stop manually backing up your photos &amp; videos to your Mac (are you still using USB cables?). Stop manually backing up your iOS device to iTunes!</p></li>
+<li><p><strong>Archives</strong> &ndash; PhotoArchive does not synchronise. PhotoArchive will not download photos or videos from your FTP server to your iOS device.</p></li>
+<li><p><strong>Never Deletes</strong> &ndash; PhotoArchive will never delete a photo or video from your FTP server, or from your iOS device.</p></li>
+<li><p><strong>Smart Archive</strong> &ndash; PhotoArchive remembers the previous archive, and will only upload new photos &amp; videos, so it&rsquo;s <em>FAST</em>!</p></li>
+<li><p><strong>Smart Photo View</strong> &ndash; Shows you the photos &amp; videos you have not archived (in danger of being lost forever), and the ones you have (safe in the event that something happens to your iOS device).</p></li>
+<li><p><strong>Full Resolution &amp; Metadata</strong> &ndash; PhotoArchive uploads photos &amp; videos in their full resolution with all metadata.</p></li>
+</ol>
+
+
+<h2>Design thinking</h2>
+
+<p>The main view that greets the user visually shows them all photos &amp; videos on their iOS device, grouped into state &ndash; not archived, or archived.
+It first shows photos &amp; videos that are not archived (in danger of being lost forever), and then photos &amp; videos that are archived (safe).</p>
+
+<p>The user can either setup their archive destination, or start archiving if already setup &amp; there are new photos or videos.</p>
+
+<p>I took inspiration from the iOS Photos app, and show photos &amp; videos as varying square sizes.</p>
+
+<p>The Not Archived section photos &amp; videos are shown as large squares up to a certain number, and then get smaller.
+Large squares let you see the few photos &amp; videos that you haven&rsquo;t archived up close.
+If there&rsquo;s lots, then they are shown as small squares to give you a visual sense of how many there are.
+The section header is the PhotoArchive logo on red &ndash; danger!</p>
+
+<p>The Archived section shows photos &amp; videos as small squares; they are safe, so you don&rsquo;t need to see what they are, just get a visual sense of how many there are.
+The section header is the PhotoArchive logo on blue (this is the app icon) &ndash; safe.</p>
+
+<p>The design allows both sections to appear together on the main view without much scrolling required.</p>
+
+<h2>When will it be released</h2>
+
+<p>PhotoArchive is functionally complete.
+I&rsquo;m currently cleaning, polishing &amp; testing it.
+It would be great to have a few testers, so if you&rsquo;d like to test it out &amp; are willing to provide feedback, then contact me at <a href="peter.boni@gmail.com">peter.boni@gmail.com</a>.</p>
+
+<h2>The future</h2>
+
+<p>Since the purpose of PhotoArchive is to save your irreplaceable memories, i&rsquo;ve thought about adding support for offsite archiving to cloud storage such as Amazon S3 or Glacier.</p>
+
+<p>Amazon Glacier is attractive because of it&rsquo;s extreme lost cost &ndash; USD$0.01 per GB (gigabyte) per month.
+That&rsquo;s just over USD$10 per month to archive 1TB (terabyte) of photos &amp; videos!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Mobile Design Details: Hide/Show Passwords - iOS Implementation and Thoughts]]></title>
@@ -315,193 +409,6 @@ didn&rsquo;t trap the paste and format the value before updating the display val
 
 <p>Go get it &ndash; <a href="https://github.com/peterboni/FormattedCurrencyInput">FormattedCurrencyInput on GitHub</a>.<br/>
 Fork it, or submit a Pull Request, and let&rsquo;s make it better for others together!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[iOS 7 Dynamic Type]]></title>
-    <link href="http://www.peterboni.net/blog/2013/06/29/ios-7-dynamic-type/"/>
-    <updated>2013-06-29T07:00:00+08:00</updated>
-    <id>http://www.peterboni.net/blog/2013/06/29/ios-7-dynamic-type</id>
-    <content type="html"><![CDATA[<p>iOS 7 introduces Dynamic Type, which if apps choose to support it, gives the user
-control over text size in an app. Web pages have had this feature for free since the early
-days of the web, but web browsers moved away from dynamic text sizing.
-<a href="http://www.codinghorror.com/blog/2009/01/the-two-types-of-browser-zoom.html">The Two Types of Browser Zoom</a>.</p>
-
-<p>iOS7 Dynamic Type automatically adjusts weight, letter spacing, and line height for every font
-size. It looks <strong>stunning</strong>, but there&rsquo;s work to make your app support it.</p>
-
-<!--more-->
-
-
-<h2>Default Size</h2>
-
-<p>Here&rsquo;s what <a href="/blog/2013/06/24/ios-7-userxlistview/">UserXListView</a> looks like with the Text Size
-(Settings &ndash; General &ndash; Text Size) set to the default size in the <em>iPhone Retina (3.5-inch)</em>
-iOS Simulator.</p>
-
-<p><img class="fancybox center" src="/media/images/2013-06-29-ios-7-dynamic-type/1-text-size-normal.png" width="500" height="713" title="Text Size Default" ></p>
-
-<p>We get 3 &amp; &lsquo;a bit&rsquo; cells in the UITableView.</p>
-
-<p><img class="fancybox center" src="/media/images/2013-06-29-ios-7-dynamic-type/2-userxlistview-normal.png" width="500" height="713" title="UserXListView Default" ></p>
-
-<h2>Smallest Size</h2>
-
-<p>Changing the Text Size to the smallest size means we can fit slightly more.</p>
-
-<p><img class="fancybox center" src="/media/images/2013-06-29-ios-7-dynamic-type/3-text-size-small.png" width="500" height="713" title="Text Size Smallest" ></p>
-
-<p>Nearly 4 cells in the UITableView.</p>
-
-<p><img class="fancybox center" src="/media/images/2013-06-29-ios-7-dynamic-type/4-userxlistview-small.png" width="500" height="713" title="UserXListView Smallest" ></p>
-
-<h2>Largest Size</h2>
-
-<p>Changing the Text Size to the largest size means we can fit slightly less, but get big
-beautiful type.</p>
-
-<p><img class="fancybox center" src="/media/images/2013-06-29-ios-7-dynamic-type/5-text-size-large.png" width="500" height="713" title="Text Size Largest" ></p>
-
-<p>3 cells in the UITableView.</p>
-
-<p><img class="fancybox center" src="/media/images/2013-06-29-ios-7-dynamic-type/6-userxlistview-large.png" width="500" height="713" title="UserXListView Largest" ></p>
-
-<h2>Implementation, The Easy Part</h2>
-
-<p>That&rsquo;s how it looks, but how hard is it to make your app support it. Let&rsquo;s look at
-<a href="/blog/2013/06/24/ios-7-userxlistview/">UserXListView</a>. The cell layout makes use of Auto
-Layout Constraints, which are very powerful.</p>
-
-<p><img class="fancybox center" src="/media/images/2013-06-29-ios-7-dynamic-type/7-userxlistview-cell-layout.png" width="381" height="674" title="UserXListView Cell Layout" ></p>
-
-<p>iOS 7 has defined Text Styles &ndash; Body, Caption 1, Caption 2, Footnote, Headline 1,
-Headline 2, Subhead 1, and Subhead 2. We assign a Text Style to each label in the cell
-layout via the attribute inspector as shown below.</p>
-
-<p><img class="fancybox center" src="/media/images/2013-06-29-ios-7-dynamic-type/8-userxlistview-cell-label-attribute-inspector.png" width="316" height="196" title="UserXListView Cell Label Attribute Inspector" ></p>
-
-<p>Once the label Text Styles &amp; Auto Layout Constraints are set, we&rsquo;re ready for the hard
-part.</p>
-
-<h2>Implementation, The Hard Part</h2>
-
-<p>Unlike Auto Layout in this example, there&rsquo;s more work to do to support
-Dynamic Type.</p>
-
-<p>We need to make the Controller aware of a Text Size change by hooking into the
-UIContentSizeCategoryDidChangeNotification.</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">viewDidLoad</span> <span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="p">[</span><span class="n">super</span> <span class="n">viewDidLoad</span><span class="p">];</span>
-</span><span class='line'><span class="p">[[</span><span class="n">NSNotificationCenter</span> <span class="n">defaultCenter</span><span class="p">]</span> <span class="nl">addObserver:</span><span class="n">self</span> <span class="nl">selector:</span><span class="k">@selector</span><span class="p">(</span><span class="nl">preferredContentSizeChanged:</span><span class="p">)</span> <span class="nl">name:</span><span class="n">UIContentSizeCategoryDidChangeNotification</span> <span class="nl">object:</span><span class="nb">nil</span><span class="p">];</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">ul</span><span class="o">&gt;</span>
-</span><span class='line'><span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nl">preferredContentSizeChanged:</span><span class="p">(</span><span class="n">NSNotification</span> <span class="o">*</span><span class="p">)</span><span class="n">aNotification</span> <span class="p">{</span>
-</span><span class='line'>  <span class="c1">// adjust the layout of the cells</span>
-</span><span class='line'>  <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">view</span> <span class="n">setNeedsLayout</span><span class="p">];</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>  <span class="c1">// refresh view&amp;hellip;</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p></li>
-</ul>
-
-
-<p>We need to calculate the height of the row/cell based on it&rsquo;s content, and as each label
-in the cell can change height we need to calculate the total height of the cell required.</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="p">(</span><span class="n">CGFloat</span><span class="p">)</span><span class="nl">tableView:</span><span class="p">(</span><span class="n">UITableView</span> <span class="o">&lt;</span><span class="n">em</span><span class="o">&gt;</span><span class="p">)</span><span class="n">tableView</span> <span class="nl">heightForRowAtIndexPath:</span><span class="p">(</span><span class="n">NSIndexPath</span> <span class="o">&lt;/</span><span class="n">em</span><span class="o">&gt;</span><span class="p">)</span><span class="n">indexPath</span> <span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">Account</span> <span class="o">*</span><span class="n">account</span> <span class="o">=</span> <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">fetchedResultsController</span> <span class="nl">objectAtIndexPath:</span><span class="n">indexPath</span><span class="p">];</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">UIFont</span> <span class="o">*</span><span class="n">nameLabelFont</span> <span class="o">=</span> <span class="p">[</span><span class="n">UIFont</span> <span class="nl">preferredFontForTextStyle:</span><span class="n">UIFontTextStyleHeadline1</span><span class="p">];</span>
-</span><span class='line'><span class="n">CGSize</span> <span class="n">nameLabelFontSize</span> <span class="o">=</span> <span class="p">[[</span><span class="n">account</span> <span class="n">name</span><span class="p">]</span> <span class="nl">sizeWithAttributes:</span><span class="p">[</span><span class="n">NSDictionary</span> <span class="nl">dictionaryWithObject:</span><span class="n">nameLabelFont</span> <span class="nl">forKey:</span><span class="n">NSFontAttributeName</span><span class="p">]];</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// ...</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">CGFloat</span> <span class="n">PADDING_OUTER</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
-</span><span class='line'><span class="n">CGFloat</span> <span class="n">totalHeight</span> <span class="o">=</span> <span class="n">PADDING_OUTER</span> <span class="o">+</span> <span class="n">nameLabelFontSize</span><span class="p">.</span><span class="n">height</span> <span class="o">+</span> <span class="p">...</span> <span class="o">+</span> <span class="n">PADDING_OUTER</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">return</span> <span class="n">totalHeight</span><span class="p">;</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>We also need to programmatically assign (or re-assign because we already did it in
-the Storyboard) the cell label Text Style values.</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="p">(</span><span class="n">UITableViewCell</span> <span class="o">&lt;</span><span class="n">em</span><span class="o">&gt;</span><span class="p">)</span><span class="nl">tableView:</span><span class="p">(</span><span class="n">UITableView</span> <span class="o">&lt;/</span><span class="n">em</span><span class="o">&gt;</span><span class="p">)</span><span class="n">tableView</span> <span class="nl">cellForRowAtIndexPath:</span><span class="p">(</span><span class="n">NSIndexPath</span> <span class="o">*</span><span class="p">)</span><span class="n">indexPath</span> <span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">AccountCell</span> <span class="o">*</span><span class="n">cell</span> <span class="o">=</span> <span class="p">(</span><span class="n">AccountCell</span> <span class="o">*</span><span class="p">)[</span><span class="n">tableView</span> <span class="nl">dequeueReusableCellWithIdentifier:</span><span class="s">@&quot;AccountCell&quot;</span><span class="p">];</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">Account</span> <span class="o">*</span><span class="n">account</span> <span class="o">=</span> <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">fetchedResultsController</span> <span class="nl">objectAtIndexPath:</span><span class="n">indexPath</span><span class="p">];</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">cell</span><span class="p">.</span><span class="n">nameLabel</span><span class="p">.</span><span class="n">text</span> <span class="o">=</span> <span class="p">[</span><span class="n">account</span> <span class="n">name</span><span class="p">];</span>
-</span><span class='line'><span class="n">cell</span><span class="p">.</span><span class="n">nameLabel</span><span class="p">.</span><span class="n">font</span> <span class="o">=</span> <span class="p">[</span><span class="n">UIFont</span> <span class="nl">preferredFontForTextStyle:</span><span class="n">UIFontTextStyleHeadline1</span><span class="p">];</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// ...</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<h2>Final Thoughts</h2>
-
-<p>That&rsquo;s it. iOS 7 determines &amp; applies the font attributes for each label based on the
-Text Style for each label, and the iOS 7 Text Size system setting selected by the user,
-and it&rsquo;s left to us (the developer) to cater for the changes in the layout to the view.</p>
-
-<p>As you can see there&rsquo;s a bit of extra work to support Dynamic Type. It would be nice if
-it was a bit smarter, a bit more automatic, but with great power comes great responsibility.</p>
 ]]></content>
   </entry>
   

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Design | Peter Boni]]></title>
   <link href="http://www.peterboni.net/blog/categories/design/atom.xml" rel="self"/>
   <link href="http://www.peterboni.net/"/>
-  <updated>2014-01-11T11:09:40+08:00</updated>
+  <updated>2014-02-15T16:22:08+08:00</updated>
   <id>http://www.peterboni.net/</id>
   <author>
     <name><![CDATA[Peter Boni]]></name>
@@ -12,6 +12,100 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[PhotoArchive for iPhone]]></title>
+    <link href="http://www.peterboni.net/blog/2014/02/15/photoarchive/"/>
+    <updated>2014-02-15T07:00:00+08:00</updated>
+    <id>http://www.peterboni.net/blog/2014/02/15/photoarchive</id>
+    <content type="html"><![CDATA[<p>I take a lot of photos &amp; videos with my iPhone.
+It&rsquo;s always with me, so it&rsquo;s convenient, and the quality is good.
+My DSLR body &amp; lenses produce superior quality, but are usually left at home gathering dust.</p>
+
+<p>When I take new photos or videos, often of my family, I worry that if something were to happen to my iPhone, those irreplaceable memories will be lost forever.</p>
+
+<p>There are many solutions for this need, for example iCloud Backup, the Dropbox app, or the Amazon Cloud Drive app, but they all have varying costs &amp; limitations.
+I wanted a simple solution for me, and that&rsquo;s why I decided to build an app as a side project &ndash; PhotoArchive for iPhone.
+When released, PhotoArchive will be free for everyone on the App Store.</p>
+
+<!--more-->
+
+
+<h2>What it looks like</h2>
+
+<div align="center">
+<img src="http://www.peterboni.net/media/images/2014-02-15-photoarchive/black.png" style="border:none !important;">
+<img src="http://www.peterboni.net/media/images/2014-02-15-photoarchive/white.png" style="border:none !important;">
+</div>
+
+
+<p></p>
+
+
+<h2>What it does</h2>
+
+<p>I have a Western Digital My Book NAS (Network Attached Storage) at home that is always on.
+I use it for file storage for computers on the network, and DLNA streaming to the living room TV via the PS3.</p>
+
+<p>I copy new photos &amp; videos from my &amp; my wife&rsquo;s iPhones by manually connecting them to a computer via USB, and downloading the new ones.
+Because it&rsquo;s a tedious manual process I don&rsquo;t do it as often as I should.</p>
+
+<p>What PhotoArchive does is copy new photos &amp; videos from your iOS device to an FTP server, over Wi-Fi.
+The Western Digital My Book NAS, like most NAS, supports FTP (File Transfer Protocol).</p>
+
+<p>This means that when I get home I can effortlessly back up new photos &amp; videos I&rsquo;ve taken that day &ndash; no turning on computers, no USB cables etc.</p>
+
+<h2>What it does (marketing version)</h2>
+
+<blockquote><p>PhotoArchive saves your irreplaceable memories, your photos &amp; videos from your iOS device Camera Roll to your FTP server over Wi-Fi.</p></blockquote>
+
+<p>Most NAS (Network Attached Storage) devices support FTP (File Transfer Protocol), so you can PhotoArchive directly to your NAS.
+FTP should only be used on Wi-Fi with WPA2 security. Be security smart.</p>
+
+<ol>
+<li><p><strong>Save Money</strong> &ndash; When you use PhotoArchive you can turn off the Camera Roll from iCloud Backup, and stay under the 5.0 GB free limit. Use iCloud Backup to back up your accounts, documents, and settings.</p></li>
+<li><p><strong>Save Time</strong> &ndash; Stop manually backing up your photos &amp; videos to your Mac (are you still using USB cables?). Stop manually backing up your iOS device to iTunes!</p></li>
+<li><p><strong>Archives</strong> &ndash; PhotoArchive does not synchronise. PhotoArchive will not download photos or videos from your FTP server to your iOS device.</p></li>
+<li><p><strong>Never Deletes</strong> &ndash; PhotoArchive will never delete a photo or video from your FTP server, or from your iOS device.</p></li>
+<li><p><strong>Smart Archive</strong> &ndash; PhotoArchive remembers the previous archive, and will only upload new photos &amp; videos, so it&rsquo;s <em>FAST</em>!</p></li>
+<li><p><strong>Smart Photo View</strong> &ndash; Shows you the photos &amp; videos you have not archived (in danger of being lost forever), and the ones you have (safe in the event that something happens to your iOS device).</p></li>
+<li><p><strong>Full Resolution &amp; Metadata</strong> &ndash; PhotoArchive uploads photos &amp; videos in their full resolution with all metadata.</p></li>
+</ol>
+
+
+<h2>Design thinking</h2>
+
+<p>The main view that greets the user visually shows them all photos &amp; videos on their iOS device, grouped into state &ndash; not archived, or archived.
+It first shows photos &amp; videos that are not archived (in danger of being lost forever), and then photos &amp; videos that are archived (safe).</p>
+
+<p>The user can either setup their archive destination, or start archiving if already setup &amp; there are new photos or videos.</p>
+
+<p>I took inspiration from the iOS Photos app, and show photos &amp; videos as varying square sizes.</p>
+
+<p>The Not Archived section photos &amp; videos are shown as large squares up to a certain number, and then get smaller.
+Large squares let you see the few photos &amp; videos that you haven&rsquo;t archived up close.
+If there&rsquo;s lots, then they are shown as small squares to give you a visual sense of how many there are.
+The section header is the PhotoArchive logo on red &ndash; danger!</p>
+
+<p>The Archived section shows photos &amp; videos as small squares; they are safe, so you don&rsquo;t need to see what they are, just get a visual sense of how many there are.
+The section header is the PhotoArchive logo on blue (this is the app icon) &ndash; safe.</p>
+
+<p>The design allows both sections to appear together on the main view without much scrolling required.</p>
+
+<h2>When will it be released</h2>
+
+<p>PhotoArchive is functionally complete.
+I&rsquo;m currently cleaning, polishing &amp; testing it.
+It would be great to have a few testers, so if you&rsquo;d like to test it out &amp; are willing to provide feedback, then contact me at <a href="peter.boni@gmail.com">peter.boni@gmail.com</a>.</p>
+
+<h2>The future</h2>
+
+<p>Since the purpose of PhotoArchive is to save your irreplaceable memories, i&rsquo;ve thought about adding support for offsite archiving to cloud storage such as Amazon S3 or Glacier.</p>
+
+<p>Amazon Glacier is attractive because of it&rsquo;s extreme lost cost &ndash; USD$0.01 per GB (gigabyte) per month.
+That&rsquo;s just over USD$10 per month to archive 1TB (terabyte) of photos &amp; videos!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Mobile Design Details: Hide/Show Passwords - iOS Implementation and Thoughts]]></title>

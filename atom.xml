@@ -4,7 +4,7 @@
   <title><![CDATA[Peter Boni]]></title>
   <link href="http://www.peterboni.net/atom.xml" rel="self"/>
   <link href="http://www.peterboni.net/"/>
-  <updated>2014-01-11T11:09:40+08:00</updated>
+  <updated>2014-02-15T16:22:08+08:00</updated>
   <id>http://www.peterboni.net/</id>
   <author>
     <name><![CDATA[Peter Boni]]></name>
@@ -12,6 +12,100 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[PhotoArchive for iPhone]]></title>
+    <link href="http://www.peterboni.net/blog/2014/02/15/photoarchive/"/>
+    <updated>2014-02-15T07:00:00+08:00</updated>
+    <id>http://www.peterboni.net/blog/2014/02/15/photoarchive</id>
+    <content type="html"><![CDATA[<p>I take a lot of photos &amp; videos with my iPhone.
+It&rsquo;s always with me, so it&rsquo;s convenient, and the quality is good.
+My DSLR body &amp; lenses produce superior quality, but are usually left at home gathering dust.</p>
+
+<p>When I take new photos or videos, often of my family, I worry that if something were to happen to my iPhone, those irreplaceable memories will be lost forever.</p>
+
+<p>There are many solutions for this need, for example iCloud Backup, the Dropbox app, or the Amazon Cloud Drive app, but they all have varying costs &amp; limitations.
+I wanted a simple solution for me, and that&rsquo;s why I decided to build an app as a side project &ndash; PhotoArchive for iPhone.
+When released, PhotoArchive will be free for everyone on the App Store.</p>
+
+<!--more-->
+
+
+<h2>What it looks like</h2>
+
+<div align="center">
+<img src="http://www.peterboni.net/media/images/2014-02-15-photoarchive/black.png" style="border:none !important;">
+<img src="http://www.peterboni.net/media/images/2014-02-15-photoarchive/white.png" style="border:none !important;">
+</div>
+
+
+<p></p>
+
+
+<h2>What it does</h2>
+
+<p>I have a Western Digital My Book NAS (Network Attached Storage) at home that is always on.
+I use it for file storage for computers on the network, and DLNA streaming to the living room TV via the PS3.</p>
+
+<p>I copy new photos &amp; videos from my &amp; my wife&rsquo;s iPhones by manually connecting them to a computer via USB, and downloading the new ones.
+Because it&rsquo;s a tedious manual process I don&rsquo;t do it as often as I should.</p>
+
+<p>What PhotoArchive does is copy new photos &amp; videos from your iOS device to an FTP server, over Wi-Fi.
+The Western Digital My Book NAS, like most NAS, supports FTP (File Transfer Protocol).</p>
+
+<p>This means that when I get home I can effortlessly back up new photos &amp; videos I&rsquo;ve taken that day &ndash; no turning on computers, no USB cables etc.</p>
+
+<h2>What it does (marketing version)</h2>
+
+<blockquote><p>PhotoArchive saves your irreplaceable memories, your photos &amp; videos from your iOS device Camera Roll to your FTP server over Wi-Fi.</p></blockquote>
+
+<p>Most NAS (Network Attached Storage) devices support FTP (File Transfer Protocol), so you can PhotoArchive directly to your NAS.
+FTP should only be used on Wi-Fi with WPA2 security. Be security smart.</p>
+
+<ol>
+<li><p><strong>Save Money</strong> &ndash; When you use PhotoArchive you can turn off the Camera Roll from iCloud Backup, and stay under the 5.0 GB free limit. Use iCloud Backup to back up your accounts, documents, and settings.</p></li>
+<li><p><strong>Save Time</strong> &ndash; Stop manually backing up your photos &amp; videos to your Mac (are you still using USB cables?). Stop manually backing up your iOS device to iTunes!</p></li>
+<li><p><strong>Archives</strong> &ndash; PhotoArchive does not synchronise. PhotoArchive will not download photos or videos from your FTP server to your iOS device.</p></li>
+<li><p><strong>Never Deletes</strong> &ndash; PhotoArchive will never delete a photo or video from your FTP server, or from your iOS device.</p></li>
+<li><p><strong>Smart Archive</strong> &ndash; PhotoArchive remembers the previous archive, and will only upload new photos &amp; videos, so it&rsquo;s <em>FAST</em>!</p></li>
+<li><p><strong>Smart Photo View</strong> &ndash; Shows you the photos &amp; videos you have not archived (in danger of being lost forever), and the ones you have (safe in the event that something happens to your iOS device).</p></li>
+<li><p><strong>Full Resolution &amp; Metadata</strong> &ndash; PhotoArchive uploads photos &amp; videos in their full resolution with all metadata.</p></li>
+</ol>
+
+
+<h2>Design thinking</h2>
+
+<p>The main view that greets the user visually shows them all photos &amp; videos on their iOS device, grouped into state &ndash; not archived, or archived.
+It first shows photos &amp; videos that are not archived (in danger of being lost forever), and then photos &amp; videos that are archived (safe).</p>
+
+<p>The user can either setup their archive destination, or start archiving if already setup &amp; there are new photos or videos.</p>
+
+<p>I took inspiration from the iOS Photos app, and show photos &amp; videos as varying square sizes.</p>
+
+<p>The Not Archived section photos &amp; videos are shown as large squares up to a certain number, and then get smaller.
+Large squares let you see the few photos &amp; videos that you haven&rsquo;t archived up close.
+If there&rsquo;s lots, then they are shown as small squares to give you a visual sense of how many there are.
+The section header is the PhotoArchive logo on red &ndash; danger!</p>
+
+<p>The Archived section shows photos &amp; videos as small squares; they are safe, so you don&rsquo;t need to see what they are, just get a visual sense of how many there are.
+The section header is the PhotoArchive logo on blue (this is the app icon) &ndash; safe.</p>
+
+<p>The design allows both sections to appear together on the main view without much scrolling required.</p>
+
+<h2>When will it be released</h2>
+
+<p>PhotoArchive is functionally complete.
+I&rsquo;m currently cleaning, polishing &amp; testing it.
+It would be great to have a few testers, so if you&rsquo;d like to test it out &amp; are willing to provide feedback, then contact me at <a href="peter.boni@gmail.com">peter.boni@gmail.com</a>.</p>
+
+<h2>The future</h2>
+
+<p>Since the purpose of PhotoArchive is to save your irreplaceable memories, i&rsquo;ve thought about adding support for offsite archiving to cloud storage such as Amazon S3 or Glacier.</p>
+
+<p>Amazon Glacier is attractive because of it&rsquo;s extreme lost cost &ndash; USD$0.01 per GB (gigabyte) per month.
+That&rsquo;s just over USD$10 per month to archive 1TB (terabyte) of photos &amp; videos!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Mobile Design Details: Hide/Show Passwords - iOS Implementation and Thoughts]]></title>
@@ -1597,127 +1691,6 @@ It&rsquo;s shown below next to Redistore for iOS, which introduced store distanc
 <p><img class="fancybox left" src="http://www.peterboni.net/media/images/2013-01-01-failmeaningfully/redistore-ios.jpg" width="320" height="548" title="Redistore for iOS introduced store distance features in version 1.3 released on April 23, 2012" ></p>
 
 <p><img class="fancybox left" src="http://www.peterboni.net/media/images/2013-01-01-failmeaningfully/paypal.jpg" width="320" height="548" title="PayPal for iOS version 5.0.1 released on September 5, 2013" ></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Demon Hacker]]></title>
-    <link href="http://www.peterboni.net/blog/2012/09/01/demon-hacker/"/>
-    <updated>2012-09-01T16:05:00+08:00</updated>
-    <id>http://www.peterboni.net/blog/2012/09/01/demon-hacker</id>
-    <content type="html"><![CDATA[<p>In early 1995 (17 years ago) I created an <a href="http://en.wikipedia.org/wiki/MS-DOS">MS-DOS</a>
-app called Demon Hacker.</p>
-
-<p>It&rsquo;s purpose was to enable a user to patch (rather crudely, but effectively)
-PC games files &amp; their created saved game files to cheat.</p>
-
-<p>I got more of a kick out of building the app using
-<a href="http://en.wikipedia.org/wiki/Turbo_Pascal">Turbo Pascal</a>, and giving it to my friends
-to use than I did playing &amp; cheating in the games.</p>
-
-<!--more-->
-
-
-<p>17 years is a <em>long</em> time in computer technology. In 1995 the Internet was emerging, and
-I knew that it had been put on a few FTP sites, but could I find it now?</p>
-
-<p>After a few minutes with Google I had found &amp; downloaded the ZIP file.
-(And made sure to scan it with antivirus software).</p>
-
-<p><em>Wow!</em></p>
-
-<p>The problem now was that it was a 16-bit MS-DOS app.</p>
-
-<p>With only Mac OS X Mountain Lion, and Windows 7, both 64-bit, I thought I would have
-to resort to setting up a VM (Virtual Machine).</p>
-
-<p>Another Google and I found <a href="http://www.dosbox.com">DOSBox</a>.
-I download &amp; opened DOSBox on Mac OS X.</p>
-
-<p><em>Double wow!</em></p>
-
-<p>I now had a directory listing. Look at those dates!</p>
-
-<p><img class="fancybox" src="http://www.peterboni.net/media/images/2012-09-01-demon-hacker/dir.png" title="Demon Hacker" ></p>
-
-<p>Check out DEMON.EXE. That&rsquo;s 29,408 bytes for the main application.
-UI (User Interface).
-Logic.
-Everything.
-That&rsquo;s 29 kilobytes (KB).</p>
-
-<p><em>Holy crap!</em></p>
-
-<p>Next step, would it run?</p>
-
-<p><em>BOOM!</em></p>
-
-<p>An app that I had created 17 years ago was running in a DOS emulator on my
-MAC OS X system.</p>
-
-<p><img class="fancybox" src="http://www.peterboni.net/media/images/2012-09-01-demon-hacker/run.png" title="Demon Hacker" ></p>
-
-<p>Here&rsquo;s the proof &ndash; the help screen. You have to admit, it&rsquo;s very helpful :)</p>
-
-<p><img class="fancybox" src="http://www.peterboni.net/media/images/2012-09-01-demon-hacker/run-help.png" title="Demon Hacker" ></p>
-
-<p>It even supports in that 29 KB size changing the application font to a medieval
-type font. Typical font files are MB these days.</p>
-
-<p><img class="fancybox" src="http://www.peterboni.net/media/images/2012-09-01-demon-hacker/run-font.png" title="Demon Hacker" ></p>
-
-<p>The great thing about Demon Hacker is that it was open.
-Extendable.
-Anyone with a PC game, a HEX editor, and some spare time could create hacks
-for games by editing the DEMON.DAT text file.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>{
-</span><span class='line'>    Alone in the Dark
-</span><span class='line'>save[0..5].itd
-</span><span class='line'>save??.itd
-</span><span class='line'>//25700 oil for the lamp
-</span><span class='line'>19856,64
-</span><span class='line'>19857,64
-</span><span class='line'>//25700 rifle ammo
-</span><span class='line'>19866,64
-</span><span class='line'>19867,64
-</span><span class='line'>//25700 health points
-</span><span class='line'>19882,64
-</span><span class='line'>19883,64
-</span><span class='line'>//25700 pistol ammo
-</span><span class='line'>20024,64
-</span><span class='line'>20025,64
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
-
-
-<p>And Demon Hacker would then let anyone use that cheat.</p>
-
-<p><img class="fancybox" src="http://www.peterboni.net/media/images/2012-09-01-demon-hacker/hack.png" title="Demon Hacker" ></p>
-
-<p>If only GitHub had existed back in 1995 the source code may not have been lost.
-If you&rsquo;re feeling nostalgic get DOSBox, your old games, and get
-<a href="http://www.github.com/peterboni/demonhacker">Demon Hacker</a>.</p>
-
-<p>This trip back down memory lane has reminded me of a few things.
-The Internet, WWW, Google &amp; technology are amazing things.
-Also that i&rsquo;m a hacker, and always will be.</p>
 ]]></content>
   </entry>
   

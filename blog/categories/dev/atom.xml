@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Dev | Peter Boni]]></title>
   <link href="http://www.peterboni.net/blog/categories/dev/atom.xml" rel="self"/>
   <link href="http://www.peterboni.net/"/>
-  <updated>2014-01-11T11:09:40+08:00</updated>
+  <updated>2014-02-15T16:22:08+08:00</updated>
   <id>http://www.peterboni.net/</id>
   <author>
     <name><![CDATA[Peter Boni]]></name>
@@ -12,6 +12,100 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[PhotoArchive for iPhone]]></title>
+    <link href="http://www.peterboni.net/blog/2014/02/15/photoarchive/"/>
+    <updated>2014-02-15T07:00:00+08:00</updated>
+    <id>http://www.peterboni.net/blog/2014/02/15/photoarchive</id>
+    <content type="html"><![CDATA[<p>I take a lot of photos &amp; videos with my iPhone.
+It&rsquo;s always with me, so it&rsquo;s convenient, and the quality is good.
+My DSLR body &amp; lenses produce superior quality, but are usually left at home gathering dust.</p>
+
+<p>When I take new photos or videos, often of my family, I worry that if something were to happen to my iPhone, those irreplaceable memories will be lost forever.</p>
+
+<p>There are many solutions for this need, for example iCloud Backup, the Dropbox app, or the Amazon Cloud Drive app, but they all have varying costs &amp; limitations.
+I wanted a simple solution for me, and that&rsquo;s why I decided to build an app as a side project &ndash; PhotoArchive for iPhone.
+When released, PhotoArchive will be free for everyone on the App Store.</p>
+
+<!--more-->
+
+
+<h2>What it looks like</h2>
+
+<div align="center">
+<img src="http://www.peterboni.net/media/images/2014-02-15-photoarchive/black.png" style="border:none !important;">
+<img src="http://www.peterboni.net/media/images/2014-02-15-photoarchive/white.png" style="border:none !important;">
+</div>
+
+
+<p></p>
+
+
+<h2>What it does</h2>
+
+<p>I have a Western Digital My Book NAS (Network Attached Storage) at home that is always on.
+I use it for file storage for computers on the network, and DLNA streaming to the living room TV via the PS3.</p>
+
+<p>I copy new photos &amp; videos from my &amp; my wife&rsquo;s iPhones by manually connecting them to a computer via USB, and downloading the new ones.
+Because it&rsquo;s a tedious manual process I don&rsquo;t do it as often as I should.</p>
+
+<p>What PhotoArchive does is copy new photos &amp; videos from your iOS device to an FTP server, over Wi-Fi.
+The Western Digital My Book NAS, like most NAS, supports FTP (File Transfer Protocol).</p>
+
+<p>This means that when I get home I can effortlessly back up new photos &amp; videos I&rsquo;ve taken that day &ndash; no turning on computers, no USB cables etc.</p>
+
+<h2>What it does (marketing version)</h2>
+
+<blockquote><p>PhotoArchive saves your irreplaceable memories, your photos &amp; videos from your iOS device Camera Roll to your FTP server over Wi-Fi.</p></blockquote>
+
+<p>Most NAS (Network Attached Storage) devices support FTP (File Transfer Protocol), so you can PhotoArchive directly to your NAS.
+FTP should only be used on Wi-Fi with WPA2 security. Be security smart.</p>
+
+<ol>
+<li><p><strong>Save Money</strong> &ndash; When you use PhotoArchive you can turn off the Camera Roll from iCloud Backup, and stay under the 5.0 GB free limit. Use iCloud Backup to back up your accounts, documents, and settings.</p></li>
+<li><p><strong>Save Time</strong> &ndash; Stop manually backing up your photos &amp; videos to your Mac (are you still using USB cables?). Stop manually backing up your iOS device to iTunes!</p></li>
+<li><p><strong>Archives</strong> &ndash; PhotoArchive does not synchronise. PhotoArchive will not download photos or videos from your FTP server to your iOS device.</p></li>
+<li><p><strong>Never Deletes</strong> &ndash; PhotoArchive will never delete a photo or video from your FTP server, or from your iOS device.</p></li>
+<li><p><strong>Smart Archive</strong> &ndash; PhotoArchive remembers the previous archive, and will only upload new photos &amp; videos, so it&rsquo;s <em>FAST</em>!</p></li>
+<li><p><strong>Smart Photo View</strong> &ndash; Shows you the photos &amp; videos you have not archived (in danger of being lost forever), and the ones you have (safe in the event that something happens to your iOS device).</p></li>
+<li><p><strong>Full Resolution &amp; Metadata</strong> &ndash; PhotoArchive uploads photos &amp; videos in their full resolution with all metadata.</p></li>
+</ol>
+
+
+<h2>Design thinking</h2>
+
+<p>The main view that greets the user visually shows them all photos &amp; videos on their iOS device, grouped into state &ndash; not archived, or archived.
+It first shows photos &amp; videos that are not archived (in danger of being lost forever), and then photos &amp; videos that are archived (safe).</p>
+
+<p>The user can either setup their archive destination, or start archiving if already setup &amp; there are new photos or videos.</p>
+
+<p>I took inspiration from the iOS Photos app, and show photos &amp; videos as varying square sizes.</p>
+
+<p>The Not Archived section photos &amp; videos are shown as large squares up to a certain number, and then get smaller.
+Large squares let you see the few photos &amp; videos that you haven&rsquo;t archived up close.
+If there&rsquo;s lots, then they are shown as small squares to give you a visual sense of how many there are.
+The section header is the PhotoArchive logo on red &ndash; danger!</p>
+
+<p>The Archived section shows photos &amp; videos as small squares; they are safe, so you don&rsquo;t need to see what they are, just get a visual sense of how many there are.
+The section header is the PhotoArchive logo on blue (this is the app icon) &ndash; safe.</p>
+
+<p>The design allows both sections to appear together on the main view without much scrolling required.</p>
+
+<h2>When will it be released</h2>
+
+<p>PhotoArchive is functionally complete.
+I&rsquo;m currently cleaning, polishing &amp; testing it.
+It would be great to have a few testers, so if you&rsquo;d like to test it out &amp; are willing to provide feedback, then contact me at <a href="peter.boni@gmail.com">peter.boni@gmail.com</a>.</p>
+
+<h2>The future</h2>
+
+<p>Since the purpose of PhotoArchive is to save your irreplaceable memories, i&rsquo;ve thought about adding support for offsite archiving to cloud storage such as Amazon S3 or Glacier.</p>
+
+<p>Amazon Glacier is attractive because of it&rsquo;s extreme lost cost &ndash; USD$0.01 per GB (gigabyte) per month.
+That&rsquo;s just over USD$10 per month to archive 1TB (terabyte) of photos &amp; videos!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Mobile Design Details: Hide/Show Passwords - iOS Implementation and Thoughts]]></title>
@@ -281,10 +375,10 @@ application framework. Enter &lsquo;npm install&rsquo;.</p>
 </pre></td><td class='code'><pre><code class='console'><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span> npm install
 </span><span class='line'><span class="go">npm http GET &lt;a href=&quot;https://registry.npmjs.org/express&quot;&gt;https://registry.npmjs.org/express&lt;/a&gt;</span>
 </span><span class='line'><span class="go">&amp;hellip;</span>
-</span><span class='line'><span class="go">&lt;a href=&quot;&amp;#109;&amp;#x61;&amp;#105;&amp;#x6c;&amp;#x74;&amp;#x6f;&amp;#58;&amp;#x65;&amp;#x78;&amp;#x70;&amp;#114;&amp;#x65;&amp;#x73;&amp;#x73;&amp;#x40;&amp;#x33;&amp;#46;&amp;#x34;&amp;#46;&amp;#x36;&quot;&gt;&amp;#x65;&amp;#x78;&amp;#112;&amp;#x72;&amp;#101;&amp;#115;&amp;#115;&amp;#64;&amp;#51;&amp;#46;&amp;#x34;&amp;#46;&amp;#x36;&lt;/a&gt; node_modules/express</span>
-</span><span class='line'><span class="go">├── &lt;a href=&quot;&amp;#x6d;&amp;#x61;&amp;#105;&amp;#108;&amp;#116;&amp;#x6f;&amp;#x3a;&amp;#x6d;&amp;#x65;&amp;#116;&amp;#x68;&amp;#111;&amp;#100;&amp;#115;&amp;#64;&amp;#x30;&amp;#46;&amp;#x31;&amp;#46;&amp;#48;&quot;&gt;&amp;#109;&amp;#x65;&amp;#116;&amp;#104;&amp;#x6f;&amp;#100;&amp;#115;&amp;#x40;&amp;#x30;&amp;#46;&amp;#x31;&amp;#46;&amp;#x30;&lt;/a&gt;</span>
+</span><span class='line'><span class="go">&lt;a href=&quot;&amp;#x6d;&amp;#97;&amp;#x69;&amp;#x6c;&amp;#116;&amp;#x6f;&amp;#x3a;&amp;#101;&amp;#x78;&amp;#112;&amp;#114;&amp;#101;&amp;#x73;&amp;#115;&amp;#x40;&amp;#51;&amp;#46;&amp;#52;&amp;#46;&amp;#x36;&quot;&gt;&amp;#101;&amp;#x78;&amp;#112;&amp;#x72;&amp;#x65;&amp;#115;&amp;#115;&amp;#x40;&amp;#x33;&amp;#x2e;&amp;#x34;&amp;#46;&amp;#x36;&lt;/a&gt; node_modules/express</span>
+</span><span class='line'><span class="go">├── &lt;a href=&quot;&amp;#109;&amp;#97;&amp;#105;&amp;#x6c;&amp;#x74;&amp;#111;&amp;#58;&amp;#x6d;&amp;#x65;&amp;#116;&amp;#104;&amp;#x6f;&amp;#x64;&amp;#115;&amp;#x40;&amp;#x30;&amp;#x2e;&amp;#x31;&amp;#46;&amp;#48;&quot;&gt;&amp;#x6d;&amp;#x65;&amp;#116;&amp;#x68;&amp;#111;&amp;#x64;&amp;#x73;&amp;#x40;&amp;#48;&amp;#x2e;&amp;#x31;&amp;#46;&amp;#x30;&lt;/a&gt;</span>
 </span><span class='line'><span class="go">&amp;hellip;</span>
-</span><span class='line'><span class="go">└── &lt;a href=&quot;&amp;#x6d;&amp;#97;&amp;#x69;&amp;#x6c;&amp;#116;&amp;#x6f;&amp;#58;&amp;#99;&amp;#111;&amp;#x6e;&amp;#110;&amp;#101;&amp;#x63;&amp;#x74;&amp;#x40;&amp;#x32;&amp;#46;&amp;#x31;&amp;#x31;&amp;#x2e;&amp;#x32;&quot;&gt;&amp;#x63;&amp;#x6f;&amp;#x6e;&amp;#x6e;&amp;#101;&amp;#99;&amp;#x74;&amp;#x40;&amp;#50;&amp;#46;&amp;#x31;&amp;#49;&amp;#46;&amp;#50;&lt;/a&gt; (uid2@0.0.3, pause@0.0.1, qs@0.6.5, bytes@0.2.1, raw-body@1.1.2, negotiator@0.3.0, &lt;a href=&quot;&amp;#109;&amp;#x61;&amp;#105;&amp;#x6c;&amp;#x74;&amp;#x6f;&amp;#x3a;&amp;#x6d;&amp;#x75;&amp;#x6c;&amp;#116;&amp;#105;&amp;#x70;&amp;#x61;&amp;#x72;&amp;#116;&amp;#121;&amp;#64;&amp;#x32;&amp;#x2e;&amp;#x32;&amp;#46;&amp;#x30;&quot;&gt;&amp;#109;&amp;#x75;&amp;#x6c;&amp;#116;&amp;#105;&amp;#112;&amp;#97;&amp;#114;&amp;#116;&amp;#x79;&amp;#x40;&amp;#x32;&amp;#46;&amp;#50;&amp;#x2e;&amp;#48;&lt;/a&gt;)</span>
+</span><span class='line'><span class="go">└── &lt;a href=&quot;&amp;#x6d;&amp;#x61;&amp;#105;&amp;#x6c;&amp;#x74;&amp;#x6f;&amp;#58;&amp;#x63;&amp;#111;&amp;#x6e;&amp;#110;&amp;#101;&amp;#x63;&amp;#116;&amp;#x40;&amp;#50;&amp;#46;&amp;#49;&amp;#x31;&amp;#x2e;&amp;#50;&quot;&gt;&amp;#x63;&amp;#x6f;&amp;#x6e;&amp;#110;&amp;#x65;&amp;#99;&amp;#x74;&amp;#64;&amp;#50;&amp;#x2e;&amp;#x31;&amp;#49;&amp;#x2e;&amp;#50;&lt;/a&gt; (uid2@0.0.3, pause@0.0.1, qs@0.6.5, bytes@0.2.1, raw-body@1.1.2, negotiator@0.3.0, &lt;a href=&quot;&amp;#x6d;&amp;#x61;&amp;#x69;&amp;#x6c;&amp;#x74;&amp;#111;&amp;#x3a;&amp;#x6d;&amp;#x75;&amp;#x6c;&amp;#x74;&amp;#x69;&amp;#x70;&amp;#x61;&amp;#x72;&amp;#x74;&amp;#x79;&amp;#64;&amp;#50;&amp;#46;&amp;#50;&amp;#x2e;&amp;#48;&quot;&gt;&amp;#x6d;&amp;#x75;&amp;#x6c;&amp;#116;&amp;#105;&amp;#x70;&amp;#97;&amp;#x72;&amp;#116;&amp;#x79;&amp;#64;&amp;#x32;&amp;#46;&amp;#50;&amp;#x2e;&amp;#x30;&lt;/a&gt;)</span>
 </span><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
@@ -893,214 +987,6 @@ and it&rsquo;s left to us (the developer) to cater for the changes in the layout
 
 <p>As you can see there&rsquo;s a bit of extra work to support Dynamic Type. It would be nice if
 it was a bit smarter, a bit more automatic, but with great power comes great responsibility.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[iOS 7 UserXListView]]></title>
-    <link href="http://www.peterboni.net/blog/2013/06/24/ios-7-userxlistview/"/>
-    <updated>2013-06-24T07:00:00+08:00</updated>
-    <id>http://www.peterboni.net/blog/2013/06/24/ios-7-userxlistview</id>
-    <content type="html"><![CDATA[<p>I believe the best way to understand something is to get your hands dirty, so I decided
-to build the front end part of an app idea that I&rsquo;ve had for a while as an iOS 7 app.</p>
-
-<p>While using iOS 7 for the last week or so, I&rsquo;ve been thinking about the UI &amp; UX.
-Of course, Metro (design language) has been around for a while thanks to Microsoft, but
-the Metro apps I&rsquo;ve used feel dull. iOS 7 feels surprisingly refreshing.</p>
-
-<!--more-->
-
-
-<p>One of the views in the app I&rsquo;m building needs a list of <em>things</em> that the user creates &ndash;
-a typical pattern in many apps. iOS has a UITableViewController, so technically it&rsquo;s an
-easy problem to solve. In terms of the design of the UI &amp; UX it&rsquo;s a little bit more complicated.</p>
-
-<p>Let me talk you through what I call the UserXListView&trade; pattern in 7 images of the
-iOS 7 app I&rsquo;ve started building.</p>
-
-<h2>1. Empty List View</h2>
-
-<p>Ok. We have a list view. That + in the top right corner is staring at her.
-Tap me! Tap me!</p>
-
-<p><img class="fancybox center" src="/media/images/2013-06-24-ios-7-userxlistview/app-1-list-view.png" width="396" height="744" title="1. Empty List View" ></p>
-
-<h2>2. Add Item (with default Icon &amp; Colour)</h2>
-
-<p>She taps +. She knows that she&rsquo;s going to create something. What&rsquo;s the first
-decision? What to name it? No. The first decision is an emotional one. What&rsquo;s this thing
-going to look like.</p>
-
-<p><img class="fancybox center" src="/media/images/2013-06-24-ios-7-userxlistview/app-2-add-item.png" width="396" height="744" title="2. Add Item (with default Icon &amp; Colour)" ></p>
-
-<p>Technically this is a modal segue; either Cancel and go back, or enter the required
-information &amp; Save.</p>
-
-<h2>3. Item Icon</h2>
-
-<p>She taps Change Icon. This is where it gets interesting. The icons are in groups &amp; are
-all black so that they are easy for her to judge equally. In this instance there&rsquo;s only one
-group of simple icons from The Noun Project, that are visually related to the thing that
-she is creating.</p>
-
-<p><img class="fancybox center" src="/media/images/2013-06-24-ios-7-userxlistview/app-3-icons.png" width="396" height="744" title="3. Item Icon" ></p>
-
-<p>Once again this is a modal segue; either Cancel and go back, or give the required
-information, which in this instance is selecting an icon. We use a UICollectionViewController
-that&rsquo;s dynamic. We define the icon groups &amp; icons as follows.</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">icons</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSArray</span> <span class="nl">arrayWithObjects:</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span>        <span class="p">[</span><span class="n">NSArray</span> <span class="nl">arrayWithObjects:</span><span class="s">@&quot;The Noun Project&quot;</span><span class="p">,</span> <span class="s">@&quot;airplane&quot;</span><span class="p">,</span> <span class="s">@&quot;beachumbrella&quot;</span><span class="p">,</span> <span class="s">@&quot;bucket&quot;</span><span class="p">,</span> <span class="s">@&quot;car&quot;</span><span class="p">,</span> <span class="s">@&quot;cocktail&quot;</span><span class="p">,</span> <span class="s">@&quot;coins&quot;</span><span class="p">,</span> <span class="s">@&quot;college&quot;</span><span class="p">,</span> <span class="s">@&quot;creditcard&quot;</span><span class="p">,</span> <span class="s">@&quot;house&quot;</span><span class="p">,</span> <span class="s">@&quot;island&quot;</span><span class="p">,</span> <span class="s">@&quot;piggybank&quot;</span><span class="p">,</span> <span class="s">@&quot;rain&quot;</span><span class="p">,</span> <span class="s">@&quot;ring&quot;</span><span class="p">,</span> <span class="s">@&quot;sailboat&quot;</span><span class="p">,</span> <span class="s">@&quot;school&quot;</span><span class="p">,</span> <span class="s">@&quot;shoppingbag&quot;</span><span class="p">,</span> <span class="s">@&quot;smartcard&quot;</span><span class="p">,</span> <span class="s">@&quot;stroller&quot;</span><span class="p">,</span> <span class="s">@&quot;tree&quot;</span><span class="p">,</span> <span class="s">@&quot;umbrella&quot;</span><span class="p">,</span> <span class="s">@&quot;wallet&quot;</span><span class="p">,</span> <span class="nb">nil</span><span class="p">],</span>
-</span><span class='line'>     <span class="nb">nil</span><span class="p">];</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<h2>4. Item Icon Colour</h2>
-
-<p>She taps the piggy bank icon (they&rsquo;re cute). Now she can personalise the icon even further
-by selecting a colour from different groups of colour palettes. She can select a colour
-from the same palette to match all her <em>things</em>, or mix &amp; match colours from different
-colour palettes. The choice is hers. If she doesn&rsquo;t like the icon in any of these colours
-she can either tap &lt; Icon, or as a nice feature of iOS 7, swipe left to right inside where
-the icons are located and the view will slide off the top to the right and she will be taken
-back to the black icons.</p>
-
-<p><img class="fancybox center" src="/media/images/2013-06-24-ios-7-userxlistview/app-4-colours.png" width="396" height="744" title="4. Item Icon Colour" ></p>
-
-<p>This time we do a push segue. We use a UICollectionViewController that&rsquo;s dynamic, and some
-Core Graphics help. In the app we only store one black piggy bank icon .png file, and at
-runtime dynamically colour each piggy bank. We define the colour groups &amp; colours as follows.</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSArray</span> <span class="nl">arrayWithObjects:</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span>         <span class="p">[</span><span class="n">NSArray</span> <span class="nl">arrayWithObjects:</span><span class="s">@&quot;Winter Sunset&quot;</span><span class="p">,</span> <span class="s">@&quot;#A8AB9B&quot;</span><span class="p">,</span> <span class="s">@&quot;#172A38&quot;</span><span class="p">,</span> <span class="s">@&quot;#EC4B5D&quot;</span><span class="p">,</span> <span class="s">@&quot;#F48773&quot;</span><span class="p">,</span> <span class="s">@&quot;#E0C590&quot;</span><span class="p">,</span> <span class="nb">nil</span><span class="p">],</span>
-</span><span class='line'>         <span class="p">[</span><span class="n">NSArray</span> <span class="nl">arrayWithObjects:</span><span class="s">@&quot;Ocean Five&quot;</span><span class="p">,</span> <span class="s">@&quot;#00A0B0&quot;</span><span class="p">,</span> <span class="s">@&quot;#6A4A3C&quot;</span><span class="p">,</span> <span class="s">@&quot;#CC333F&quot;</span><span class="p">,</span> <span class="s">@&quot;#EB6841&quot;</span><span class="p">,</span> <span class="s">@&quot;#EDC951&quot;</span><span class="p">,</span> <span class="nb">nil</span><span class="p">],</span>
-</span><span class='line'>     <span class="nb">nil</span><span class="p">];</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>And then do some magic with the black piggy bank icon with a helper.</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">+</span> <span class="p">(</span><span class="n">UIImage</span> <span class="o">&lt;</span><span class="n">em</span><span class="o">&gt;</span><span class="p">)</span><span class="nf">getIcon:</span><span class="p">(</span><span class="n">NSString</span> <span class="o">&lt;/</span><span class="n">em</span><span class="o">&gt;</span><span class="p">)</span><span class="nv">iconName</span> <span class="nf">withColor:</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">iconColorHex</span> <span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">UIImage</span> <span class="o">*</span><span class="n">image</span> <span class="o">=</span> <span class="p">[</span><span class="n">UIImage</span> <span class="nl">imageNamed:</span><span class="p">[</span><span class="n">NSString</span> <span class="nl">stringWithFormat:</span><span class="s">@&quot;%@.png&quot;</span><span class="p">,</span> <span class="n">iconName</span><span class="p">]];</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">CGRect</span> <span class="n">rect</span> <span class="o">=</span> <span class="n">CGRectMake</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">image</span><span class="p">.</span><span class="n">size</span><span class="p">.</span><span class="n">width</span><span class="p">,</span> <span class="n">image</span><span class="p">.</span><span class="n">size</span><span class="p">.</span><span class="n">height</span><span class="p">);</span>
-</span><span class='line'><span class="n">UIGraphicsBeginImageContext</span><span class="p">(</span><span class="n">rect</span><span class="p">.</span><span class="n">size</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">CGContextRef</span> <span class="n">context</span> <span class="o">=</span> <span class="n">UIGraphicsGetCurrentContext</span><span class="p">();</span>
-</span><span class='line'><span class="n">CGContextClipToMask</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">rect</span><span class="p">,</span> <span class="n">image</span><span class="p">.</span><span class="n">CGImage</span><span class="p">);</span>
-</span><span class='line'><span class="n">CGContextSetFillColorWithColor</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="p">[[</span><span class="n">UIColor</span> <span class="nl">colorFromHexCode:</span><span class="n">iconColorHex</span><span class="p">]</span> <span class="n">CGColor</span><span class="p">]);</span>
-</span><span class='line'><span class="n">CGContextFillRect</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">rect</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">UIImage</span> <span class="o">*</span><span class="n">img</span> <span class="o">=</span> <span class="n">UIGraphicsGetImageFromCurrentImageContext</span><span class="p">();</span>
-</span><span class='line'><span class="n">UIGraphicsEndImageContext</span><span class="p">();</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">return</span> <span class="p">[</span><span class="n">UIImage</span> <span class="nl">imageWithCGImage:</span><span class="n">img</span><span class="p">.</span><span class="n">CGImage</span> <span class="nl">scale:</span><span class="mf">1.0</span> <span class="nl">orientation:</span><span class="n">UIImageOrientationDownMirrored</span><span class="p">];</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<h2>5. Add Item (with selected Icon &amp; Colour)</h2>
-
-<p>She taps the red piggy bank in the Ocean Five colour group, and is taken back to the
-2. Add Item view, with her red piggy bank there waiting for her. She can now enter the
-other information and tap Save.</p>
-
-<p><img class="fancybox center" src="/media/images/2013-06-24-ios-7-userxlistview/app-5-add-item.png" width="396" height="744" title="5. Add Item (with selected Icon &amp; Colour)" ></p>
-
-<h2>6. Item in List View</h2>
-
-<p>She taps Save, and her new red piggy bank is waiting for her in the list view. All that&rsquo;s
-left to do is to add some more.</p>
-
-<p><img class="fancybox center" src="/media/images/2013-06-24-ios-7-userxlistview/app-6-list-view.png" width="396" height="744" title="6. Item in List View" ></p>
-
-<h2>7. List View with Items</h2>
-
-<p>As she looks at the list of her <em>things</em>, she instantly recognises &amp; associates with each
-one, as it has her personal identifying touch.</p>
-
-<p><img class="fancybox center" src="/media/images/2013-06-24-ios-7-userxlistview/app-7-list-view-lots.png" width="396" height="744" title="7. List View with Items" ></p>
-
-<p>As you can see it&rsquo;s easy to give the user power over their <em>things</em> by a simple mobile
-UI &amp; UX pattern, hereby called the UserXListView&trade; pattern.</p>
-
-<h2>Storyboard</h2>
-
-<p>For reference here&rsquo;s how the views hang together in the Storyboard. Excluding the
-UINavigationControlers we have a UITableViewController, UIViewController, and
-two UICollectionViewControllers.</p>
-
-<p><img class="fancybox center" src="/media/images/2013-06-24-ios-7-userxlistview/storyboard.png" width="624" height="1" title="Xcode5 Storyboard" ></p>
-
-<h2>Sources</h2>
-
-<p><a href="http://en.wikipedia.org/wiki/Metro_(design_language)">Metro (design language)</a></p>
-
-<p><a href="http://www.apple.com/au/ios/ios7/design/">iOS 7 Design</a></p>
-
-<p>If you use resources, remember to do the right thing and attribute where required!</p>
-
-<p><a href="http://thenounproject.com">The Noun Project</a></p>
-
-<blockquote><p><a href="http://thenounproject.com/noun/beach-umbrella/#icon-No2020" target="_blank">Beach Umbrella</a> designed by <a href="http://thenounproject.com/____Lo" target="_blank">Laurent Patain</a> from The Noun Project<br/>
-<a href="http://thenounproject.com/noun/bucket/#icon-No2142" target="_blank">Bucket</a> designed by <a href="http://thenounproject.com/anandgrafiti" target="_blank">Anand A Nair</a> from The Noun Project<br/>
-<a href="http://thenounproject.com/noun/cocktail/#icon-No482" target="_blank">Cocktail</a>  from The Noun Project<br/>
-<a href="http://thenounproject.com/noun/coins/#icon-No16888" target="_blank">Coins</a> designed by <a href="http://thenounproject.com/jevgeni.striganov" target="_blank">Jevgeni Striganov</a> from The Noun Project<br/>
-<a href="http://thenounproject.com/noun/credit-card/#icon-No14358" target="_blank">Credit Card</a> designed by <a href="http://thenounproject.com/Oppenlander" target="_blank">Brian Oppenlander</a> from The Noun Project<br/>
-<a href="http://thenounproject.com/noun/house/#icon-No6783" target="_blank">House</a> designed by <a href="http://thenounproject.com/olynleroy" target="_blank">Olyn LeRoy</a> from The Noun Project<br/>
-<a href="http://thenounproject.com/noun/island/#icon-No8624" target="_blank">Island</a> designed by <a href="http://thenounproject.com/Avalanche" target="_blank">Athena Manolopoulos</a> from The Noun Project<br/>
-<a href="http://thenounproject.com/noun/rain/#icon-No9400" target="_blank">Rain</a> designed by <a href="http://thenounproject.com/iconify" target="_blank">Scott Lewis</a> from The Noun Project<br/>
-<a href="http://thenounproject.com/noun/ring/#icon-No1118" target="_blank">Ring</a> designed by <a href="http://thenounproject.com/mimosa.cb" target="_blank">Christopher T. Howlett</a> from The Noun Project<br/>
-<a href="http://thenounproject.com/noun/sail-boat/#icon-No2026" target="_blank">Sail Boat</a> designed by <a href="http://thenounproject.com/____Lo" target="_blank">Laurent Patain</a> from The Noun Project<br/>
-<a href="http://thenounproject.com/noun/shopping-bag/#icon-No17663" target="_blank">Shopping Bag</a> designed by <a href="http://thenounproject.com/tinyxl" target="_blank">Erin Standley</a> from The Noun Project<br/>
-<a href="http://thenounproject.com/noun/smart-card/#icon-No1804" target="_blank">Smart Card</a> designed by <a href="http://thenounproject.com/andrewforrester" target="_blank">Andrew Forrester</a> from The Noun Project<br/>
-<a href="http://thenounproject.com/noun/stroller/#icon-No601" target="_blank">Stroller</a>  from The Noun Project<br/>
-<a href="http://thenounproject.com/noun/umbrella/#icon-No142" target="_blank">Umbrella</a>  from The Noun Project<br/>
-<a href="http://thenounproject.com/noun/wallet/#icon-No3055" target="_blank">Wallet</a> designed by <a href="http://thenounproject.com/hakan" target="_blank">Hakan Yalcin</a> from The Noun Project</p></blockquote>
-
-<p><a href="http://www.colourlovers.com">COLOURlovers</a></p>
 ]]></content>
   </entry>
   
