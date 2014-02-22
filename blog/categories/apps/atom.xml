@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Apps | Peter Boni]]></title>
   <link href="http://www.peterboni.net/blog/categories/apps/atom.xml" rel="self"/>
   <link href="http://www.peterboni.net/"/>
-  <updated>2014-02-22T16:09:18+08:00</updated>
+  <updated>2014-02-22T16:12:19+08:00</updated>
   <id>http://www.peterboni.net/</id>
   <author>
     <name><![CDATA[Peter Boni]]></name>
@@ -62,13 +62,6 @@ The Western Digital My Book NAS, like most NAS, supports FTP (File Transfer Prot
 
 <blockquote><p>PhotoArchive saves your irreplaceable memories, your photos &amp; videos from your iPhone, iPad, or iPod touch to your home storage over Wi-Fi.</p></blockquote>
 
-<p>PhotoArchive archives to your home storage device, e.g. NAS (Network Attached Storage), or home computer, using FTP (File Transfer Protocol).</p>
-
-<p>Most NAS devices already support FTP, but if you are using a computer you will need an FTP server, see here &ndash; [Mac OS X][ftp_mac], or [Windows][ftp_win].</p>
-
-<p>FTP should only be used on Wi-Fi with WPA2 security, with your storage device
-on the same network. Don&rsquo;t do it over the Internet! Be security smart.</p>
-
 <p>What does PhotoArchive do?</p>
 
 <ol>
@@ -81,6 +74,13 @@ on the same network. Don&rsquo;t do it over the Internet! Be security smart.</p>
 <li><p><strong>Full Resolution &amp; Metadata</strong> &ndash; PhotoArchive uploads photos &amp; videos in their full resolution with all metadata (information about the photos &amp; videos, e.g. where you took them).</p></li>
 </ol>
 
+
+<p>PhotoArchive archives to your home storage device, e.g. NAS (Network Attached Storage), or home computer, using FTP (File Transfer Protocol).</p>
+
+<p>Most NAS devices already support FTP, but if you are using a computer you will need an FTP server, see here &ndash; <a href="http://osxdaily.com/2011/09/29/start-an-ftp-or-sftp-server-in-mac-os-x-lion/">Mac OS X</a>, or <a href="https://filezilla-project.org/download.php?type=server">Windows</a>.</p>
+
+<p>FTP should only be used on Wi-Fi with WPA2 security, with your storage device
+on the same network. Don&rsquo;t do it over the Internet! Be security smart.</p>
 
 <h2>Design thinking</h2>
 
