@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Apps | Peter Boni]]></title>
   <link href="http://www.peterboni.net/blog/categories/apps/atom.xml" rel="self"/>
   <link href="http://www.peterboni.net/"/>
-  <updated>2014-02-24T18:48:48+08:00</updated>
+  <updated>2014-02-24T19:02:12+08:00</updated>
   <id>http://www.peterboni.net/</id>
   <author>
     <name><![CDATA[Peter Boni]]></name>
@@ -77,7 +77,7 @@ The Western Digital My Book NAS, like most NAS, supports FTP (File Transfer Prot
 
 <p>How does PhotoArchive work?</p>
 
-<p>PhotoArchive archives to your home storage &ndash; NAS (Network Attached Storage), or Mac/PC, using FTP (File Transfer Protocol). Most NAS devices already support FTP, but if you are using a Mac/PC you will need an FTP server.</p>
+<p>PhotoArchive archives to your home storage &ndash; NAS (Network Attached Storage) or Mac/PC, using FTP (File Transfer Protocol). Most NAS devices already support FTP, but if you are using a Mac/PC you will need an FTP server.</p>
 
 <p>FTP should only be used on Wi-Fi with WPA2 security, with your storage on the same network. Don&rsquo;t do it over the Internet! Be security smart.</p>
 
