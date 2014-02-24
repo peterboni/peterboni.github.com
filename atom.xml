@@ -4,7 +4,7 @@
   <title><![CDATA[Peter Boni]]></title>
   <link href="http://www.peterboni.net/atom.xml" rel="self"/>
   <link href="http://www.peterboni.net/"/>
-  <updated>2014-02-24T18:39:11+08:00</updated>
+  <updated>2014-02-24T18:48:48+08:00</updated>
   <id>http://www.peterboni.net/</id>
   <author>
     <name><![CDATA[Peter Boni]]></name>
@@ -65,13 +65,13 @@ The Western Digital My Book NAS, like most NAS, supports FTP (File Transfer Prot
 <blockquote><p>PhotoArchive saves your irreplaceable memories, your photos &amp; videos from your iPhone, iPad, or iPod touch to your home storage over Wi-Fi.</p></blockquote>
 
 <ol>
-<li><p><strong>Save Money</strong> &ndash; Turn off the Camera Roll from iCloud Backup, and stay under the 5.0 GB free limit. Use iCloud Backup to back up everything except your Camera Roll, so there is no need to manually back up your device to iTunes.</p></li>
 <li><p><strong>Save Time</strong> &ndash; Stop manually backing up your device to iTunes. Are you still using a USB cable? Stop manually backing up your photos &amp; videos by importing them into iPhoto. You may still import them into iPhoto, but you can do it when you have time, not when you have to &ndash; your photos &amp; videos are already safe!</p></li>
-<li><p><strong>Archives</strong> &ndash; Does not synchronise. It will not download photos or videos from your home storage to your device.</p></li>
+<li><p><strong>Save Money</strong> &ndash; Use iCloud Backup to back up everything except your Camera Roll, so there is no need to manually back up your device to iTunes. Turn off the Camera Roll from iCloud Backup, and stay under the 5.0 GB free limit.</p></li>
+<li><p><strong>Archives</strong> &ndash; Does not synchronise. Will not download photos or videos from your home storage to your device.</p></li>
 <li><p><strong>Never Deletes</strong> &ndash; Will never delete a photo or video from your home storage, or from your device.</p></li>
 <li><p><strong>Smart Archive</strong> &ndash; Remembers the previous archive, and will only upload new photos &amp; videos, so it&rsquo;s <em>FAST</em>!</p></li>
-<li><p><strong>Smart Photo View</strong> &ndash; Visually shows you your photos &amp; videos that are in danger of being lost forever (not archived), and the ones that are safe in the event that something happens to your device (archived).</p></li>
-<li><p><strong>Full Resolution &amp; Metadata</strong> &ndash; Saves your photos &amp; videos in their full resolution, with all metadata &ndash; information about your photos &amp; videos, e.g. where you took them.</p></li>
+<li><p><strong>Smart Photo View</strong> &ndash; Shows you your photos &amp; videos that are in danger of being lost forever (not archived), and the ones that are safe in the event that something happens to your device (archived).</p></li>
+<li><p><strong>Full Resolution &amp; Metadata</strong> &ndash; Uploads your photos &amp; videos in their full resolution, with all metadata &ndash; information about your photos &amp; videos, e.g. where you took them.</p></li>
 </ol>
 
 
