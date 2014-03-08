@@ -5,11 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>PhotoArchive for iPhone - Peter Boni</title>
+  <title>PhotoArchive to Your Mac - Peter Boni</title>
   <meta name="author" content="Peter Boni">
 
   
-  <meta name="description" content="PhotoArchive for iPhone March 8, 2014 Download on the App Store What does PhotoArchive do? PhotoArchive saves your irreplaceable memories, your &hellip;">
+  <meta name="description" content="PhotoArchive to Your Mac March 8, 2014 Follow these steps to setup your Mac &amp; PhotoArchive, so that you can easily
+PhotoArchive to your Mac &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://www.peterboni.net/photoarchive">
+  <link rel="canonical" href="http://www.peterboni.net/photoarchive/mac-osx.html">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Peter Boni" type="application/atom+xml">
@@ -83,7 +84,7 @@
 <article role="article">
   
   <header>
-    <h1 class="entry-title">PhotoArchive for iPhone</h1>
+    <h1 class="entry-title">PhotoArchive to Your Mac</h1>
     <p class="meta">
 
 
@@ -99,7 +100,118 @@
 <time datetime="2014-03-08T07:00:00+08:00" pubdate data-updated="true">March  8, 2014</time></p>
   </header>
   
-  <div align="center">
+  <p>Follow these steps to setup your Mac &amp; PhotoArchive, so that you can easily
+PhotoArchive to your Mac Pictures folder.</p>
+
+<p>These instructions are for Mac OS X Mountain Lion, Version 10.9.2, and PhotoArchive 1.0.</p>
+
+<h2>1. Launch Terminal</h2>
+
+<p>Use either of the following ways to launch Terminal.</p>
+
+<ol>
+<li>Open <a href="http://support.apple.com/kb/ht2470">Finder</a></li>
+<li>Go to Applications &ndash; Utilities</li>
+<li>Open Terminal</li>
+</ol>
+
+
+<p>or</p>
+
+<ol>
+<li>Open <a href="http://support.apple.com/kb/ht2531">Spotlight</a></li>
+<li>Type in &lsquo;Terminal&rsquo; (without the quotes)</li>
+<li>Open the &lsquo;Top Hit&rsquo; (it should be Terminal)</li>
+</ol>
+
+
+<p>Take note your Mac User <em>Account Name</em>.</p>
+
+<div align="center">
+<img src="/media/images/photoarchive/mac-osx-terminal.png">
+</div>
+
+
+<p></p>
+
+
+<h2>2. Start the Mac OS X FTP server</h2>
+
+<p>Type in (or copy &amp; paste) the following command and press enter.</p>
+
+<blockquote><p>sudo -s launchctl load -w /System/Library/LaunchDaemons/ftp.plist</p></blockquote>
+
+<p>You may be prompted for an administrator username and/or password. Enter them if prompted.</p>
+
+<div align="center">
+<img src="/media/images/photoarchive/mac-osx-start-ftp.png">
+</div>
+
+
+<p></p>
+
+
+<h2>3. Test FTP server &amp; Get IP address</h2>
+
+<p>The next step is to test the Mac OS X FTP Server.</p>
+
+<ol>
+<li>Type &lsquo;ftp localhost&rsquo; and press enter.</li>
+<li>Press enter (it will default to your Mac User <em>Account Name</em>).</li>
+<li>Enter your password and press enter. This is the password you enter to login
+to your Mac.</li>
+</ol>
+
+
+<p>The Terminal window should look like this.</p>
+
+<div align="center">
+<img src="/media/images/photoarchive/mac-osx-test-ftp1.png">
+</div>
+
+
+<p></p>
+
+
+<p>Now check you can access the Pictures folder.</p>
+
+<ol>
+<li>Type &lsquo;cd Pictures&rsquo; and press enter.</li>
+<li>Type &lsquo;ls&rsquo; and press enter.</li>
+</ol>
+
+
+<p>You should see the contents of your Pictures folder.</p>
+
+<div align="center">
+<img src="/media/images/photoarchive/mac-osx-test-ftp2.png">
+</div>
+
+
+<p></p>
+
+
+<p>Now to get the IP address of your Mac on the network.</p>
+
+<ol>
+<li>Open <a href="https://support.apple.com/kb/ht2490">System Preferences</a></li>
+<li>Click &lsquo;Network&rsquo;</li>
+<li>Click on either &lsquo;Ethernet&rsquo; or &lsquo;Wi-Fi&rsquo; (in that order &amp; whichever one is green)</li>
+<li>Note the numeric IP address.</li>
+</ol>
+
+
+<div align="center">
+<img src="/media/images/photoarchive/mac-osx-network.png">
+</div>
+
+
+<p></p>
+
+
+<h2>4. Install &amp; Launch PhotoArchive on your iPhone</h2>
+
+<div align="center">
 <a href="https://itunes.apple.com/us/app/photoarchive/id821440285?ls=1&mt=8">
 <img src="/media/images/appstore.png" style="border:none !important;">
 </a>
@@ -116,55 +228,77 @@
 <p></p>
 
 
+<h2>5. Configure PhotoArchive Settings</h2>
 
+<ol>
+<li>Tap Settings</li>
+<li>Tap FTP</li>
+<li>Tap Host (x2), enter your Mac IP address (from Step 3 above), tap Save</li>
+<li>Tap Name (x2), enter your Mac User <em>Account Name</em> (from Step 1 above)</li>
+<li>Tap Password, enter your Mac User <em>Password</em> (the same one you entered in Step 3 above), tap Save</li>
+<li>Tap Folder, tap Pictures, tap &lsquo;Create Folder&rsquo; &amp; enter a name, tap OK, then Save</li>
+<li>Tap Done (x2)</li>
+</ol>
+
+
+<p>At Step 8 above, your FTP view in PhotoArchive should look similar to this.</p>
 
 <div align="center">
-<img src="/media/images/2014-02-15-photoarchive/black.png" style="border:none !important;">
-<img src="/media/images/2014-02-15-photoarchive/white.png" style="border:none !important;">
+<img src="/media/images/photoarchive/mac-osx-photoarchive-ftp.png">
 </div>
 
 
 <p></p>
 
 
-<h2>What does PhotoArchive do?</h2>
-
-<blockquote><p>PhotoArchive saves your irreplaceable memories, your photos &amp; videos from your iPhone, iPad, or iPod touch to your home storage over Wi-Fi.</p></blockquote>
-
-<p>Once you have configured the Settings, this is how you use PhotoArchive.</p>
-
-<p>Step 1: Launch PhotoArchive.<br/>
-Step 2: Tap Start.<br/>
-Step 3: Wait for your new photos &amp; videos to be archived.</p>
-
-<p>Your irreplaceable memories are now safe. It&rsquo;s <em>FAST</em>!</p>
+<h2>6. Archive!</h2>
 
 <ol>
-<li><p><strong>Save Time</strong> &ndash; Stop manually backing up your device to iTunes. Are you still using a USB cable? Stop manually backing up your photos &amp; videos by importing them into iPhoto. You may still import them into iPhoto, but you can do it when you have time, not when you have to &ndash; your photos &amp; videos are already safe!</p></li>
-<li><p><strong>Save Money</strong> &ndash; Use iCloud Backup to back up everything except your Camera Roll, so there is no need to manually back up your device to iTunes. Turn off the Camera Roll from iCloud Backup, and stay under the 5.0 GB free limit.</p></li>
-<li><p><strong>Archives</strong> &ndash; Does not synchronise. Will not download photos or videos from your home storage to your device.</p></li>
-<li><p><strong>Never Deletes</strong> &ndash; Will never delete a photo or video from your home storage, or from your device.</p></li>
-<li><p><strong>Smart Archive</strong> &ndash; Remembers the previous archive, and will only upload new photos &amp; videos, so it&rsquo;s <em>FAST</em>!</p></li>
-<li><p><strong>Smart Photo View</strong> &ndash; Shows you your photos &amp; videos that are in danger of being lost forever (not archived), and the ones that are safe in the event that something happens to your device (archived).</p></li>
-<li><p><strong>Full Resolution &amp; Metadata</strong> &ndash; Uploads your photos &amp; videos in their full resolution, with all metadata &ndash; information about your photos &amp; videos, e.g. where you took them.</p></li>
+<li>Tap Start</li>
 </ol>
 
 
-<h2>How does PhotoArchive work?</h2>
+<p>This is what PhotoArchive looks like before you tap Start.</p>
 
-<p>PhotoArchive archives to your home storage &ndash; NAS (Network Attached Storage) or Mac/PC, using FTP (File Transfer Protocol). Most NAS devices already support FTP, but if you are using a Mac/PC you will need an FTP server. Get an FTP server for <a href="http://osxdaily.com/2011/09/29/start-an-ftp-or-sftp-server-in-mac-os-x-lion/">Mac OS X</a>, or <a href="https://filezilla-project.org/download.php?type=server">Windows</a>.</p>
+<div align="center">
+<img src="/media/images/photoarchive/mac-osx-photoarchive-start1.png">
+</div>
 
-<p>FTP should only be used on Wi-Fi with WPA2 security, with your storage on the same local network. Don&rsquo;t do it over the Internet! Be security smart.</p>
 
-<h2>Reviews Help!</h2>
+<p></p>
 
-<p>If you find PhotoArchive useful (remember, it&rsquo;s also free), please take the time to give a nice review. Thank you.</p>
 
-<h2>Support</h2>
+<p>During.</p>
 
-<p><a href="http://wdc.custhelp.com/app/answers/detail/a_id/2680">How to access data on a WD Personal Cloud drive and other WD NAS devices, using FTP</a></p>
+<div align="center">
+<img src="/media/images/photoarchive/mac-osx-photoarchive-start2.png">
+</div>
 
-<p><a href="/photoarchive/mac-osx.html">PhotoArchive to Your Mac</a></p>
+
+<p></p>
+
+
+<p>And after.</p>
+
+<div align="center">
+<img src="/media/images/photoarchive/mac-osx-photoarchive-start3.png">
+</div>
+
+
+<p></p>
+
+
+<h2>7. Check your photos &amp; videos have been archived</h2>
+
+<div align="center">
+<img src="/media/images/photoarchive/mac-osx-pictures.png">
+</div>
+
+
+<p></p>
+
+
+
 
   
     <footer>
@@ -188,7 +322,7 @@ Step 3: Wait for your new photos &amp; videos to be archived.</p>
       
         <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://www.peterboni.net/photoarchive/index.html" data-via="peterboni" data-counturl="http://www.peterboni.net/photoarchive/index.html" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://www.peterboni.net/photoarchive/mac-osx.html" data-via="peterboni" data-counturl="http://www.peterboni.net/photoarchive/mac-osx.html" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
