@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Apps | Peter Boni]]></title>
   <link href="http://www.peterboni.net/blog/categories/apps/atom.xml" rel="self"/>
   <link href="http://www.peterboni.net/"/>
-  <updated>2014-03-09T09:48:30+08:00</updated>
+  <updated>2014-03-09T10:46:16+08:00</updated>
   <id>http://www.peterboni.net/</id>
   <author>
     <name><![CDATA[Peter Boni]]></name>
@@ -12,6 +12,32 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[PhotoArchive for iPad]]></title>
+    <link href="http://www.peterboni.net/blog/2014/03/09/photoarchive-for-ipad/"/>
+    <updated>2014-03-09T07:00:00+08:00</updated>
+    <id>http://www.peterboni.net/blog/2014/03/09/photoarchive-for-ipad</id>
+    <content type="html"><![CDATA[<p><a href="/photoarchive">PhotoArchive for iPhone</a> version 1.1 is &ldquo;Waiting For Review&rdquo;.</p>
+
+<ol>
+<li>iPad user interface!</li>
+<li>PhotoArchive now stops the system putting the device to sleep when an archive is in progress. This is great for your initial archive when you have lots of photos &amp; videos that have never been archived.</li>
+<li>Settings: If you change the FTP Server or Account details, the FTP Folder is reset (cleared).</li>
+</ol>
+
+
+<div align="center">
+<img src="http://www.peterboni.net/media/images/photoarchive/ipad.png" style="border:none !important;">
+</div>
+
+
+<p></p>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[PhotoArchive for iPhone]]></title>
@@ -37,8 +63,8 @@ When released, PhotoArchive will be free for everyone on the App Store.</p>
 <h2>What it looks like</h2>
 
 <div align="center">
-<img src="http://www.peterboni.net/media/images/2014-02-15-photoarchive/black.png" style="border:none !important;">
-<img src="http://www.peterboni.net/media/images/2014-02-15-photoarchive/white.png" style="border:none !important;">
+<img src="http://www.peterboni.net/media/images/photoarchive/black.png" style="border:none !important;">
+<img src="http://www.peterboni.net/media/images/photoarchive/white.png" style="border:none !important;">
 </div>
 
 

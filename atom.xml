@@ -4,7 +4,7 @@
   <title><![CDATA[Peter Boni]]></title>
   <link href="http://www.peterboni.net/atom.xml" rel="self"/>
   <link href="http://www.peterboni.net/"/>
-  <updated>2014-03-09T09:48:30+08:00</updated>
+  <updated>2014-03-09T10:46:16+08:00</updated>
   <id>http://www.peterboni.net/</id>
   <author>
     <name><![CDATA[Peter Boni]]></name>
@@ -12,6 +12,32 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[PhotoArchive for iPad]]></title>
+    <link href="http://www.peterboni.net/blog/2014/03/09/photoarchive-for-ipad/"/>
+    <updated>2014-03-09T07:00:00+08:00</updated>
+    <id>http://www.peterboni.net/blog/2014/03/09/photoarchive-for-ipad</id>
+    <content type="html"><![CDATA[<p><a href="http://www.peterboni.net/photoarchive">PhotoArchive for iPhone</a> version 1.1 is &ldquo;Waiting For Review&rdquo;.</p>
+
+<ol>
+<li>iPad user interface!</li>
+<li>PhotoArchive now stops the system putting the device to sleep when an archive is in progress. This is great for your initial archive when you have lots of photos &amp; videos that have never been archived.</li>
+<li>Settings: If you change the FTP Server or Account details, the FTP Folder is reset (cleared).</li>
+</ol>
+
+
+<div align="center">
+<img src="http://www.peterboni.net/media/images/photoarchive/ipad.png" style="border:none !important;">
+</div>
+
+
+<p></p>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Running Conversation]]></title>
@@ -83,8 +109,8 @@ When released, PhotoArchive will be free for everyone on the App Store.</p>
 <h2>What it looks like</h2>
 
 <div align="center">
-<img src="http://www.peterboni.net/media/images/2014-02-15-photoarchive/black.png" style="border:none !important;">
-<img src="http://www.peterboni.net/media/images/2014-02-15-photoarchive/white.png" style="border:none !important;">
+<img src="http://www.peterboni.net/media/images/photoarchive/black.png" style="border:none !important;">
+<img src="http://www.peterboni.net/media/images/photoarchive/white.png" style="border:none !important;">
 </div>
 
 
@@ -1625,34 +1651,6 @@ Simplicity.</p>
 <p>If only we had all of these things, all of the time.</p>
 
 <p>You can create software without some of these things, but not <em>great</em> software.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Running]]></title>
-    <link href="http://www.peterboni.net/blog/2013/02/15/running/"/>
-    <updated>2013-02-15T07:00:00+08:00</updated>
-    <id>http://www.peterboni.net/blog/2013/02/15/running</id>
-    <content type="html"><![CDATA[<p>He was running. <em>Hard.</em> He knew instinctively to the very fibre of his being why he was running. Survival. His life. If he didn&rsquo;t run, and run fast, he was dead.</p>
-
-<p>They were after him, howling for blood, and a more primal drive, the thrill of the hunt, and the kill. He was the prey.</p>
-
-<!--more-->
-
-
-<p>His hunters were larger than him, bigger boned, with barrel chests, shorter arms &amp; legs, but more powerful. They carried more primitive heavy stabbing spears compared to his more versatile throwing spear, which meant they needed to get close to him.</p>
-
-<p>He knew they were getting closer. The sounds of their heavy footfalls rang through the dense forest. Their garbled grunts &amp; taunts echoed all around him, their purpose to intimidate, to frighten, but they caused the opposite reaction, it triggered his survival instinct. He ran faster.</p>
-
-<p>Suddenly he tripped over a branch, and fell hard hitting his head on a rock. As his vision darkened, he felt like he was being thrown through something strange. And then there was total darkness. An enveloped feeling. No sound. No predators. And then, again, strangely, but differently &hellip;</p>
-
-<p>He was running. Steadily. Consistently. Really concentrating on his breathing, his stride, the way his feet hit the ground, and his overall rhythm. He was running for fitness, competing against imagined binary ghosts, some of other souls &ndash; thousands of them scattered around the planet, but also some of himself at different places in time, but in his mind mostly against ones from the past.</p>
-
-<p>His mind created the purpose &amp; the urgency for his running. The small computing device attached to his body was capable of storing &amp; processing massive amounts of data. While he ran it was working to pump high beats per minute music to his ears which when combined with his brain increased his heart rate &amp; blood flow.</p>
-
-<p>The small computing device was also working to receive signals being broadcast from an array of satellites orbiting the planet, to triangulate his exact location on the planet every second. It then sent this information back into the airwaves, to be captured by a vast array of computing devices &amp; software, which then stored &amp; analysed the information, and sent back statistics &amp; insights that he could analyse, share, and interact with later.</p>
-
-<p>He looked ahead as he ran at the scenery slowly bobbing up &amp; down, up &amp; down. He pulled more air into his lungs. This was different. Strange. Somewhat lonely, but not. He couldn&rsquo;t figure out why, but it felt good to run.</p>
 ]]></content>
   </entry>
   
