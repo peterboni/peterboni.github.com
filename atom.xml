@@ -4,7 +4,7 @@
   <title><![CDATA[Peter Boni]]></title>
   <link href="http://www.peterboni.net/atom.xml" rel="self"/>
   <link href="http://www.peterboni.net/"/>
-  <updated>2014-05-19T19:13:37+08:00</updated>
+  <updated>2014-05-19T21:37:58+08:00</updated>
   <id>http://www.peterboni.net/</id>
   <author>
     <name><![CDATA[Peter Boni]]></name>
@@ -12,6 +12,28 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Circular]]></title>
+    <link href="http://www.peterboni.net/blog/2014/05/19/circular/"/>
+    <updated>2014-05-19T07:00:00+08:00</updated>
+    <id>http://www.peterboni.net/blog/2014/05/19/circular</id>
+    <content type="html"><![CDATA[<p>As his body left the bus, and his foot struck the pavement, time slowed. His thoughts went immediately to the unknown man and he dreaded the unintelligible call &ldquo;G.. y.. b.. i.. h&hellip;&rdquo;, like a gong mechanically sounding the impending end of the world. The unknown man always appeared the same; raggedy unwashed hair, unshaven, old dirty clothing. His thoughts moved away from the unknown man, and he headed for the gate.</p>
+
+<!--more-->
+
+
+<p>He walked along the path, early morning sunlight shining down through the criss-crossed metal gate, hitting the left hand side of his face. His eyes closed, seemingly by themselves to shield against the bright light. He contemplated the warmth of the sun on his face.</p>
+
+<p>Reluctantly he willed his eyes to slowly open. They squinted &amp; then closed again. Black bars rolled over his closed eyelids as he walked, in a hypnotic rhythm, the effect of the sunlight being blocked by the metal that formed the gate squares. He found it harder to will his eyes open as he walked.</p>
+
+<p>When his eyes closed he could hear and experience parts of the world that were before drowned out by his visual sense. He heard the sounds of the people around him. Walking. Stomping. Stopping. Starting. Conversing. The birds. Cars. Buses. The cacophony was strangely familiar. He felt himself being pulled past the unknown man, as time began to slowly speed back up.</p>
+
+<p>&ldquo;G.. y.. b.. i.. h&hellip;&rdquo; the unknown man intoned. He couldn&rsquo;t make out what the man was saying, but the way the man spoke synced with his walking, the sunlight &amp; black bars, the sounds. There was rhythm. Everything was moving together. It was coming again, he could hear it before the man began, &ldquo;G.. y.. b.. i.. h&hellip;&rdquo;.</p>
+
+<p>And then suddenly it was all gone. As his body left the bus, and his foot struck the pavement, time slowed. He had the feeling that he had been here before.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[PhotoArchive 1.3]]></title>
@@ -1550,97 +1572,6 @@ two UICollectionViewControllers.</p>
 <p>All this happened in seconds, so he kept running, confused, and expecting that the v-band would correct itself. The scene from his v-band lurched as if the person fell, and then was facing up looking at the trees &amp; dark sky. The vision started to darken, but before it went completely dark he saw what looked like a primitive hunter standing over him. He looked big, muscly, but with short arms, and was carrying a large spear.</p>
 
 <p><a href="http://www.peterboni.net/blog/2013/02/15/running/">Running</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Creating Software]]></title>
-    <link href="http://www.peterboni.net/blog/2013/02/24/creating-software/"/>
-    <updated>2013-02-24T07:00:00+08:00</updated>
-    <id>http://www.peterboni.net/blog/2013/02/24/creating-software</id>
-    <content type="html"><![CDATA[<p>Hi my name is Peter and I&rsquo;m a developer, now playing an architect, and still trying to figure out what that means. But that&rsquo;s a post for another day. Probably many posts.</p>
-
-<p>To put this post in context my background is mostly &lsquo;front end&rsquo; software development in DOS, Windows, Web, and Mobile; mostly with software that has a user interface, but occasionally not.</p>
-
-<!--more-->
-
-
-<h2>Complexity</h2>
-
-<p>I have always struggled with software development complexity.</p>
-
-<p>I love software development. Communicating &amp; collaborating with people and computers, thinking, planning, modelling, designing, delving into my creative mind &amp; soul, engineering and <em>crafting</em> software that fulfils a need, creating is … awesome!</p>
-
-<p>Software development is complex, but I believe <em>we make it more complex</em>. In our quest to make software development better, we lose focus, and we end up creating complexity.</p>
-
-<h2>Process</h2>
-
-<p>Complexity can exist at many different steps in the software development journey. What do you do with something that&rsquo;s complex? You create a process to perform it of course.</p>
-
-<p>Perhaps the most infamous process is the <a href="http://en.wikipedia.org/wiki/Waterfall_model">waterfall model</a>.</p>
-
-<blockquote><p>&lsquo;The waterfall model is a sequential design process, often used in software development processes, in which progress is seen as flowing steadily downwards (like a waterfall) through the phases of Conception, Initiation, Analysis, Design, Construction, Testing, Production/Implementation, and Maintenance.&rsquo;</p></blockquote>
-
-<p>Sounds great doesn&rsquo;t it? Follow a detailed plan, err &hellip; &lsquo;phases in a waterfall&rsquo;, and you will have software at the end of the process that fulfils your need. People have been following it for <em>decades</em>. There&rsquo;s only one problem.</p>
-
-<blockquote><p>&lsquo;The first formal description of the waterfall model is often cited as a 1970 article by Winston W. Royce, although Royce did not use the term &ldquo;waterfall&rdquo; in this article. Royce presented this model as an example of a flawed, non-working model.&rsquo;</p></blockquote>
-
-<p>But this didn&rsquo;t stop people from using it. <em>Still hasn&rsquo;t.</em> Perhaps there is perceived safety in process. If you follow instructions, surely you will achieve the desired end result?</p>
-
-<p>On my first agile project we delivered a green fields software system in 8 months, which would have taken <em>years</em> using our traditional software development process, and this included learning an agile process, tools &amp; techniques. After the project ended I returned to one of the traditional software development areas. Two things struck me like physical blows, and left me with a feeling of complete loss &amp; bewilderment.</p>
-
-<p>The first was that email was my process again. I sent more emails in that first day than in the previous 8 months. The second thing was when I was sitting in my little cubicle, nicely partitioned, I overheard a conversation between two developers &ndash; &ldquo;Reject defect #537. That&rsquo;s not a defect because&hellip;&rdquo; I forget the specifics, but remember that it was two developers, an absurd defect number, and they literally talked about it for 10 &ndash; 15 minutes. It never occurred to them that they should go find the tester &amp; <em>talk</em> to them.</p>
-
-<h2>Technology</h2>
-
-<p>Processes can be complex, and so can the dizzying universe of technology which is created &amp; wielded by people.</p>
-
-<p>Programming languages are used to build software, and there are thousands of them, with more being created every year. Each one has it&rsquo;s own syntax (form) and semantics (meaning) for expressing it&rsquo;s instructions to a machine.</p>
-
-<p>There are different types of software. For example operating systems manage hardware and provide services for other software. Platforms, frameworks, libraries, and applications use operating systems, and each other.</p>
-
-<p>Each piece of software can be complex, and working software can be a complex web of relationships between them. Just how complex can be highlighted by a seemingly absurd comparison.</p>
-
-<blockquote><p>&lsquo;For decades computer scientists have strived to build machines that can calculate faster than the human brain and store more information. The contraptions have won. &hellip; Biology does a lot with a little: the human genome, which grows our body and directs us through years of complex life, requires less data than a laptop operating system.&rsquo;</p>
-
-<p>Mark Fischetti, <a href="http://www.scientificamerican.com/article.cfm?id=computers-vs-brains">Computers versus Brains</a><br/>
-Scientific American, November, 2011</p></blockquote>
-
-<p>It takes time to understand technology, when to use it, and how to apply it, and people often come away with different understanding, and a different level of skill in using it.</p>
-
-<p>Early in my career I was working on a project when it was decided a well known services company (name withheld) would come in, save the day, and show us how to do it properly. There was one <em>recognised expert</em> I will always remember. He sat quietly aloof at his desk every day, apart from the occasional very important closed door meeting. Each day he would take from his desk a book from the vast array of &lsquo;software development&rsquo; books on it (his personal collection), sit there with it in front of his computer and implement some new form of <em>best practice</em> code or <em>pattern</em> for the part of the project he was working on. He was seen as highly productive.</p>
-
-<p>When he left his masterpiece was given to me, with no hand over. You can guess the outcome. It was either the most brilliant code I have ever seen in my entire life, and I was unworthy to begin to comprehend it&rsquo;s magnificence, or it was a pile of shit. The truth was probably somewhere in the middle.</p>
-
-<p>The sad thing is I&rsquo;ve seen this behaviour to varying degrees <em>consistently</em> over the years. It&rsquo;s something I have been guilty of as well. People wielding technology, rather than collaborating with people using technology.</p>
-
-<h2>Simplicity</h2>
-
-<p>When I think about software development I think about the following words in a positive, <em>great</em> context.</p>
-
-<p>People.<br/>
-Purpose.<br/>
-Knowledge.<br/>
-Capability.<br/>
-Humility.<br/>
-Communication.<br/>
-Collaboration.<br/>
-Compromise.<br/>
-Consistency.<br/>
-Passion.<br/>
-Time.<br/>
-Technology.<br/>
-Simplicity.</p>
-
-<p>I put people first. They are the enduring <em>thread</em> that ties man to machine, and getting it to do what they want. Process &amp; Technology seem to forget that sometimes.</p>
-
-<p>I put technology second last. Without everything before it, it is useless.</p>
-
-<p>I put simplicity last. I believe it will <em>emerge</em> if you have the rest.</p>
-
-<p>If only we had all of these things, all of the time.</p>
-
-<p>You can create software without some of these things, but not <em>great</em> software.</p>
 ]]></content>
   </entry>
   
