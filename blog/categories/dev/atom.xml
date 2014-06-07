@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Dev | Peter Boni]]></title>
   <link href="http://www.peterboni.net/blog/categories/dev/atom.xml" rel="self"/>
   <link href="http://www.peterboni.net/"/>
-  <updated>2014-06-03T16:32:19+08:00</updated>
+  <updated>2014-06-07T10:21:17+08:00</updated>
   <id>http://www.peterboni.net/</id>
   <author>
     <name><![CDATA[Peter Boni]]></name>
@@ -144,106 +144,70 @@ with the field.</p>
 <p>Create an Outlet Connection in <strong>ViewController.h</strong> called <strong>password</strong>, which should look
 like this.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">@interface</span> <span class="nc">ViewController</span> : <span class="nc">UIViewController</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">@property</span> <span class="p">(</span><span class="n">weak</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="kt">IBOutlet</span> <span class="n">UITextField</span> <span class="o">*</span><span class="n">password</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">@end</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:objc %}
+@interface ViewController : UIViewController</p>
+
+<p>@property (weak, nonatomic) IBOutlet UITextField *password;</p>
+
+<p>@end
+{% endcodeblock %}</p>
 
 <p>In <strong>ViewController.m</strong>, put the following code into <strong>viewDidLoad</strong>.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">viewDidLoad</span>
-</span><span class='line'><span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="p">[</span><span class="n">super</span> <span class="n">viewDidLoad</span><span class="p">];</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">CGSize</span> <span class="n">hideShowSize</span> <span class="o">=</span> <span class="p">[</span><span class="s">@&quot;SHOWX&quot;</span> <span class="nl">sizeWithAttributes:</span><span class="err">@</span><span class="p">{</span><span class="nl">NSFontAttributeName:</span><span class="p">[</span><span class="n">UIFont</span> <span class="nl">systemFontOfSize:</span><span class="mf">14.0f</span><span class="p">]}];</span>
-</span><span class='line'><span class="n">UIButton</span> <span class="o">*</span><span class="n">hideShow</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UIButton</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithFrame:</span><span class="n">CGRectMake</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">hideShowSize</span><span class="p">.</span><span class="n">width</span><span class="p">,</span> <span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">frame</span><span class="p">.</span><span class="n">size</span><span class="p">.</span><span class="n">height</span><span class="p">)];</span>
-</span><span class='line'><span class="p">[</span><span class="n">hideShow</span><span class="p">.</span><span class="n">titleLabel</span> <span class="nl">setFont:</span><span class="p">[</span><span class="n">UIFont</span> <span class="nl">systemFontOfSize:</span><span class="mf">14.0f</span><span class="p">]];</span>
-</span><span class='line'><span class="p">[</span><span class="n">hideShow</span> <span class="nl">setTitle:</span><span class="s">@&quot;HIDE&quot;</span> <span class="nl">forState:</span><span class="n">UIControlStateNormal</span><span class="p">];</span>
-</span><span class='line'><span class="p">[</span><span class="n">hideShow</span> <span class="nl">setTitleColor:</span><span class="p">[</span><span class="n">UIColor</span> <span class="n">grayColor</span><span class="p">]</span> <span class="nl">forState:</span><span class="n">UIControlStateNormal</span><span class="p">];</span>
-</span><span class='line'><span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">rightView</span> <span class="o">=</span> <span class="n">hideShow</span><span class="p">;</span>
-</span><span class='line'><span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">rightViewMode</span> <span class="o">=</span> <span class="n">UITextFieldViewModeAlways</span><span class="p">;</span>
-</span><span class='line'><span class="p">[</span><span class="n">hideShow</span> <span class="nl">addTarget:</span><span class="n">self</span> <span class="nl">action:</span><span class="k">@selector</span><span class="p">(</span><span class="nl">hideShow:</span><span class="p">)</span> <span class="nl">forControlEvents:</span><span class="n">UIControlEventTouchUpInside</span><span class="p">];</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:objc %}
+&ndash; (void)viewDidLoad
+{</p>
+
+<pre><code>[super viewDidLoad];
+
+CGSize hideShowSize = [@"SHOWX" sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14.0f]}];
+UIButton *hideShow = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, hideShowSize.width, self.password.frame.size.height)];
+[hideShow.titleLabel setFont:[UIFont systemFontOfSize:14.0f]];
+[hideShow setTitle:@"HIDE" forState:UIControlStateNormal];
+[hideShow setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+self.password.rightView = hideShow;
+self.password.rightViewMode = UITextFieldViewModeAlways;
+[hideShow addTarget:self action:@selector(hideShow:) forControlEvents:UIControlEventTouchUpInside];
+</code></pre>
+
+<p>}
+{% endcodeblock %}</p>
 
 <p>And then create <strong>hideShow</strong>.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nl">hideShow:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="n">sender</span>
-</span><span class='line'><span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">UIButton</span> <span class="o">*</span><span class="n">hideShow</span> <span class="o">=</span> <span class="p">(</span><span class="n">UIButton</span> <span class="o">*</span><span class="p">)</span><span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">rightView</span><span class="p">;</span>
-</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">secureTextEntry</span><span class="p">)</span>
-</span><span class='line'><span class="p">{</span>
-</span><span class='line'>    <span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">secureTextEntry</span> <span class="o">=</span> <span class="n">YES</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">[</span><span class="n">hideShow</span> <span class="nl">setTitle:</span><span class="s">@&quot;SHOW&quot;</span> <span class="nl">forState:</span><span class="n">UIControlStateNormal</span><span class="p">];</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'><span class="k">else</span>
-</span><span class='line'><span class="p">{</span>
-</span><span class='line'>    <span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">secureTextEntry</span> <span class="o">=</span> <span class="n">NO</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">[</span><span class="n">hideShow</span> <span class="nl">setTitle:</span><span class="s">@&quot;HIDE&quot;</span> <span class="nl">forState:</span><span class="n">UIControlStateNormal</span><span class="p">];</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'><span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">password</span> <span class="n">becomeFirstResponder</span><span class="p">];</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:objc %}
+&ndash; (void)hideShow:(id)sender
+{</p>
+
+<pre><code>UIButton *hideShow = (UIButton *)self.password.rightView;
+if (!self.password.secureTextEntry)
+{
+    self.password.secureTextEntry = YES;
+    [hideShow setTitle:@"SHOW" forState:UIControlStateNormal];
+}
+else
+{
+    self.password.secureTextEntry = NO;
+    [hideShow setTitle:@"HIDE" forState:UIControlStateNormal];
+}
+[self.password becomeFirstResponder];
+</code></pre>
+
+<p>}
+{% endcodeblock %}</p>
 
 <p>You should get something like this.</p>
 
-<p><img class="fancybox center" src="/media/images/2014-01-11-mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts/1.png" width="594" height="270"></p>
+<p>{% img fancybox center /media/images/2014-01-11-mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts/1.png 594 270 %}</p>
 
 <p>You can immediately touch &amp; start entering your un-obfuscated password.</p>
 
-<p><img class="fancybox center" src="/media/images/2014-01-11-mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts/2.png" width="594" height="270"></p>
+<p>{% img fancybox center /media/images/2014-01-11-mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts/2.png 594 270 %}</p>
 
 <p>If you touch &lsquo;HIDE&rsquo; then your password is obfuscated, and similarly touching &lsquo;SHOW&rsquo; will
 go back to your un-obfuscated password.</p>
 
-<p><img class="fancybox center" src="/media/images/2014-01-11-mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts/3.png" width="594" height="270"></p>
+<p>{% img fancybox center /media/images/2014-01-11-mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts/3.png 594 270 %}</p>
 
 <h2>Thoughts</h2>
 
@@ -254,9 +218,9 @@ of the UITextField.</p>
 <p>Therefore you should <strong>only</strong> use this pattern in Sign Up &amp; Login views, <strong>not</strong> views
 where you can view/edit account details for a service.</p>
 
-<p><img class="fancybox center" src="/media/images/2014-01-11-mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts/4.png" width="594" height="270"></p>
+<p>{% img fancybox center /media/images/2014-01-11-mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts/4.png 594 270 %}</p>
 
-<p><img class="fancybox center" src="/media/images/2014-01-11-mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts/5.png" width="594" height="270"></p>
+<p>{% img fancybox center /media/images/2014-01-11-mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts/5.png 594 270 %}</p>
 
 <p>This still doesn&rsquo;t remove the frustration of having to manually enter passwords on mobile.
 It would be great to see Apple take the lead with iOS, and extend the iCloud Keychain /
@@ -320,126 +284,84 @@ which is available free from the App Store.</p>
 
 <p>Create &amp; change to a new folder called <strong>cloudbackend</strong> from your Documents folder.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="gp">peters-mac-mini:Documents peterboni$</span> mkdir cloudbackend
-</span><span class='line'><span class="gp">peters-mac-mini:Documents peterboni$</span> <span class="nb">cd </span>cloudbackend/
-</span><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:console %}
+peters-mac-mini:Documents peterboni$ mkdir cloudbackend
+peters-mac-mini:Documents peterboni$ cd cloudbackend/
+peters-mac-mini:cloudbackend peterboni$
+{% endcodeblock %}</p>
 
 <p>Create a file called <strong>package.json</strong> and put the following JSON data object in it.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="p">{</span>
-</span><span class='line'>  <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">name</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span><span class="o">:</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">cloudbackend</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;,</span>
-</span><span class='line'>  <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">description</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span><span class="o">:</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;,</span>
-</span><span class='line'>  <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">version</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span><span class="o">:</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="mf">0.0</span><span class="p">.</span><span class="mi">1</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;,</span>
-</span><span class='line'>  <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="kr">private</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-</span><span class='line'>  <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">scripts</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span><span class="o">:</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="s2">&quot;start&quot;</span><span class="o">:</span> <span class="s2">&quot;node app&quot;</span>
-</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="p">},</span>
-</span><span class='line'>  <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">dependencies</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span><span class="o">:</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="s2">&quot;express&quot;</span><span class="o">:</span> <span class="s2">&quot;3.x&quot;</span>
-</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="p">}</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:javascript %}
+{
+  &ldquo;name&rdquo;: &ldquo;cloudbackend&rdquo;,
+  &ldquo;description&rdquo;: &ldquo;&rdquo;,
+  &ldquo;version&rdquo;: &ldquo;0.0.1&rdquo;,
+  &ldquo;private&rdquo;: true,
+  &ldquo;scripts&rdquo;: {</p>
+
+<pre><code>"start": "node app"
+</code></pre>
+
+<p>  },
+  &ldquo;dependencies&rdquo;: {</p>
+
+<pre><code>"express": "3.x"
+</code></pre>
+
+<p>  }
+}
+{% endcodeblock %}</p>
 
 <p>Use npm (Node Package Manager) to install <a href="http://expressjs.com">Express</a>, which is the
 dependency you identified in the above package.json file. Express is a web
 application framework. Enter &lsquo;npm install&rsquo;.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span> npm install
-</span><span class='line'><span class="go">npm http GET &lt;a href=&quot;https://registry.npmjs.org/express&quot;&gt;https://registry.npmjs.org/express&lt;/a&gt;</span>
-</span><span class='line'><span class="go">&amp;hellip;</span>
-</span><span class='line'><span class="go">&lt;a href=&quot;&amp;#109;&amp;#x61;&amp;#105;&amp;#108;&amp;#116;&amp;#111;&amp;#x3a;&amp;#x65;&amp;#120;&amp;#x70;&amp;#x72;&amp;#x65;&amp;#x73;&amp;#x73;&amp;#x40;&amp;#51;&amp;#x2e;&amp;#x34;&amp;#46;&amp;#x36;&quot;&gt;&amp;#101;&amp;#x78;&amp;#x70;&amp;#114;&amp;#101;&amp;#x73;&amp;#x73;&amp;#64;&amp;#51;&amp;#x2e;&amp;#x34;&amp;#x2e;&amp;#x36;&lt;/a&gt; node_modules/express</span>
-</span><span class='line'><span class="go">├── &lt;a href=&quot;&amp;#109;&amp;#x61;&amp;#x69;&amp;#108;&amp;#116;&amp;#111;&amp;#58;&amp;#109;&amp;#x65;&amp;#116;&amp;#x68;&amp;#111;&amp;#x64;&amp;#x73;&amp;#64;&amp;#48;&amp;#46;&amp;#x31;&amp;#46;&amp;#x30;&quot;&gt;&amp;#109;&amp;#101;&amp;#x74;&amp;#x68;&amp;#111;&amp;#100;&amp;#115;&amp;#x40;&amp;#x30;&amp;#x2e;&amp;#49;&amp;#x2e;&amp;#48;&lt;/a&gt;</span>
-</span><span class='line'><span class="go">&amp;hellip;</span>
-</span><span class='line'><span class="go">└── &lt;a href=&quot;&amp;#x6d;&amp;#x61;&amp;#105;&amp;#x6c;&amp;#116;&amp;#111;&amp;#x3a;&amp;#99;&amp;#111;&amp;#x6e;&amp;#x6e;&amp;#x65;&amp;#x63;&amp;#x74;&amp;#x40;&amp;#50;&amp;#x2e;&amp;#x31;&amp;#x31;&amp;#x2e;&amp;#50;&quot;&gt;&amp;#99;&amp;#x6f;&amp;#110;&amp;#110;&amp;#x65;&amp;#99;&amp;#x74;&amp;#x40;&amp;#x32;&amp;#x2e;&amp;#x31;&amp;#x31;&amp;#46;&amp;#50;&lt;/a&gt; (uid2@0.0.3, pause@0.0.1, qs@0.6.5, bytes@0.2.1, raw-body@1.1.2, negotiator@0.3.0, &lt;a href=&quot;&amp;#x6d;&amp;#97;&amp;#x69;&amp;#x6c;&amp;#116;&amp;#x6f;&amp;#58;&amp;#109;&amp;#117;&amp;#x6c;&amp;#x74;&amp;#x69;&amp;#112;&amp;#97;&amp;#114;&amp;#x74;&amp;#x79;&amp;#64;&amp;#x32;&amp;#x2e;&amp;#x32;&amp;#46;&amp;#x30;&quot;&gt;&amp;#109;&amp;#x75;&amp;#x6c;&amp;#116;&amp;#105;&amp;#112;&amp;#97;&amp;#x72;&amp;#x74;&amp;#121;&amp;#64;&amp;#50;&amp;#x2e;&amp;#x32;&amp;#46;&amp;#x30;&lt;/a&gt;)</span>
-</span><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:console %}
+peters-mac-mini:cloudbackend peterboni$ npm install
+npm http GET <a href="https://registry.npmjs.org/express">https://registry.npmjs.org/express</a>
+&hellip;
+<a href="&#109;&#x61;&#x69;&#108;&#x74;&#x6f;&#x3a;&#101;&#120;&#112;&#114;&#x65;&#x73;&#x73;&#x40;&#x33;&#46;&#x34;&#x2e;&#x36;">&#101;&#x78;&#112;&#114;&#x65;&#115;&#115;&#x40;&#51;&#x2e;&#x34;&#46;&#x36;</a> node_modules/express
+├── <a href="&#109;&#x61;&#105;&#x6c;&#116;&#111;&#58;&#109;&#101;&#x74;&#x68;&#111;&#100;&#115;&#64;&#x30;&#x2e;&#x31;&#x2e;&#x30;">&#x6d;&#101;&#116;&#x68;&#111;&#x64;&#x73;&#64;&#48;&#46;&#x31;&#46;&#x30;</a>
+&hellip;
+└── <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#x63;&#111;&#x6e;&#x6e;&#101;&#x63;&#116;&#x40;&#50;&#x2e;&#49;&#x31;&#x2e;&#50;">&#x63;&#111;&#110;&#110;&#101;&#99;&#116;&#x40;&#x32;&#x2e;&#49;&#x31;&#46;&#x32;</a> (uid2@0.0.3, pause@0.0.1, qs@0.6.5, bytes@0.2.1, raw-body@1.1.2, negotiator@0.3.0, <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#111;&#x3a;&#x6d;&#x75;&#x6c;&#x74;&#105;&#112;&#x61;&#x72;&#116;&#121;&#64;&#50;&#46;&#x32;&#46;&#48;">&#x6d;&#x75;&#x6c;&#x74;&#x69;&#112;&#x61;&#114;&#x74;&#x79;&#64;&#x32;&#46;&#50;&#46;&#48;</a>)
+peters-mac-mini:cloudbackend peterboni$
+{% endcodeblock %}</p>
 
 <p>Create a file called <strong>app.js</strong> with the following content.
 All we are doing here is exposing one HTTP GET method request, available at &lsquo;/test&rsquo;,
 which returns a JSON data object. A simple test.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">express</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;),</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;http&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">app</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">port</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;,</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">PORT</span> <span class="o">||</span> <span class="mi">3000</span><span class="p">);</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="err">/test&amp;rsquo;, function(req, res) {</span>
-</span><span class='line'>  <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">({</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">message</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;</span><span class="o">:&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">hi</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;});</span>
-</span><span class='line'><span class="p">});</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="nx">app</span><span class="p">).</span><span class="nx">listen</span><span class="p">(</span><span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">port</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;),</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">Cloudbackend</span> <span class="nx">listening</span> <span class="nx">on</span> <span class="nx">port</span> <span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span> <span class="o">+</span> <span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">port</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;));</span>
-</span><span class='line'><span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:javascript %}
+var express = require(&lsquo;express&rsquo;),</p>
+
+<pre><code>http = require('http');
+</code></pre>
+
+<p>var app = express();</p>
+
+<p>app.set(&lsquo;port&rsquo;, process.env.PORT || 3000);</p>
+
+<p>app.get(&lsquo;/test&rsquo;, function(req, res) {
+  res.json({&lsquo;message&rsquo;:&lsquo;hi&rsquo;});
+});</p>
+
+<p>http.createServer(app).listen(app.get(&lsquo;port&rsquo;), function() {
+  console.log(&ldquo;Cloudbackend listening on port &rdquo; + app.get(&lsquo;port&rsquo;));
+});
+{% endcodeblock %}</p>
 
 <p>Let&rsquo;s test it!
 Enter &lsquo;node app&rsquo;.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span> node app
-</span><span class='line'><span class="go">Cloudbackend listening on port 3000</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:console %}
+peters-mac-mini:cloudbackend peterboni$ node app
+Cloudbackend listening on port 3000
+{% endcodeblock %}</p>
 
 <p>Now open your favourite web browser, and navigate to <a href="http://localhost:3000/test">http://localhost:3000/test</a></p>
 
-<p><img class="fancybox center" src="/media/images/2013-12-07-a-cloud-backend-using-nodejs-on-aws/1-node-app.png" width="914" height="468"></p>
+<p>{% img fancybox center /media/images/2013-12-07-a-cloud-backend-using-nodejs-on-aws/1-node-app.png 914 468 %}</p>
 
 <p>Congratulations! You&rsquo;ve just successfully built a RESTful web API with a single <em>resource</em>
 called <em>test</em> which is responding to a HTTP GET method request, and is returning a
@@ -474,46 +396,32 @@ You have a fully <strong>auto load balanced, auto scaled cloud application envir
 <p>Initialise your <strong>cloudbackend</strong> Git repository. Enter &lsquo;git init&rsquo;, followed by
 the other commands in the following console code block.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span> git init
-</span><span class='line'><span class="go">Initialized empty Git repository in /Users/peterboni/Documents/cloudbackend/.git/</span>
-</span><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span> cat &gt; .gitignore &amp;lt;&amp;lt;EOT
-</span><span class='line'><span class="go">node_modules/</span>
-</span><span class='line'><span class="go">.gitignore</span>
-</span><span class='line'><span class="go">.elasticbeanstalk/</span>
-</span><span class='line'><span class="go">EOT</span>
-</span><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span> git add .
-</span><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span> git commit -m &amp;ldquo;initial app&amp;rdquo;
-</span><span class='line'><span class="go">[master (root-commit) 889e876] initial app</span>
-</span><span class='line'><span class="go"> 2 files changed, 26 insertions(+)</span>
-</span><span class='line'><span class="go"> create mode 100644 app.js</span>
-</span><span class='line'><span class="go"> create mode 100644 package.json</span>
-</span><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:console %}
+peters-mac-mini:cloudbackend peterboni$ git init
+Initialized empty Git repository in /Users/peterboni/Documents/cloudbackend/.git/
+peters-mac-mini:cloudbackend peterboni$ cat > .gitignore &lt;&lt;EOT
+node_modules/
+.gitignore
+.elasticbeanstalk/
+EOT
+peters-mac-mini:cloudbackend peterboni$ git add .
+peters-mac-mini:cloudbackend peterboni$ git commit -m &ldquo;initial app&rdquo;
+[master (root-commit) 889e876] initial app
+ 2 files changed, 26 insertions(+)
+ create mode 100644 app.js
+ create mode 100644 package.json
+peters-mac-mini:cloudbackend peterboni$
+{% endcodeblock %}</p>
 
 <p>Next download &amp; extract the <a href="http://aws.amazon.com/code/6752709412171743">AWS Elastic Beanstalk Command Line Tool</a> to
 your Documents folder (the cloudbackend folder should be in your Documents folder).</p>
 
 <p>Next add the appropriate EB Python folder to your PATH.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span> <span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/Users/peterboni/Documents/AWS-ElasticBeanstalk-CLI-2.5.1/eb/macosx/python2.7/
-</span><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:console %}
+peters-mac-mini:cloudbackend peterboni$ export PATH=$PATH:/Users/peterboni/Documents/AWS-ElasticBeanstalk-CLI-2.5.1/eb/macosx/python2.7/
+peters-mac-mini:cloudbackend peterboni$
+{% endcodeblock %}</p>
 
 <p>If you have OS X Mavericks (Version 10.9) then you already have Python 2.7.5, else you
 will need to download &amp; install it.</p>
@@ -533,95 +441,52 @@ can be found at the URL given after you enter &lsquo;eb init&rsquo;.</li>
 </ol>
 
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span> eb init
-</span><span class='line'><span class="go">To get your AWS Access Key ID and Secret Access Key,</span>
-</span><span class='line'><span class="go">  visit &amp;ldquo;&lt;a href=&quot;https://aws-portal.amazon.com/gp/aws/securityCredentials&quot;&gt;https://aws-portal.amazon.com/gp/aws/securityCredentials&lt;/a&gt;&amp;rdquo;.</span>
-</span><span class='line'><span class="go">Enter your AWS Access Key ID (current value is &amp;ldquo;AKIAJ&lt;strong&gt;&lt;strong&gt;&lt;em&gt;GBOHQ&amp;rdquo;): [enter yours here]</span>
-</span><span class='line'><span class="go">Enter your AWS Secret Access Key (current value is &amp;ldquo;MhYxu&lt;/em&gt;&lt;/strong&gt;&lt;/strong&gt;rJfZx&amp;rdquo;): [enter yours here]</span>
-</span><span class='line'><span class="go">Select an AWS Elastic Beanstalk service region.</span>
-</span><span class='line'><span class="go">Available service regions are:</span>
-</span><span class='line'><span class="go">1) US East (Virginia)</span>
-</span><span class='line'><span class="go">2) US West (Oregon)</span>
-</span><span class='line'><span class="go">3) US West (North California)</span>
-</span><span class='line'><span class="go">4) EU West (Ireland)</span>
-</span><span class='line'><span class="go">5) Asia Pacific (Singapore)</span>
-</span><span class='line'><span class="go">6) Asia Pacific (Tokyo)</span>
-</span><span class='line'><span class="go">7) Asia Pacific (Sydney)</span>
-</span><span class='line'><span class="go">8) South America (Sao Paulo)</span>
-</span><span class='line'><span class="go">Select (1 to 8): 7</span>
-</span><span class='line'><span class="go">Enter an AWS Elastic Beanstalk application name (auto-generated value is &amp;ldquo;cloudbackend&amp;rdquo;):</span>
-</span><span class='line'><span class="go">Enter an AWS Elastic Beanstalk environment name (auto-generated value is &amp;ldquo;cloudbackend-env&amp;rdquo;):</span>
-</span><span class='line'><span class="go">Select a solution stack.</span>
-</span><span class='line'><span class="go">Available solution stacks are:</span>
-</span><span class='line'><span class="go">1) 32bit Amazon Linux 2013.09 running PHP 5.4</span>
-</span><span class='line'><span class="go">2) 64bit Amazon Linux 2013.09 running PHP 5.4</span>
-</span><span class='line'><span class="go">3) 32bit Amazon Linux 2013.09 running PHP 5.5</span>
-</span><span class='line'><span class="go">4) 64bit Amazon Linux 2013.09 running PHP 5.5</span>
-</span><span class='line'><span class="go">5) 32bit Amazon Linux running PHP 5.3</span>
-</span><span class='line'><span class="go">6) 64bit Amazon Linux running PHP 5.3</span>
-</span><span class='line'><span class="go">7) 32bit Amazon Linux 2013.09 running Node.js</span>
-</span><span class='line'><span class="go">8) 64bit Amazon Linux 2013.09 running Node.js</span>
-</span><span class='line'><span class="go">&amp;hellip;</span>
-</span><span class='line'><span class="go">Select (1 to 28): 8</span>
-</span><span class='line'><span class="go">Select an environment type.</span>
-</span><span class='line'><span class="go">Available environment types are:</span>
-</span><span class='line'><span class="go">1) LoadBalanced</span>
-</span><span class='line'><span class="go">2) SingleInstance</span>
-</span><span class='line'><span class="go">Select (1 to 2): 1</span>
-</span><span class='line'><span class="go">Create an RDS DB Instance? [y/n]: n</span>
-</span><span class='line'><span class="go">Attach an instance profile (current value is &amp;ldquo;[Create a default instance profile]&amp;rdquo;):</span>
-</span><span class='line'><span class="go">1) [Create a default instance profile]</span>
-</span><span class='line'><span class="go">2) aws-elasticbeanstalk-ec2-role</span>
-</span><span class='line'><span class="go">3) [Other instance profile]</span>
-</span><span class='line'><span class="go">Select (1 to 3): 1</span>
-</span><span class='line'><span class="go">Updated AWS Credential file at &amp;ldquo;/Users/peterboni/.elasticbeanstalk/aws_credential_file&amp;rdquo;.&lt;/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="go">&lt;p&gt;peters-mac-mini:cloudbackend peterboni$</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:console %}
+peters-mac-mini:cloudbackend peterboni$ eb init
+To get your AWS Access Key ID and Secret Access Key,
+  visit &ldquo;<a href="https://aws-portal.amazon.com/gp/aws/securityCredentials">https://aws-portal.amazon.com/gp/aws/securityCredentials</a>&rdquo;.
+Enter your AWS Access Key ID (current value is &ldquo;AKIAJ<strong><strong><em>GBOHQ&rdquo;): [enter yours here]
+Enter your AWS Secret Access Key (current value is &ldquo;MhYxu</em></strong></strong>rJfZx&rdquo;): [enter yours here]
+Select an AWS Elastic Beanstalk service region.
+Available service regions are:
+1) US East (Virginia)
+2) US West (Oregon)
+3) US West (North California)
+4) EU West (Ireland)
+5) Asia Pacific (Singapore)
+6) Asia Pacific (Tokyo)
+7) Asia Pacific (Sydney)
+8) South America (Sao Paulo)
+Select (1 to 8): 7
+Enter an AWS Elastic Beanstalk application name (auto-generated value is &ldquo;cloudbackend&rdquo;):
+Enter an AWS Elastic Beanstalk environment name (auto-generated value is &ldquo;cloudbackend-env&rdquo;):
+Select a solution stack.
+Available solution stacks are:
+1) 32bit Amazon Linux 2013.09 running PHP 5.4
+2) 64bit Amazon Linux 2013.09 running PHP 5.4
+3) 32bit Amazon Linux 2013.09 running PHP 5.5
+4) 64bit Amazon Linux 2013.09 running PHP 5.5
+5) 32bit Amazon Linux running PHP 5.3
+6) 64bit Amazon Linux running PHP 5.3
+7) 32bit Amazon Linux 2013.09 running Node.js
+8) 64bit Amazon Linux 2013.09 running Node.js
+&hellip;
+Select (1 to 28): 8
+Select an environment type.
+Available environment types are:
+1) LoadBalanced
+2) SingleInstance
+Select (1 to 2): 1
+Create an RDS DB Instance? [y/n]: n
+Attach an instance profile (current value is &ldquo;[Create a default instance profile]&rdquo;):
+1) [Create a default instance profile]
+2) aws-elasticbeanstalk-ec2-role
+3) [Other instance profile]
+Select (1 to 3): 1
+Updated AWS Credential file at &ldquo;/Users/peterboni/.elasticbeanstalk/aws_credential_file&rdquo;.</p>
+
+<p>peters-mac-mini:cloudbackend peterboni$
+{% endcodeblock %}</p>
 
 <p>Now we just start it. Be patient as this will take a few minutes.</p>
 
@@ -631,55 +496,32 @@ can be found at the URL given after you enter &lsquo;eb init&rsquo;.</li>
 </ol>
 
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span> eb start
-</span><span class='line'><span class="go">Starting application &amp;ldquo;cloudbackend&amp;rdquo;.</span>
-</span><span class='line'><span class="go">Would you like to deploy the latest Git commit to your environment? [y/n]: y</span>
-</span><span class='line'><span class="go">remote:</span>
-</span><span class='line'><span class="go">remote: error: Unable to deploy application version: No Environment found for EnvironmentName = &amp;lsquo;cloudbackend-env&amp;rsquo;.</span>
-</span><span class='line'><span class="go">remote:</span>
-</span><span class='line'><span class="go">To &lt;a href=&quot;https://...:...@git.elasticbeanstalk.ap-southeast-2.amazonaws.com/v1/repos/.../commitid/.../environment/...&quot;&gt;https://...:...@git.elasticbeanstalk.ap-southeast-2.amazonaws.com/v1/repos/.../commitid/.../environment/...&lt;/a&gt;</span>
-</span><span class='line'><span class="go"> * [new branch]      HEAD &amp;ndash;&gt; master&lt;/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="go">&lt;p&gt;Waiting for environment &amp;ldquo;cloudbackend-env&amp;rdquo; to launch.</span>
-</span><span class='line'><span class="go">2013-12-07 08:21:09 INFO    createEnvironment is starting.</span>
-</span><span class='line'><span class="go">2013-12-07 08:21:14 INFO    Using elasticbeanstalk-ap-southeast-2-558573496878 as Amazon S3 storage bucket for environment data.</span>
-</span><span class='line'><span class="go">2013-12-07 08:21:46 INFO    Created load balancer named: awseb-e-i-AWSEBLoa-SNLC5NAHWZWP</span>
-</span><span class='line'><span class="go">2013-12-07 08:22:06 INFO    Created security group named: awseb-e-ib22smbwaz-stack-AWSEBSecurityGroup-1DE3TWOH4AYLK</span>
-</span><span class='line'><span class="go">2013-12-07 08:22:10 INFO    Created Auto Scaling launch configuration named: awseb-e-ib22smbwaz-stack-AWSEBAutoScalingLaunchConfiguration-1NPGUDUWIC5YP</span>
-</span><span class='line'><span class="go">2013-12-07 08:23:07 INFO    Waiting for EC2 instances to launch. This may take a few minutes.</span>
-</span><span class='line'><span class="go">2013-12-07 08:23:07 INFO    Created Auto Scaling group named: awseb-e-ib22smbwaz-stack-AWSEBAutoScalingGroup-1BTN5S4LQA5BD</span>
-</span><span class='line'><span class="go">2013-12-07 08:23:10 INFO    Created Auto Scaling group policy named: arn:aws:autoscaling:ap-southeast-2:558573496878:scalingPolicy:5c8b171d-262b-4286-8bbd-76ff9db15845:autoScalingGroupName/awseb-e-ib22smbwaz-stack-AWSEBAutoScalingGroup-1BTN5S4LQA5BD:policyName/awseb-e-ib22smbwaz-stack-AWSEBAutoScalingScaleDownPolicy-18LWCZMRA7I4G</span>
-</span><span class='line'><span class="go">2013-12-07 08:23:11 INFO    Created Auto Scaling group policy named: arn:aws:autoscaling:ap-southeast-2:558573496878:scalingPolicy:d9a9f3df-b813-4ffe-9556-f2a7136aa69d:autoScalingGroupName/awseb-e-ib22smbwaz-stack-AWSEBAutoScalingGroup-1BTN5S4LQA5BD:policyName/awseb-e-ib22smbwaz-stack-AWSEBAutoScalingScaleUpPolicy-ZSDGPZ6KHCRQ</span>
-</span><span class='line'><span class="go">2013-12-07 08:23:14 INFO    Created CloudWatch alarm named: awseb-e-ib22smbwaz-stack-AWSEBCloudwatchAlarmHigh-1AAZW8L054YWY</span>
-</span><span class='line'><span class="go">2013-12-07 08:23:14 INFO    Created CloudWatch alarm named: awseb-e-ib22smbwaz-stack-AWSEBCloudwatchAlarmLow-1OAGDWAQFGJTO</span>
-</span><span class='line'><span class="go">2013-12-07 08:27:02 INFO    Successfully launched environment: cloudbackend-env</span>
-</span><span class='line'><span class="go">Application is available at &amp;ldquo;cloudbackend-env-yey9npuvjz.elasticbeanstalk.com&amp;rdquo;.</span>
-</span><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:console %}
+peters-mac-mini:cloudbackend peterboni$ eb start
+Starting application &ldquo;cloudbackend&rdquo;.
+Would you like to deploy the latest Git commit to your environment? [y/n]: y
+remote:
+remote: error: Unable to deploy application version: No Environment found for EnvironmentName = &lsquo;cloudbackend-env&rsquo;.
+remote:
+To <a href="https://...:...@git.elasticbeanstalk.ap-southeast-2.amazonaws.com/v1/repos/.../commitid/.../environment/...">https://...:...@git.elasticbeanstalk.ap-southeast-2.amazonaws.com/v1/repos/.../commitid/.../environment/...</a>
+ * [new branch]      HEAD &ndash;> master</p>
+
+<p>Waiting for environment &ldquo;cloudbackend-env&rdquo; to launch.
+2013-12-07 08:21:09 INFO    createEnvironment is starting.
+2013-12-07 08:21:14 INFO    Using elasticbeanstalk-ap-southeast-2-558573496878 as Amazon S3 storage bucket for environment data.
+2013-12-07 08:21:46 INFO    Created load balancer named: awseb-e-i-AWSEBLoa-SNLC5NAHWZWP
+2013-12-07 08:22:06 INFO    Created security group named: awseb-e-ib22smbwaz-stack-AWSEBSecurityGroup-1DE3TWOH4AYLK
+2013-12-07 08:22:10 INFO    Created Auto Scaling launch configuration named: awseb-e-ib22smbwaz-stack-AWSEBAutoScalingLaunchConfiguration-1NPGUDUWIC5YP
+2013-12-07 08:23:07 INFO    Waiting for EC2 instances to launch. This may take a few minutes.
+2013-12-07 08:23:07 INFO    Created Auto Scaling group named: awseb-e-ib22smbwaz-stack-AWSEBAutoScalingGroup-1BTN5S4LQA5BD
+2013-12-07 08:23:10 INFO    Created Auto Scaling group policy named: arn:aws:autoscaling:ap-southeast-2:558573496878:scalingPolicy:5c8b171d-262b-4286-8bbd-76ff9db15845:autoScalingGroupName/awseb-e-ib22smbwaz-stack-AWSEBAutoScalingGroup-1BTN5S4LQA5BD:policyName/awseb-e-ib22smbwaz-stack-AWSEBAutoScalingScaleDownPolicy-18LWCZMRA7I4G
+2013-12-07 08:23:11 INFO    Created Auto Scaling group policy named: arn:aws:autoscaling:ap-southeast-2:558573496878:scalingPolicy:d9a9f3df-b813-4ffe-9556-f2a7136aa69d:autoScalingGroupName/awseb-e-ib22smbwaz-stack-AWSEBAutoScalingGroup-1BTN5S4LQA5BD:policyName/awseb-e-ib22smbwaz-stack-AWSEBAutoScalingScaleUpPolicy-ZSDGPZ6KHCRQ
+2013-12-07 08:23:14 INFO    Created CloudWatch alarm named: awseb-e-ib22smbwaz-stack-AWSEBCloudwatchAlarmHigh-1AAZW8L054YWY
+2013-12-07 08:23:14 INFO    Created CloudWatch alarm named: awseb-e-ib22smbwaz-stack-AWSEBCloudwatchAlarmLow-1OAGDWAQFGJTO
+2013-12-07 08:27:02 INFO    Successfully launched environment: cloudbackend-env
+Application is available at &ldquo;cloudbackend-env-yey9npuvjz.elasticbeanstalk.com&rdquo;.
+peters-mac-mini:cloudbackend peterboni$
+{% endcodeblock %}</p>
 
 <p>Let&rsquo;s test it!</p>
 
@@ -688,7 +530,7 @@ can be found at the URL given after you enter &lsquo;eb init&rsquo;.</li>
 <blockquote><p>Replace the domain part of the above URL with the domain you were given at the end of the &lsquo;eb start&rsquo; process &hellip;
 Application is available at &ldquo;cloudbackend-env-*.elasticbeanstalk.com&rdquo;.</p></blockquote>
 
-<p><img class="fancybox center" src="/media/images/2013-12-07-a-cloud-backend-using-nodejs-on-aws/2-node-app.png" width="1138" height="714"></p>
+<p>{% img fancybox center /media/images/2013-12-07-a-cloud-backend-using-nodejs-on-aws/2-node-app.png 1138 714 %}</p>
 
 <p><strong>Congratulations! Your cloud backend is now working.</strong></p>
 
@@ -697,39 +539,24 @@ Application is available at &ldquo;cloudbackend-env-*.elasticbeanstalk.com&rdquo
 <p>Lastly if you want to stop &amp; delete the environment, use the following EB command.
 Enter &lsquo;eb stop&rsquo;, and then &lsquo;y&rsquo; to terminate the environment.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span> eb stop
-</span><span class='line'><span class="go">Terminate environment? [y/n]: y</span>
-</span><span class='line'><span class="go">Stopping environment &amp;ldquo;cloudbackend-env&amp;rdquo;. This may take a few minutes.</span>
-</span><span class='line'><span class="go">2013-12-07 09:24:44 INFO    terminateEnvironment is starting.</span>
-</span><span class='line'><span class="go">2013-12-07 09:24:57 INFO    Deleted CloudWatch alarm named: awseb-e-ib22smbwaz-stack-AWSEBCloudwatchAlarmLow-1OAGDWAQFGJTO</span>
-</span><span class='line'><span class="go">2013-12-07 09:24:57 INFO    Deleted CloudWatch alarm named: awseb-e-ib22smbwaz-stack-AWSEBCloudwatchAlarmHigh-1AAZW8L054YWY</span>
-</span><span class='line'><span class="go">2013-12-07 09:25:00 INFO    Deleted Auto Scaling group policy named: arn:aws:autoscaling:ap-southeast-2:558573496878:scalingPolicy:d9a9f3df-b813-4ffe-9556-f2a7136aa69d:autoScalingGroupName/awseb-e-ib22smbwaz-stack-AWSEBAutoScalingGroup-1BTN5S4LQA5BD:policyName/awseb-e-ib22smbwaz-stack-AWSEBAutoScalingScaleUpPolicy-ZSDGPZ6KHCRQ</span>
-</span><span class='line'><span class="go">2013-12-07 09:25:00 INFO    Deleted Auto Scaling group policy named: arn:aws:autoscaling:ap-southeast-2:558573496878:scalingPolicy:5c8b171d-262b-4286-8bbd-76ff9db15845:autoScalingGroupName/awseb-e-ib22smbwaz-stack-AWSEBAutoScalingGroup-1BTN5S4LQA5BD:policyName/awseb-e-ib22smbwaz-stack-AWSEBAutoScalingScaleDownPolicy-18LWCZMRA7I4G</span>
-</span><span class='line'><span class="go">2013-12-07 09:25:03 INFO    Waiting for EC2 instances to terminate. This may take a few minutes.</span>
-</span><span class='line'><span class="go">2013-12-07 09:26:15 INFO    Deleted Auto Scaling group named: awseb-e-ib22smbwaz-stack-AWSEBAutoScalingGroup-1BTN5S4LQA5BD</span>
-</span><span class='line'><span class="go">2013-12-07 09:26:19 INFO    Deleted Auto Scaling launch configuration named: awseb-e-ib22smbwaz-stack-AWSEBAutoScalingLaunchConfiguration-1NPGUDUWIC5YP</span>
-</span><span class='line'><span class="go">2013-12-07 09:26:22 INFO    Deleted security group named: awseb-e-ib22smbwaz-stack-AWSEBSecurityGroup-1DE3TWOH4AYLK</span>
-</span><span class='line'><span class="go">2013-12-07 09:26:25 INFO    Deleted load balancer named: awseb-e-i-AWSEBLoa-SNLC5NAHWZWP</span>
-</span><span class='line'><span class="go">2013-12-07 09:26:28 INFO    Deleting SNS topic for environment cloudbackend-env.</span>
-</span><span class='line'><span class="go">Stop of environment &amp;ldquo;cloudbackend-env&amp;rdquo; has completed.</span>
-</span><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:console %}
+peters-mac-mini:cloudbackend peterboni$ eb stop
+Terminate environment? [y/n]: y
+Stopping environment &ldquo;cloudbackend-env&rdquo;. This may take a few minutes.
+2013-12-07 09:24:44 INFO    terminateEnvironment is starting.
+2013-12-07 09:24:57 INFO    Deleted CloudWatch alarm named: awseb-e-ib22smbwaz-stack-AWSEBCloudwatchAlarmLow-1OAGDWAQFGJTO
+2013-12-07 09:24:57 INFO    Deleted CloudWatch alarm named: awseb-e-ib22smbwaz-stack-AWSEBCloudwatchAlarmHigh-1AAZW8L054YWY
+2013-12-07 09:25:00 INFO    Deleted Auto Scaling group policy named: arn:aws:autoscaling:ap-southeast-2:558573496878:scalingPolicy:d9a9f3df-b813-4ffe-9556-f2a7136aa69d:autoScalingGroupName/awseb-e-ib22smbwaz-stack-AWSEBAutoScalingGroup-1BTN5S4LQA5BD:policyName/awseb-e-ib22smbwaz-stack-AWSEBAutoScalingScaleUpPolicy-ZSDGPZ6KHCRQ
+2013-12-07 09:25:00 INFO    Deleted Auto Scaling group policy named: arn:aws:autoscaling:ap-southeast-2:558573496878:scalingPolicy:5c8b171d-262b-4286-8bbd-76ff9db15845:autoScalingGroupName/awseb-e-ib22smbwaz-stack-AWSEBAutoScalingGroup-1BTN5S4LQA5BD:policyName/awseb-e-ib22smbwaz-stack-AWSEBAutoScalingScaleDownPolicy-18LWCZMRA7I4G
+2013-12-07 09:25:03 INFO    Waiting for EC2 instances to terminate. This may take a few minutes.
+2013-12-07 09:26:15 INFO    Deleted Auto Scaling group named: awseb-e-ib22smbwaz-stack-AWSEBAutoScalingGroup-1BTN5S4LQA5BD
+2013-12-07 09:26:19 INFO    Deleted Auto Scaling launch configuration named: awseb-e-ib22smbwaz-stack-AWSEBAutoScalingLaunchConfiguration-1NPGUDUWIC5YP
+2013-12-07 09:26:22 INFO    Deleted security group named: awseb-e-ib22smbwaz-stack-AWSEBSecurityGroup-1DE3TWOH4AYLK
+2013-12-07 09:26:25 INFO    Deleted load balancer named: awseb-e-i-AWSEBLoa-SNLC5NAHWZWP
+2013-12-07 09:26:28 INFO    Deleting SNS topic for environment cloudbackend-env.
+Stop of environment &ldquo;cloudbackend-env&rdquo; has completed.
+peters-mac-mini:cloudbackend peterboni$
+{% endcodeblock %}</p>
 
 <p>If you get stuck, you can always try checking out the Amazon documentation &ndash;
 <a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_nodejs_express.html">Deploying an Express Application to AWS Elastic Beanstalk</a>.</p>
@@ -760,40 +587,40 @@ into this experience &amp; open source code.</p>
 sent a signal to them that they are entering a money value. The cursor is flashing at them
 after the last 0 at the end of the formatted money value.</p>
 
-<p><img class="fancybox center" src="/media/images/2013-07-04-ios-formatted-currency-input/1.png" width="396" height="744" title="Start, Shows $0.00" ></p>
+<p>{% img fancybox center /media/images/2013-07-04-ios-formatted-currency-input/1.png 396 744 Start, Shows $0.00 %}</p>
 
 <p>2. The user taps the 1 key on the number pad. The display value changes to $0.01</p>
 
-<p><img class="fancybox center" src="/media/images/2013-07-04-ios-formatted-currency-input/2.png" width="396" height="744" title="Tap 1, Changes to $0.01" ></p>
+<p>{% img fancybox center /media/images/2013-07-04-ios-formatted-currency-input/2.png 396 744 Tap 1, Changes to $0.01 %}</p>
 
 <p>3. The user taps the 2 key on the number pad. The display value changes to $0.12</p>
 
-<p><img class="fancybox center" src="/media/images/2013-07-04-ios-formatted-currency-input/3.png" width="396" height="744" title="Tap 2, Changes to $0.12" ></p>
+<p>{% img fancybox center /media/images/2013-07-04-ios-formatted-currency-input/3.png 396 744 Tap 2, Changes to $0.12 %}</p>
 
 <p>4. The user taps the 3 key on the number pad. The display value changes to $1.23</p>
 
 <p>They haven&rsquo;t had to enter in a dot. They are just tapping numbers, and the displayed
 money value is formatting itself in front of their eyes.</p>
 
-<p><img class="fancybox center" src="/media/images/2013-07-04-ios-formatted-currency-input/4.png" width="396" height="744" title="Tap 3, Changes to $1.23" ></p>
+<p>{% img fancybox center /media/images/2013-07-04-ios-formatted-currency-input/4.png 396 744 Tap 3, Changes to $1.23 %}</p>
 
 <p>5. The user taps some more numbers &ndash; 4, 5, and then 6. The display value changes to $1,234.56</p>
 
 <p>We have a comma! The money value is formatted.</p>
 
-<p><img class="fancybox center" src="/media/images/2013-07-04-ios-formatted-currency-input/5.png" width="396" height="744" title="Tap 4, 5, 6, Changes to $1,234.56" ></p>
+<p>{% img fancybox center /media/images/2013-07-04-ios-formatted-currency-input/5.png 396 744 Tap 4, 5, 6, Changes to $1,234.56 %}</p>
 
 <p>6. The user taps Delete. The display value changes to $123.45</p>
 
-<p><img class="fancybox center" src="/media/images/2013-07-04-ios-formatted-currency-input/6.png" width="396" height="744" title="Tap Delete, Deletes 6" ></p>
+<p>{% img fancybox center /media/images/2013-07-04-ios-formatted-currency-input/6.png 396 744 Tap Delete, Deletes 6 %}</p>
 
 <p>7. The user moves the cursor to after 1, taps Delete. The display value changes to $23.45</p>
 
-<p><img class="fancybox center" src="/media/images/2013-07-04-ios-formatted-currency-input/7.png" width="396" height="744" title="Move cursor to after 1, and Tap Delete, Deletes 1" ></p>
+<p>{% img fancybox center /media/images/2013-07-04-ios-formatted-currency-input/7.png 396 744 Move cursor to after 1, and Tap Delete, Deletes 1 %}</p>
 
 <p>8. From start the user gets ready to paste in &lsquo;$1,000&rsquo; (without quotes) from somewhere else.</p>
 
-<p><img class="fancybox center" src="/media/images/2013-07-04-ios-formatted-currency-input/8.png" width="396" height="744" title="From Start, Get ready to Paste $1,000" ></p>
+<p>{% img fancybox center /media/images/2013-07-04-ios-formatted-currency-input/8.png 396 744 From Start, Get ready to Paste $1,000 %}</p>
 
 <p>9. The &lsquo;$1,000&rsquo; gets pasted in &amp; the display value changes to $1,000.00.</p>
 
@@ -802,7 +629,7 @@ didn&rsquo;t trap the paste and format the value before updating the display val
 
 <p>Also note that the user could also paste in &lsquo;1000&rsquo; or &lsquo;$1000&rsquo;.</p>
 
-<p><img class="fancybox center" src="/media/images/2013-07-04-ios-formatted-currency-input/9.png" width="396" height="744" title="Paste in $1,000, Changes to $1,000.00" ></p>
+<p>{% img fancybox center /media/images/2013-07-04-ios-formatted-currency-input/9.png 396 744 Paste in $1,000, Changes to $1,000.00 %}</p>
 
 <h2>The Code</h2>
 
@@ -833,32 +660,32 @@ size. It looks <strong>stunning</strong>, but there&rsquo;s work to make your ap
 (Settings &ndash; General &ndash; Text Size) set to the default size in the <em>iPhone Retina (3.5-inch)</em>
 iOS Simulator.</p>
 
-<p><img class="fancybox center" src="/media/images/2013-06-29-ios-7-dynamic-type/1-text-size-normal.png" width="500" height="713" title="Text Size Default" ></p>
+<p>{% img fancybox center /media/images/2013-06-29-ios-7-dynamic-type/1-text-size-normal.png 500 713 Text Size Default %}</p>
 
 <p>We get 3 &amp; &lsquo;a bit&rsquo; cells in the UITableView.</p>
 
-<p><img class="fancybox center" src="/media/images/2013-06-29-ios-7-dynamic-type/2-userxlistview-normal.png" width="500" height="713" title="UserXListView Default" ></p>
+<p>{% img fancybox center /media/images/2013-06-29-ios-7-dynamic-type/2-userxlistview-normal.png 500 713 UserXListView Default %}</p>
 
 <h2>Smallest Size</h2>
 
 <p>Changing the Text Size to the smallest size means we can fit slightly more.</p>
 
-<p><img class="fancybox center" src="/media/images/2013-06-29-ios-7-dynamic-type/3-text-size-small.png" width="500" height="713" title="Text Size Smallest" ></p>
+<p>{% img fancybox center /media/images/2013-06-29-ios-7-dynamic-type/3-text-size-small.png 500 713 Text Size Smallest %}</p>
 
 <p>Nearly 4 cells in the UITableView.</p>
 
-<p><img class="fancybox center" src="/media/images/2013-06-29-ios-7-dynamic-type/4-userxlistview-small.png" width="500" height="713" title="UserXListView Smallest" ></p>
+<p>{% img fancybox center /media/images/2013-06-29-ios-7-dynamic-type/4-userxlistview-small.png 500 713 UserXListView Smallest %}</p>
 
 <h2>Largest Size</h2>
 
 <p>Changing the Text Size to the largest size means we can fit slightly less, but get big
 beautiful type.</p>
 
-<p><img class="fancybox center" src="/media/images/2013-06-29-ios-7-dynamic-type/5-text-size-large.png" width="500" height="713" title="Text Size Largest" ></p>
+<p>{% img fancybox center /media/images/2013-06-29-ios-7-dynamic-type/5-text-size-large.png 500 713 Text Size Largest %}</p>
 
 <p>3 cells in the UITableView.</p>
 
-<p><img class="fancybox center" src="/media/images/2013-06-29-ios-7-dynamic-type/6-userxlistview-large.png" width="500" height="713" title="UserXListView Largest" ></p>
+<p>{% img fancybox center /media/images/2013-06-29-ios-7-dynamic-type/6-userxlistview-large.png 500 713 UserXListView Largest %}</p>
 
 <h2>Implementation, The Easy Part</h2>
 
@@ -866,13 +693,13 @@ beautiful type.</p>
 <a href="/blog/2013/06/24/ios-7-userxlistview/">UserXListView</a>. The cell layout makes use of Auto
 Layout Constraints, which are very powerful.</p>
 
-<p><img class="fancybox center" src="/media/images/2013-06-29-ios-7-dynamic-type/7-userxlistview-cell-layout.png" width="381" height="674" title="UserXListView Cell Layout" ></p>
+<p>{% img fancybox center /media/images/2013-06-29-ios-7-dynamic-type/7-userxlistview-cell-layout.png 381 674 UserXListView Cell Layout %}</p>
 
 <p>iOS 7 has defined Text Styles &ndash; Body, Caption 1, Caption 2, Footnote, Headline 1,
 Headline 2, Subhead 1, and Subhead 2. We assign a Text Style to each label in the cell
 layout via the attribute inspector as shown below.</p>
 
-<p><img class="fancybox center" src="/media/images/2013-06-29-ios-7-dynamic-type/8-userxlistview-cell-label-attribute-inspector.png" width="316" height="196" title="UserXListView Cell Label Attribute Inspector" ></p>
+<p>{% img fancybox center /media/images/2013-06-29-ios-7-dynamic-type/8-userxlistview-cell-label-attribute-inspector.png 316 196 UserXListView Cell Label Attribute Inspector %}</p>
 
 <p>Once the label Text Styles &amp; Auto Layout Constraints are set, we&rsquo;re ready for the hard
 part.</p>
@@ -885,107 +712,66 @@ Dynamic Type.</p>
 <p>We need to make the Controller aware of a Text Size change by hooking into the
 UIContentSizeCategoryDidChangeNotification.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">viewDidLoad</span> <span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="p">[</span><span class="n">super</span> <span class="n">viewDidLoad</span><span class="p">];</span>
-</span><span class='line'><span class="p">[[</span><span class="n">NSNotificationCenter</span> <span class="n">defaultCenter</span><span class="p">]</span> <span class="nl">addObserver:</span><span class="n">self</span> <span class="nl">selector:</span><span class="k">@selector</span><span class="p">(</span><span class="nl">preferredContentSizeChanged:</span><span class="p">)</span> <span class="nl">name:</span><span class="n">UIContentSizeCategoryDidChangeNotification</span> <span class="nl">object:</span><span class="nb">nil</span><span class="p">];</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">ul</span><span class="o">&gt;</span>
-</span><span class='line'><span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nl">preferredContentSizeChanged:</span><span class="p">(</span><span class="n">NSNotification</span> <span class="o">*</span><span class="p">)</span><span class="n">aNotification</span> <span class="p">{</span>
-</span><span class='line'>  <span class="c1">// adjust the layout of the cells</span>
-</span><span class='line'>  <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">view</span> <span class="n">setNeedsLayout</span><span class="p">];</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>  <span class="c1">// refresh view&amp;hellip;</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p></li>
+<p>{% codeblock lang:objc %}
+&ndash; (void)viewDidLoad {</p>
+
+<pre><code>[super viewDidLoad];
+[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(preferredContentSizeChanged:) name:UIContentSizeCategoryDidChangeNotification object:nil];
+</code></pre>
+
+<p>}</p>
+
+<ul>
+<li><p>(void)preferredContentSizeChanged:(NSNotification *)aNotification {
+  // adjust the layout of the cells
+  [self.view setNeedsLayout];</p>
+
+<p>  // refresh view&hellip;
+}
+{% endcodeblock %}</p></li>
 </ul>
 
 
 <p>We need to calculate the height of the row/cell based on it&rsquo;s content, and as each label
 in the cell can change height we need to calculate the total height of the cell required.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="p">(</span><span class="n">CGFloat</span><span class="p">)</span><span class="nl">tableView:</span><span class="p">(</span><span class="n">UITableView</span> <span class="o">&lt;</span><span class="n">em</span><span class="o">&gt;</span><span class="p">)</span><span class="n">tableView</span> <span class="nl">heightForRowAtIndexPath:</span><span class="p">(</span><span class="n">NSIndexPath</span> <span class="o">&lt;/</span><span class="n">em</span><span class="o">&gt;</span><span class="p">)</span><span class="n">indexPath</span> <span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">Account</span> <span class="o">*</span><span class="n">account</span> <span class="o">=</span> <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">fetchedResultsController</span> <span class="nl">objectAtIndexPath:</span><span class="n">indexPath</span><span class="p">];</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">UIFont</span> <span class="o">*</span><span class="n">nameLabelFont</span> <span class="o">=</span> <span class="p">[</span><span class="n">UIFont</span> <span class="nl">preferredFontForTextStyle:</span><span class="n">UIFontTextStyleHeadline1</span><span class="p">];</span>
-</span><span class='line'><span class="n">CGSize</span> <span class="n">nameLabelFontSize</span> <span class="o">=</span> <span class="p">[[</span><span class="n">account</span> <span class="n">name</span><span class="p">]</span> <span class="nl">sizeWithAttributes:</span><span class="p">[</span><span class="n">NSDictionary</span> <span class="nl">dictionaryWithObject:</span><span class="n">nameLabelFont</span> <span class="nl">forKey:</span><span class="n">NSFontAttributeName</span><span class="p">]];</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// ...</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">CGFloat</span> <span class="n">PADDING_OUTER</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
-</span><span class='line'><span class="n">CGFloat</span> <span class="n">totalHeight</span> <span class="o">=</span> <span class="n">PADDING_OUTER</span> <span class="o">+</span> <span class="n">nameLabelFontSize</span><span class="p">.</span><span class="n">height</span> <span class="o">+</span> <span class="p">...</span> <span class="o">+</span> <span class="n">PADDING_OUTER</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">return</span> <span class="n">totalHeight</span><span class="p">;</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:objc %}
+&ndash; (CGFloat)tableView:(UITableView <em>)tableView heightForRowAtIndexPath:(NSIndexPath </em>)indexPath {</p>
+
+<pre><code>Account *account = [self.fetchedResultsController objectAtIndexPath:indexPath];
+
+UIFont *nameLabelFont = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline1];
+CGSize nameLabelFontSize = [[account name] sizeWithAttributes:[NSDictionary dictionaryWithObject:nameLabelFont forKey:NSFontAttributeName]];
+
+// ...
+
+CGFloat PADDING_OUTER = 10;
+CGFloat totalHeight = PADDING_OUTER + nameLabelFontSize.height + ... + PADDING_OUTER;
+
+return totalHeight;
+</code></pre>
+
+<p>}
+{% endcodeblock %}</p>
 
 <p>We also need to programmatically assign (or re-assign because we already did it in
 the Storyboard) the cell label Text Style values.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="p">(</span><span class="n">UITableViewCell</span> <span class="o">&lt;</span><span class="n">em</span><span class="o">&gt;</span><span class="p">)</span><span class="nl">tableView:</span><span class="p">(</span><span class="n">UITableView</span> <span class="o">&lt;/</span><span class="n">em</span><span class="o">&gt;</span><span class="p">)</span><span class="n">tableView</span> <span class="nl">cellForRowAtIndexPath:</span><span class="p">(</span><span class="n">NSIndexPath</span> <span class="o">*</span><span class="p">)</span><span class="n">indexPath</span> <span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">AccountCell</span> <span class="o">*</span><span class="n">cell</span> <span class="o">=</span> <span class="p">(</span><span class="n">AccountCell</span> <span class="o">*</span><span class="p">)[</span><span class="n">tableView</span> <span class="nl">dequeueReusableCellWithIdentifier:</span><span class="s">@&quot;AccountCell&quot;</span><span class="p">];</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">Account</span> <span class="o">*</span><span class="n">account</span> <span class="o">=</span> <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">fetchedResultsController</span> <span class="nl">objectAtIndexPath:</span><span class="n">indexPath</span><span class="p">];</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">cell</span><span class="p">.</span><span class="n">nameLabel</span><span class="p">.</span><span class="n">text</span> <span class="o">=</span> <span class="p">[</span><span class="n">account</span> <span class="n">name</span><span class="p">];</span>
-</span><span class='line'><span class="n">cell</span><span class="p">.</span><span class="n">nameLabel</span><span class="p">.</span><span class="n">font</span> <span class="o">=</span> <span class="p">[</span><span class="n">UIFont</span> <span class="nl">preferredFontForTextStyle:</span><span class="n">UIFontTextStyleHeadline1</span><span class="p">];</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// ...</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:objc %}
+&ndash; (UITableViewCell <em>)tableView:(UITableView </em>)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {</p>
+
+<pre><code>AccountCell *cell = (AccountCell *)[tableView dequeueReusableCellWithIdentifier:@"AccountCell"];
+
+Account *account = [self.fetchedResultsController objectAtIndexPath:indexPath];
+
+cell.nameLabel.text = [account name];
+cell.nameLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline1];
+
+// ...
+</code></pre>
+
+<p>}
+{% endcodeblock %}</p>
 
 <h2>Final Thoughts</h2>
 

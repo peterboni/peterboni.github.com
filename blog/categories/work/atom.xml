@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Work | Peter Boni]]></title>
   <link href="http://www.peterboni.net/blog/categories/work/atom.xml" rel="self"/>
   <link href="http://www.peterboni.net/"/>
-  <updated>2014-06-03T16:32:19+08:00</updated>
+  <updated>2014-06-07T10:21:17+08:00</updated>
   <id>http://www.peterboni.net/</id>
   <author>
     <name><![CDATA[Peter Boni]]></name>
@@ -51,7 +51,7 @@ much I dislike email &amp; it&rsquo;s seductive call, but alas, I&rsquo;m still 
 
 <p>There has probably been millions of words written about <a href="http://en.wikipedia.org/wiki/Communication">communication</a>. So why bother? Because I&rsquo;m actively trying to get better at it.</p>
 
-<p><img class="fancybox center" src="/media/images/2013-09-01-communication/photo-small.jpg" width="700" height="467" title="Photo" >
+<p>{% img fancybox center /media/images/2013-09-01-communication/photo-small.jpg 700 467 Photo %}
 <a href="/media/images/2013-09-01-communication/photo.jpg">Photo (Original)</a></p>
 ]]></content>
   </entry>

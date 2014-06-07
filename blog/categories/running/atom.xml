@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Running | Peter Boni]]></title>
   <link href="http://www.peterboni.net/blog/categories/running/atom.xml" rel="self"/>
   <link href="http://www.peterboni.net/"/>
-  <updated>2014-06-03T16:32:19+08:00</updated>
+  <updated>2014-06-07T10:21:17+08:00</updated>
   <id>http://www.peterboni.net/</id>
   <author>
     <name><![CDATA[Peter Boni]]></name>
@@ -100,7 +100,7 @@ I loved, and it&rsquo;s why I kept doing it. It&rsquo;s not about the numbers.</
     <link href="http://www.peterboni.net/blog/2013/10/01/ihealth-renaissance/"/>
     <updated>2013-10-01T07:00:00+08:00</updated>
     <id>http://www.peterboni.net/blog/2013/10/01/ihealth-renaissance</id>
-    <content type="html"><![CDATA[<p><img class="fancybox center" src="/media/images/2013-10-01-ihealth-renaissance/img_1181.jpg" width="640" height="365" title="iHealth" ></p>
+    <content type="html"><![CDATA[<p>{% img fancybox center /media/images/2013-10-01-ihealth-renaissance/img_1181.jpg 640 365 iHealth %}</p>
 
 <p>I have experienced a personal health renaissance over the last year. My iPhone<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> is teaching me how to change my health, both body &amp; mind. It has offered motivation when I needed it. I believe that the iHealth Renaissance is just getting started. It could do the same for you if you let it. Let me explain how.</p>
 
@@ -117,7 +117,7 @@ I loved, and it&rsquo;s why I kept doing it. It&rsquo;s not about the numbers.</
 
 <p>With 4 fitness apps installed &amp; being used regularly next came changing what I put into my body. My wife installed &amp; started using MyNetDiary which is essentially calorie counting, with once again, plenty of feedback that gave me a sense of progress. I could visually see how many calories I was consuming against how many I should consume to meet my target weight. What it did more than that though was teach me about what I was eating. I was shocked at a few things, for example almonds &hellip; holy crap! It hasn&rsquo;t changed what I eat, as I still enjoy beer &amp; chocolate, but it has changed my behaviour. I now think about the quality &amp; quantity of what I will put into my body.</p>
 
-<p><img class="fancybox center" src="/media/images/2013-10-01-ihealth-renaissance/img_1137.jpg" width="500" height="500" title="Breakfast" ></p>
+<p>{% img fancybox center /media/images/2013-10-01-ihealth-renaissance/img_1137.jpg 500 500 Breakfast %}</p>
 
 <p>With 5 health apps installed &amp; being used regularly I started seeing changes. 8 months of running, and 1.5 months of changing the way I eat I had dropped over 8 kg in weight, and could now comfortably run 5 km at a pace of 5:30 per km, with nice steep hills thrown in.</p>
 
@@ -155,7 +155,7 @@ I loved, and it&rsquo;s why I kept doing it. It&rsquo;s not about the numbers.</
 
 <p>I did a quick review of headphones with remote &amp; microphone in the Apple Store and purchased the Sennheiser OCX 685i In-Ear Sports Headphones.</p>
 
-<p><img class="fancybox center" src="/media/images/2013-09-22-design-little-things-matter/img_2357.jpg" width="600" height="400" title="Sennheiser OCX 685i In-Ear Sports Headphones" ></p>
+<p>{% img fancybox center /media/images/2013-09-22-design-little-things-matter/img_2357.jpg 600 400 Sennheiser OCX 685i In-Ear Sports Headphones %}</p>
 
 <p>The ear clip design, combined with the lightweight cord &amp; clip means that they stay secure while running. No more falling out. The remote &amp; microphone work &ndash; I have full control over music. I can also use Siri to listen to incoming messages, and dictate a reply. I can even use Siri to <a href="https://twitter.com/peterboni/status/379924494527131649">Tweet</a>. The headphones are also sweat &amp; water resistant. Nearly perfect.</p>
 
@@ -163,7 +163,7 @@ I loved, and it&rsquo;s why I kept doing it. It&rsquo;s not about the numbers.</
 
 <p>Compare the design of the remote on the Sennheiser in the above picture to the remote on the Apple EarPods in the below picture.</p>
 
-<p><img class="fancybox center" src="/media/images/2013-09-22-design-little-things-matter/img_2360.jpg" width="600" height="400" title="Apple EarPods with Remote and Mic" ></p>
+<p>{% img fancybox center /media/images/2013-09-22-design-little-things-matter/img_2360.jpg 600 400 Apple EarPods with Remote and Mic %}</p>
 
 <p>Can you guess what the problem is? When I&rsquo;m running &amp; listening to music, I&rsquo;m watching the road ahead. I move my fingers to the remote near my neck, grab it, and feel for the controls. They&rsquo;re all placed together &amp; feel like they blend into each other. It feels like one button. This is the exact opposite experience with the Apple EarPods remote. On the Apple EarPods remote the clear indent in the middle means I feel immediately by touch the distinction between the 3 buttons, and hence how to activate the different functions that the 3 buttons enable.</p>
 
@@ -197,7 +197,7 @@ I loved, and it&rsquo;s why I kept doing it. It&rsquo;s not about the numbers.</
 
 <p>As he stopped at the end of the road &amp; looked out over the water, the sight of the Sydney Opera House greeted him. They both stood there, looking at the Opera House, and the Harbour Bridge to the right. He turned his head &amp; looked at the avatar of his dad, and smiled.</p>
 
-<p><img class="fancybox center" src="/media/images/2013-07-25-running-memory/photo-small.jpg" width="770" height="295" title="Photo" >
+<p>{% img fancybox center /media/images/2013-07-25-running-memory/photo-small.jpg 770 295 Photo %}
 <a href="/media/images/2013-07-25-running-memory/photo.jpg">Photo (Original)</a></p>
 
 <p><a href="/blog/2013/03/09/glitch-in-the-matrix/">Glitch in the Matrix</a></p>
