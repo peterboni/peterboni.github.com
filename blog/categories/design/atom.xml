@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Design | Peter Boni]]></title>
   <link href="http://www.peterboni.net/blog/categories/design/atom.xml" rel="self"/>
   <link href="http://www.peterboni.net/"/>
-  <updated>2014-06-07T10:21:17+08:00</updated>
+  <updated>2014-06-14T11:49:03+08:00</updated>
   <id>http://www.peterboni.net/</id>
   <author>
     <name><![CDATA[Peter Boni]]></name>
@@ -23,11 +23,11 @@ For the latest information visit <a href="/photoarchive">PhotoArchive for iPhone
 
 <p>I take a lot of photos &amp; videos with my iPhone.
 It&rsquo;s always with me, so it&rsquo;s convenient, and the quality is good.
-My DSLR body &amp; lenses produce superior quality, but are usually left at home gathering dust.</p>
+My DSLR body and lenses produce superior quality, but are usually left at home gathering dust.</p>
 
 <p>When I take new photos or videos, often of my family, I worry that if something were to happen to my iPhone, those irreplaceable memories will be lost forever.</p>
 
-<p>There are many solutions for this need, for example iCloud Backup, the Dropbox app, or the Amazon Cloud Drive app, but they all have varying costs &amp; limitations.
+<p>There are many solutions for this need, for example iCloud Backup, the Dropbox app, or the Amazon Cloud Drive app, but they all have varying costs and limitations.
 I wanted a simple solution for me, and that&rsquo;s why I decided to build an app as a side project &ndash; PhotoArchive for iPhone.
 When released, PhotoArchive will be free for everyone on the App Store.</p>
 
@@ -50,7 +50,7 @@ When released, PhotoArchive will be free for everyone on the App Store.</p>
 <p>I have a Western Digital My Book NAS (Network Attached Storage) at home that is always on.
 I use it for file storage for computers on the network, and DLNA streaming to the living room TV via the PS3.</p>
 
-<p>I copy new photos &amp; videos from my &amp; my wife&rsquo;s iPhones by manually connecting them to a computer via USB, and downloading the new ones.
+<p>I copy new photos &amp; videos from my and my wife&rsquo;s iPhones by manually connecting them to a computer via USB, and downloading the new ones.
 Because it&rsquo;s a tedious manual process I don&rsquo;t do it as often as I should.</p>
 
 <p>What PhotoArchive does is copy new photos &amp; videos from your iOS device to an FTP server, over Wi-Fi.
@@ -71,7 +71,7 @@ The Western Digital My Book NAS, like most NAS, supports FTP (File Transfer Prot
 <li><p><strong>Never Deletes</strong> &ndash; Will never delete a photo or video from your home storage, or from your device.</p></li>
 <li><p><strong>Smart Archive</strong> &ndash; Remembers the previous archive, and will only upload new photos &amp; videos, so it&rsquo;s <em>FAST</em>!</p></li>
 <li><p><strong>Smart Photo View</strong> &ndash; Shows you your photos &amp; videos that are in danger of being lost forever (not archived), and the ones that are safe in the event that something happens to your device (archived).</p></li>
-<li><p><strong>Full Resolution &amp; Metadata</strong> &ndash; Uploads your photos &amp; videos in their full resolution, with all metadata &ndash; information about your photos &amp; videos, e.g. where you took them.</p></li>
+<li><p><strong>Full Resolution and Metadata</strong> &ndash; Uploads your photos &amp; videos in their full resolution, with all metadata &ndash; information about your photos &amp; videos, e.g. where you took them.</p></li>
 </ol>
 
 
@@ -86,7 +86,7 @@ The Western Digital My Book NAS, like most NAS, supports FTP (File Transfer Prot
 <p>The main view that greets the user visually shows them all photos &amp; videos on their iOS device, grouped into state &ndash; not archived, or archived.
 It first shows photos &amp; videos that are not archived (in danger of being lost forever), and then photos &amp; videos that are archived (safe).</p>
 
-<p>The user can either setup their archive destination, or start archiving if already setup &amp; there are new photos or videos.</p>
+<p>The user can either setup their archive destination, or start archiving if already setup and there are new photos or videos.</p>
 
 <p>I took inspiration from the iOS Photos app, and show photos &amp; videos as varying square sizes.</p>
 
@@ -103,8 +103,8 @@ The section header is the PhotoArchive logo on blue (this is the app icon) &ndas
 <h2>When will it be released</h2>
 
 <p>PhotoArchive is functionally complete.
-I&rsquo;m currently cleaning, polishing &amp; testing it.
-It would be great to have a few testers, so if you&rsquo;d like to test it out &amp; are willing to provide feedback, then contact me at <a href="peter.boni@gmail.com">peter.boni@gmail.com</a>.</p>
+I&rsquo;m currently cleaning, polishing and testing it.
+It would be great to have a few testers, so if you&rsquo;d like to test it out and are willing to provide feedback, then contact me at <a href="peter.boni@gmail.com">peter.boni@gmail.com</a>.</p>
 
 <h2>The future</h2>
 
@@ -125,7 +125,7 @@ published on November 7, 2012 called <a href="http://www.lukew.com/ff/entry.asp?
 
 <p>The fact that I have to manually enter passwords on mobile has been a constant source
 of frustration for me, with this only making it worse.
-Sadly his advice has not caught on much with app/site designers &amp; developers.
+Sadly his advice has not caught on much with app/site designers and developers.
 I decided to see how hard it was to quickly implement on iOS with a few thoughts along the way.</p>
 
 <!--more-->
@@ -144,70 +144,106 @@ with the field.</p>
 <p>Create an Outlet Connection in <strong>ViewController.h</strong> called <strong>password</strong>, which should look
 like this.</p>
 
-<p>{% codeblock lang:objc %}
-@interface ViewController : UIViewController</p>
-
-<p>@property (weak, nonatomic) IBOutlet UITextField *password;</p>
-
-<p>@end
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">@interface</span> <span class="nc">ViewController</span> : <span class="nc">UIViewController</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">@property</span> <span class="p">(</span><span class="n">weak</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="kt">IBOutlet</span> <span class="n">UITextField</span> <span class="o">*</span><span class="n">password</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">@end</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>In <strong>ViewController.m</strong>, put the following code into <strong>viewDidLoad</strong>.</p>
 
-<p>{% codeblock lang:objc %}
-&ndash; (void)viewDidLoad
-{</p>
-
-<pre><code>[super viewDidLoad];
-
-CGSize hideShowSize = [@"SHOWX" sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14.0f]}];
-UIButton *hideShow = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, hideShowSize.width, self.password.frame.size.height)];
-[hideShow.titleLabel setFont:[UIFont systemFontOfSize:14.0f]];
-[hideShow setTitle:@"HIDE" forState:UIControlStateNormal];
-[hideShow setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-self.password.rightView = hideShow;
-self.password.rightViewMode = UITextFieldViewModeAlways;
-[hideShow addTarget:self action:@selector(hideShow:) forControlEvents:UIControlEventTouchUpInside];
-</code></pre>
-
-<p>}
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">viewDidLoad</span>
+</span><span class='line'><span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="p">[</span><span class="n">super</span> <span class="n">viewDidLoad</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">CGSize</span> <span class="n">hideShowSize</span> <span class="o">=</span> <span class="p">[</span><span class="s">@&quot;SHOWX&quot;</span> <span class="nl">sizeWithAttributes:</span><span class="err">@</span><span class="p">{</span><span class="nl">NSFontAttributeName:</span><span class="p">[</span><span class="n">UIFont</span> <span class="nl">systemFontOfSize:</span><span class="mf">14.0f</span><span class="p">]}];</span>
+</span><span class='line'><span class="n">UIButton</span> <span class="o">*</span><span class="n">hideShow</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UIButton</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithFrame:</span><span class="n">CGRectMake</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">hideShowSize</span><span class="p">.</span><span class="n">width</span><span class="p">,</span> <span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">frame</span><span class="p">.</span><span class="n">size</span><span class="p">.</span><span class="n">height</span><span class="p">)];</span>
+</span><span class='line'><span class="p">[</span><span class="n">hideShow</span><span class="p">.</span><span class="n">titleLabel</span> <span class="nl">setFont:</span><span class="p">[</span><span class="n">UIFont</span> <span class="nl">systemFontOfSize:</span><span class="mf">14.0f</span><span class="p">]];</span>
+</span><span class='line'><span class="p">[</span><span class="n">hideShow</span> <span class="nl">setTitle:</span><span class="s">@&quot;HIDE&quot;</span> <span class="nl">forState:</span><span class="n">UIControlStateNormal</span><span class="p">];</span>
+</span><span class='line'><span class="p">[</span><span class="n">hideShow</span> <span class="nl">setTitleColor:</span><span class="p">[</span><span class="n">UIColor</span> <span class="n">grayColor</span><span class="p">]</span> <span class="nl">forState:</span><span class="n">UIControlStateNormal</span><span class="p">];</span>
+</span><span class='line'><span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">rightView</span> <span class="o">=</span> <span class="n">hideShow</span><span class="p">;</span>
+</span><span class='line'><span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">rightViewMode</span> <span class="o">=</span> <span class="n">UITextFieldViewModeAlways</span><span class="p">;</span>
+</span><span class='line'><span class="p">[</span><span class="n">hideShow</span> <span class="nl">addTarget:</span><span class="n">self</span> <span class="nl">action:</span><span class="k">@selector</span><span class="p">(</span><span class="nl">hideShow:</span><span class="p">)</span> <span class="nl">forControlEvents:</span><span class="n">UIControlEventTouchUpInside</span><span class="p">];</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>And then create <strong>hideShow</strong>.</p>
 
-<p>{% codeblock lang:objc %}
-&ndash; (void)hideShow:(id)sender
-{</p>
-
-<pre><code>UIButton *hideShow = (UIButton *)self.password.rightView;
-if (!self.password.secureTextEntry)
-{
-    self.password.secureTextEntry = YES;
-    [hideShow setTitle:@"SHOW" forState:UIControlStateNormal];
-}
-else
-{
-    self.password.secureTextEntry = NO;
-    [hideShow setTitle:@"HIDE" forState:UIControlStateNormal];
-}
-[self.password becomeFirstResponder];
-</code></pre>
-
-<p>}
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nl">hideShow:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="n">sender</span>
+</span><span class='line'><span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">UIButton</span> <span class="o">*</span><span class="n">hideShow</span> <span class="o">=</span> <span class="p">(</span><span class="n">UIButton</span> <span class="o">*</span><span class="p">)</span><span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">rightView</span><span class="p">;</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">secureTextEntry</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">secureTextEntry</span> <span class="o">=</span> <span class="n">YES</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">hideShow</span> <span class="nl">setTitle:</span><span class="s">@&quot;SHOW&quot;</span> <span class="nl">forState:</span><span class="n">UIControlStateNormal</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="k">else</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">secureTextEntry</span> <span class="o">=</span> <span class="n">NO</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">hideShow</span> <span class="nl">setTitle:</span><span class="s">@&quot;HIDE&quot;</span> <span class="nl">forState:</span><span class="n">UIControlStateNormal</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">password</span> <span class="n">becomeFirstResponder</span><span class="p">];</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>You should get something like this.</p>
 
-<p>{% img fancybox center /media/images/2014-01-11-mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts/1.png 594 270 %}</p>
+<p><img class="fancybox center" src="/media/images/2014-01-11-mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts/1.png" width="594" height="270"></p>
 
-<p>You can immediately touch &amp; start entering your un-obfuscated password.</p>
+<p>You can immediately touch and start entering your un-obfuscated password.</p>
 
-<p>{% img fancybox center /media/images/2014-01-11-mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts/2.png 594 270 %}</p>
+<p><img class="fancybox center" src="/media/images/2014-01-11-mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts/2.png" width="594" height="270"></p>
 
 <p>If you touch &lsquo;HIDE&rsquo; then your password is obfuscated, and similarly touching &lsquo;SHOW&rsquo; will
 go back to your un-obfuscated password.</p>
 
-<p>{% img fancybox center /media/images/2014-01-11-mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts/3.png 594 270 %}</p>
+<p><img class="fancybox center" src="/media/images/2014-01-11-mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts/3.png" width="594" height="270"></p>
 
 <h2>Thoughts</h2>
 
@@ -215,12 +251,12 @@ go back to your un-obfuscated password.</p>
 functionality, so when the UITextField is not secure, the user can copy the contents
 of the UITextField.</p>
 
-<p>Therefore you should <strong>only</strong> use this pattern in Sign Up &amp; Login views, <strong>not</strong> views
+<p>Therefore you should <strong>only</strong> use this pattern in Sign Up and Login views, <strong>not</strong> views
 where you can view/edit account details for a service.</p>
 
-<p>{% img fancybox center /media/images/2014-01-11-mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts/4.png 594 270 %}</p>
+<p><img class="fancybox center" src="/media/images/2014-01-11-mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts/4.png" width="594" height="270"></p>
 
-<p>{% img fancybox center /media/images/2014-01-11-mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts/5.png 594 270 %}</p>
+<p><img class="fancybox center" src="/media/images/2014-01-11-mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts/5.png" width="594" height="270"></p>
 
 <p>This still doesn&rsquo;t remove the frustration of having to manually enter passwords on mobile.
 It would be great to see Apple take the lead with iOS, and extend the iCloud Keychain /
@@ -233,26 +269,26 @@ Safari Password AutoFill (and generator) features to native apps.</p>
     <link href="http://www.peterboni.net/blog/2013/09/22/design-little-things-matter/"/>
     <updated>2013-09-22T07:00:00+08:00</updated>
     <id>http://www.peterboni.net/blog/2013/09/22/design-little-things-matter</id>
-    <content type="html"><![CDATA[<p>I like running &amp; listening to music using my iPhone. Up until recently I was using Sennheiser In-Ear Headphones without a remote or microphone. The headphones caused me a few problems before I finally decided to buy new headphones, which made me think about design.</p>
+    <content type="html"><![CDATA[<p>I like running and listening to music using my iPhone. Up until recently I was using Sennheiser In-Ear Headphones without a remote or microphone. The headphones caused me a few problems before I finally decided to buy new headphones, which made me think about design.</p>
 
 <!--more-->
 
 
-<p>The first problem with my current headphones was that even though they were in-ear, they kept falling out, which was really annoying. The second problem was that I couldn&rsquo;t forward songs. Listening to a slow or uninspiring song approaching a hill is hard work. The third problem sometimes occurred with an incoming message. Fumbling to get the iPhone out of my <a href="http://www.spibelt.com.au">SPI Belt</a> &amp; read the message while running (to see if it was urgent) was difficult.</p>
+<p>The first problem with my current headphones was that even though they were in-ear, they kept falling out, which was really annoying. The second problem was that I couldn&rsquo;t forward songs. Listening to a slow or uninspiring song approaching a hill is hard work. The third problem sometimes occurred with an incoming message. Fumbling to get the iPhone out of my <a href="http://www.spibelt.com.au">SPI Belt</a> and read the message while running (to see if it was urgent) was difficult.</p>
 
-<p>I did a quick review of headphones with remote &amp; microphone in the Apple Store and purchased the Sennheiser OCX 685i In-Ear Sports Headphones.</p>
+<p>I did a quick review of headphones with remote and microphone in the Apple Store and purchased the Sennheiser OCX 685i In-Ear Sports Headphones.</p>
 
-<p>{% img fancybox center /media/images/2013-09-22-design-little-things-matter/img_2357.jpg 600 400 Sennheiser OCX 685i In-Ear Sports Headphones %}</p>
+<p><img class="fancybox center" src="/media/images/2013-09-22-design-little-things-matter/img_2357.jpg" width="600" height="400" title="Sennheiser OCX 685i In-Ear Sports Headphones" ></p>
 
-<p>The ear clip design, combined with the lightweight cord &amp; clip means that they stay secure while running. No more falling out. The remote &amp; microphone work &ndash; I have full control over music. I can also use Siri to listen to incoming messages, and dictate a reply. I can even use Siri to <a href="https://twitter.com/peterboni/status/379924494527131649">Tweet</a>. The headphones are also sweat &amp; water resistant. Nearly perfect.</p>
+<p>The ear clip design, combined with the lightweight cord and clip means that they stay secure while running. No more falling out. The remote and microphone work &ndash; I have full control over music. I can also use Siri to listen to incoming messages, and dictate a reply. I can even use Siri to <a href="https://twitter.com/peterboni/status/379924494527131649">Tweet</a>. The headphones are also sweat and water resistant. Nearly perfect.</p>
 
 <blockquote><p>The only problem I have with them is the <em>design</em> of the remote, which detracts from the overall experience of using the product.</p></blockquote>
 
 <p>Compare the design of the remote on the Sennheiser in the above picture to the remote on the Apple EarPods in the below picture.</p>
 
-<p>{% img fancybox center /media/images/2013-09-22-design-little-things-matter/img_2360.jpg 600 400 Apple EarPods with Remote and Mic %}</p>
+<p><img class="fancybox center" src="/media/images/2013-09-22-design-little-things-matter/img_2360.jpg" width="600" height="400" title="Apple EarPods with Remote and Mic" ></p>
 
-<p>Can you guess what the problem is? When I&rsquo;m running &amp; listening to music, I&rsquo;m watching the road ahead. I move my fingers to the remote near my neck, grab it, and feel for the controls. They&rsquo;re all placed together &amp; feel like they blend into each other. It feels like one button. This is the exact opposite experience with the Apple EarPods remote. On the Apple EarPods remote the clear indent in the middle means I feel immediately by touch the distinction between the 3 buttons, and hence how to activate the different functions that the 3 buttons enable.</p>
+<p>Can you guess what the problem is? When I&rsquo;m running and listening to music, I&rsquo;m watching the road ahead. I move my fingers to the remote near my neck, grab it, and feel for the controls. They&rsquo;re all placed together and feel like they blend into each other. It feels like one button. This is the exact opposite experience with the Apple EarPods remote. On the Apple EarPods remote the clear indent in the middle means I feel immediately by touch the distinction between the 3 buttons, and hence how to activate the different functions that the 3 buttons enable.</p>
 
 <p>I was reading this article today &ndash; <a href="http://www.businessweek.com/articles/2013-09-20/apple-ceo-tim-cooks-complete-interview-with-bloomberg-businessweek">Tim Cook: The Complete Interview</a>, and there are a few really good quotes from Tim Cook that I think are relevant.</p>
 

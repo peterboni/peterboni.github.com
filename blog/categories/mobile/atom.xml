@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mobile | Peter Boni]]></title>
   <link href="http://www.peterboni.net/blog/categories/mobile/atom.xml" rel="self"/>
   <link href="http://www.peterboni.net/"/>
-  <updated>2014-06-07T10:21:17+08:00</updated>
+  <updated>2014-06-14T11:49:03+08:00</updated>
   <id>http://www.peterboni.net/</id>
   <author>
     <name><![CDATA[Peter Boni]]></name>
@@ -22,7 +22,7 @@
 
 <p>Google <a href="http://googleblog.blogspot.com.au/2014/03/save-more-with-google-drive.html">recently lowered</a> the price of their monthly storage plans making it extremely cheap to have an active (not cold like Amazon S3 Glacier Storage) offsite backup of your irreplaceable memories, your photos &amp; videos.</p>
 
-<p>{% youtube EzUwVVtSrxs %}</p>
+<p><div class="embed-video-container"><iframe src="http://www.youtube.com/embed/EzUwVVtSrxs "></iframe></div></p>
 ]]></content>
   </entry>
   
@@ -36,11 +36,11 @@ For the latest information visit <a href="/photoarchive">PhotoArchive for iPhone
 
 <p>I take a lot of photos &amp; videos with my iPhone.
 It&rsquo;s always with me, so it&rsquo;s convenient, and the quality is good.
-My DSLR body &amp; lenses produce superior quality, but are usually left at home gathering dust.</p>
+My DSLR body and lenses produce superior quality, but are usually left at home gathering dust.</p>
 
 <p>When I take new photos or videos, often of my family, I worry that if something were to happen to my iPhone, those irreplaceable memories will be lost forever.</p>
 
-<p>There are many solutions for this need, for example iCloud Backup, the Dropbox app, or the Amazon Cloud Drive app, but they all have varying costs &amp; limitations.
+<p>There are many solutions for this need, for example iCloud Backup, the Dropbox app, or the Amazon Cloud Drive app, but they all have varying costs and limitations.
 I wanted a simple solution for me, and that&rsquo;s why I decided to build an app as a side project &ndash; PhotoArchive for iPhone.
 When released, PhotoArchive will be free for everyone on the App Store.</p>
 
@@ -63,7 +63,7 @@ When released, PhotoArchive will be free for everyone on the App Store.</p>
 <p>I have a Western Digital My Book NAS (Network Attached Storage) at home that is always on.
 I use it for file storage for computers on the network, and DLNA streaming to the living room TV via the PS3.</p>
 
-<p>I copy new photos &amp; videos from my &amp; my wife&rsquo;s iPhones by manually connecting them to a computer via USB, and downloading the new ones.
+<p>I copy new photos &amp; videos from my and my wife&rsquo;s iPhones by manually connecting them to a computer via USB, and downloading the new ones.
 Because it&rsquo;s a tedious manual process I don&rsquo;t do it as often as I should.</p>
 
 <p>What PhotoArchive does is copy new photos &amp; videos from your iOS device to an FTP server, over Wi-Fi.
@@ -84,7 +84,7 @@ The Western Digital My Book NAS, like most NAS, supports FTP (File Transfer Prot
 <li><p><strong>Never Deletes</strong> &ndash; Will never delete a photo or video from your home storage, or from your device.</p></li>
 <li><p><strong>Smart Archive</strong> &ndash; Remembers the previous archive, and will only upload new photos &amp; videos, so it&rsquo;s <em>FAST</em>!</p></li>
 <li><p><strong>Smart Photo View</strong> &ndash; Shows you your photos &amp; videos that are in danger of being lost forever (not archived), and the ones that are safe in the event that something happens to your device (archived).</p></li>
-<li><p><strong>Full Resolution &amp; Metadata</strong> &ndash; Uploads your photos &amp; videos in their full resolution, with all metadata &ndash; information about your photos &amp; videos, e.g. where you took them.</p></li>
+<li><p><strong>Full Resolution and Metadata</strong> &ndash; Uploads your photos &amp; videos in their full resolution, with all metadata &ndash; information about your photos &amp; videos, e.g. where you took them.</p></li>
 </ol>
 
 
@@ -99,7 +99,7 @@ The Western Digital My Book NAS, like most NAS, supports FTP (File Transfer Prot
 <p>The main view that greets the user visually shows them all photos &amp; videos on their iOS device, grouped into state &ndash; not archived, or archived.
 It first shows photos &amp; videos that are not archived (in danger of being lost forever), and then photos &amp; videos that are archived (safe).</p>
 
-<p>The user can either setup their archive destination, or start archiving if already setup &amp; there are new photos or videos.</p>
+<p>The user can either setup their archive destination, or start archiving if already setup and there are new photos or videos.</p>
 
 <p>I took inspiration from the iOS Photos app, and show photos &amp; videos as varying square sizes.</p>
 
@@ -116,8 +116,8 @@ The section header is the PhotoArchive logo on blue (this is the app icon) &ndas
 <h2>When will it be released</h2>
 
 <p>PhotoArchive is functionally complete.
-I&rsquo;m currently cleaning, polishing &amp; testing it.
-It would be great to have a few testers, so if you&rsquo;d like to test it out &amp; are willing to provide feedback, then contact me at <a href="peter.boni@gmail.com">peter.boni@gmail.com</a>.</p>
+I&rsquo;m currently cleaning, polishing and testing it.
+It would be great to have a few testers, so if you&rsquo;d like to test it out and are willing to provide feedback, then contact me at <a href="peter.boni@gmail.com">peter.boni@gmail.com</a>.</p>
 
 <h2>The future</h2>
 
@@ -138,7 +138,7 @@ published on November 7, 2012 called <a href="http://www.lukew.com/ff/entry.asp?
 
 <p>The fact that I have to manually enter passwords on mobile has been a constant source
 of frustration for me, with this only making it worse.
-Sadly his advice has not caught on much with app/site designers &amp; developers.
+Sadly his advice has not caught on much with app/site designers and developers.
 I decided to see how hard it was to quickly implement on iOS with a few thoughts along the way.</p>
 
 <!--more-->
@@ -157,70 +157,106 @@ with the field.</p>
 <p>Create an Outlet Connection in <strong>ViewController.h</strong> called <strong>password</strong>, which should look
 like this.</p>
 
-<p>{% codeblock lang:objc %}
-@interface ViewController : UIViewController</p>
-
-<p>@property (weak, nonatomic) IBOutlet UITextField *password;</p>
-
-<p>@end
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">@interface</span> <span class="nc">ViewController</span> : <span class="nc">UIViewController</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">@property</span> <span class="p">(</span><span class="n">weak</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="kt">IBOutlet</span> <span class="n">UITextField</span> <span class="o">*</span><span class="n">password</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">@end</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>In <strong>ViewController.m</strong>, put the following code into <strong>viewDidLoad</strong>.</p>
 
-<p>{% codeblock lang:objc %}
-&ndash; (void)viewDidLoad
-{</p>
-
-<pre><code>[super viewDidLoad];
-
-CGSize hideShowSize = [@"SHOWX" sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14.0f]}];
-UIButton *hideShow = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, hideShowSize.width, self.password.frame.size.height)];
-[hideShow.titleLabel setFont:[UIFont systemFontOfSize:14.0f]];
-[hideShow setTitle:@"HIDE" forState:UIControlStateNormal];
-[hideShow setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-self.password.rightView = hideShow;
-self.password.rightViewMode = UITextFieldViewModeAlways;
-[hideShow addTarget:self action:@selector(hideShow:) forControlEvents:UIControlEventTouchUpInside];
-</code></pre>
-
-<p>}
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">viewDidLoad</span>
+</span><span class='line'><span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="p">[</span><span class="n">super</span> <span class="n">viewDidLoad</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">CGSize</span> <span class="n">hideShowSize</span> <span class="o">=</span> <span class="p">[</span><span class="s">@&quot;SHOWX&quot;</span> <span class="nl">sizeWithAttributes:</span><span class="err">@</span><span class="p">{</span><span class="nl">NSFontAttributeName:</span><span class="p">[</span><span class="n">UIFont</span> <span class="nl">systemFontOfSize:</span><span class="mf">14.0f</span><span class="p">]}];</span>
+</span><span class='line'><span class="n">UIButton</span> <span class="o">*</span><span class="n">hideShow</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UIButton</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithFrame:</span><span class="n">CGRectMake</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">hideShowSize</span><span class="p">.</span><span class="n">width</span><span class="p">,</span> <span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">frame</span><span class="p">.</span><span class="n">size</span><span class="p">.</span><span class="n">height</span><span class="p">)];</span>
+</span><span class='line'><span class="p">[</span><span class="n">hideShow</span><span class="p">.</span><span class="n">titleLabel</span> <span class="nl">setFont:</span><span class="p">[</span><span class="n">UIFont</span> <span class="nl">systemFontOfSize:</span><span class="mf">14.0f</span><span class="p">]];</span>
+</span><span class='line'><span class="p">[</span><span class="n">hideShow</span> <span class="nl">setTitle:</span><span class="s">@&quot;HIDE&quot;</span> <span class="nl">forState:</span><span class="n">UIControlStateNormal</span><span class="p">];</span>
+</span><span class='line'><span class="p">[</span><span class="n">hideShow</span> <span class="nl">setTitleColor:</span><span class="p">[</span><span class="n">UIColor</span> <span class="n">grayColor</span><span class="p">]</span> <span class="nl">forState:</span><span class="n">UIControlStateNormal</span><span class="p">];</span>
+</span><span class='line'><span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">rightView</span> <span class="o">=</span> <span class="n">hideShow</span><span class="p">;</span>
+</span><span class='line'><span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">rightViewMode</span> <span class="o">=</span> <span class="n">UITextFieldViewModeAlways</span><span class="p">;</span>
+</span><span class='line'><span class="p">[</span><span class="n">hideShow</span> <span class="nl">addTarget:</span><span class="n">self</span> <span class="nl">action:</span><span class="k">@selector</span><span class="p">(</span><span class="nl">hideShow:</span><span class="p">)</span> <span class="nl">forControlEvents:</span><span class="n">UIControlEventTouchUpInside</span><span class="p">];</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>And then create <strong>hideShow</strong>.</p>
 
-<p>{% codeblock lang:objc %}
-&ndash; (void)hideShow:(id)sender
-{</p>
-
-<pre><code>UIButton *hideShow = (UIButton *)self.password.rightView;
-if (!self.password.secureTextEntry)
-{
-    self.password.secureTextEntry = YES;
-    [hideShow setTitle:@"SHOW" forState:UIControlStateNormal];
-}
-else
-{
-    self.password.secureTextEntry = NO;
-    [hideShow setTitle:@"HIDE" forState:UIControlStateNormal];
-}
-[self.password becomeFirstResponder];
-</code></pre>
-
-<p>}
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nl">hideShow:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="n">sender</span>
+</span><span class='line'><span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">UIButton</span> <span class="o">*</span><span class="n">hideShow</span> <span class="o">=</span> <span class="p">(</span><span class="n">UIButton</span> <span class="o">*</span><span class="p">)</span><span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">rightView</span><span class="p">;</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">secureTextEntry</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">secureTextEntry</span> <span class="o">=</span> <span class="n">YES</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">hideShow</span> <span class="nl">setTitle:</span><span class="s">@&quot;SHOW&quot;</span> <span class="nl">forState:</span><span class="n">UIControlStateNormal</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="k">else</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">secureTextEntry</span> <span class="o">=</span> <span class="n">NO</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">hideShow</span> <span class="nl">setTitle:</span><span class="s">@&quot;HIDE&quot;</span> <span class="nl">forState:</span><span class="n">UIControlStateNormal</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">password</span> <span class="n">becomeFirstResponder</span><span class="p">];</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>You should get something like this.</p>
 
-<p>{% img fancybox center /media/images/2014-01-11-mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts/1.png 594 270 %}</p>
+<p><img class="fancybox center" src="/media/images/2014-01-11-mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts/1.png" width="594" height="270"></p>
 
-<p>You can immediately touch &amp; start entering your un-obfuscated password.</p>
+<p>You can immediately touch and start entering your un-obfuscated password.</p>
 
-<p>{% img fancybox center /media/images/2014-01-11-mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts/2.png 594 270 %}</p>
+<p><img class="fancybox center" src="/media/images/2014-01-11-mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts/2.png" width="594" height="270"></p>
 
 <p>If you touch &lsquo;HIDE&rsquo; then your password is obfuscated, and similarly touching &lsquo;SHOW&rsquo; will
 go back to your un-obfuscated password.</p>
 
-<p>{% img fancybox center /media/images/2014-01-11-mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts/3.png 594 270 %}</p>
+<p><img class="fancybox center" src="/media/images/2014-01-11-mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts/3.png" width="594" height="270"></p>
 
 <h2>Thoughts</h2>
 
@@ -228,12 +264,12 @@ go back to your un-obfuscated password.</p>
 functionality, so when the UITextField is not secure, the user can copy the contents
 of the UITextField.</p>
 
-<p>Therefore you should <strong>only</strong> use this pattern in Sign Up &amp; Login views, <strong>not</strong> views
+<p>Therefore you should <strong>only</strong> use this pattern in Sign Up and Login views, <strong>not</strong> views
 where you can view/edit account details for a service.</p>
 
-<p>{% img fancybox center /media/images/2014-01-11-mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts/4.png 594 270 %}</p>
+<p><img class="fancybox center" src="/media/images/2014-01-11-mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts/4.png" width="594" height="270"></p>
 
-<p>{% img fancybox center /media/images/2014-01-11-mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts/5.png 594 270 %}</p>
+<p><img class="fancybox center" src="/media/images/2014-01-11-mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts/5.png" width="594" height="270"></p>
 
 <p>This still doesn&rsquo;t remove the frustration of having to manually enter passwords on mobile.
 It would be great to see Apple take the lead with iOS, and extend the iCloud Keychain /
@@ -246,41 +282,41 @@ Safari Password AutoFill (and generator) features to native apps.</p>
     <link href="http://www.peterboni.net/blog/2013/10/01/ihealth-renaissance/"/>
     <updated>2013-10-01T07:00:00+08:00</updated>
     <id>http://www.peterboni.net/blog/2013/10/01/ihealth-renaissance</id>
-    <content type="html"><![CDATA[<p>{% img fancybox center /media/images/2013-10-01-ihealth-renaissance/img_1181.jpg 640 365 iHealth %}</p>
+    <content type="html"><![CDATA[<p><img class="fancybox center" src="/media/images/2013-10-01-ihealth-renaissance/img_1181.jpg" width="640" height="365" title="iHealth" ></p>
 
-<p>I have experienced a personal health renaissance over the last year. My iPhone<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> is teaching me how to change my health, both body &amp; mind. It has offered motivation when I needed it. I believe that the iHealth Renaissance is just getting started. It could do the same for you if you let it. Let me explain how.</p>
+<p>I have experienced a personal health renaissance over the last year. My iPhone<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> is teaching me how to change my health, both body and mind. It has offered motivation when I needed it. I believe that the iHealth Renaissance is just getting started. It could do the same for you if you let it. Let me explain how.</p>
 
 <!--more-->
 
 
 <p>It all started innocently enough on January 1, 2013 when I installed the first health app on my iPhone &ndash; RunKeeper, that I had heard about from a friend. I didn&rsquo;t think I was <em>that</em> unfit as I cycled regularly, and was able to do 80km rides at a decent pace. I wanted to try something different, and decided to try running as I had never been a runner. I actually didn&rsquo;t like it as I thought that I couldn&rsquo;t do it &ndash; that I wasn&rsquo;t built for it. I&rsquo;m 189 cm (6 feet 2.4 inches), and was about 98 kg. Overweight for sure, but at the time not really concerned about it. My first run was the day after, January 2 when I ran 2.55 km at a pace of 6:42 per km, on a completely flat course.</p>
 
-<p>RunKeeper gave me all sorts of rich feedback. Realtime audio feedback on my run. Visual statistics after my run &amp; of all previous runs. I could easily hear, see &amp; track my progress. The social networking that was built in took the feedback to the next level. Likes &amp; comments on my runs, as well as being able to view friends runs, combined with the leaderboard, gave me more motivation. I was really <a href="/blog/categories/running/">enjoying running</a>. I wasn&rsquo;t conscious of why I kept coming back &amp; using RunKeeper until I experienced a talk from <a href="http://drjasonfox.com/">Dr Jason Fox</a> (a &lsquo;motivation strategy &amp; design expert&rsquo;) at a technology conference later in the year.</p>
+<p>RunKeeper gave me all sorts of rich feedback. Realtime audio feedback on my run. Visual statistics after my run and of all previous runs. I could easily hear, see and track my progress. The social networking that was built in took the feedback to the next level. Likes and comments on my runs, as well as being able to view friends runs, combined with the leaderboard, gave me more motivation. I was really <a href="/blog/categories/running/">enjoying running</a>. I wasn&rsquo;t conscious of why I kept coming back and using RunKeeper until I experienced a talk from <a href="http://drjasonfox.com/">Dr Jason Fox</a> (a &lsquo;motivation strategy and design expert&rsquo;) at a technology conference later in the year.</p>
 
-<blockquote><p>RunKeeper had designed running to be inherently motivating. It reduced the latency between the effort &amp; feedback. It enhanced the visibility of, and gave me a clear sense of progress. The more visible my progress, the more motivated I became. The more I ran.</p></blockquote>
+<blockquote><p>RunKeeper had designed running to be inherently motivating. It reduced the latency between the effort and feedback. It enhanced the visibility of, and gave me a clear sense of progress. The more visible my progress, the more motivated I became. The more I ran.</p></blockquote>
 
-<p>After RunKeeper came Strava for my cycling. I think RunKeeper supported cycling as a different activity type but I knew friends using Strava for cycling. If you were around and using the Internet in the late 90s you will remember ICQ starting the IM (Instant Messaging) wars. Some friends were on RunKeeper, and some were on Strava. I was stuck with both, which really means three apps, as Strava has two &ndash; one for cycling and one for running. All this cardio meant that weights were next. Thoughts of figuring out how to do the exercises properly again, and setting up &amp; recording scheduled routines did not motivate me at all. That&rsquo;s when a friend put me on to GymGoal 2 which managed it all for me, and gave me visual help &amp; feedback.</p>
+<p>After RunKeeper came Strava for my cycling. I think RunKeeper supported cycling as a different activity type but I knew friends using Strava for cycling. If you were around and using the Internet in the late 90s you will remember ICQ starting the IM (Instant Messaging) wars. Some friends were on RunKeeper, and some were on Strava. I was stuck with both, which really means three apps, as Strava has two &ndash; one for cycling and one for running. All this cardio meant that weights were next. Thoughts of figuring out how to do the exercises properly again, and setting up and recording scheduled routines did not motivate me at all. That&rsquo;s when a friend put me on to GymGoal 2 which managed it all for me, and gave me visual help and feedback.</p>
 
-<p>With 4 fitness apps installed &amp; being used regularly next came changing what I put into my body. My wife installed &amp; started using MyNetDiary which is essentially calorie counting, with once again, plenty of feedback that gave me a sense of progress. I could visually see how many calories I was consuming against how many I should consume to meet my target weight. What it did more than that though was teach me about what I was eating. I was shocked at a few things, for example almonds &hellip; holy crap! It hasn&rsquo;t changed what I eat, as I still enjoy beer &amp; chocolate, but it has changed my behaviour. I now think about the quality &amp; quantity of what I will put into my body.</p>
+<p>With 4 fitness apps installed and being used regularly next came changing what I put into my body. My wife installed and started using MyNetDiary which is essentially calorie counting, with once again, plenty of feedback that gave me a sense of progress. I could visually see how many calories I was consuming against how many I should consume to meet my target weight. What it did more than that though was teach me about what I was eating. I was shocked at a few things, for example almonds &hellip; holy crap! It hasn&rsquo;t changed what I eat, as I still enjoy beer and chocolate, but it has changed my behaviour. I now think about the quality and quantity of what I will put into my body.</p>
 
-<p>{% img fancybox center /media/images/2013-10-01-ihealth-renaissance/img_1137.jpg 500 500 Breakfast %}</p>
+<p><img class="fancybox center" src="/media/images/2013-10-01-ihealth-renaissance/img_1137.jpg" width="500" height="500" title="Breakfast" ></p>
 
-<p>With 5 health apps installed &amp; being used regularly I started seeing changes. 8 months of running, and 1.5 months of changing the way I eat I had dropped over 8 kg in weight, and could now comfortably run 5 km at a pace of 5:30 per km, with nice steep hills thrown in.</p>
+<p>With 5 health apps installed and being used regularly I started seeing changes. 8 months of running, and 1.5 months of changing the way I eat I had dropped over 8 kg in weight, and could now comfortably run 5 km at a pace of 5:30 per km, with nice steep hills thrown in.</p>
 
-<p>There are two more health apps that I have installed &amp; started using. The first one I came across when I read an article <a href="http://well.blogs.nytimes.com/2013/05/09/the-scientific-7-minute-workout/">The Scientific 7-Minute Workout</a>. I thought that it would come in handy when I was short on time, and also as a good way to shake things up. Check out the &lsquo;7 Minute Workout &ldquo;Seven&rdquo;&rsquo; app. The last one I came across when I read a Lifehacker article <a href="http://lifehacker.com/what-happens-to-the-brain-when-you-meditate-and-how-it-1202533314">What Happens to the Brain When You Meditate (And How it Benefits You)</a>, that recommended an app created by a former Buddhist monk called <a href="http://www.getsomeheadspace.com/">Headspace</a>. Check out the app &lsquo;Headspace&rsquo;, it&rsquo;s meditation when &amp; where you have the time, which for me is on my way to work on the bus. I&rsquo;m really excited about giving meditation a go, and Headspace was built for the iHealth Renaissance.</p>
+<p>There are two more health apps that I have installed and started using. The first one I came across when I read an article <a href="http://well.blogs.nytimes.com/2013/05/09/the-scientific-7-minute-workout/">The Scientific 7-Minute Workout</a>. I thought that it would come in handy when I was short on time, and also as a good way to shake things up. Check out the &lsquo;7 Minute Workout &ldquo;Seven&rdquo;&rsquo; app. The last one I came across when I read a Lifehacker article <a href="http://lifehacker.com/what-happens-to-the-brain-when-you-meditate-and-how-it-1202533314">What Happens to the Brain When You Meditate (And How it Benefits You)</a>, that recommended an app created by a former Buddhist monk called <a href="http://www.getsomeheadspace.com/">Headspace</a>. Check out the app &lsquo;Headspace&rsquo;, it&rsquo;s meditation when and where you have the time, which for me is on my way to work on the bus. I&rsquo;m really excited about giving meditation a go, and Headspace was built for the iHealth Renaissance.</p>
 
-<p>I now have 7 health apps installed &amp; being used, which is the majority category of apps that I use on my iPhone. I haven&rsquo;t used a Nike+ Fuelband, Jawbone UP, or a Fitbit Flex, but I can see that the iHealth Renaissance is just starting, and that these are just early wearable accessory products.</p>
+<p>I now have 7 health apps installed and being used, which is the majority category of apps that I use on my iPhone. I haven&rsquo;t used a Nike+ Fuelband, Jawbone UP, or a Fitbit Flex, but I can see that the iHealth Renaissance is just starting, and that these are just early wearable accessory products.</p>
 
-<p>It&rsquo;s frustrating that I need multiple apps for the same thing, and also that I need to enter the same information into different apps. For example most of the health apps want to know my gender, age, height &amp; weight, to be able to provide me meaningful feedback. Why do I need to provide my data multiple times?</p>
+<p>It&rsquo;s frustrating that I need multiple apps for the same thing, and also that I need to enter the same information into different apps. For example most of the health apps want to know my gender, age, height and weight, to be able to provide me meaningful feedback. Why do I need to provide my data multiple times?</p>
 
-<p>It&rsquo;s interesting looking at the move Apple has made with the iPhone 5s, by introducing a motion coprocessor called the M7, which continuously measures motion data &amp; makes it available for apps. I can&rsquo;t wait for the next generation of iHealth apps &amp; wearable accessory products. I think we still need wearable accessory products as apps are tucked away nicely on your iPhone. You choose when to interact with them. We need devices that we can see that constantly motivate us. Devices that further reduce the latency between effort &amp; feedback in an effortless, visual, motivational way. I think that these devices will still be accessory products that augment the core richer connected experience that can be delivered via your iPhone.</p>
+<p>It&rsquo;s interesting looking at the move Apple has made with the iPhone 5s, by introducing a motion coprocessor called the M7, which continuously measures motion data and makes it available for apps. I can&rsquo;t wait for the next generation of iHealth apps and wearable accessory products. I think we still need wearable accessory products as apps are tucked away nicely on your iPhone. You choose when to interact with them. We need devices that we can see that constantly motivate us. Devices that further reduce the latency between effort and feedback in an effortless, visual, motivational way. I think that these devices will still be accessory products that augment the core richer connected experience that can be delivered via your iPhone.</p>
 
-<p>So the iHealth Renaissance is making good progress, but where is the iWealth Renaissance? The current batch of mobile apps from the financial services industry are primarily sales &amp; service based. Buy this product. View &amp; manage your accounts. They haven&rsquo;t started to take the next step.</p>
+<p>So the iHealth Renaissance is making good progress, but where is the iWealth Renaissance? The current batch of mobile apps from the financial services industry are primarily sales and service based. Buy this product. View and manage your accounts. They haven&rsquo;t started to take the next step.</p>
 <div class="footnotes">
 <hr/>
 <ol>
 <li id="fn:1">
-<p>I use an iPhone. I use the term iPhone in this article to mean smartphone, or what I think of as a native Internet mobile personal assistant &amp; augmentation device.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<p>I use an iPhone. I use the term iPhone in this article to mean smartphone, or what I think of as a native Internet mobile personal assistant and augmentation device.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
 </ol>
 </div>
 
@@ -292,26 +328,26 @@ Safari Password AutoFill (and generator) features to native apps.</p>
     <link href="http://www.peterboni.net/blog/2013/09/22/design-little-things-matter/"/>
     <updated>2013-09-22T07:00:00+08:00</updated>
     <id>http://www.peterboni.net/blog/2013/09/22/design-little-things-matter</id>
-    <content type="html"><![CDATA[<p>I like running &amp; listening to music using my iPhone. Up until recently I was using Sennheiser In-Ear Headphones without a remote or microphone. The headphones caused me a few problems before I finally decided to buy new headphones, which made me think about design.</p>
+    <content type="html"><![CDATA[<p>I like running and listening to music using my iPhone. Up until recently I was using Sennheiser In-Ear Headphones without a remote or microphone. The headphones caused me a few problems before I finally decided to buy new headphones, which made me think about design.</p>
 
 <!--more-->
 
 
-<p>The first problem with my current headphones was that even though they were in-ear, they kept falling out, which was really annoying. The second problem was that I couldn&rsquo;t forward songs. Listening to a slow or uninspiring song approaching a hill is hard work. The third problem sometimes occurred with an incoming message. Fumbling to get the iPhone out of my <a href="http://www.spibelt.com.au">SPI Belt</a> &amp; read the message while running (to see if it was urgent) was difficult.</p>
+<p>The first problem with my current headphones was that even though they were in-ear, they kept falling out, which was really annoying. The second problem was that I couldn&rsquo;t forward songs. Listening to a slow or uninspiring song approaching a hill is hard work. The third problem sometimes occurred with an incoming message. Fumbling to get the iPhone out of my <a href="http://www.spibelt.com.au">SPI Belt</a> and read the message while running (to see if it was urgent) was difficult.</p>
 
-<p>I did a quick review of headphones with remote &amp; microphone in the Apple Store and purchased the Sennheiser OCX 685i In-Ear Sports Headphones.</p>
+<p>I did a quick review of headphones with remote and microphone in the Apple Store and purchased the Sennheiser OCX 685i In-Ear Sports Headphones.</p>
 
-<p>{% img fancybox center /media/images/2013-09-22-design-little-things-matter/img_2357.jpg 600 400 Sennheiser OCX 685i In-Ear Sports Headphones %}</p>
+<p><img class="fancybox center" src="/media/images/2013-09-22-design-little-things-matter/img_2357.jpg" width="600" height="400" title="Sennheiser OCX 685i In-Ear Sports Headphones" ></p>
 
-<p>The ear clip design, combined with the lightweight cord &amp; clip means that they stay secure while running. No more falling out. The remote &amp; microphone work &ndash; I have full control over music. I can also use Siri to listen to incoming messages, and dictate a reply. I can even use Siri to <a href="https://twitter.com/peterboni/status/379924494527131649">Tweet</a>. The headphones are also sweat &amp; water resistant. Nearly perfect.</p>
+<p>The ear clip design, combined with the lightweight cord and clip means that they stay secure while running. No more falling out. The remote and microphone work &ndash; I have full control over music. I can also use Siri to listen to incoming messages, and dictate a reply. I can even use Siri to <a href="https://twitter.com/peterboni/status/379924494527131649">Tweet</a>. The headphones are also sweat and water resistant. Nearly perfect.</p>
 
 <blockquote><p>The only problem I have with them is the <em>design</em> of the remote, which detracts from the overall experience of using the product.</p></blockquote>
 
 <p>Compare the design of the remote on the Sennheiser in the above picture to the remote on the Apple EarPods in the below picture.</p>
 
-<p>{% img fancybox center /media/images/2013-09-22-design-little-things-matter/img_2360.jpg 600 400 Apple EarPods with Remote and Mic %}</p>
+<p><img class="fancybox center" src="/media/images/2013-09-22-design-little-things-matter/img_2360.jpg" width="600" height="400" title="Apple EarPods with Remote and Mic" ></p>
 
-<p>Can you guess what the problem is? When I&rsquo;m running &amp; listening to music, I&rsquo;m watching the road ahead. I move my fingers to the remote near my neck, grab it, and feel for the controls. They&rsquo;re all placed together &amp; feel like they blend into each other. It feels like one button. This is the exact opposite experience with the Apple EarPods remote. On the Apple EarPods remote the clear indent in the middle means I feel immediately by touch the distinction between the 3 buttons, and hence how to activate the different functions that the 3 buttons enable.</p>
+<p>Can you guess what the problem is? When I&rsquo;m running and listening to music, I&rsquo;m watching the road ahead. I move my fingers to the remote near my neck, grab it, and feel for the controls. They&rsquo;re all placed together and feel like they blend into each other. It feels like one button. This is the exact opposite experience with the Apple EarPods remote. On the Apple EarPods remote the clear indent in the middle means I feel immediately by touch the distinction between the 3 buttons, and hence how to activate the different functions that the 3 buttons enable.</p>
 
 <p>I was reading this article today &ndash; <a href="http://www.businessweek.com/articles/2013-09-20/apple-ceo-tim-cooks-complete-interview-with-bloomberg-businessweek">Tim Cook: The Complete Interview</a>, and there are a few really good quotes from Tim Cook that I think are relevant.</p>
 

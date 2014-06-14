@@ -4,7 +4,7 @@
   <title><![CDATA[Peter Boni]]></title>
   <link href="http://www.peterboni.net/atom.xml" rel="self"/>
   <link href="http://www.peterboni.net/"/>
-  <updated>2014-06-07T10:19:09+08:00</updated>
+  <updated>2014-06-14T11:49:03+08:00</updated>
   <id>http://www.peterboni.net/</id>
   <author>
     <name><![CDATA[Peter Boni]]></name>
@@ -25,11 +25,11 @@
 
 <p>He walked along the path, early morning sunlight shining down through the criss-crossed metal gate, hitting the left hand side of his face. His eyes closed, seemingly by themselves to shield against the bright light. He contemplated the warmth of the sun on his face.</p>
 
-<p>Reluctantly he willed his eyes to slowly open. They squinted &amp; then closed again. Black bars rolled over his closed eyelids as he walked, in a hypnotic rhythm, the effect of the sunlight being blocked by the metal that formed the gate squares. He found it harder to will his eyes open as he walked.</p>
+<p>Reluctantly he willed his eyes to slowly open. They squinted and then closed again. Black bars rolled over his closed eyelids as he walked, in a hypnotic rhythm, the effect of the sunlight being blocked by the metal that formed the gate squares. He found it harder to will his eyes open as he walked.</p>
 
 <p>When his eyes closed he could hear and experience parts of the world that were before drowned out by his visual sense. He heard the sounds of the people around him. Walking. Stomping. Stopping. Starting. Conversing. The birds. Cars. Buses. The cacophony was strangely familiar. He felt himself being pulled past the unknown man, as time began to slowly speed back up.</p>
 
-<p>&ldquo;G.. y.. b.. i.. h&hellip;&rdquo; the unknown man intoned. He couldn&rsquo;t make out what the man was saying, but the way the man spoke synced with his walking, the sunlight &amp; black bars, the sounds. There was rhythm. Everything was moving together. It was coming again, he could hear it before the man began, &ldquo;G.. y.. b.. i.. h&hellip;&rdquo;.</p>
+<p>&ldquo;G.. y.. b.. i.. h&hellip;&rdquo; the unknown man intoned. He couldn&rsquo;t make out what the man was saying, but the way the man spoke synced with his walking, the sunlight and black bars, the sounds. There was rhythm. Everything was moving together. It was coming again, he could hear it before the man began, &ldquo;G.. y.. b.. i.. h&hellip;&rdquo;.</p>
 
 <p>And then suddenly it was all gone. As his body left the bus, and his foot struck the pavement, time slowed. He had the feeling that he had been here before.</p>
 ]]></content>
@@ -107,11 +107,11 @@ For the latest information visit <a href="http://www.peterboni.net/photoarchive"
 
 <p>I take a lot of photos &amp; videos with my iPhone.
 It&rsquo;s always with me, so it&rsquo;s convenient, and the quality is good.
-My DSLR body &amp; lenses produce superior quality, but are usually left at home gathering dust.</p>
+My DSLR body and lenses produce superior quality, but are usually left at home gathering dust.</p>
 
 <p>When I take new photos or videos, often of my family, I worry that if something were to happen to my iPhone, those irreplaceable memories will be lost forever.</p>
 
-<p>There are many solutions for this need, for example iCloud Backup, the Dropbox app, or the Amazon Cloud Drive app, but they all have varying costs &amp; limitations.
+<p>There are many solutions for this need, for example iCloud Backup, the Dropbox app, or the Amazon Cloud Drive app, but they all have varying costs and limitations.
 I wanted a simple solution for me, and that&rsquo;s why I decided to build an app as a side project &ndash; PhotoArchive for iPhone.
 When released, PhotoArchive will be free for everyone on the App Store.</p>
 
@@ -134,7 +134,7 @@ When released, PhotoArchive will be free for everyone on the App Store.</p>
 <p>I have a Western Digital My Book NAS (Network Attached Storage) at home that is always on.
 I use it for file storage for computers on the network, and DLNA streaming to the living room TV via the PS3.</p>
 
-<p>I copy new photos &amp; videos from my &amp; my wife&rsquo;s iPhones by manually connecting them to a computer via USB, and downloading the new ones.
+<p>I copy new photos &amp; videos from my and my wife&rsquo;s iPhones by manually connecting them to a computer via USB, and downloading the new ones.
 Because it&rsquo;s a tedious manual process I don&rsquo;t do it as often as I should.</p>
 
 <p>What PhotoArchive does is copy new photos &amp; videos from your iOS device to an FTP server, over Wi-Fi.
@@ -155,7 +155,7 @@ The Western Digital My Book NAS, like most NAS, supports FTP (File Transfer Prot
 <li><p><strong>Never Deletes</strong> &ndash; Will never delete a photo or video from your home storage, or from your device.</p></li>
 <li><p><strong>Smart Archive</strong> &ndash; Remembers the previous archive, and will only upload new photos &amp; videos, so it&rsquo;s <em>FAST</em>!</p></li>
 <li><p><strong>Smart Photo View</strong> &ndash; Shows you your photos &amp; videos that are in danger of being lost forever (not archived), and the ones that are safe in the event that something happens to your device (archived).</p></li>
-<li><p><strong>Full Resolution &amp; Metadata</strong> &ndash; Uploads your photos &amp; videos in their full resolution, with all metadata &ndash; information about your photos &amp; videos, e.g. where you took them.</p></li>
+<li><p><strong>Full Resolution and Metadata</strong> &ndash; Uploads your photos &amp; videos in their full resolution, with all metadata &ndash; information about your photos &amp; videos, e.g. where you took them.</p></li>
 </ol>
 
 
@@ -170,7 +170,7 @@ The Western Digital My Book NAS, like most NAS, supports FTP (File Transfer Prot
 <p>The main view that greets the user visually shows them all photos &amp; videos on their iOS device, grouped into state &ndash; not archived, or archived.
 It first shows photos &amp; videos that are not archived (in danger of being lost forever), and then photos &amp; videos that are archived (safe).</p>
 
-<p>The user can either setup their archive destination, or start archiving if already setup &amp; there are new photos or videos.</p>
+<p>The user can either setup their archive destination, or start archiving if already setup and there are new photos or videos.</p>
 
 <p>I took inspiration from the iOS Photos app, and show photos &amp; videos as varying square sizes.</p>
 
@@ -187,8 +187,8 @@ The section header is the PhotoArchive logo on blue (this is the app icon) &ndas
 <h2>When will it be released</h2>
 
 <p>PhotoArchive is functionally complete.
-I&rsquo;m currently cleaning, polishing &amp; testing it.
-It would be great to have a few testers, so if you&rsquo;d like to test it out &amp; are willing to provide feedback, then contact me at <a href="peter.boni@gmail.com">peter.boni@gmail.com</a>.</p>
+I&rsquo;m currently cleaning, polishing and testing it.
+It would be great to have a few testers, so if you&rsquo;d like to test it out and are willing to provide feedback, then contact me at <a href="peter.boni@gmail.com">peter.boni@gmail.com</a>.</p>
 
 <h2>The future</h2>
 
@@ -209,7 +209,7 @@ published on November 7, 2012 called <a href="http://www.lukew.com/ff/entry.asp?
 
 <p>The fact that I have to manually enter passwords on mobile has been a constant source
 of frustration for me, with this only making it worse.
-Sadly his advice has not caught on much with app/site designers &amp; developers.
+Sadly his advice has not caught on much with app/site designers and developers.
 I decided to see how hard it was to quickly implement on iOS with a few thoughts along the way.</p>
 
 <!--more-->
@@ -311,7 +311,7 @@ like this.</p>
 
 <p><img class="fancybox center" src="http://www.peterboni.net/media/images/2014-01-11-mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts/1.png" width="594" height="270"></p>
 
-<p>You can immediately touch &amp; start entering your un-obfuscated password.</p>
+<p>You can immediately touch and start entering your un-obfuscated password.</p>
 
 <p><img class="fancybox center" src="http://www.peterboni.net/media/images/2014-01-11-mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts/2.png" width="594" height="270"></p>
 
@@ -326,7 +326,7 @@ go back to your un-obfuscated password.</p>
 functionality, so when the UITextField is not secure, the user can copy the contents
 of the UITextField.</p>
 
-<p>Therefore you should <strong>only</strong> use this pattern in Sign Up &amp; Login views, <strong>not</strong> views
+<p>Therefore you should <strong>only</strong> use this pattern in Sign Up and Login views, <strong>not</strong> views
 where you can view/edit account details for a service.</p>
 
 <p><img class="fancybox center" src="http://www.peterboni.net/media/images/2014-01-11-mobile-design-details-hide-show-passwords-ios-implementation-and-thoughts/4.png" width="594" height="270"></p>
@@ -366,7 +366,7 @@ I had also run 2.8 kilometers in 4 minutes, 39 seconds per kilometer.</p>
 
 <p>I also lost 12.8 kilograms.</p>
 
-<p>This year I plan to train &amp; run in the City to Surf Half Marathon, which
+<p>This year I plan to train and run in the City to Surf Half Marathon, which
 <a href="https://www.google.com/#q=half+marathon">according to Google</a> is 21.097494 kilometers.
 Very precise, thanks Google.</p>
 
@@ -392,7 +392,7 @@ and the open source <a href="http://www.baasbox.com">BaasBox</a>.
 The idea is that a BaaS abstracts the complexity of building a backend.</p>
 
 <p>But is building a backend really all that difficult using cloud computing?
-Let&rsquo;s find out &amp; build a cloud backend using <a href="http://nodejs.org">node.js</a> on <a href="http://aws.amazon.com">AWS</a>.
+Let&rsquo;s find out and build a cloud backend using <a href="http://nodejs.org">node.js</a> on <a href="http://aws.amazon.com">AWS</a>.
 Let&rsquo;s get started.</p>
 
 <!--more-->
@@ -400,7 +400,7 @@ Let&rsquo;s get started.</p>
 
 <h2>Node.js</h2>
 
-<p>First download &amp; install <a href="http://nodejs.org">Node.js</a>, which is a platform for building applications in JavaScript.
+<p>First download and install <a href="http://nodejs.org">Node.js</a>, which is a platform for building applications in JavaScript.
 It&rsquo;s powered by the Google Chrome V8 JavaScript engine.</p>
 
 <p>Isn&rsquo;t JavaScript slow? No!</p>
@@ -410,7 +410,7 @@ There are no intermediate byte codes, no interpreter.&rdquo;, <a href="https://d
 
 <p>Node.js is fast.</p>
 
-<p>We&rsquo;re going to use Node.js &amp; node packages to expose web services for our awesome mobile app.</p>
+<p>We&rsquo;re going to use Node.js and node packages to expose web services for our awesome mobile app.</p>
 
 <p>Why? There are lots of good articles that explain what Node.js is and what it&rsquo;s good for.
 Here&rsquo;s my simple take:</p>
@@ -429,7 +429,7 @@ This blog post should serve as the foundation to start you on that journey.</p>
 <p>We will be using OS X Mavericks (Version 10.9), Terminal, and <a href="http://www.barebones.com/products/textwrangler/">TextWrangler</a>
 which is available free from the App Store.</p>
 
-<p>Create &amp; change to a new folder called <strong>cloudbackend</strong> from your Documents folder.</p>
+<p>Create and change to a new folder called <strong>cloudbackend</strong> from your Documents folder.</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -550,13 +550,13 @@ JSON data object.</p>
 <h2>AWS</h2>
 
 <p>With <a href="http://aws.amazon.com">AWS</a> (Amazon Web Services) we can easily deploy our backend to the cloud while
-still keeping flexibility &amp; control &ndash; things that a BaaS takes away by abstracting the complexity.</p>
+still keeping flexibility and control &ndash; things that a BaaS takes away by abstracting the complexity.</p>
 
 <p>First sign up for the very generous <a href="http://aws.amazon.com/free/">AWS Free Usage Tier</a>.
 This simple tutorial should not result in charges to your account.</p>
 
 <p>We are going to deploy <strong>cloudbackend</strong> as an Application into EB (<a href="http://aws.amazon.com/elasticbeanstalk/">Elastic Beanstalk</a>)
-which is an AWS <em>Application Container</em>. The <a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.concepts.architecture.html">Architectural Overview</a> shows &amp;
+which is an AWS <em>Application Container</em>. The <a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.concepts.architecture.html">Architectural Overview</a> shows and
 explains what Elastic Beanstalk is.</p>
 
 <ol>
@@ -566,10 +566,10 @@ explains what Elastic Beanstalk is.</p>
 </ol>
 
 
-<p>Once setup all AWS resources are automatically provisioned &amp; configured.
+<p>Once setup all AWS resources are automatically provisioned and configured.
 You have a fully <strong>auto load balanced, auto scaled cloud application environment</strong>.</p>
 
-<p>Next, download &amp; install <a href="http://git-scm.com/">Git</a>.</p>
+<p>Next, download and install <a href="http://git-scm.com/">Git</a>.</p>
 
 <p>Initialise your <strong>cloudbackend</strong> Git repository. Enter &lsquo;git init&rsquo;, followed by
 the other commands in the following console code block.</p>
@@ -605,7 +605,7 @@ the other commands in the following console code block.</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Next download &amp; extract the <a href="http://aws.amazon.com/code/6752709412171743">AWS Elastic Beanstalk Command Line Tool</a> to
+<p>Next download and extract the <a href="http://aws.amazon.com/code/6752709412171743">AWS Elastic Beanstalk Command Line Tool</a> to
 your Documents folder (the cloudbackend folder should be in your Documents folder).</p>
 
 <p>Next add the appropriate EB Python folder to your PATH.</p>
@@ -618,16 +618,16 @@ your Documents folder (the cloudbackend folder should be in your Documents folde
 
 
 <p>If you have OS X Mavericks (Version 10.9) then you already have Python 2.7.5, else you
-will need to download &amp; install it.</p>
+will need to download and install it.</p>
 
-<p>Next we&rsquo;re going to create &amp; configure the <strong>cloudbackend</strong> AWS Elastic Beanstalk
+<p>Next we&rsquo;re going to create and configure the <strong>cloudbackend</strong> AWS Elastic Beanstalk
 Application Container. You basically enter &lsquo;eb init&rsquo; and then follow the prompts.</p>
 
 <ol>
 <li>You will need to enter your AWS Access Key ID and Secret Access Key, which
 can be found at the URL given after you enter &lsquo;eb init&rsquo;.</li>
 <li>Select an AWS service region. I entered &lsquo;7&rsquo; for &lsquo;Asia Pacific (Sydney)&rsquo;.</li>
-<li>Accept the default application &amp; environment names by pressing return.</li>
+<li>Accept the default application and environment names by pressing return.</li>
 <li>Enter &lsquo;8&rsquo;, for &lsquo;64bit Amazon Linux 2013.09 running Node.js&rsquo;.</li>
 <li>Enter &lsquo;1&rsquo;, for &lsquo;LoadBalanced&rsquo;.</li>
 <li>Enter &lsquo;n&rsquo;, to skip creating an &lsquo;RDS DB Instance&rsquo;.</li>
@@ -680,7 +680,7 @@ can be found at the URL given after you enter &lsquo;eb init&rsquo;.</li>
 <span class='line-number'>43</span>
 <span class='line-number'>44</span>
 </pre></td><td class='code'><pre><code class='console'><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span> eb init
-</span><span class='line'><span class="go">To get your AWS Access Key ID and Secret Access Key, </span>
+</span><span class='line'><span class="go">To get your AWS Access Key ID and Secret Access Key,</span>
 </span><span class='line'><span class="go">  visit &quot;https://aws-portal.amazon.com/gp/aws/securityCredentials&quot;.</span>
 </span><span class='line'><span class="go">Enter your AWS Access Key ID (current value is &quot;AKIAJ*****GBOHQ&quot;): [enter yours here]</span>
 </span><span class='line'><span class="go">Enter your AWS Secret Access Key (current value is &quot;MhYxu*****rJfZx&quot;): [enter yours here]</span>
@@ -695,8 +695,8 @@ can be found at the URL given after you enter &lsquo;eb init&rsquo;.</li>
 </span><span class='line'><span class="go">7) Asia Pacific (Sydney)</span>
 </span><span class='line'><span class="go">8) South America (Sao Paulo)</span>
 </span><span class='line'><span class="go">Select (1 to 8): 7</span>
-</span><span class='line'><span class="go">Enter an AWS Elastic Beanstalk application name (auto-generated value is &quot;cloudbackend&quot;): </span>
-</span><span class='line'><span class="go">Enter an AWS Elastic Beanstalk environment name (auto-generated value is &quot;cloudbackend-env&quot;): </span>
+</span><span class='line'><span class="go">Enter an AWS Elastic Beanstalk application name (auto-generated value is &quot;cloudbackend&quot;):</span>
+</span><span class='line'><span class="go">Enter an AWS Elastic Beanstalk environment name (auto-generated value is &quot;cloudbackend-env&quot;):</span>
 </span><span class='line'><span class="go">Select a solution stack.</span>
 </span><span class='line'><span class="go">Available solution stacks are:</span>
 </span><span class='line'><span class="go">1) 32bit Amazon Linux 2013.09 running PHP 5.4</span>
@@ -761,9 +761,9 @@ can be found at the URL given after you enter &lsquo;eb init&rsquo;.</li>
 </pre></td><td class='code'><pre><code class='console'><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span> eb start
 </span><span class='line'><span class="go">Starting application &quot;cloudbackend&quot;.</span>
 </span><span class='line'><span class="go">Would you like to deploy the latest Git commit to your environment? [y/n]: y</span>
-</span><span class='line'><span class="go">remote: </span>
+</span><span class='line'><span class="go">remote:</span>
 </span><span class='line'><span class="go">remote: error: Unable to deploy application version: No Environment found for EnvironmentName = &#39;cloudbackend-env&#39;.</span>
-</span><span class='line'><span class="go">remote: </span>
+</span><span class='line'><span class="go">remote:</span>
 </span><span class='line'><span class="go">To https://...:...@git.elasticbeanstalk.ap-southeast-2.amazonaws.com/v1/repos/.../commitid/.../environment/...</span>
 </span><span class='line'><span class="go"> * [new branch]      HEAD -&gt; master</span>
 </span><span class='line'>
@@ -798,7 +798,7 @@ Application is available at &ldquo;cloudbackend-env-*.elasticbeanstalk.com&rdquo
 
 <p>Now to work on that awesome mobile app!</p>
 
-<p>Lastly if you want to stop &amp; delete the environment, use the following EB command.
+<p>Lastly if you want to stop and delete the environment, use the following EB command.
 Enter &lsquo;eb stop&rsquo;, and then &lsquo;y&rsquo; to terminate the environment.</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -821,8 +821,8 @@ Enter &lsquo;eb stop&rsquo;, and then &lsquo;y&rsquo; to terminate the environme
 </span><span class='line'><span class="go">Terminate environment? [y/n]: y</span>
 </span><span class='line'><span class="go">Stopping environment &quot;cloudbackend-env&quot;. This may take a few minutes.</span>
 </span><span class='line'><span class="go">2013-12-07 09:24:44  INFO    terminateEnvironment is starting.</span>
-</span><span class='line'><span class="go">2013-12-07 09:24:57  INFO    Deleted CloudWatch alarm named: awseb-e-ib22smbwaz-stack-AWSEBCloudwatchAlarmLow-1OAGDWAQFGJTO </span>
-</span><span class='line'><span class="go">2013-12-07 09:24:57  INFO    Deleted CloudWatch alarm named: awseb-e-ib22smbwaz-stack-AWSEBCloudwatchAlarmHigh-1AAZW8L054YWY </span>
+</span><span class='line'><span class="go">2013-12-07 09:24:57  INFO    Deleted CloudWatch alarm named: awseb-e-ib22smbwaz-stack-AWSEBCloudwatchAlarmLow-1OAGDWAQFGJTO</span>
+</span><span class='line'><span class="go">2013-12-07 09:24:57  INFO    Deleted CloudWatch alarm named: awseb-e-ib22smbwaz-stack-AWSEBCloudwatchAlarmHigh-1AAZW8L054YWY</span>
 </span><span class='line'><span class="go">2013-12-07 09:25:00  INFO    Deleted Auto Scaling group policy named: arn:aws:autoscaling:ap-southeast-2:558573496878:scalingPolicy:d9a9f3df-b813-4ffe-9556-f2a7136aa69d:autoScalingGroupName/awseb-e-ib22smbwaz-stack-AWSEBAutoScalingGroup-1BTN5S4LQA5BD:policyName/awseb-e-ib22smbwaz-stack-AWSEBAutoScalingScaleUpPolicy-ZSDGPZ6KHCRQ</span>
 </span><span class='line'><span class="go">2013-12-07 09:25:00  INFO    Deleted Auto Scaling group policy named: arn:aws:autoscaling:ap-southeast-2:558573496878:scalingPolicy:5c8b171d-262b-4286-8bbd-76ff9db15845:autoScalingGroupName/awseb-e-ib22smbwaz-stack-AWSEBAutoScalingGroup-1BTN5S4LQA5BD:policyName/awseb-e-ib22smbwaz-stack-AWSEBAutoScalingScaleDownPolicy-18LWCZMRA7I4G</span>
 </span><span class='line'><span class="go">2013-12-07 09:25:03  INFO    Waiting for EC2 instances to terminate. This may take a few minutes.</span>
@@ -875,39 +875,39 @@ database, or web pages to your cloud backend in future posts if there is interes
     <id>http://www.peterboni.net/blog/2013/10/01/ihealth-renaissance</id>
     <content type="html"><![CDATA[<p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-10-01-ihealth-renaissance/img_1181.jpg" width="640" height="365" title="iHealth" ></p>
 
-<p>I have experienced a personal health renaissance over the last year. My iPhone<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> is teaching me how to change my health, both body &amp; mind. It has offered motivation when I needed it. I believe that the iHealth Renaissance is just getting started. It could do the same for you if you let it. Let me explain how.</p>
+<p>I have experienced a personal health renaissance over the last year. My iPhone<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> is teaching me how to change my health, both body and mind. It has offered motivation when I needed it. I believe that the iHealth Renaissance is just getting started. It could do the same for you if you let it. Let me explain how.</p>
 
 <!--more-->
 
 
 <p>It all started innocently enough on January 1, 2013 when I installed the first health app on my iPhone &ndash; RunKeeper, that I had heard about from a friend. I didn&rsquo;t think I was <em>that</em> unfit as I cycled regularly, and was able to do 80km rides at a decent pace. I wanted to try something different, and decided to try running as I had never been a runner. I actually didn&rsquo;t like it as I thought that I couldn&rsquo;t do it &ndash; that I wasn&rsquo;t built for it. I&rsquo;m 189 cm (6 feet 2.4 inches), and was about 98 kg. Overweight for sure, but at the time not really concerned about it. My first run was the day after, January 2 when I ran 2.55 km at a pace of 6:42 per km, on a completely flat course.</p>
 
-<p>RunKeeper gave me all sorts of rich feedback. Realtime audio feedback on my run. Visual statistics after my run &amp; of all previous runs. I could easily hear, see &amp; track my progress. The social networking that was built in took the feedback to the next level. Likes &amp; comments on my runs, as well as being able to view friends runs, combined with the leaderboard, gave me more motivation. I was really <a href="http://www.peterboni.net/blog/categories/running/">enjoying running</a>. I wasn&rsquo;t conscious of why I kept coming back &amp; using RunKeeper until I experienced a talk from <a href="http://drjasonfox.com/">Dr Jason Fox</a> (a &lsquo;motivation strategy &amp; design expert&rsquo;) at a technology conference later in the year.</p>
+<p>RunKeeper gave me all sorts of rich feedback. Realtime audio feedback on my run. Visual statistics after my run and of all previous runs. I could easily hear, see and track my progress. The social networking that was built in took the feedback to the next level. Likes and comments on my runs, as well as being able to view friends runs, combined with the leaderboard, gave me more motivation. I was really <a href="http://www.peterboni.net/blog/categories/running/">enjoying running</a>. I wasn&rsquo;t conscious of why I kept coming back and using RunKeeper until I experienced a talk from <a href="http://drjasonfox.com/">Dr Jason Fox</a> (a &lsquo;motivation strategy and design expert&rsquo;) at a technology conference later in the year.</p>
 
-<blockquote><p>RunKeeper had designed running to be inherently motivating. It reduced the latency between the effort &amp; feedback. It enhanced the visibility of, and gave me a clear sense of progress. The more visible my progress, the more motivated I became. The more I ran.</p></blockquote>
+<blockquote><p>RunKeeper had designed running to be inherently motivating. It reduced the latency between the effort and feedback. It enhanced the visibility of, and gave me a clear sense of progress. The more visible my progress, the more motivated I became. The more I ran.</p></blockquote>
 
-<p>After RunKeeper came Strava for my cycling. I think RunKeeper supported cycling as a different activity type but I knew friends using Strava for cycling. If you were around and using the Internet in the late 90s you will remember ICQ starting the IM (Instant Messaging) wars. Some friends were on RunKeeper, and some were on Strava. I was stuck with both, which really means three apps, as Strava has two &ndash; one for cycling and one for running. All this cardio meant that weights were next. Thoughts of figuring out how to do the exercises properly again, and setting up &amp; recording scheduled routines did not motivate me at all. That&rsquo;s when a friend put me on to GymGoal 2 which managed it all for me, and gave me visual help &amp; feedback.</p>
+<p>After RunKeeper came Strava for my cycling. I think RunKeeper supported cycling as a different activity type but I knew friends using Strava for cycling. If you were around and using the Internet in the late 90s you will remember ICQ starting the IM (Instant Messaging) wars. Some friends were on RunKeeper, and some were on Strava. I was stuck with both, which really means three apps, as Strava has two &ndash; one for cycling and one for running. All this cardio meant that weights were next. Thoughts of figuring out how to do the exercises properly again, and setting up and recording scheduled routines did not motivate me at all. That&rsquo;s when a friend put me on to GymGoal 2 which managed it all for me, and gave me visual help and feedback.</p>
 
-<p>With 4 fitness apps installed &amp; being used regularly next came changing what I put into my body. My wife installed &amp; started using MyNetDiary which is essentially calorie counting, with once again, plenty of feedback that gave me a sense of progress. I could visually see how many calories I was consuming against how many I should consume to meet my target weight. What it did more than that though was teach me about what I was eating. I was shocked at a few things, for example almonds &hellip; holy crap! It hasn&rsquo;t changed what I eat, as I still enjoy beer &amp; chocolate, but it has changed my behaviour. I now think about the quality &amp; quantity of what I will put into my body.</p>
+<p>With 4 fitness apps installed and being used regularly next came changing what I put into my body. My wife installed and started using MyNetDiary which is essentially calorie counting, with once again, plenty of feedback that gave me a sense of progress. I could visually see how many calories I was consuming against how many I should consume to meet my target weight. What it did more than that though was teach me about what I was eating. I was shocked at a few things, for example almonds &hellip; holy crap! It hasn&rsquo;t changed what I eat, as I still enjoy beer and chocolate, but it has changed my behaviour. I now think about the quality and quantity of what I will put into my body.</p>
 
 <p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-10-01-ihealth-renaissance/img_1137.jpg" width="500" height="500" title="Breakfast" ></p>
 
-<p>With 5 health apps installed &amp; being used regularly I started seeing changes. 8 months of running, and 1.5 months of changing the way I eat I had dropped over 8 kg in weight, and could now comfortably run 5 km at a pace of 5:30 per km, with nice steep hills thrown in.</p>
+<p>With 5 health apps installed and being used regularly I started seeing changes. 8 months of running, and 1.5 months of changing the way I eat I had dropped over 8 kg in weight, and could now comfortably run 5 km at a pace of 5:30 per km, with nice steep hills thrown in.</p>
 
-<p>There are two more health apps that I have installed &amp; started using. The first one I came across when I read an article <a href="http://well.blogs.nytimes.com/2013/05/09/the-scientific-7-minute-workout/">The Scientific 7-Minute Workout</a>. I thought that it would come in handy when I was short on time, and also as a good way to shake things up. Check out the &lsquo;7 Minute Workout &ldquo;Seven&rdquo;&rsquo; app. The last one I came across when I read a Lifehacker article <a href="http://lifehacker.com/what-happens-to-the-brain-when-you-meditate-and-how-it-1202533314">What Happens to the Brain When You Meditate (And How it Benefits You)</a>, that recommended an app created by a former Buddhist monk called <a href="http://www.getsomeheadspace.com/">Headspace</a>. Check out the app &lsquo;Headspace&rsquo;, it&rsquo;s meditation when &amp; where you have the time, which for me is on my way to work on the bus. I&rsquo;m really excited about giving meditation a go, and Headspace was built for the iHealth Renaissance.</p>
+<p>There are two more health apps that I have installed and started using. The first one I came across when I read an article <a href="http://well.blogs.nytimes.com/2013/05/09/the-scientific-7-minute-workout/">The Scientific 7-Minute Workout</a>. I thought that it would come in handy when I was short on time, and also as a good way to shake things up. Check out the &lsquo;7 Minute Workout &ldquo;Seven&rdquo;&rsquo; app. The last one I came across when I read a Lifehacker article <a href="http://lifehacker.com/what-happens-to-the-brain-when-you-meditate-and-how-it-1202533314">What Happens to the Brain When You Meditate (And How it Benefits You)</a>, that recommended an app created by a former Buddhist monk called <a href="http://www.getsomeheadspace.com/">Headspace</a>. Check out the app &lsquo;Headspace&rsquo;, it&rsquo;s meditation when and where you have the time, which for me is on my way to work on the bus. I&rsquo;m really excited about giving meditation a go, and Headspace was built for the iHealth Renaissance.</p>
 
-<p>I now have 7 health apps installed &amp; being used, which is the majority category of apps that I use on my iPhone. I haven&rsquo;t used a Nike+ Fuelband, Jawbone UP, or a Fitbit Flex, but I can see that the iHealth Renaissance is just starting, and that these are just early wearable accessory products.</p>
+<p>I now have 7 health apps installed and being used, which is the majority category of apps that I use on my iPhone. I haven&rsquo;t used a Nike+ Fuelband, Jawbone UP, or a Fitbit Flex, but I can see that the iHealth Renaissance is just starting, and that these are just early wearable accessory products.</p>
 
-<p>It&rsquo;s frustrating that I need multiple apps for the same thing, and also that I need to enter the same information into different apps. For example most of the health apps want to know my gender, age, height &amp; weight, to be able to provide me meaningful feedback. Why do I need to provide my data multiple times?</p>
+<p>It&rsquo;s frustrating that I need multiple apps for the same thing, and also that I need to enter the same information into different apps. For example most of the health apps want to know my gender, age, height and weight, to be able to provide me meaningful feedback. Why do I need to provide my data multiple times?</p>
 
-<p>It&rsquo;s interesting looking at the move Apple has made with the iPhone 5s, by introducing a motion coprocessor called the M7, which continuously measures motion data &amp; makes it available for apps. I can&rsquo;t wait for the next generation of iHealth apps &amp; wearable accessory products. I think we still need wearable accessory products as apps are tucked away nicely on your iPhone. You choose when to interact with them. We need devices that we can see that constantly motivate us. Devices that further reduce the latency between effort &amp; feedback in an effortless, visual, motivational way. I think that these devices will still be accessory products that augment the core richer connected experience that can be delivered via your iPhone.</p>
+<p>It&rsquo;s interesting looking at the move Apple has made with the iPhone 5s, by introducing a motion coprocessor called the M7, which continuously measures motion data and makes it available for apps. I can&rsquo;t wait for the next generation of iHealth apps and wearable accessory products. I think we still need wearable accessory products as apps are tucked away nicely on your iPhone. You choose when to interact with them. We need devices that we can see that constantly motivate us. Devices that further reduce the latency between effort and feedback in an effortless, visual, motivational way. I think that these devices will still be accessory products that augment the core richer connected experience that can be delivered via your iPhone.</p>
 
-<p>So the iHealth Renaissance is making good progress, but where is the iWealth Renaissance? The current batch of mobile apps from the financial services industry are primarily sales &amp; service based. Buy this product. View &amp; manage your accounts. They haven&rsquo;t started to take the next step.</p>
+<p>So the iHealth Renaissance is making good progress, but where is the iWealth Renaissance? The current batch of mobile apps from the financial services industry are primarily sales and service based. Buy this product. View and manage your accounts. They haven&rsquo;t started to take the next step.</p>
 <div class="footnotes">
 <hr/>
 <ol>
 <li id="fn:1">
-<p>I use an iPhone. I use the term iPhone in this article to mean smartphone, or what I think of as a native Internet mobile personal assistant &amp; augmentation device.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<p>I use an iPhone. I use the term iPhone in this article to mean smartphone, or what I think of as a native Internet mobile personal assistant and augmentation device.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
 </ol>
 </div>
 
@@ -919,18 +919,18 @@ database, or web pages to your cloud backend in future posts if there is interes
     <link href="http://www.peterboni.net/blog/2013/09/22/design-little-things-matter/"/>
     <updated>2013-09-22T07:00:00+08:00</updated>
     <id>http://www.peterboni.net/blog/2013/09/22/design-little-things-matter</id>
-    <content type="html"><![CDATA[<p>I like running &amp; listening to music using my iPhone. Up until recently I was using Sennheiser In-Ear Headphones without a remote or microphone. The headphones caused me a few problems before I finally decided to buy new headphones, which made me think about design.</p>
+    <content type="html"><![CDATA[<p>I like running and listening to music using my iPhone. Up until recently I was using Sennheiser In-Ear Headphones without a remote or microphone. The headphones caused me a few problems before I finally decided to buy new headphones, which made me think about design.</p>
 
 <!--more-->
 
 
-<p>The first problem with my current headphones was that even though they were in-ear, they kept falling out, which was really annoying. The second problem was that I couldn&rsquo;t forward songs. Listening to a slow or uninspiring song approaching a hill is hard work. The third problem sometimes occurred with an incoming message. Fumbling to get the iPhone out of my <a href="http://www.spibelt.com.au">SPI Belt</a> &amp; read the message while running (to see if it was urgent) was difficult.</p>
+<p>The first problem with my current headphones was that even though they were in-ear, they kept falling out, which was really annoying. The second problem was that I couldn&rsquo;t forward songs. Listening to a slow or uninspiring song approaching a hill is hard work. The third problem sometimes occurred with an incoming message. Fumbling to get the iPhone out of my <a href="http://www.spibelt.com.au">SPI Belt</a> and read the message while running (to see if it was urgent) was difficult.</p>
 
-<p>I did a quick review of headphones with remote &amp; microphone in the Apple Store and purchased the Sennheiser OCX 685i In-Ear Sports Headphones.</p>
+<p>I did a quick review of headphones with remote and microphone in the Apple Store and purchased the Sennheiser OCX 685i In-Ear Sports Headphones.</p>
 
 <p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-09-22-design-little-things-matter/img_2357.jpg" width="600" height="400" title="Sennheiser OCX 685i In-Ear Sports Headphones" ></p>
 
-<p>The ear clip design, combined with the lightweight cord &amp; clip means that they stay secure while running. No more falling out. The remote &amp; microphone work &ndash; I have full control over music. I can also use Siri to listen to incoming messages, and dictate a reply. I can even use Siri to <a href="https://twitter.com/peterboni/status/379924494527131649">Tweet</a>. The headphones are also sweat &amp; water resistant. Nearly perfect.</p>
+<p>The ear clip design, combined with the lightweight cord and clip means that they stay secure while running. No more falling out. The remote and microphone work &ndash; I have full control over music. I can also use Siri to listen to incoming messages, and dictate a reply. I can even use Siri to <a href="https://twitter.com/peterboni/status/379924494527131649">Tweet</a>. The headphones are also sweat and water resistant. Nearly perfect.</p>
 
 <blockquote><p>The only problem I have with them is the <em>design</em> of the remote, which detracts from the overall experience of using the product.</p></blockquote>
 
@@ -938,7 +938,7 @@ database, or web pages to your cloud backend in future posts if there is interes
 
 <p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-09-22-design-little-things-matter/img_2360.jpg" width="600" height="400" title="Apple EarPods with Remote and Mic" ></p>
 
-<p>Can you guess what the problem is? When I&rsquo;m running &amp; listening to music, I&rsquo;m watching the road ahead. I move my fingers to the remote near my neck, grab it, and feel for the controls. They&rsquo;re all placed together &amp; feel like they blend into each other. It feels like one button. This is the exact opposite experience with the Apple EarPods remote. On the Apple EarPods remote the clear indent in the middle means I feel immediately by touch the distinction between the 3 buttons, and hence how to activate the different functions that the 3 buttons enable.</p>
+<p>Can you guess what the problem is? When I&rsquo;m running and listening to music, I&rsquo;m watching the road ahead. I move my fingers to the remote near my neck, grab it, and feel for the controls. They&rsquo;re all placed together and feel like they blend into each other. It feels like one button. This is the exact opposite experience with the Apple EarPods remote. On the Apple EarPods remote the clear indent in the middle means I feel immediately by touch the distinction between the 3 buttons, and hence how to activate the different functions that the 3 buttons enable.</p>
 
 <p>I was reading this article today &ndash; <a href="http://www.businessweek.com/articles/2013-09-20/apple-ceo-tim-cooks-complete-interview-with-bloomberg-businessweek">Tim Cook: The Complete Interview</a>, and there are a few really good quotes from Tim Cook that I think are relevant.</p>
 
@@ -970,28 +970,29 @@ herself would suddenly blurt out &lsquo;I don&rsquo;t like it&rsquo;, or &lsquo;
 I remember feeling proud, but at the same time flustered, and sometimes annoyed
 because of the timing. She was doing what my wife (an infinitely better communicator
 than me) had taught her to do, to vocalise her feelings without thinking, just throw
-them out there. Before she learnt to do this she used to get frustrated &amp; express
+them out there. Before she learnt to do this she used to get frustrated and express
 her feelings in other ways, the most common of which was crying.</p>
 
-<p>So if expressing your feelings &amp; thoughts effectively is one part of communication the other part is what comes back to you once you do this, and what you do with it.
+<p>So if expressing your feelings and thoughts effectively is one part of communication the other part is what comes back to you once you do this, and what you do with it.
 My daughter is 5 &frac12; now, and can engage in meaningful communication, interspersed with
 periods of her imagination taking control. I notice that when I say something to her,
 she will pause, and then immediately respond with a question, or less frequently an
 interesting factoid that she draws out from her limited experience.
-She does this with an openness that I find refreshing &amp; disarming.
+She does this with an openness that I find refreshing and disarming.
 Her words, tone, and body language are all aligned with a genuine interest.
 There&rsquo;s not a shred of guile.</p>
 
 <p>Of course as adults we all know how much more complex it gets. There are far more
 less effective ways to communicate than in person. I wish I could convey to you how
-much I dislike email &amp; it&rsquo;s seductive call, but alas, I&rsquo;m still learning.</p>
+much I dislike email and it&rsquo;s seductive call, but alas, I&rsquo;m still learning.</p>
 
 <p>I have this surreal mental movie of us all as adults. We&rsquo;re walking around in a shared existence, but within our own bubbles of reality. We have goggles strapped to our heads that we can&rsquo;t take off. These goggles are much like camera lenses that can have multiple filters stacked on. The goggles protect our eyes, but they also filter our vision. As we grow our eyes change but then so too do the goggles, as filters are added, changed, or removed. I wonder what would happen if we were to regularly pause and consider what we are, and how we communicate with those around us.</p>
 
 <p>There has probably been millions of words written about <a href="http://en.wikipedia.org/wiki/Communication">communication</a>. So why bother? Because I&rsquo;m actively trying to get better at it.</p>
 
-<p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-09-01-communication/photo-small.jpg" width="700" height="467" title="Photo" >
-<a href="http://www.peterboni.net/media/images/2013-09-01-communication/photo.jpg">Photo (Original)</a></p>
+<p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-09-01-communication/photo-small.jpg" width="700" height="467" title="Photo" ></p>
+
+<p><a href="http://www.peterboni.net/media/images/2013-09-01-communication/photo.jpg">Photo (Original)</a></p>
 ]]></content>
   </entry>
   
@@ -1000,18 +1001,18 @@ much I dislike email &amp; it&rsquo;s seductive call, but alas, I&rsquo;m still 
     <link href="http://www.peterboni.net/blog/2013/07/25/running-memory/"/>
     <updated>2013-07-25T07:00:00+08:00</updated>
     <id>http://www.peterboni.net/blog/2013/07/25/running-memory</id>
-    <content type="html"><![CDATA[<p>Liam ran, his long muscular legs pounding the pavement. There were only a few souls out that chose to brave the cold &amp; darkness of the early morning. His breathing &amp; rhythm were steady. He wasn&rsquo;t pushing himself as he settled into his run. He ran to relax &amp; be with his thoughts.</p>
+    <content type="html"><![CDATA[<p>Liam ran, his long muscular legs pounding the pavement. There were only a few souls out that chose to brave the cold and darkness of the early morning. His breathing and rhythm were steady. He wasn&rsquo;t pushing himself as he settled into his run. He ran to relax and be with his thoughts.</p>
 
 <!--more-->
 
 
 <p>&ldquo;Show dad running&rdquo; he said softly to himself between breaths. Ahead of him on the long bridge his dad appeared running. He smiled to himself. The music he was listening to changed to a different track. &ldquo;Sweet Dreams, Ministry of Sound Running Trax Winter 2011&rdquo; appeared at the top of his vision, next to more text … &ldquo;Pace 5:27/km, 20sec slower/km&rdquo;. Memories of his childhood came flooding back of them running together at the park near their home, him desperately trying to keep up with his shorter legs. Better catch the old man now he thought, I&rsquo;m slacking off! He gained on his dad and was finally running in sync with him, side by side.</p>
 
-<p>The nanotechnology in his body connected him to the vast services &amp; data available on the net and seamlessly augmented his reality, which in this case was his vision &amp; hearing. His dad had been born into a time when the world was starting to emerge from their pre-digital caves, and people started leaving digital footprints everywhere they went. He was benefiting from his dads digital footprint now. His dad loved to run, and had recorded them for his own benefit using the primitive tracking technology &amp; services of the time.</p>
+<p>The nanotechnology in his body connected him to the vast services and data available on the net and seamlessly augmented his reality, which in this case was his vision and hearing. His dad had been born into a time when the world was starting to emerge from their pre-digital caves, and people started leaving digital footprints everywhere they went. He was benefiting from his dads digital footprint now. His dad loved to run, and had recorded them for his own benefit using the primitive tracking technology and services of the time.</p>
 
-<p>This was the first time Liam had been to this city. His dad had been here before &amp; run this same route. As he ran side by side with his dad, listening to the same music he had listened to many years before he felt connected to him, in a way that would not have been possible for his dad&rsquo;s generation. This was his dad, in his prime, doing something that he now loved too, and they were doing it together at different places in time.</p>
+<p>This was the first time Liam had been to this city. His dad had been here before and run this same route. As he ran side by side with his dad, listening to the same music he had listened to many years before he felt connected to him, in a way that would not have been possible for his dad&rsquo;s generation. This was his dad, in his prime, doing something that he now loved too, and they were doing it together at different places in time.</p>
 
-<p>As he stopped at the end of the road &amp; looked out over the water, the sight of the Sydney Opera House greeted him. They both stood there, looking at the Opera House, and the Harbour Bridge to the right. He turned his head &amp; looked at the avatar of his dad, and smiled.</p>
+<p>As he stopped at the end of the road and looked out over the water, the sight of the Sydney Opera House greeted him. They both stood there, looking at the Opera House, and the Harbour Bridge to the right. He turned his head and looked at the avatar of his dad, and smiled.</p>
 
 <p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-07-25-running-memory/photo-small.jpg" width="770" height="295" title="Photo" >
 <a href="http://www.peterboni.net/media/images/2013-07-25-running-memory/photo.jpg">Photo (Original)</a></p>
@@ -1029,15 +1030,15 @@ much I dislike email &amp; it&rsquo;s seductive call, but alas, I&rsquo;m still 
 a UITextField. If you want a basic user experience, then you&rsquo;re done.</p>
 
 <p>If you want to give the user <em>something better</em>, then the pain begins. The pain is worth
-it because <strong>small details matter</strong>. I&rsquo;ve taken ideas from a few places &amp; combined them
-into this experience &amp; open source code.</p>
+it because <strong>small details matter</strong>. I&rsquo;ve taken ideas from a few places and combined them
+into this experience and open source code.</p>
 
 <!--more-->
 
 
 <h2>The Experience in 9 images</h2>
 
-<p>1. We start &amp; sit there, begging the user to enter something. We&rsquo;re showing $0.00, so we have
+<p>1. We start and sit there, begging the user to enter something. We&rsquo;re showing $0.00, so we have
 sent a signal to them that they are entering a money value. The cursor is flashing at them
 after the last 0 at the end of the formatted money value.</p>
 
@@ -1076,7 +1077,7 @@ money value is formatting itself in front of their eyes.</p>
 
 <p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-07-04-ios-formatted-currency-input/8.png" width="396" height="744" title="From Start, Get ready to Paste $1,000" ></p>
 
-<p>9. The &lsquo;$1,000&rsquo; gets pasted in &amp; the display value changes to $1,000.00.</p>
+<p>9. The &lsquo;$1,000&rsquo; gets pasted in and the display value changes to $1,000.00.</p>
 
 <p>Note that the display value didn&rsquo;t change to $10.00, which would have happened if we
 didn&rsquo;t trap the paste and format the value before updating the display value.</p>
@@ -1116,7 +1117,7 @@ iOS Simulator.</p>
 
 <p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-06-29-ios-7-dynamic-type/1-text-size-normal.png" width="500" height="713" title="Text Size Default" ></p>
 
-<p>We get 3 &amp; &lsquo;a bit&rsquo; cells in the UITableView.</p>
+<p>We get 3 and &lsquo;a bit&rsquo; cells in the UITableView.</p>
 
 <p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-06-29-ios-7-dynamic-type/2-userxlistview-normal.png" width="500" height="713" title="UserXListView Default" ></p>
 
@@ -1155,7 +1156,7 @@ layout via the attribute inspector as shown below.</p>
 
 <p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-06-29-ios-7-dynamic-type/8-userxlistview-cell-label-attribute-inspector.png" width="316" height="196" title="UserXListView Cell Label Attribute Inspector" ></p>
 
-<p>Once the label Text Styles &amp; Auto Layout Constraints are set, we&rsquo;re ready for the hard
+<p>Once the label Text Styles and Auto Layout Constraints are set, we&rsquo;re ready for the hard
 part.</p>
 
 <h2>Implementation, The Hard Part</h2>
@@ -1251,7 +1252,7 @@ the Storyboard) the cell label Text Style values.</p>
 
 <h2>Final Thoughts</h2>
 
-<p>That&rsquo;s it. iOS 7 determines &amp; applies the font attributes for each label based on the
+<p>That&rsquo;s it. iOS 7 determines and applies the font attributes for each label based on the
 Text Style for each label, and the iOS 7 Text Size system setting selected by the user,
 and it&rsquo;s left to us (the developer) to cater for the changes in the layout to the view.</p>
 
@@ -1268,7 +1269,7 @@ it was a bit smarter, a bit more automatic, but with great power comes great res
     <content type="html"><![CDATA[<p>I believe the best way to understand something is to get your hands dirty, so I decided
 to build the front end part of an app idea that I&rsquo;ve had for a while as an iOS 7 app.</p>
 
-<p>While using iOS 7 for the last week or so, I&rsquo;ve been thinking about the UI &amp; UX.
+<p>While using iOS 7 for the last week or so, I&rsquo;ve been thinking about the UI and UX.
 Of course, Metro (design language) has been around for a while thanks to Microsoft, but
 the Metro apps I&rsquo;ve used feel dull. iOS 7 feels surprisingly refreshing.</p>
 
@@ -1277,7 +1278,7 @@ the Metro apps I&rsquo;ve used feel dull. iOS 7 feels surprisingly refreshing.</
 
 <p>One of the views in the app I&rsquo;m building needs a list of <em>things</em> that the user creates &ndash;
 a typical pattern in many apps. iOS has a UITableViewController, so technically it&rsquo;s an
-easy problem to solve. In terms of the design of the UI &amp; UX it&rsquo;s a little bit more complicated.</p>
+easy problem to solve. In terms of the design of the UI and UX it&rsquo;s a little bit more complicated.</p>
 
 <p>Let me talk you through what I call the UserXListView&trade; pattern in 7 images of the
 iOS 7 app I&rsquo;ve started building.</p>
@@ -1289,20 +1290,20 @@ Tap me! Tap me!</p>
 
 <p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-06-24-ios-7-userxlistview/app-1-list-view.png" width="396" height="744" title="1. Empty List View" ></p>
 
-<h2>2. Add Item (with default Icon &amp; Colour)</h2>
+<h2>2. Add Item (with default Icon and Colour)</h2>
 
 <p>She taps +. She knows that she&rsquo;s going to create something. What&rsquo;s the first
 decision? What to name it? No. The first decision is an emotional one. What&rsquo;s this thing
 going to look like.</p>
 
-<p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-06-24-ios-7-userxlistview/app-2-add-item.png" width="396" height="744" title="2. Add Item (with default Icon & Colour)" ></p>
+<p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-06-24-ios-7-userxlistview/app-2-add-item.png" width="396" height="744" title="2. Add Item (with default Icon and Colour)" ></p>
 
 <p>Technically this is a modal segue; either Cancel and go back, or enter the required
-information &amp; Save.</p>
+information and Save.</p>
 
 <h2>3. Item Icon</h2>
 
-<p>She taps Change Icon. This is where it gets interesting. The icons are in groups &amp; are
+<p>She taps Change Icon. This is where it gets interesting. The icons are in groups and are
 all black so that they are easy for her to judge equally. In this instance there&rsquo;s only one
 group of simple icons from The Noun Project, that are visually related to the thing that
 she is creating.</p>
@@ -1311,7 +1312,7 @@ she is creating.</p>
 
 <p>Once again this is a modal segue; either Cancel and go back, or give the required
 information, which in this instance is selecting an icon. We use a UICollectionViewController
-that&rsquo;s dynamic. We define the icon groups &amp; icons as follows.</p>
+that&rsquo;s dynamic. We define the icon groups and icons as follows.</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -1326,7 +1327,7 @@ that&rsquo;s dynamic. We define the icon groups &amp; icons as follows.</p>
 
 <p>She taps the piggy bank icon (they&rsquo;re cute). Now she can personalise the icon even further
 by selecting a colour from different groups of colour palettes. She can select a colour
-from the same palette to match all her <em>things</em>, or mix &amp; match colours from different
+from the same palette to match all her <em>things</em>, or mix and match colours from different
 colour palettes. The choice is hers. If she doesn&rsquo;t like the icon in any of these colours
 she can either tap &lt; Icon, or as a nice feature of iOS 7, swipe left to right inside where
 the icons are located and the view will slide off the top to the right and she will be taken
@@ -1336,7 +1337,7 @@ back to the black icons.</p>
 
 <p>This time we do a push segue. We use a UICollectionViewController that&rsquo;s dynamic, and some
 Core Graphics help. In the app we only store one black piggy bank icon .png file, and at
-runtime dynamically colour each piggy bank. We define the colour groups &amp; colours as follows.</p>
+runtime dynamically colour each piggy bank. We define the colour groups and colours as follows.</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -1386,13 +1387,13 @@ runtime dynamically colour each piggy bank. We define the colour groups &amp; co
 </span></code></pre></td></tr></table></div></figure>
 
 
-<h2>5. Add Item (with selected Icon &amp; Colour)</h2>
+<h2>5. Add Item (with selected Icon and Colour)</h2>
 
 <p>She taps the red piggy bank in the Ocean Five colour group, and is taken back to the
 2. Add Item view, with her red piggy bank there waiting for her. She can now enter the
 other information and tap Save.</p>
 
-<p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-06-24-ios-7-userxlistview/app-5-add-item.png" width="396" height="744" title="5. Add Item (with selected Icon & Colour)" ></p>
+<p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-06-24-ios-7-userxlistview/app-5-add-item.png" width="396" height="744" title="5. Add Item (with selected Icon and Colour)" ></p>
 
 <h2>6. Item in List View</h2>
 
@@ -1403,13 +1404,13 @@ left to do is to add some more.</p>
 
 <h2>7. List View with Items</h2>
 
-<p>As she looks at the list of her <em>things</em>, she instantly recognises &amp; associates with each
+<p>As she looks at the list of her <em>things</em>, she instantly recognises and associates with each
 one, as it has her personal identifying touch.</p>
 
 <p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-06-24-ios-7-userxlistview/app-7-list-view-lots.png" width="396" height="744" title="7. List View with Items" ></p>
 
 <p>As you can see it&rsquo;s easy to give the user power over their <em>things</em> by a simple mobile
-UI &amp; UX pattern, hereby called the UserXListView&trade; pattern.</p>
+UI and UX pattern, hereby called the UserXListView&trade; pattern.</p>
 
 <h2>Storyboard</h2>
 
@@ -1474,26 +1475,26 @@ two UICollectionViewControllers.</p>
     <link href="http://www.peterboni.net/blog/2013/06/01/people-based-working/"/>
     <updated>2013-06-01T07:00:00+08:00</updated>
     <id>http://www.peterboni.net/blog/2013/06/01/people-based-working</id>
-    <content type="html"><![CDATA[<p>Some companies have traditional work environments. When you come into work, you have an assigned desk. You are physically located with your team, which is located within that teams larger team, and so on. The company feels like it physically revolves around you. You are physically partitioned &amp; packed into a master seating plan, maintained &amp; controlled by The Collective of Master Seating Plan Controllers.</p>
+    <content type="html"><![CDATA[<p>Some companies have traditional work environments. When you come into work, you have an assigned desk. You are physically located with your team, which is located within that teams larger team, and so on. The company feels like it physically revolves around you. You are physically partitioned and packed into a master seating plan, maintained and controlled by The Collective of Master Seating Plan Controllers.</p>
 
 <!--more-->
 
 
-<p>There&rsquo;s an obvious &amp; defined order to it all. You know where you sit. You know your place, because its there, day after day. It doesn&rsquo;t move, even though your work &amp; the people who you work with does. You are the master of your own domain. It contains your stuff, your possessions. It has your personal touch. Outside battles &amp; war rage, but inside your domain its peaceful. You have focus because of consistency.</p>
+<p>There&rsquo;s an obvious and defined order to it all. You know where you sit. You know your place, because its there, day after day. It doesn&rsquo;t move, even though your work and the people who you work with does. You are the master of your own domain. It contains your stuff, your possessions. It has your personal touch. Outside battles and war rage, but inside your domain its peaceful. You have focus because of consistency.</p>
 
-<p>Some companies have non traditional work environments. One style is ABW &ndash; Activity Based Working. When you come into work, you don&rsquo;t have an assigned desk. You have a locker like you did in school that contains your work tools &amp; minimal possessions. Your first task for the day is to find a desk. This is more complicated than it sounds. What time did you get in? What activity are you doing today?</p>
+<p>Some companies have non traditional work environments. One style is ABW &ndash; Activity Based Working. When you come into work, you don&rsquo;t have an assigned desk. You have a locker like you did in school that contains your work tools and minimal possessions. Your first task for the day is to find a desk. This is more complicated than it sounds. What time did you get in? What activity are you doing today?</p>
 
 <p>Teams migrate in packs. One lone wolf can disrupt the established base of a team, and set them on a random migration path, which in turn has a ripple effect in the office ecosystem across a floor, and into other floors. Overt (mostly silent) psychological wars are fought over areas by teams posturing, and positioning of physical objects like whiteboards, agile card walls, posters, or pictures. Some teams are firmly entrenched, and won&rsquo;t be moved, even by the occasional interloper.</p>
 
-<p>Once you select a desk, if you don&rsquo;t immediately clean it, you&rsquo;re touching potentially multiple people&rsquo;s germs all over the desk, keyboard, mouse &amp; phone, and then yourself &ndash; your face, your food, and other people. This all takes time that&rsquo;s not spent working, which can be frustrating. Sometimes you think &ldquo;I sat here yesterday. Maybe I don&rsquo;t need to clean everything today.&rdquo; As you sit there in this foreign, sparse, sterile, non personal environment, the people around you may or may not be different from yesterday. It depends what the people who come in after you do. Where will they go when they come in? What complex logic (or not for that matter) will they follow to select their desk?</p>
+<p>Once you select a desk, if you don&rsquo;t immediately clean it, you&rsquo;re touching potentially multiple people&rsquo;s germs all over the desk, keyboard, mouse and phone, and then yourself &ndash; your face, your food, and other people. This all takes time that&rsquo;s not spent working, which can be frustrating. Sometimes you think &ldquo;I sat here yesterday. Maybe I don&rsquo;t need to clean everything today.&rdquo; As you sit there in this foreign, sparse, sterile, non personal environment, the people around you may or may not be different from yesterday. It depends what the people who come in after you do. Where will they go when they come in? What complex logic (or not for that matter) will they follow to select their desk?</p>
 
 <p>The environment is mostly not peaceful, or conducive to solitary productive thinking work. There&rsquo;s more noise. People are more chatty. It&rsquo;s harder to concentrate for lengthy periods at a time, even in so called designated quiet work styled areas. It&rsquo;s exhausting.</p>
 
-<p>To an outsider ABW may appear as chaos. But to an insider, strange things happen in ABW. You can sit next to people you are working with &amp; collaborate with them more effectively. You can sit next to different people. You can move if you don&rsquo;t want to sit next to someone. You can have random conversations that may, or may not prove immediately useful. The amazing thing is that you can do these things every day.</p>
+<p>To an outsider ABW may appear as chaos. But to an insider, strange things happen in ABW. You can sit next to people you are working with and collaborate with them more effectively. You can sit next to different people. You can move if you don&rsquo;t want to sit next to someone. You can have random conversations that may, or may not prove immediately useful. The amazing thing is that you can do these things every day.</p>
 
-<p>If you want to move to your activity there is no lengthy process through The Collective of Master Seating Plan Controllers. You just &hellip; move. You feel like you are part of something bigger than just your small team. You feel more empowered. You seem to physically revolve around the company with people, and the company &amp; the people feel like the core purpose of why you are there.</p>
+<p>If you want to move to your activity there is no lengthy process through The Collective of Master Seating Plan Controllers. You just &hellip; move. You feel like you are part of something bigger than just your small team. You feel more empowered. You seem to physically revolve around the company with people, and the company and the people feel like the core purpose of why you are there.</p>
 
-<p>You learn to live with the noise, the constant interruptions, and not owning a space. The space serves a purpose, not just you. You begin to see patterns of movement &amp; highly productive collaboration. You start to participate &amp; change your style of working. You begin to think that you can&rsquo;t go back to a traditional work environment.</p>
+<p>You learn to live with the noise, the constant interruptions, and not owning a space. The space serves a purpose, not just you. You begin to see patterns of movement and highly productive collaboration. You start to participate and change your style of working. You begin to think that you can&rsquo;t go back to a traditional work environment.</p>
 
 <p><a href="http://vimeo.com/26774102">Simon Sinek: If You Don&rsquo;t Understand People, You Don&rsquo;t Understand Business</a></p>
 ]]></content>
@@ -1504,7 +1505,7 @@ two UICollectionViewControllers.</p>
     <link href="http://www.peterboni.net/blog/2013/05/11/this-is-water/"/>
     <updated>2013-05-11T07:00:00+08:00</updated>
     <id>http://www.peterboni.net/blog/2013/05/11/this-is-water</id>
-    <content type="html"><![CDATA[<p>I recently took a month leave from work &amp; did absolutely nothing. Well not nothing. I did something I&rsquo;ve never done before. I didn&rsquo;t do any work. I spent it with my family. I relaxed. Really relaxed. I disconnected from my life of work, more work, the Internet, computers &amp; technology. Well, ok, mostly for the last few. This may not seem momentous to you, but for me it was.</p>
+    <content type="html"><![CDATA[<p>I recently took a month leave from work and did absolutely nothing. Well not nothing. I did something I&rsquo;ve never done before. I didn&rsquo;t do any work. I spent it with my family. I relaxed. Really relaxed. I disconnected from my life of work, more work, the Internet, computers and technology. Well, ok, mostly for the last few. This may not seem momentous to you, but for me it was.</p>
 
 <!--more-->
 
@@ -1513,11 +1514,11 @@ two UICollectionViewControllers.</p>
 
 <p>When I returned to work I felt strange. The first few days I was wondering why I was there. What was I doing. What was my purpose. Why did I come here (other than the obvious reasons). I&rsquo;d look out the window and feel in my soul that I needed to return to the existence I had come from. I missed my pain in the butt kids. There was the usual jokes with family and friends. &ldquo;Hey, how&rsquo;s reality? Happy to be back at work? ;)&rdquo;, to which I replied jokingly &ldquo;Reality sucks!&rdquo;.</p>
 
-<p>What I started to notice in the first few days was that I was relaxed at my core. I could think before speaking &amp; putting words out there, making sure they were positive and added value. It sharpened my focus. I no longer felt like a speeding train. I felt like I&rsquo;d slowed down inside, and was more effective for it.</p>
+<p>What I started to notice in the first few days was that I was relaxed at my core. I could think before speaking and putting words out there, making sure they were positive and added value. It sharpened my focus. I no longer felt like a speeding train. I felt like I&rsquo;d slowed down inside, and was more effective for it.</p>
 
-<p>A few more days passed, and it was the end of the first week. The feeling of strangeness was still there, but so too was the feeling of being relaxed at my core. I resolved to fight like hell to keep it. I started to change my habits. I made time for breakfast in the morning. I resolved not to rush. I made time for exercise; riding, running, walking &amp; started weights again after many years. I made time for my family. I made time for meditation. I&rsquo;ve made time for thinking, writing &amp; doing. There&rsquo;s only so many hours in a day, so I stopped doing things that didn&rsquo;t add value, and just added noise to my life. It&rsquo;s a liberating feeling.</p>
+<p>A few more days passed, and it was the end of the first week. The feeling of strangeness was still there, but so too was the feeling of being relaxed at my core. I resolved to fight like hell to keep it. I started to change my habits. I made time for breakfast in the morning. I resolved not to rush. I made time for exercise; riding, running, walking and started weights again after many years. I made time for my family. I made time for meditation. I&rsquo;ve made time for thinking, writing and doing. There&rsquo;s only so many hours in a day, so I stopped doing things that didn&rsquo;t add value, and just added noise to my life. It&rsquo;s a liberating feeling.</p>
 
-<p>It&rsquo;s affected me in other ways too. I had one of my best runs in my first week back at work. Relaxed. Smooth. Good pace &amp; rhythm. But still competitive. I still increased my pace, clawing at the road, gasping for breath for the last couple hundred metres. A neighbour would have seen this person run up the road, collapse on the lawn, gasping for breath, scrambling at his iPhone to press finish on Strava. As I lay there on the lawn, the beats from the earbuds combining with the pounding of my ears, sweat pouring off my face and down my neck, the wind hitting me, I felt alive. I felt great. It&rsquo;s reflected in my edited Strava Name for the run &ndash; &ldquo;BOOM FEEL MY RYTHM STICK BOUNCE !&rdquo;.</p>
+<p>It&rsquo;s affected me in other ways too. I had one of my best runs in my first week back at work. Relaxed. Smooth. Good pace and rhythm. But still competitive. I still increased my pace, clawing at the road, gasping for breath for the last couple hundred metres. A neighbour would have seen this person run up the road, collapse on the lawn, gasping for breath, scrambling at his iPhone to press finish on Strava. As I lay there on the lawn, the beats from the earbuds combining with the pounding of my ears, sweat pouring off my face and down my neck, the wind hitting me, I felt alive. I felt great. It&rsquo;s reflected in my edited Strava Name for the run &ndash; &ldquo;BOOM FEEL MY RYTHM STICK BOUNCE !&rdquo;.</p>
 
 <p><a href="http://vimeo.com/65576562">This Is Water</a></p>
 ]]></content>
@@ -1528,26 +1529,26 @@ two UICollectionViewControllers.</p>
     <link href="http://www.peterboni.net/blog/2013/04/03/app-dev-is-not-rapid/"/>
     <updated>2013-04-03T07:00:00+08:00</updated>
     <id>http://www.peterboni.net/blog/2013/04/03/app-dev-is-not-rapid</id>
-    <content type="html"><![CDATA[<p>Application Development is not Rapid. There, I finally typed it. It feels like a weight off my fingers. I have been creating applications for over 20 years, and do a damn good job of it. I&rsquo;m not arrogant, there are many developers that are smarter, more creative, or more productive. If I was to describe myself as a developer in one word I&rsquo;d say simple, which is kind of funny, because fear of being labelled that has stopped me writing this in the past. This is a post based on my thoughts &amp; feelings at the state of application development.</p>
+    <content type="html"><![CDATA[<p>Application Development is not Rapid. There, I finally typed it. It feels like a weight off my fingers. I have been creating applications for over 20 years, and do a damn good job of it. I&rsquo;m not arrogant, there are many developers that are smarter, more creative, or more productive. If I was to describe myself as a developer in one word I&rsquo;d say simple, which is kind of funny, because fear of being labelled that has stopped me writing this in the past. This is a post based on my thoughts and feelings at the state of application development.</p>
 
 <!--more-->
 
 
-<p>I have written before about why I <a href="http://www.peterboni.net/blog/2013/02/24/creating-software/">create software</a>, and my struggle with software development complexity. I&rsquo;m going to tell a story about my experience with the Technology, and it&rsquo;s contribution to the People, Process &amp; Technology triad when building applications.</p>
+<p>I have written before about why I <a href="http://www.peterboni.net/blog/2013/02/24/creating-software/">create software</a>, and my struggle with software development complexity. I&rsquo;m going to tell a story about my experience with the Technology, and it&rsquo;s contribution to the People, Process and Technology triad when building applications.</p>
 
-<p>My first job out of university was doing Microsoft Access &lsquo;database&rsquo; development for a large mining company. I put database in quotes because I didn&rsquo;t think of Access as strictly a database at the time. We built tables with constraints &amp; relationships, queries, forms, reports, and logic (macros &amp; VBA). Mostly via point &amp; click, and writing simple code. We built applications. It was and still is amazing to me how much two Access developers built, with one of them being so naive &amp; inexperienced.</p>
+<p>My first job out of university was doing Microsoft Access &lsquo;database&rsquo; development for a large mining company. I put database in quotes because I didn&rsquo;t think of Access as strictly a database at the time. We built tables with constraints and relationships, queries, forms, reports, and logic (macros and VBA). Mostly via point and click, and writing simple code. We built applications. It was and still is amazing to me how much two Access developers built, with one of them being so naive and inexperienced.</p>
 
-<p>I then progressed to building a web application, using HTML, CSS, JavaScript, ColdFusion (version 4.0 from 1999) &amp; SQL Server. There&rsquo;s a few more technologies there than my Microsoft Access experience, but ColdFusion rocked. It joined the other technologies together seamlessly, and it made creating an application rapid. I felt productive.</p>
+<p>I then progressed to building a web application, using HTML, CSS, JavaScript, ColdFusion (version 4.0 from 1999) and SQL Server. There&rsquo;s a few more technologies there than my Microsoft Access experience, but ColdFusion rocked. It joined the other technologies together seamlessly, and it made creating an application rapid. I felt productive.</p>
 
-<blockquote><p>To me rapid development meant quickly building working application software that fulfilled a need with simple, powerful tools. It meant building &amp; joining together the parts in an easily learned, understood, and consistent way that supported change.</p></blockquote>
+<blockquote><p>To me rapid development meant quickly building working application software that fulfilled a need with simple, powerful tools. It meant building and joining together the parts in an easily learned, understood, and consistent way that supported change.</p></blockquote>
 
-<p>Where did I find myself after a few experiences of rapid application development? I found myself in the distinctly non-rapid world of enterprise systems development. There was titanic Sun, IBM, Oracle &amp; Microsoft technologies. I found myself submerged in Sun Java, J2SE, J2EE, IBM WebSphere, Oracle Database, and Microsoft .NET &amp; Servers. Within each one I used a dizzying array of technologies &ndash; to use an abstract term to describe the things you could use &amp; the ways you could use them. There were plenty of acronyms that made you feel accomplished if you knew what they stood for, even if you didn&rsquo;t know what they did.</p>
+<p>Where did I find myself after a few experiences of rapid application development? I found myself in the distinctly non-rapid world of enterprise systems development. There was titanic Sun, IBM, Oracle and Microsoft technologies. I found myself submerged in Sun Java, J2SE, J2EE, IBM WebSphere, Oracle Database, and Microsoft .NET and Servers. Within each one I used a dizzying array of technologies &ndash; to use an abstract term to describe the things you could use and the ways you could use them. There were plenty of acronyms that made you feel accomplished if you knew what they stood for, even if you didn&rsquo;t know what they did.</p>
 
 <p>My view of web application architecture had exploded from a few technologies to many, many layers of them. ColdFusion was replaced by an astoundingly complex maze of choices. Want to display a database field on the screen? Oh, not so quick Mr Simple Developer. We need to do it in a modern, best practice, scalable way. I did not feel productive.</p>
 
-<p>This is where some people would stop me in my story, call me a non-believer, and then begin to preach the virtues of their given religion. I have no desire to go into any of them here. All I will say is that I&rsquo;ve seen people wield them as weapons, instead of collaborating with people to use them. The criteria I evaluate technology by is pretty simple. Can I understand it? Does it make sense in my gut? This may seem like a simpletons view, but it&rsquo;s proven correct time &amp; again. Is it simple to understand &amp; work with quickly? How many layers of abstraction or indirection are there? What value do they add? Is there a simpler way to do it? Would other people understand what it&rsquo;s doing? How about in 5 years? Is it closed, open, popular? What does it feel like to use?</p>
+<p>This is where some people would stop me in my story, call me a non-believer, and then begin to preach the virtues of their given religion. I have no desire to go into any of them here. All I will say is that I&rsquo;ve seen people wield them as weapons, instead of collaborating with people to use them. The criteria I evaluate technology by is pretty simple. Can I understand it? Does it make sense in my gut? This may seem like a simpletons view, but it&rsquo;s proven correct time and again. Is it simple to understand and work with quickly? How many layers of abstraction or indirection are there? What value do they add? Is there a simpler way to do it? Would other people understand what it&rsquo;s doing? How about in 5 years? Is it closed, open, popular? What does it feel like to use?</p>
 
-<p>Microsoft Access &amp; ColdFusion still exist 13 years after I used them. Access 2013 looks like it&rsquo;s been given new Metro (sorry, Windows 8-style UI) &amp; web coats, but underneath it looks like the same animal that has not evolved in over a decade. There are rapid application development platforms &amp; tools out there, but why haven&rsquo;t they evolved, and become more widely used for application development? particularly enterprise systems development?</p>
+<p>Microsoft Access and ColdFusion still exist 13 years after I used them. Access 2013 looks like it&rsquo;s been given new Metro (sorry, Windows 8-style UI) and web coats, but underneath it looks like the same animal that has not evolved in over a decade. There are rapid application development platforms and tools out there, but why haven&rsquo;t they evolved, and become more widely used for application development? particularly enterprise systems development?</p>
 ]]></content>
   </entry>
   
@@ -1556,20 +1557,20 @@ two UICollectionViewControllers.</p>
     <link href="http://www.peterboni.net/blog/2013/03/09/glitch-in-the-matrix/"/>
     <updated>2013-03-09T07:00:00+08:00</updated>
     <id>http://www.peterboni.net/blog/2013/03/09/glitch-in-the-matrix</id>
-    <content type="html"><![CDATA[<p>He sprinted, his powerful legs heaving with the strain of propelling his massive 6 foot 3 inch frame forward. His lungs sucked in as much air as they could in the short span they were allowed. They were gaining on him. Two distinct shapes in the distance. 17.2 meters &amp; closing.</p>
+    <content type="html"><![CDATA[<p>He sprinted, his powerful legs heaving with the strain of propelling his massive 6 foot 3 inch frame forward. His lungs sucked in as much air as they could in the short span they were allowed. They were gaining on him. Two distinct shapes in the distance. 17.2 meters and closing.</p>
 
 <!--more-->
 
 
-<p>As he glanced back a few moments before he could just make out their features with the ambient lighting from the houses &amp; dim street lights. Their faces were wolf like, but sinister, hideously contorted. They were howling, but only he could hear it. Long ethereal tormented howls filled his night. His v-band augmented reality display identified them as level 6 ghosts. They were there, but not really there. The two runners were also wearing v-bands, and running in another part of the world. They were chosen by v-net as competitors and spawned on his run.</p>
+<p>As he glanced back a few moments before he could just make out their features with the ambient lighting from the houses and dim street lights. Their faces were wolf like, but sinister, hideously contorted. They were howling, but only he could hear it. Long ethereal tormented howls filled his night. His v-band augmented reality display identified them as level 6 ghosts. They were there, but not really there. The two runners were also wearing v-bands, and running in another part of the world. They were chosen by v-net as competitors and spawned on his run.</p>
 
 <p>He chuckled to himself, as to them he appeared as Astro Boy. These young kids had no originality, thinking they could psych older runners. But this was serious. If he let them gain ground he risked his level 7 standing in the league.</p>
 
-<p>&lsquo;Show my last ghost&rsquo; he said out loud while running, seemingly to himself. His previous self spawned in front of him, running his previous run. He could see he was slacking off &amp; the two wolf like ghosts were gaining. He forced his legs to increase his pace, and sucked in more oxygen. He started gaining on his past ghost &amp; pulling away from his pursuers.</p>
+<p>&lsquo;Show my last ghost&rsquo; he said out loud while running, seemingly to himself. His previous self spawned in front of him, running his previous run. He could see he was slacking off and the two wolf like ghosts were gaining. He forced his legs to increase his pace, and sucked in more oxygen. He started gaining on his past ghost and pulling away from his pursuers.</p>
 
 <p>Suddenly his vision went black, and then it was back, but instead of the familiar scene in front of him he saw trees densely packed together. He was in a forest. The scene was moving fast, bouncing up and down, left and right. He kept running straight along the path he was on, but couldn&rsquo;t see where he was going. His v-band was showing him someone from somewhere else. What the frak was happening!</p>
 
-<p>All this happened in seconds, so he kept running, confused, and expecting that the v-band would correct itself. The scene from his v-band lurched as if the person fell, and then was facing up looking at the trees &amp; dark sky. The vision started to darken, but before it went completely dark he saw what looked like a primitive hunter standing over him. He looked big, muscly, but with short arms, and was carrying a large spear.</p>
+<p>All this happened in seconds, so he kept running, confused, and expecting that the v-band would correct itself. The scene from his v-band lurched as if the person fell, and then was facing up looking at the trees and dark sky. The vision started to darken, but before it went completely dark he saw what looked like a primitive hunter standing over him. He looked big, muscly, but with short arms, and was carrying a large spear.</p>
 
 <p><a href="http://www.peterboni.net/blog/2013/02/15/running/">Running</a></p>
 ]]></content>

@@ -121,7 +121,7 @@ and the open source <a href="http://www.baasbox.com">BaasBox</a>.
 The idea is that a BaaS abstracts the complexity of building a backend.</p>
 
 <p>But is building a backend really all that difficult using cloud computing?
-Let&rsquo;s find out &amp; build a cloud backend using <a href="http://nodejs.org">node.js</a> on <a href="http://aws.amazon.com">AWS</a>.
+Let&rsquo;s find out and build a cloud backend using <a href="http://nodejs.org">node.js</a> on <a href="http://aws.amazon.com">AWS</a>.
 Let&rsquo;s get started.</p>
 
 <!--more-->
@@ -129,7 +129,7 @@ Let&rsquo;s get started.</p>
 
 <h2>Node.js</h2>
 
-<p>First download &amp; install <a href="http://nodejs.org">Node.js</a>, which is a platform for building applications in JavaScript.
+<p>First download and install <a href="http://nodejs.org">Node.js</a>, which is a platform for building applications in JavaScript.
 It&rsquo;s powered by the Google Chrome V8 JavaScript engine.</p>
 
 <p>Isn&rsquo;t JavaScript slow? No!</p>
@@ -139,7 +139,7 @@ There are no intermediate byte codes, no interpreter.&rdquo;, <a href="https://d
 
 <p>Node.js is fast.</p>
 
-<p>We&rsquo;re going to use Node.js &amp; node packages to expose web services for our awesome mobile app.</p>
+<p>We&rsquo;re going to use Node.js and node packages to expose web services for our awesome mobile app.</p>
 
 <p>Why? There are lots of good articles that explain what Node.js is and what it&rsquo;s good for.
 Here&rsquo;s my simple take:</p>
@@ -158,7 +158,7 @@ This blog post should serve as the foundation to start you on that journey.</p>
 <p>We will be using OS X Mavericks (Version 10.9), Terminal, and <a href="http://www.barebones.com/products/textwrangler/">TextWrangler</a>
 which is available free from the App Store.</p>
 
-<p>Create &amp; change to a new folder called <strong>cloudbackend</strong> from your Documents folder.</p>
+<p>Create and change to a new folder called <strong>cloudbackend</strong> from your Documents folder.</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -279,13 +279,13 @@ JSON data object.</p>
 <h2>AWS</h2>
 
 <p>With <a href="http://aws.amazon.com">AWS</a> (Amazon Web Services) we can easily deploy our backend to the cloud while
-still keeping flexibility &amp; control &ndash; things that a BaaS takes away by abstracting the complexity.</p>
+still keeping flexibility and control &ndash; things that a BaaS takes away by abstracting the complexity.</p>
 
 <p>First sign up for the very generous <a href="http://aws.amazon.com/free/">AWS Free Usage Tier</a>.
 This simple tutorial should not result in charges to your account.</p>
 
 <p>We are going to deploy <strong>cloudbackend</strong> as an Application into EB (<a href="http://aws.amazon.com/elasticbeanstalk/">Elastic Beanstalk</a>)
-which is an AWS <em>Application Container</em>. The <a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.concepts.architecture.html">Architectural Overview</a> shows &amp;
+which is an AWS <em>Application Container</em>. The <a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.concepts.architecture.html">Architectural Overview</a> shows and
 explains what Elastic Beanstalk is.</p>
 
 <ol>
@@ -295,10 +295,10 @@ explains what Elastic Beanstalk is.</p>
 </ol>
 
 
-<p>Once setup all AWS resources are automatically provisioned &amp; configured.
+<p>Once setup all AWS resources are automatically provisioned and configured.
 You have a fully <strong>auto load balanced, auto scaled cloud application environment</strong>.</p>
 
-<p>Next, download &amp; install <a href="http://git-scm.com/">Git</a>.</p>
+<p>Next, download and install <a href="http://git-scm.com/">Git</a>.</p>
 
 <p>Initialise your <strong>cloudbackend</strong> Git repository. Enter &lsquo;git init&rsquo;, followed by
 the other commands in the following console code block.</p>
@@ -334,7 +334,7 @@ the other commands in the following console code block.</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Next download &amp; extract the <a href="http://aws.amazon.com/code/6752709412171743">AWS Elastic Beanstalk Command Line Tool</a> to
+<p>Next download and extract the <a href="http://aws.amazon.com/code/6752709412171743">AWS Elastic Beanstalk Command Line Tool</a> to
 your Documents folder (the cloudbackend folder should be in your Documents folder).</p>
 
 <p>Next add the appropriate EB Python folder to your PATH.</p>
@@ -347,16 +347,16 @@ your Documents folder (the cloudbackend folder should be in your Documents folde
 
 
 <p>If you have OS X Mavericks (Version 10.9) then you already have Python 2.7.5, else you
-will need to download &amp; install it.</p>
+will need to download and install it.</p>
 
-<p>Next we&rsquo;re going to create &amp; configure the <strong>cloudbackend</strong> AWS Elastic Beanstalk
+<p>Next we&rsquo;re going to create and configure the <strong>cloudbackend</strong> AWS Elastic Beanstalk
 Application Container. You basically enter &lsquo;eb init&rsquo; and then follow the prompts.</p>
 
 <ol>
 <li>You will need to enter your AWS Access Key ID and Secret Access Key, which
 can be found at the URL given after you enter &lsquo;eb init&rsquo;.</li>
 <li>Select an AWS service region. I entered &lsquo;7&rsquo; for &lsquo;Asia Pacific (Sydney)&rsquo;.</li>
-<li>Accept the default application &amp; environment names by pressing return.</li>
+<li>Accept the default application and environment names by pressing return.</li>
 <li>Enter &lsquo;8&rsquo;, for &lsquo;64bit Amazon Linux 2013.09 running Node.js&rsquo;.</li>
 <li>Enter &lsquo;1&rsquo;, for &lsquo;LoadBalanced&rsquo;.</li>
 <li>Enter &lsquo;n&rsquo;, to skip creating an &lsquo;RDS DB Instance&rsquo;.</li>
@@ -409,7 +409,7 @@ can be found at the URL given after you enter &lsquo;eb init&rsquo;.</li>
 <span class='line-number'>43</span>
 <span class='line-number'>44</span>
 </pre></td><td class='code'><pre><code class='console'><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span> eb init
-</span><span class='line'><span class="go">To get your AWS Access Key ID and Secret Access Key, </span>
+</span><span class='line'><span class="go">To get your AWS Access Key ID and Secret Access Key,</span>
 </span><span class='line'><span class="go">  visit &quot;https://aws-portal.amazon.com/gp/aws/securityCredentials&quot;.</span>
 </span><span class='line'><span class="go">Enter your AWS Access Key ID (current value is &quot;AKIAJ*****GBOHQ&quot;): [enter yours here]</span>
 </span><span class='line'><span class="go">Enter your AWS Secret Access Key (current value is &quot;MhYxu*****rJfZx&quot;): [enter yours here]</span>
@@ -424,8 +424,8 @@ can be found at the URL given after you enter &lsquo;eb init&rsquo;.</li>
 </span><span class='line'><span class="go">7) Asia Pacific (Sydney)</span>
 </span><span class='line'><span class="go">8) South America (Sao Paulo)</span>
 </span><span class='line'><span class="go">Select (1 to 8): 7</span>
-</span><span class='line'><span class="go">Enter an AWS Elastic Beanstalk application name (auto-generated value is &quot;cloudbackend&quot;): </span>
-</span><span class='line'><span class="go">Enter an AWS Elastic Beanstalk environment name (auto-generated value is &quot;cloudbackend-env&quot;): </span>
+</span><span class='line'><span class="go">Enter an AWS Elastic Beanstalk application name (auto-generated value is &quot;cloudbackend&quot;):</span>
+</span><span class='line'><span class="go">Enter an AWS Elastic Beanstalk environment name (auto-generated value is &quot;cloudbackend-env&quot;):</span>
 </span><span class='line'><span class="go">Select a solution stack.</span>
 </span><span class='line'><span class="go">Available solution stacks are:</span>
 </span><span class='line'><span class="go">1) 32bit Amazon Linux 2013.09 running PHP 5.4</span>
@@ -490,9 +490,9 @@ can be found at the URL given after you enter &lsquo;eb init&rsquo;.</li>
 </pre></td><td class='code'><pre><code class='console'><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span> eb start
 </span><span class='line'><span class="go">Starting application &quot;cloudbackend&quot;.</span>
 </span><span class='line'><span class="go">Would you like to deploy the latest Git commit to your environment? [y/n]: y</span>
-</span><span class='line'><span class="go">remote: </span>
+</span><span class='line'><span class="go">remote:</span>
 </span><span class='line'><span class="go">remote: error: Unable to deploy application version: No Environment found for EnvironmentName = &#39;cloudbackend-env&#39;.</span>
-</span><span class='line'><span class="go">remote: </span>
+</span><span class='line'><span class="go">remote:</span>
 </span><span class='line'><span class="go">To https://...:...@git.elasticbeanstalk.ap-southeast-2.amazonaws.com/v1/repos/.../commitid/.../environment/...</span>
 </span><span class='line'><span class="go"> * [new branch]      HEAD -&gt; master</span>
 </span><span class='line'>
@@ -527,7 +527,7 @@ Application is available at &ldquo;cloudbackend-env-*.elasticbeanstalk.com&rdquo
 
 <p>Now to work on that awesome mobile app!</p>
 
-<p>Lastly if you want to stop &amp; delete the environment, use the following EB command.
+<p>Lastly if you want to stop and delete the environment, use the following EB command.
 Enter &lsquo;eb stop&rsquo;, and then &lsquo;y&rsquo; to terminate the environment.</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -550,8 +550,8 @@ Enter &lsquo;eb stop&rsquo;, and then &lsquo;y&rsquo; to terminate the environme
 </span><span class='line'><span class="go">Terminate environment? [y/n]: y</span>
 </span><span class='line'><span class="go">Stopping environment &quot;cloudbackend-env&quot;. This may take a few minutes.</span>
 </span><span class='line'><span class="go">2013-12-07 09:24:44  INFO    terminateEnvironment is starting.</span>
-</span><span class='line'><span class="go">2013-12-07 09:24:57  INFO    Deleted CloudWatch alarm named: awseb-e-ib22smbwaz-stack-AWSEBCloudwatchAlarmLow-1OAGDWAQFGJTO </span>
-</span><span class='line'><span class="go">2013-12-07 09:24:57  INFO    Deleted CloudWatch alarm named: awseb-e-ib22smbwaz-stack-AWSEBCloudwatchAlarmHigh-1AAZW8L054YWY </span>
+</span><span class='line'><span class="go">2013-12-07 09:24:57  INFO    Deleted CloudWatch alarm named: awseb-e-ib22smbwaz-stack-AWSEBCloudwatchAlarmLow-1OAGDWAQFGJTO</span>
+</span><span class='line'><span class="go">2013-12-07 09:24:57  INFO    Deleted CloudWatch alarm named: awseb-e-ib22smbwaz-stack-AWSEBCloudwatchAlarmHigh-1AAZW8L054YWY</span>
 </span><span class='line'><span class="go">2013-12-07 09:25:00  INFO    Deleted Auto Scaling group policy named: arn:aws:autoscaling:ap-southeast-2:558573496878:scalingPolicy:d9a9f3df-b813-4ffe-9556-f2a7136aa69d:autoScalingGroupName/awseb-e-ib22smbwaz-stack-AWSEBAutoScalingGroup-1BTN5S4LQA5BD:policyName/awseb-e-ib22smbwaz-stack-AWSEBAutoScalingScaleUpPolicy-ZSDGPZ6KHCRQ</span>
 </span><span class='line'><span class="go">2013-12-07 09:25:00  INFO    Deleted Auto Scaling group policy named: arn:aws:autoscaling:ap-southeast-2:558573496878:scalingPolicy:5c8b171d-262b-4286-8bbd-76ff9db15845:autoScalingGroupName/awseb-e-ib22smbwaz-stack-AWSEBAutoScalingGroup-1BTN5S4LQA5BD:policyName/awseb-e-ib22smbwaz-stack-AWSEBAutoScalingScaleDownPolicy-18LWCZMRA7I4G</span>
 </span><span class='line'><span class="go">2013-12-07 09:25:03  INFO    Waiting for EC2 instances to terminate. This may take a few minutes.</span>

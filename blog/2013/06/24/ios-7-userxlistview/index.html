@@ -111,7 +111,7 @@ to build the front end part of an app idea that I&rsquo;ve &hellip;">
 <div class="entry-content"><p>I believe the best way to understand something is to get your hands dirty, so I decided
 to build the front end part of an app idea that I&rsquo;ve had for a while as an iOS 7 app.</p>
 
-<p>While using iOS 7 for the last week or so, I&rsquo;ve been thinking about the UI &amp; UX.
+<p>While using iOS 7 for the last week or so, I&rsquo;ve been thinking about the UI and UX.
 Of course, Metro (design language) has been around for a while thanks to Microsoft, but
 the Metro apps I&rsquo;ve used feel dull. iOS 7 feels surprisingly refreshing.</p>
 
@@ -120,7 +120,7 @@ the Metro apps I&rsquo;ve used feel dull. iOS 7 feels surprisingly refreshing.</
 
 <p>One of the views in the app I&rsquo;m building needs a list of <em>things</em> that the user creates &ndash;
 a typical pattern in many apps. iOS has a UITableViewController, so technically it&rsquo;s an
-easy problem to solve. In terms of the design of the UI &amp; UX it&rsquo;s a little bit more complicated.</p>
+easy problem to solve. In terms of the design of the UI and UX it&rsquo;s a little bit more complicated.</p>
 
 <p>Let me talk you through what I call the UserXListView&trade; pattern in 7 images of the
 iOS 7 app I&rsquo;ve started building.</p>
@@ -132,20 +132,20 @@ Tap me! Tap me!</p>
 
 <p><img class="fancybox center" src="/media/images/2013-06-24-ios-7-userxlistview/app-1-list-view.png" width="396" height="744" title="1. Empty List View" ></p>
 
-<h2>2. Add Item (with default Icon &amp; Colour)</h2>
+<h2>2. Add Item (with default Icon and Colour)</h2>
 
 <p>She taps +. She knows that she&rsquo;s going to create something. What&rsquo;s the first
 decision? What to name it? No. The first decision is an emotional one. What&rsquo;s this thing
 going to look like.</p>
 
-<p><img class="fancybox center" src="/media/images/2013-06-24-ios-7-userxlistview/app-2-add-item.png" width="396" height="744" title="2. Add Item (with default Icon & Colour)" ></p>
+<p><img class="fancybox center" src="/media/images/2013-06-24-ios-7-userxlistview/app-2-add-item.png" width="396" height="744" title="2. Add Item (with default Icon and Colour)" ></p>
 
 <p>Technically this is a modal segue; either Cancel and go back, or enter the required
-information &amp; Save.</p>
+information and Save.</p>
 
 <h2>3. Item Icon</h2>
 
-<p>She taps Change Icon. This is where it gets interesting. The icons are in groups &amp; are
+<p>She taps Change Icon. This is where it gets interesting. The icons are in groups and are
 all black so that they are easy for her to judge equally. In this instance there&rsquo;s only one
 group of simple icons from The Noun Project, that are visually related to the thing that
 she is creating.</p>
@@ -154,7 +154,7 @@ she is creating.</p>
 
 <p>Once again this is a modal segue; either Cancel and go back, or give the required
 information, which in this instance is selecting an icon. We use a UICollectionViewController
-that&rsquo;s dynamic. We define the icon groups &amp; icons as follows.</p>
+that&rsquo;s dynamic. We define the icon groups and icons as follows.</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -169,7 +169,7 @@ that&rsquo;s dynamic. We define the icon groups &amp; icons as follows.</p>
 
 <p>She taps the piggy bank icon (they&rsquo;re cute). Now she can personalise the icon even further
 by selecting a colour from different groups of colour palettes. She can select a colour
-from the same palette to match all her <em>things</em>, or mix &amp; match colours from different
+from the same palette to match all her <em>things</em>, or mix and match colours from different
 colour palettes. The choice is hers. If she doesn&rsquo;t like the icon in any of these colours
 she can either tap &lt; Icon, or as a nice feature of iOS 7, swipe left to right inside where
 the icons are located and the view will slide off the top to the right and she will be taken
@@ -179,7 +179,7 @@ back to the black icons.</p>
 
 <p>This time we do a push segue. We use a UICollectionViewController that&rsquo;s dynamic, and some
 Core Graphics help. In the app we only store one black piggy bank icon .png file, and at
-runtime dynamically colour each piggy bank. We define the colour groups &amp; colours as follows.</p>
+runtime dynamically colour each piggy bank. We define the colour groups and colours as follows.</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -229,13 +229,13 @@ runtime dynamically colour each piggy bank. We define the colour groups &amp; co
 </span></code></pre></td></tr></table></div></figure>
 
 
-<h2>5. Add Item (with selected Icon &amp; Colour)</h2>
+<h2>5. Add Item (with selected Icon and Colour)</h2>
 
 <p>She taps the red piggy bank in the Ocean Five colour group, and is taken back to the
 2. Add Item view, with her red piggy bank there waiting for her. She can now enter the
 other information and tap Save.</p>
 
-<p><img class="fancybox center" src="/media/images/2013-06-24-ios-7-userxlistview/app-5-add-item.png" width="396" height="744" title="5. Add Item (with selected Icon & Colour)" ></p>
+<p><img class="fancybox center" src="/media/images/2013-06-24-ios-7-userxlistview/app-5-add-item.png" width="396" height="744" title="5. Add Item (with selected Icon and Colour)" ></p>
 
 <h2>6. Item in List View</h2>
 
@@ -246,13 +246,13 @@ left to do is to add some more.</p>
 
 <h2>7. List View with Items</h2>
 
-<p>As she looks at the list of her <em>things</em>, she instantly recognises &amp; associates with each
+<p>As she looks at the list of her <em>things</em>, she instantly recognises and associates with each
 one, as it has her personal identifying touch.</p>
 
 <p><img class="fancybox center" src="/media/images/2013-06-24-ios-7-userxlistview/app-7-list-view-lots.png" width="396" height="744" title="7. List View with Items" ></p>
 
 <p>As you can see it&rsquo;s easy to give the user power over their <em>things</em> by a simple mobile
-UI &amp; UX pattern, hereby called the UserXListView&trade; pattern.</p>
+UI and UX pattern, hereby called the UserXListView&trade; pattern.</p>
 
 <h2>Storyboard</h2>
 

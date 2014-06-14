@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Apps | Peter Boni]]></title>
   <link href="http://www.peterboni.net/blog/categories/apps/atom.xml" rel="self"/>
   <link href="http://www.peterboni.net/"/>
-  <updated>2014-06-07T10:21:17+08:00</updated>
+  <updated>2014-06-14T11:49:03+08:00</updated>
   <id>http://www.peterboni.net/</id>
   <author>
     <name><![CDATA[Peter Boni]]></name>
@@ -22,7 +22,7 @@
 
 <p>Google <a href="http://googleblog.blogspot.com.au/2014/03/save-more-with-google-drive.html">recently lowered</a> the price of their monthly storage plans making it extremely cheap to have an active (not cold like Amazon S3 Glacier Storage) offsite backup of your irreplaceable memories, your photos &amp; videos.</p>
 
-<p>{% youtube EzUwVVtSrxs %}</p>
+<p><div class="embed-video-container"><iframe src="http://www.youtube.com/embed/EzUwVVtSrxs "></iframe></div></p>
 ]]></content>
   </entry>
   
@@ -36,11 +36,11 @@ For the latest information visit <a href="/photoarchive">PhotoArchive for iPhone
 
 <p>I take a lot of photos &amp; videos with my iPhone.
 It&rsquo;s always with me, so it&rsquo;s convenient, and the quality is good.
-My DSLR body &amp; lenses produce superior quality, but are usually left at home gathering dust.</p>
+My DSLR body and lenses produce superior quality, but are usually left at home gathering dust.</p>
 
 <p>When I take new photos or videos, often of my family, I worry that if something were to happen to my iPhone, those irreplaceable memories will be lost forever.</p>
 
-<p>There are many solutions for this need, for example iCloud Backup, the Dropbox app, or the Amazon Cloud Drive app, but they all have varying costs &amp; limitations.
+<p>There are many solutions for this need, for example iCloud Backup, the Dropbox app, or the Amazon Cloud Drive app, but they all have varying costs and limitations.
 I wanted a simple solution for me, and that&rsquo;s why I decided to build an app as a side project &ndash; PhotoArchive for iPhone.
 When released, PhotoArchive will be free for everyone on the App Store.</p>
 
@@ -63,7 +63,7 @@ When released, PhotoArchive will be free for everyone on the App Store.</p>
 <p>I have a Western Digital My Book NAS (Network Attached Storage) at home that is always on.
 I use it for file storage for computers on the network, and DLNA streaming to the living room TV via the PS3.</p>
 
-<p>I copy new photos &amp; videos from my &amp; my wife&rsquo;s iPhones by manually connecting them to a computer via USB, and downloading the new ones.
+<p>I copy new photos &amp; videos from my and my wife&rsquo;s iPhones by manually connecting them to a computer via USB, and downloading the new ones.
 Because it&rsquo;s a tedious manual process I don&rsquo;t do it as often as I should.</p>
 
 <p>What PhotoArchive does is copy new photos &amp; videos from your iOS device to an FTP server, over Wi-Fi.
@@ -84,7 +84,7 @@ The Western Digital My Book NAS, like most NAS, supports FTP (File Transfer Prot
 <li><p><strong>Never Deletes</strong> &ndash; Will never delete a photo or video from your home storage, or from your device.</p></li>
 <li><p><strong>Smart Archive</strong> &ndash; Remembers the previous archive, and will only upload new photos &amp; videos, so it&rsquo;s <em>FAST</em>!</p></li>
 <li><p><strong>Smart Photo View</strong> &ndash; Shows you your photos &amp; videos that are in danger of being lost forever (not archived), and the ones that are safe in the event that something happens to your device (archived).</p></li>
-<li><p><strong>Full Resolution &amp; Metadata</strong> &ndash; Uploads your photos &amp; videos in their full resolution, with all metadata &ndash; information about your photos &amp; videos, e.g. where you took them.</p></li>
+<li><p><strong>Full Resolution and Metadata</strong> &ndash; Uploads your photos &amp; videos in their full resolution, with all metadata &ndash; information about your photos &amp; videos, e.g. where you took them.</p></li>
 </ol>
 
 
@@ -99,7 +99,7 @@ The Western Digital My Book NAS, like most NAS, supports FTP (File Transfer Prot
 <p>The main view that greets the user visually shows them all photos &amp; videos on their iOS device, grouped into state &ndash; not archived, or archived.
 It first shows photos &amp; videos that are not archived (in danger of being lost forever), and then photos &amp; videos that are archived (safe).</p>
 
-<p>The user can either setup their archive destination, or start archiving if already setup &amp; there are new photos or videos.</p>
+<p>The user can either setup their archive destination, or start archiving if already setup and there are new photos or videos.</p>
 
 <p>I took inspiration from the iOS Photos app, and show photos &amp; videos as varying square sizes.</p>
 
@@ -116,8 +116,8 @@ The section header is the PhotoArchive logo on blue (this is the app icon) &ndas
 <h2>When will it be released</h2>
 
 <p>PhotoArchive is functionally complete.
-I&rsquo;m currently cleaning, polishing &amp; testing it.
-It would be great to have a few testers, so if you&rsquo;d like to test it out &amp; are willing to provide feedback, then contact me at <a href="peter.boni@gmail.com">peter.boni@gmail.com</a>.</p>
+I&rsquo;m currently cleaning, polishing and testing it.
+It would be great to have a few testers, so if you&rsquo;d like to test it out and are willing to provide feedback, then contact me at <a href="peter.boni@gmail.com">peter.boni@gmail.com</a>.</p>
 
 <h2>The future</h2>
 
@@ -133,14 +133,14 @@ That&rsquo;s just over USD$10 per month to archive 1TB (terabyte) of photos &amp
     <link href="http://www.peterboni.net/blog/2013/01/01/failmeaningfully/"/>
     <updated>2013-01-01T07:00:00+08:00</updated>
     <id>http://www.peterboni.net/blog/2013/01/01/failmeaningfully</id>
-    <content type="html"><![CDATA[<p>It was August 2010. Over 2 years ago. My beautiful daughter Abigail was 2 years old. The iPhone 4 had just come out, and the smartphone revolution was in full swing. All I needed was an idea. Somehow I found myself become part of a like minded, passionate &amp; committed team, with some of the best people I have ever had the privilege or pleasure to work with. I say somehow because I&rsquo;ve always tried to go with the flow. It just happened. Redistore was born.</p>
+    <content type="html"><![CDATA[<p>It was August 2010. Over 2 years ago. My beautiful daughter Abigail was 2 years old. The iPhone 4 had just come out, and the smartphone revolution was in full swing. All I needed was an idea. Somehow I found myself become part of a like minded, passionate and committed team, with some of the best people I have ever had the privilege or pleasure to work with. I say somehow because I&rsquo;ve always tried to go with the flow. It just happened. Redistore was born.</p>
 
-<p>{% img fancybox center /media/images/2013-01-01-failmeaningfully/website.png 569 635 Redistore Web Site %}</p>
+<p><img class="fancybox center" src="/media/images/2013-01-01-failmeaningfully/website.png" width="569" height="635" title="Redistore Web Site" ></p>
 
 <!--more-->
 
 
-<p>The idea &amp; vision was simple. Wouldn&rsquo;t it be cool if you could order &amp; pay for your coffee <em>before</em> you arrived at the store, just waltz in, bypass the queue, pick it up &amp; go. It&rsquo;s paid for so there&rsquo;s no fumbling around for change, or paying with a card which was time consuming before contactless payment, e.g. MasterCard PayPass. I thought the idea had potential. The team thought the idea had potential. People we talked to thought the idea had potential. We decided as a team to take a risk. &lsquo;<a href="http://en.wikipedia.org/wiki/Field_of_Dreams">If you build it, he will come</a>&rsquo;, we all heard the voice whisper. Others were skeptical, but not us. We built it.</p>
+<p>The idea and vision was simple. Wouldn&rsquo;t it be cool if you could order and pay for your coffee <em>before</em> you arrived at the store, just waltz in, bypass the queue, pick it up and go. It&rsquo;s paid for so there&rsquo;s no fumbling around for change, or paying with a card which was time consuming before contactless payment, e.g. MasterCard PayPass. I thought the idea had potential. The team thought the idea had potential. People we talked to thought the idea had potential. We decided as a team to take a risk. &lsquo;<a href="http://en.wikipedia.org/wiki/Field_of_Dreams">If you build it, he will come</a>&rsquo;, we all heard the voice whisper. Others were skeptical, but not us. We built it.</p>
 
 <p>2 years later, and Redistore has failed. This is what I learnt.</p>
 
@@ -148,29 +148,29 @@ That&rsquo;s just over USD$10 per month to archive 1TB (terabyte) of photos &amp
 
 <p>I can still remember how it started. The excitement of exploring the idea. Formulating it. Talking about it. Becoming a team. It felt awesome. That&rsquo;s the Hollywood beginning.</p>
 
-<p>The reality was a hard slog of trying to work two jobs. 15 to 16 hour days, 5 to 6 days a week. Rise at 6am, cycle to work &amp; be working by 7am. Leave at 4pm. Be home &amp; sorted by 5pm. Two hours to spend with my family, which I&rsquo;m guilty of not doing enough of. At work by 7pm. Work till 9pm or 10pm. Rinse &amp; repeat. And don&rsquo;t forget the weekends. You get the picture. I had no life.</p>
+<p>The reality was a hard slog of trying to work two jobs. 15 to 16 hour days, 5 to 6 days a week. Rise at 6am, cycle to work and be working by 7am. Leave at 4pm. Be home and sorted by 5pm. Two hours to spend with my family, which I&rsquo;m guilty of not doing enough of. At work by 7pm. Work till 9pm or 10pm. Rinse and repeat. And don&rsquo;t forget the weekends. You get the picture. I had no life.</p>
 
 <h2>Tech</h2>
 
-<p><em>But</em> we built something that&rsquo;s bloody cool &amp; has possibility. A fully customisable, real time online ordering system for low value, high volume consumables. Coffee stores. Take away food. The order is paid for by the customer using their Redistore account which they can &lsquo;top up&rsquo; using PayPal or a Credit Card. The store gets a verified order. It&rsquo;s in real time. There&rsquo;s no queueing. Win win.</p>
+<p><em>But</em> we built something that&rsquo;s bloody cool and has possibility. A fully customisable, real time online ordering system for low value, high volume consumables. Coffee stores. Take away food. The order is paid for by the customer using their Redistore account which they can &lsquo;top up&rsquo; using PayPal or a Credit Card. The store gets a verified order. It&rsquo;s in real time. There&rsquo;s no queueing. Win win.</p>
 
-<p>The technology &amp; platform that we built was the fun part.</p>
+<p>The technology and platform that we built was the fun part.</p>
 
-<p>The customer web client was built using Sencha ExtJS 3 and supports all major browsers. It was designed &amp; built from scratch to provide a <em>fast</em> UX (User Experience) for browsing stores &amp; ordering, unlike most classic page request &amp; response web stores. ExtJS is an amazing platform, but has a steep learning curve, and ExtJS 4 broke compatibility for ExtJS 3 apps; there is significant work required to upgrade your app.</p>
+<p>The customer web client was built using Sencha ExtJS 3 and supports all major browsers. It was designed and built from scratch to provide a <em>fast</em> UX (User Experience) for browsing stores and ordering, unlike most classic page request and response web stores. ExtJS is an amazing platform, but has a steep learning curve, and ExtJS 4 broke compatibility for ExtJS 3 apps; there is significant work required to upgrade your app.</p>
 
-<p>{% img fancybox /media/images/2013-01-01-failmeaningfully/webclient1.png 795 600 Redistore Web Site %}</p>
+<p><img class="fancybox" src="/media/images/2013-01-01-failmeaningfully/webclient1.png" width="795" height="600" title="Redistore Web Site" ></p>
 
-<p>{% img fancybox /media/images/2013-01-01-failmeaningfully/webclient2.png 795 600 Redistore Web Site %}</p>
+<p><img class="fancybox" src="/media/images/2013-01-01-failmeaningfully/webclient2.png" width="795" height="600" title="Redistore Web Site" ></p>
 
-<p>{% img fancybox /media/images/2013-01-01-failmeaningfully/webclient3.png 795 600 Redistore Web Site %}</p>
+<p><img class="fancybox" src="/media/images/2013-01-01-failmeaningfully/webclient3.png" width="795" height="600" title="Redistore Web Site" ></p>
 
 <p>The now defunct customer mobile client was built using Sencha Touch 1. The native vs. web app mobile holy war was raging, and we decided to build a web app. It was a mistake. The mobile client worked adequately on iOS, but on Android it was unusable. The tools were not ready. Facebook had not yet <a href="http://techcrunch.com/2012/09/11/mark-zuckerberg-our-biggest-mistake-with-mobile-was-betting-too-much-on-html5/">admitted their mistake</a>, nor Sencha fired their <a href="http://www.sencha.com/blog/the-making-of-fastbook-an-html5-love-story/">Fastbook</a> return. We needed a <em>great</em> customer UX, and didn&rsquo;t have it.</p>
 
-<p>{% img fancybox left /media/images/2013-01-01-failmeaningfully/iphone-app.png 320 548 Redistore iPhone App %}</p>
+<p><img class="fancybox left" src="/media/images/2013-01-01-failmeaningfully/iphone-app.png" width="320" height="548" title="Redistore iPhone App" ></p>
 
 <p>The store receiver client was also built with Sencha Touch, and performs adequately for stores on an iPod.</p>
 
-<p>The web clients communicate via Ajax to the back end action style JSON based web services developed using .NET WCF. If building using the same core technology now, we&rsquo;d seriously look at Web API &amp; RESTful services. There&rsquo;s also a ton of awesome back-end enterprise system type stuff (database, reconciliation, reporting, MI etc.), that was built by a <a href="http://en.wikipedia.org/wiki/Cylon_(Battlestar_Galactica)">Cylon</a>. Seriously. They work <em>hard</em>, I guess because they don&rsquo;t need to sleep.</p>
+<p>The web clients communicate via Ajax to the back end action style JSON based web services developed using .NET WCF. If building using the same core technology now, we&rsquo;d seriously look at Web API and RESTful services. There&rsquo;s also a ton of awesome back-end enterprise system type stuff (database, reconciliation, reporting, MI etc.), that was built by a <a href="http://en.wikipedia.org/wiki/Cylon_(Battlestar_Galactica)">Cylon</a>. Seriously. They work <em>hard</em>, I guess because they don&rsquo;t need to sleep.</p>
 
 <p>To address the <em>great</em> customer mobile UX, after go-live we spent 3 months building a native iPhone app, and 3 months building a native Android app. It was a great learning experience at the cost of 6 months of effort. Without getting into details of our approach, or religious debates, I hope that we (the industry) can move <strong>forward</strong> to <em>the web</em>. How we do that is for <a href="http://www.okito.net/post/38255553240/the-mobile-web">smart people</a> to <a href="http://lilly.tumblr.com/post/38309067913/asymmetry">work out</a>.</p>
 
@@ -180,7 +180,7 @@ That&rsquo;s just over USD$10 per month to archive 1TB (terabyte) of photos &amp
 
 <p>We tried to sell it mostly to coffee stores the old fashioned way, by approaching them, talking to them about it, showing them what it could do. Once we had a store on board we did really simple customer advertising at the store.</p>
 
-<p>Although it&rsquo;s <em>far</em> from being a runaway success, it has &amp; continues to be <em>successful</em>, in that it ticks along &amp; is used every single business day, with no issues.</p>
+<p>Although it&rsquo;s <em>far</em> from being a runaway success, it has and continues to be <em>successful</em>, in that it ticks along and is used every single business day, with no issues.</p>
 
 <p>Over 18 months in production, what are the stats?</p>
 
@@ -192,11 +192,11 @@ That&rsquo;s just over USD$10 per month to archive 1TB (terabyte) of photos &amp
 </ul>
 
 
-<p>The order percentages between web &amp; mobile are interesting. The 2 active stores are located in office buildings, and it implies customers prefer using the web client to order from their desks, before going down to pickup their order.</p>
+<p>The order percentages between web and mobile are interesting. The 2 active stores are located in office buildings, and it implies customers prefer using the web client to order from their desks, before going down to pickup their order.</p>
 
 <h2>Reflection</h2>
 
-<p>The enthusiasm &amp; commitment for the idea &amp; vision has dispersed. What it could have been didn&rsquo;t materialise, and not by lack of effort.</p>
+<p>The enthusiasm and commitment for the idea and vision has dispersed. What it could have been didn&rsquo;t materialise, and not by lack of effort.</p>
 
 <p>I don&rsquo;t think we really understood our customer, as we really just replaced phone orders. We didn&rsquo;t have an automated store onboarding process, so bringing stores on was a long complicated process. We didn&rsquo;t do marketing.</p>
 
@@ -204,7 +204,7 @@ That&rsquo;s just over USD$10 per month to archive 1TB (terabyte) of photos &amp
 
 <h2>End</h2>
 
-<p>It&rsquo;s time to move on. To take what I&rsquo;ve learnt &amp; move forward. I&rsquo;m excited about seeking new ideas &amp; projects. Exploring. Finding. Trying. I love the process of creating things. I&rsquo;ve heard the expression &lsquo;<strong>fail fast</strong>&rsquo;, but I think you should &lsquo;<strong>fail meaningfully</strong>&rsquo; at something you choose, have <a href="http://www.zurb.com/article/1131/passion-to-fail-fast">passion</a>
+<p>It&rsquo;s time to move on. To take what I&rsquo;ve learnt and move forward. I&rsquo;m excited about seeking new ideas and projects. Exploring. Finding. Trying. I love the process of creating things. I&rsquo;ve heard the expression &lsquo;<strong>fail fast</strong>&rsquo;, but I think you should &lsquo;<strong>fail meaningfully</strong>&rsquo; at something you choose, have <a href="http://www.zurb.com/article/1131/passion-to-fail-fast">passion</a>
  for, believe in, and work hard at. Learning takes quality time.</p>
 
 <p>It&rsquo;s time to move on … <em>after</em> I finish reading <a href="http://theleanstartup.com">The Lean Startup</a> by Eric Ries.</p>
@@ -214,9 +214,9 @@ That&rsquo;s just over USD$10 per month to archive 1TB (terabyte) of photos &amp
 <p>PayPal released their updated app for iOS, version 5.0.1 on <strong>September 5, 2013</strong>.
 It&rsquo;s shown below next to Redistore for iOS, which introduced store distance features in version 1.3 released on <strong>April 23, 2012</strong>. Looks like there is some similarity.</p>
 
-<p>{% img fancybox left /media/images/2013-01-01-failmeaningfully/redistore-ios.jpg 320 548 Redistore for iOS introduced store distance features in version 1.3 released on April 23, 2012 %}</p>
+<p><img class="fancybox left" src="/media/images/2013-01-01-failmeaningfully/redistore-ios.jpg" width="320" height="548" title="Redistore for iOS introduced store distance features in version 1.3 released on April 23, 2012" ></p>
 
-<p>{% img fancybox left /media/images/2013-01-01-failmeaningfully/paypal.jpg 320 548 PayPal for iOS version 5.0.1 released on September 5, 2013 %}</p>
+<p><img class="fancybox left" src="/media/images/2013-01-01-failmeaningfully/paypal.jpg" width="320" height="548" title="PayPal for iOS version 5.0.1 released on September 5, 2013" ></p>
 ]]></content>
   </entry>
   
@@ -229,11 +229,11 @@ It&rsquo;s shown below next to Redistore for iOS, which introduced store distanc
 app called Demon Hacker.</p>
 
 <p>It&rsquo;s purpose was to enable a user to patch (rather crudely, but effectively)
-PC games files &amp; their created saved game files to cheat.</p>
+PC games files and their created saved game files to cheat.</p>
 
 <p>I got more of a kick out of building the app using
 <a href="http://en.wikipedia.org/wiki/Turbo_Pascal">Turbo Pascal</a>, and giving it to my friends
-to use than I did playing &amp; cheating in the games.</p>
+to use than I did playing and cheating in the games.</p>
 
 <!--more-->
 
@@ -241,7 +241,7 @@ to use than I did playing &amp; cheating in the games.</p>
 <p>17 years is a <em>long</em> time in computer technology. In 1995 the Internet was emerging, and
 I knew that it had been put on a few FTP sites, but could I find it now?</p>
 
-<p>After a few minutes with Google I had found &amp; downloaded the ZIP file.
+<p>After a few minutes with Google I had found and downloaded the ZIP file.
 (And made sure to scan it with antivirus software).</p>
 
 <p><em>Wow!</em></p>
@@ -252,13 +252,13 @@ I knew that it had been put on a few FTP sites, but could I find it now?</p>
 to resort to setting up a VM (Virtual Machine).</p>
 
 <p>Another Google and I found <a href="http://www.dosbox.com">DOSBox</a>.
-I download &amp; opened DOSBox on Mac OS X.</p>
+I download and opened DOSBox on Mac OS X.</p>
 
 <p><em>Double wow!</em></p>
 
 <p>I now had a directory listing. Look at those dates!</p>
 
-<p>{%img fancybox /media/images/2012-09-01-demon-hacker/dir.png Demon Hacker%}</p>
+<p><img class="fancybox" src="/media/images/2012-09-01-demon-hacker/dir.png" title="Demon Hacker" ></p>
 
 <p>Check out DEMON.EXE. That&rsquo;s 29,408 bytes for the main application.
 UI (User Interface).
@@ -275,55 +275,73 @@ That&rsquo;s 29 kilobytes (KB).</p>
 <p>An app that I had created 17 years ago was running in a DOS emulator on my
 MAC OS X system.</p>
 
-<p>{%img fancybox /media/images/2012-09-01-demon-hacker/run.png Demon Hacker%}</p>
+<p><img class="fancybox" src="/media/images/2012-09-01-demon-hacker/run.png" title="Demon Hacker" ></p>
 
 <p>Here&rsquo;s the proof &ndash; the help screen. You have to admit, it&rsquo;s very helpful :)</p>
 
-<p>{%img fancybox /media/images/2012-09-01-demon-hacker/run-help.png Demon Hacker%}</p>
+<p><img class="fancybox" src="/media/images/2012-09-01-demon-hacker/run-help.png" title="Demon Hacker" ></p>
 
 <p>It even supports in that 29 KB size changing the application font to a medieval
 type font. Typical font files are MB these days.</p>
 
-<p>{%img fancybox /media/images/2012-09-01-demon-hacker/run-font.png Demon Hacker%}</p>
+<p><img class="fancybox" src="/media/images/2012-09-01-demon-hacker/run-font.png" title="Demon Hacker" ></p>
 
 <p>The great thing about Demon Hacker is that it was open.
 Extendable.
 Anyone with a PC game, a HEX editor, and some spare time could create hacks
 for games by editing the DEMON.DAT text file.</p>
 
-<p>{%codeblock%}
-{</p>
-
-<pre><code>Alone in the Dark
-</code></pre>
-
-<p>save[0..5].itd
-save??.itd
-//25700 oil for the lamp
-19856,64
-19857,64
-//25700 rifle ammo
-19866,64
-19867,64
-//25700 health points
-19882,64
-19883,64
-//25700 pistol ammo
-20024,64
-20025,64
-}
-{%endcodeblock%}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>{&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>Alone in the Dark
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>save[0..5].itd
+</span><span class='line'>save??.itd
+</span><span class='line'>//25700 oil for the lamp
+</span><span class='line'>19856,64
+</span><span class='line'>19857,64
+</span><span class='line'>//25700 rifle ammo
+</span><span class='line'>19866,64
+</span><span class='line'>19867,64
+</span><span class='line'>//25700 health points
+</span><span class='line'>19882,64
+</span><span class='line'>19883,64
+</span><span class='line'>//25700 pistol ammo
+</span><span class='line'>20024,64
+</span><span class='line'>20025,64
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>And Demon Hacker would then let anyone use that cheat.</p>
 
-<p>{%img fancybox /media/images/2012-09-01-demon-hacker/hack.png Demon Hacker%}</p>
+<p><img class="fancybox" src="/media/images/2012-09-01-demon-hacker/hack.png" title="Demon Hacker" ></p>
 
 <p>If only GitHub had existed back in 1995 the source code may not have been lost.
 If you&rsquo;re feeling nostalgic get DOSBox, your old games, and get
 <a href="http://www.github.com/peterboni/demonhacker">Demon Hacker</a>.</p>
 
 <p>This trip back down memory lane has reminded me of a few things.
-The Internet, WWW, Google &amp; technology are amazing things.
+The Internet, WWW, Google and technology are amazing things.
 Also that i&rsquo;m a hacker, and always will be.</p>
 ]]></content>
   </entry>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Running | Peter Boni]]></title>
   <link href="http://www.peterboni.net/blog/categories/running/atom.xml" rel="self"/>
   <link href="http://www.peterboni.net/"/>
-  <updated>2014-06-07T10:21:17+08:00</updated>
+  <updated>2014-06-14T11:49:03+08:00</updated>
   <id>http://www.peterboni.net/</id>
   <author>
     <name><![CDATA[Peter Boni]]></name>
@@ -86,7 +86,7 @@ I had also run 2.8 kilometers in 4 minutes, 39 seconds per kilometer.</p>
 
 <p>I also lost 12.8 kilograms.</p>
 
-<p>This year I plan to train &amp; run in the City to Surf Half Marathon, which
+<p>This year I plan to train and run in the City to Surf Half Marathon, which
 <a href="https://www.google.com/#q=half+marathon">according to Google</a> is 21.097494 kilometers.
 Very precise, thanks Google.</p>
 
@@ -100,41 +100,41 @@ I loved, and it&rsquo;s why I kept doing it. It&rsquo;s not about the numbers.</
     <link href="http://www.peterboni.net/blog/2013/10/01/ihealth-renaissance/"/>
     <updated>2013-10-01T07:00:00+08:00</updated>
     <id>http://www.peterboni.net/blog/2013/10/01/ihealth-renaissance</id>
-    <content type="html"><![CDATA[<p>{% img fancybox center /media/images/2013-10-01-ihealth-renaissance/img_1181.jpg 640 365 iHealth %}</p>
+    <content type="html"><![CDATA[<p><img class="fancybox center" src="/media/images/2013-10-01-ihealth-renaissance/img_1181.jpg" width="640" height="365" title="iHealth" ></p>
 
-<p>I have experienced a personal health renaissance over the last year. My iPhone<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> is teaching me how to change my health, both body &amp; mind. It has offered motivation when I needed it. I believe that the iHealth Renaissance is just getting started. It could do the same for you if you let it. Let me explain how.</p>
+<p>I have experienced a personal health renaissance over the last year. My iPhone<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> is teaching me how to change my health, both body and mind. It has offered motivation when I needed it. I believe that the iHealth Renaissance is just getting started. It could do the same for you if you let it. Let me explain how.</p>
 
 <!--more-->
 
 
 <p>It all started innocently enough on January 1, 2013 when I installed the first health app on my iPhone &ndash; RunKeeper, that I had heard about from a friend. I didn&rsquo;t think I was <em>that</em> unfit as I cycled regularly, and was able to do 80km rides at a decent pace. I wanted to try something different, and decided to try running as I had never been a runner. I actually didn&rsquo;t like it as I thought that I couldn&rsquo;t do it &ndash; that I wasn&rsquo;t built for it. I&rsquo;m 189 cm (6 feet 2.4 inches), and was about 98 kg. Overweight for sure, but at the time not really concerned about it. My first run was the day after, January 2 when I ran 2.55 km at a pace of 6:42 per km, on a completely flat course.</p>
 
-<p>RunKeeper gave me all sorts of rich feedback. Realtime audio feedback on my run. Visual statistics after my run &amp; of all previous runs. I could easily hear, see &amp; track my progress. The social networking that was built in took the feedback to the next level. Likes &amp; comments on my runs, as well as being able to view friends runs, combined with the leaderboard, gave me more motivation. I was really <a href="/blog/categories/running/">enjoying running</a>. I wasn&rsquo;t conscious of why I kept coming back &amp; using RunKeeper until I experienced a talk from <a href="http://drjasonfox.com/">Dr Jason Fox</a> (a &lsquo;motivation strategy &amp; design expert&rsquo;) at a technology conference later in the year.</p>
+<p>RunKeeper gave me all sorts of rich feedback. Realtime audio feedback on my run. Visual statistics after my run and of all previous runs. I could easily hear, see and track my progress. The social networking that was built in took the feedback to the next level. Likes and comments on my runs, as well as being able to view friends runs, combined with the leaderboard, gave me more motivation. I was really <a href="/blog/categories/running/">enjoying running</a>. I wasn&rsquo;t conscious of why I kept coming back and using RunKeeper until I experienced a talk from <a href="http://drjasonfox.com/">Dr Jason Fox</a> (a &lsquo;motivation strategy and design expert&rsquo;) at a technology conference later in the year.</p>
 
-<blockquote><p>RunKeeper had designed running to be inherently motivating. It reduced the latency between the effort &amp; feedback. It enhanced the visibility of, and gave me a clear sense of progress. The more visible my progress, the more motivated I became. The more I ran.</p></blockquote>
+<blockquote><p>RunKeeper had designed running to be inherently motivating. It reduced the latency between the effort and feedback. It enhanced the visibility of, and gave me a clear sense of progress. The more visible my progress, the more motivated I became. The more I ran.</p></blockquote>
 
-<p>After RunKeeper came Strava for my cycling. I think RunKeeper supported cycling as a different activity type but I knew friends using Strava for cycling. If you were around and using the Internet in the late 90s you will remember ICQ starting the IM (Instant Messaging) wars. Some friends were on RunKeeper, and some were on Strava. I was stuck with both, which really means three apps, as Strava has two &ndash; one for cycling and one for running. All this cardio meant that weights were next. Thoughts of figuring out how to do the exercises properly again, and setting up &amp; recording scheduled routines did not motivate me at all. That&rsquo;s when a friend put me on to GymGoal 2 which managed it all for me, and gave me visual help &amp; feedback.</p>
+<p>After RunKeeper came Strava for my cycling. I think RunKeeper supported cycling as a different activity type but I knew friends using Strava for cycling. If you were around and using the Internet in the late 90s you will remember ICQ starting the IM (Instant Messaging) wars. Some friends were on RunKeeper, and some were on Strava. I was stuck with both, which really means three apps, as Strava has two &ndash; one for cycling and one for running. All this cardio meant that weights were next. Thoughts of figuring out how to do the exercises properly again, and setting up and recording scheduled routines did not motivate me at all. That&rsquo;s when a friend put me on to GymGoal 2 which managed it all for me, and gave me visual help and feedback.</p>
 
-<p>With 4 fitness apps installed &amp; being used regularly next came changing what I put into my body. My wife installed &amp; started using MyNetDiary which is essentially calorie counting, with once again, plenty of feedback that gave me a sense of progress. I could visually see how many calories I was consuming against how many I should consume to meet my target weight. What it did more than that though was teach me about what I was eating. I was shocked at a few things, for example almonds &hellip; holy crap! It hasn&rsquo;t changed what I eat, as I still enjoy beer &amp; chocolate, but it has changed my behaviour. I now think about the quality &amp; quantity of what I will put into my body.</p>
+<p>With 4 fitness apps installed and being used regularly next came changing what I put into my body. My wife installed and started using MyNetDiary which is essentially calorie counting, with once again, plenty of feedback that gave me a sense of progress. I could visually see how many calories I was consuming against how many I should consume to meet my target weight. What it did more than that though was teach me about what I was eating. I was shocked at a few things, for example almonds &hellip; holy crap! It hasn&rsquo;t changed what I eat, as I still enjoy beer and chocolate, but it has changed my behaviour. I now think about the quality and quantity of what I will put into my body.</p>
 
-<p>{% img fancybox center /media/images/2013-10-01-ihealth-renaissance/img_1137.jpg 500 500 Breakfast %}</p>
+<p><img class="fancybox center" src="/media/images/2013-10-01-ihealth-renaissance/img_1137.jpg" width="500" height="500" title="Breakfast" ></p>
 
-<p>With 5 health apps installed &amp; being used regularly I started seeing changes. 8 months of running, and 1.5 months of changing the way I eat I had dropped over 8 kg in weight, and could now comfortably run 5 km at a pace of 5:30 per km, with nice steep hills thrown in.</p>
+<p>With 5 health apps installed and being used regularly I started seeing changes. 8 months of running, and 1.5 months of changing the way I eat I had dropped over 8 kg in weight, and could now comfortably run 5 km at a pace of 5:30 per km, with nice steep hills thrown in.</p>
 
-<p>There are two more health apps that I have installed &amp; started using. The first one I came across when I read an article <a href="http://well.blogs.nytimes.com/2013/05/09/the-scientific-7-minute-workout/">The Scientific 7-Minute Workout</a>. I thought that it would come in handy when I was short on time, and also as a good way to shake things up. Check out the &lsquo;7 Minute Workout &ldquo;Seven&rdquo;&rsquo; app. The last one I came across when I read a Lifehacker article <a href="http://lifehacker.com/what-happens-to-the-brain-when-you-meditate-and-how-it-1202533314">What Happens to the Brain When You Meditate (And How it Benefits You)</a>, that recommended an app created by a former Buddhist monk called <a href="http://www.getsomeheadspace.com/">Headspace</a>. Check out the app &lsquo;Headspace&rsquo;, it&rsquo;s meditation when &amp; where you have the time, which for me is on my way to work on the bus. I&rsquo;m really excited about giving meditation a go, and Headspace was built for the iHealth Renaissance.</p>
+<p>There are two more health apps that I have installed and started using. The first one I came across when I read an article <a href="http://well.blogs.nytimes.com/2013/05/09/the-scientific-7-minute-workout/">The Scientific 7-Minute Workout</a>. I thought that it would come in handy when I was short on time, and also as a good way to shake things up. Check out the &lsquo;7 Minute Workout &ldquo;Seven&rdquo;&rsquo; app. The last one I came across when I read a Lifehacker article <a href="http://lifehacker.com/what-happens-to-the-brain-when-you-meditate-and-how-it-1202533314">What Happens to the Brain When You Meditate (And How it Benefits You)</a>, that recommended an app created by a former Buddhist monk called <a href="http://www.getsomeheadspace.com/">Headspace</a>. Check out the app &lsquo;Headspace&rsquo;, it&rsquo;s meditation when and where you have the time, which for me is on my way to work on the bus. I&rsquo;m really excited about giving meditation a go, and Headspace was built for the iHealth Renaissance.</p>
 
-<p>I now have 7 health apps installed &amp; being used, which is the majority category of apps that I use on my iPhone. I haven&rsquo;t used a Nike+ Fuelband, Jawbone UP, or a Fitbit Flex, but I can see that the iHealth Renaissance is just starting, and that these are just early wearable accessory products.</p>
+<p>I now have 7 health apps installed and being used, which is the majority category of apps that I use on my iPhone. I haven&rsquo;t used a Nike+ Fuelband, Jawbone UP, or a Fitbit Flex, but I can see that the iHealth Renaissance is just starting, and that these are just early wearable accessory products.</p>
 
-<p>It&rsquo;s frustrating that I need multiple apps for the same thing, and also that I need to enter the same information into different apps. For example most of the health apps want to know my gender, age, height &amp; weight, to be able to provide me meaningful feedback. Why do I need to provide my data multiple times?</p>
+<p>It&rsquo;s frustrating that I need multiple apps for the same thing, and also that I need to enter the same information into different apps. For example most of the health apps want to know my gender, age, height and weight, to be able to provide me meaningful feedback. Why do I need to provide my data multiple times?</p>
 
-<p>It&rsquo;s interesting looking at the move Apple has made with the iPhone 5s, by introducing a motion coprocessor called the M7, which continuously measures motion data &amp; makes it available for apps. I can&rsquo;t wait for the next generation of iHealth apps &amp; wearable accessory products. I think we still need wearable accessory products as apps are tucked away nicely on your iPhone. You choose when to interact with them. We need devices that we can see that constantly motivate us. Devices that further reduce the latency between effort &amp; feedback in an effortless, visual, motivational way. I think that these devices will still be accessory products that augment the core richer connected experience that can be delivered via your iPhone.</p>
+<p>It&rsquo;s interesting looking at the move Apple has made with the iPhone 5s, by introducing a motion coprocessor called the M7, which continuously measures motion data and makes it available for apps. I can&rsquo;t wait for the next generation of iHealth apps and wearable accessory products. I think we still need wearable accessory products as apps are tucked away nicely on your iPhone. You choose when to interact with them. We need devices that we can see that constantly motivate us. Devices that further reduce the latency between effort and feedback in an effortless, visual, motivational way. I think that these devices will still be accessory products that augment the core richer connected experience that can be delivered via your iPhone.</p>
 
-<p>So the iHealth Renaissance is making good progress, but where is the iWealth Renaissance? The current batch of mobile apps from the financial services industry are primarily sales &amp; service based. Buy this product. View &amp; manage your accounts. They haven&rsquo;t started to take the next step.</p>
+<p>So the iHealth Renaissance is making good progress, but where is the iWealth Renaissance? The current batch of mobile apps from the financial services industry are primarily sales and service based. Buy this product. View and manage your accounts. They haven&rsquo;t started to take the next step.</p>
 <div class="footnotes">
 <hr/>
 <ol>
 <li id="fn:1">
-<p>I use an iPhone. I use the term iPhone in this article to mean smartphone, or what I think of as a native Internet mobile personal assistant &amp; augmentation device.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<p>I use an iPhone. I use the term iPhone in this article to mean smartphone, or what I think of as a native Internet mobile personal assistant and augmentation device.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
 </ol>
 </div>
 
@@ -146,26 +146,26 @@ I loved, and it&rsquo;s why I kept doing it. It&rsquo;s not about the numbers.</
     <link href="http://www.peterboni.net/blog/2013/09/22/design-little-things-matter/"/>
     <updated>2013-09-22T07:00:00+08:00</updated>
     <id>http://www.peterboni.net/blog/2013/09/22/design-little-things-matter</id>
-    <content type="html"><![CDATA[<p>I like running &amp; listening to music using my iPhone. Up until recently I was using Sennheiser In-Ear Headphones without a remote or microphone. The headphones caused me a few problems before I finally decided to buy new headphones, which made me think about design.</p>
+    <content type="html"><![CDATA[<p>I like running and listening to music using my iPhone. Up until recently I was using Sennheiser In-Ear Headphones without a remote or microphone. The headphones caused me a few problems before I finally decided to buy new headphones, which made me think about design.</p>
 
 <!--more-->
 
 
-<p>The first problem with my current headphones was that even though they were in-ear, they kept falling out, which was really annoying. The second problem was that I couldn&rsquo;t forward songs. Listening to a slow or uninspiring song approaching a hill is hard work. The third problem sometimes occurred with an incoming message. Fumbling to get the iPhone out of my <a href="http://www.spibelt.com.au">SPI Belt</a> &amp; read the message while running (to see if it was urgent) was difficult.</p>
+<p>The first problem with my current headphones was that even though they were in-ear, they kept falling out, which was really annoying. The second problem was that I couldn&rsquo;t forward songs. Listening to a slow or uninspiring song approaching a hill is hard work. The third problem sometimes occurred with an incoming message. Fumbling to get the iPhone out of my <a href="http://www.spibelt.com.au">SPI Belt</a> and read the message while running (to see if it was urgent) was difficult.</p>
 
-<p>I did a quick review of headphones with remote &amp; microphone in the Apple Store and purchased the Sennheiser OCX 685i In-Ear Sports Headphones.</p>
+<p>I did a quick review of headphones with remote and microphone in the Apple Store and purchased the Sennheiser OCX 685i In-Ear Sports Headphones.</p>
 
-<p>{% img fancybox center /media/images/2013-09-22-design-little-things-matter/img_2357.jpg 600 400 Sennheiser OCX 685i In-Ear Sports Headphones %}</p>
+<p><img class="fancybox center" src="/media/images/2013-09-22-design-little-things-matter/img_2357.jpg" width="600" height="400" title="Sennheiser OCX 685i In-Ear Sports Headphones" ></p>
 
-<p>The ear clip design, combined with the lightweight cord &amp; clip means that they stay secure while running. No more falling out. The remote &amp; microphone work &ndash; I have full control over music. I can also use Siri to listen to incoming messages, and dictate a reply. I can even use Siri to <a href="https://twitter.com/peterboni/status/379924494527131649">Tweet</a>. The headphones are also sweat &amp; water resistant. Nearly perfect.</p>
+<p>The ear clip design, combined with the lightweight cord and clip means that they stay secure while running. No more falling out. The remote and microphone work &ndash; I have full control over music. I can also use Siri to listen to incoming messages, and dictate a reply. I can even use Siri to <a href="https://twitter.com/peterboni/status/379924494527131649">Tweet</a>. The headphones are also sweat and water resistant. Nearly perfect.</p>
 
 <blockquote><p>The only problem I have with them is the <em>design</em> of the remote, which detracts from the overall experience of using the product.</p></blockquote>
 
 <p>Compare the design of the remote on the Sennheiser in the above picture to the remote on the Apple EarPods in the below picture.</p>
 
-<p>{% img fancybox center /media/images/2013-09-22-design-little-things-matter/img_2360.jpg 600 400 Apple EarPods with Remote and Mic %}</p>
+<p><img class="fancybox center" src="/media/images/2013-09-22-design-little-things-matter/img_2360.jpg" width="600" height="400" title="Apple EarPods with Remote and Mic" ></p>
 
-<p>Can you guess what the problem is? When I&rsquo;m running &amp; listening to music, I&rsquo;m watching the road ahead. I move my fingers to the remote near my neck, grab it, and feel for the controls. They&rsquo;re all placed together &amp; feel like they blend into each other. It feels like one button. This is the exact opposite experience with the Apple EarPods remote. On the Apple EarPods remote the clear indent in the middle means I feel immediately by touch the distinction between the 3 buttons, and hence how to activate the different functions that the 3 buttons enable.</p>
+<p>Can you guess what the problem is? When I&rsquo;m running and listening to music, I&rsquo;m watching the road ahead. I move my fingers to the remote near my neck, grab it, and feel for the controls. They&rsquo;re all placed together and feel like they blend into each other. It feels like one button. This is the exact opposite experience with the Apple EarPods remote. On the Apple EarPods remote the clear indent in the middle means I feel immediately by touch the distinction between the 3 buttons, and hence how to activate the different functions that the 3 buttons enable.</p>
 
 <p>I was reading this article today &ndash; <a href="http://www.businessweek.com/articles/2013-09-20/apple-ceo-tim-cooks-complete-interview-with-bloomberg-businessweek">Tim Cook: The Complete Interview</a>, and there are a few really good quotes from Tim Cook that I think are relevant.</p>
 
@@ -184,20 +184,20 @@ I loved, and it&rsquo;s why I kept doing it. It&rsquo;s not about the numbers.</
     <link href="http://www.peterboni.net/blog/2013/07/25/running-memory/"/>
     <updated>2013-07-25T07:00:00+08:00</updated>
     <id>http://www.peterboni.net/blog/2013/07/25/running-memory</id>
-    <content type="html"><![CDATA[<p>Liam ran, his long muscular legs pounding the pavement. There were only a few souls out that chose to brave the cold &amp; darkness of the early morning. His breathing &amp; rhythm were steady. He wasn&rsquo;t pushing himself as he settled into his run. He ran to relax &amp; be with his thoughts.</p>
+    <content type="html"><![CDATA[<p>Liam ran, his long muscular legs pounding the pavement. There were only a few souls out that chose to brave the cold and darkness of the early morning. His breathing and rhythm were steady. He wasn&rsquo;t pushing himself as he settled into his run. He ran to relax and be with his thoughts.</p>
 
 <!--more-->
 
 
 <p>&ldquo;Show dad running&rdquo; he said softly to himself between breaths. Ahead of him on the long bridge his dad appeared running. He smiled to himself. The music he was listening to changed to a different track. &ldquo;Sweet Dreams, Ministry of Sound Running Trax Winter 2011&rdquo; appeared at the top of his vision, next to more text … &ldquo;Pace 5:27/km, 20sec slower/km&rdquo;. Memories of his childhood came flooding back of them running together at the park near their home, him desperately trying to keep up with his shorter legs. Better catch the old man now he thought, I&rsquo;m slacking off! He gained on his dad and was finally running in sync with him, side by side.</p>
 
-<p>The nanotechnology in his body connected him to the vast services &amp; data available on the net and seamlessly augmented his reality, which in this case was his vision &amp; hearing. His dad had been born into a time when the world was starting to emerge from their pre-digital caves, and people started leaving digital footprints everywhere they went. He was benefiting from his dads digital footprint now. His dad loved to run, and had recorded them for his own benefit using the primitive tracking technology &amp; services of the time.</p>
+<p>The nanotechnology in his body connected him to the vast services and data available on the net and seamlessly augmented his reality, which in this case was his vision and hearing. His dad had been born into a time when the world was starting to emerge from their pre-digital caves, and people started leaving digital footprints everywhere they went. He was benefiting from his dads digital footprint now. His dad loved to run, and had recorded them for his own benefit using the primitive tracking technology and services of the time.</p>
 
-<p>This was the first time Liam had been to this city. His dad had been here before &amp; run this same route. As he ran side by side with his dad, listening to the same music he had listened to many years before he felt connected to him, in a way that would not have been possible for his dad&rsquo;s generation. This was his dad, in his prime, doing something that he now loved too, and they were doing it together at different places in time.</p>
+<p>This was the first time Liam had been to this city. His dad had been here before and run this same route. As he ran side by side with his dad, listening to the same music he had listened to many years before he felt connected to him, in a way that would not have been possible for his dad&rsquo;s generation. This was his dad, in his prime, doing something that he now loved too, and they were doing it together at different places in time.</p>
 
-<p>As he stopped at the end of the road &amp; looked out over the water, the sight of the Sydney Opera House greeted him. They both stood there, looking at the Opera House, and the Harbour Bridge to the right. He turned his head &amp; looked at the avatar of his dad, and smiled.</p>
+<p>As he stopped at the end of the road and looked out over the water, the sight of the Sydney Opera House greeted him. They both stood there, looking at the Opera House, and the Harbour Bridge to the right. He turned his head and looked at the avatar of his dad, and smiled.</p>
 
-<p>{% img fancybox center /media/images/2013-07-25-running-memory/photo-small.jpg 770 295 Photo %}
+<p><img class="fancybox center" src="/media/images/2013-07-25-running-memory/photo-small.jpg" width="770" height="295" title="Photo" >
 <a href="/media/images/2013-07-25-running-memory/photo.jpg">Photo (Original)</a></p>
 
 <p><a href="/blog/2013/03/09/glitch-in-the-matrix/">Glitch in the Matrix</a></p>
