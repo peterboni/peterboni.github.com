@@ -34,17 +34,15 @@ to build the front end part of an app idea that I&rsquo;ve &hellip;">
 <!--fancyBox-->
 <link href="/media/fancybox/jquery.fancybox.css" rel="stylesheet" type="text/css">
   
-  <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-42113178-1']);
-    _gaq.push(['_trackPageview']);
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script>
+  ga('create', 'UA-42113178-1', 'peterboni.net');
+  ga('send', 'pageview');
+</script>
 
 
 </head>
@@ -118,7 +116,7 @@ the Metro apps I&rsquo;ve used feel dull. iOS 7 feels surprisingly refreshing.</
 <!--more-->
 
 
-<p>One of the views in the app I&rsquo;m building needs a list of <em>things</em> that the user creates &ndash;
+<p>One of the views in the app I&rsquo;m building needs a list of <em>things</em> that the user creates -
 a typical pattern in many apps. iOS has a UITableViewController, so technically it&rsquo;s an
 easy problem to solve. In terms of the design of the UI and UX it&rsquo;s a little bit more complicated.</p>
 
@@ -316,7 +314,7 @@ two UICollectionViewControllers.</p>
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/dev/'>Dev</a>, <a class='category' href='/blog/categories/mobile/'>Mobile</a>
+    <a class='category' href='/blog/categories/dev/'>dev</a>, <a class='category' href='/blog/categories/mobile/'>mobile</a>
   
 </span>
 
@@ -438,7 +436,7 @@ two UICollectionViewControllers.</p>
 
 
 
-<!--fancyBox-->
+<!-- fancybox -->
 <script src="/javascripts/libs/jquery.min.js"></script>
 <script src="/media/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
 <script src="/media/fancybox/activate.js" type="text/javascript"></script>

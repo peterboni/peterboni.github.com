@@ -4,7 +4,7 @@
   <title><![CDATA[Peter Boni]]></title>
   <link href="http://www.peterboni.net/atom.xml" rel="self"/>
   <link href="http://www.peterboni.net/"/>
-  <updated>2014-06-22T08:59:21+08:00</updated>
+  <updated>2014-06-22T14:26:14+08:00</updated>
   <id>http://www.peterboni.net/</id>
   <author>
     <name><![CDATA[Peter Boni]]></name>
@@ -112,7 +112,7 @@ My DSLR body and lenses produce superior quality, but are usually left at home g
 <p>When I take new photos or videos, often of my family, I worry that if something were to happen to my iPhone, those irreplaceable memories will be lost forever.</p>
 
 <p>There are many solutions for this need, for example iCloud Backup, the Dropbox app, or the Amazon Cloud Drive app, but they all have varying costs and limitations.
-I wanted a simple solution for me, and that&rsquo;s why I decided to build an app as a side project &ndash; PhotoArchive for iPhone.
+I wanted a simple solution for me, and that&rsquo;s why I decided to build an app as a side project - PhotoArchive for iPhone.
 When released, PhotoArchive will be free for everyone on the App Store.</p>
 
 <!--more-->
@@ -140,7 +140,7 @@ Because it&rsquo;s a tedious manual process I don&rsquo;t do it as often as I sh
 <p>What PhotoArchive does is copy new photos &amp; videos from your iOS device to an FTP server, over Wi-Fi.
 The Western Digital My Book NAS, like most NAS, supports FTP (File Transfer Protocol).</p>
 
-<p>This means that when I get home I can effortlessly back up new photos &amp; videos I&rsquo;ve taken that day &ndash; no turning on computers, no USB cables etc.</p>
+<p>This means that when I get home I can effortlessly back up new photos &amp; videos I&rsquo;ve taken that day - no turning on computers, no USB cables etc.</p>
 
 <h2>What it does (marketing version)</h2>
 
@@ -149,25 +149,25 @@ The Western Digital My Book NAS, like most NAS, supports FTP (File Transfer Prot
 <blockquote><p>PhotoArchive saves your irreplaceable memories, your photos &amp; videos from your iPhone, iPad, or iPod touch to your home storage over Wi-Fi.</p></blockquote>
 
 <ol>
-<li><p><strong>Save Time</strong> &ndash; Stop manually backing up your device to iTunes. Are you still using a USB cable? Stop manually backing up your photos &amp; videos by importing them into iPhoto. You may still import them into iPhoto, but you can do it when you have time, not when you have to &ndash; your photos &amp; videos are already safe!</p></li>
-<li><p><strong>Save Money</strong> &ndash; Use iCloud Backup to back up everything except your Camera Roll, so there is no need to manually back up your device to iTunes. Turn off the Camera Roll from iCloud Backup, and stay under the 5.0 GB free limit.</p></li>
-<li><p><strong>Archives</strong> &ndash; Does not synchronise. Will not download photos or videos from your home storage to your device.</p></li>
-<li><p><strong>Never Deletes</strong> &ndash; Will never delete a photo or video from your home storage, or from your device.</p></li>
-<li><p><strong>Smart Archive</strong> &ndash; Remembers the previous archive, and will only upload new photos &amp; videos, so it&rsquo;s <em>FAST</em>!</p></li>
-<li><p><strong>Smart Photo View</strong> &ndash; Shows you your photos &amp; videos that are in danger of being lost forever (not archived), and the ones that are safe in the event that something happens to your device (archived).</p></li>
-<li><p><strong>Full Resolution and Metadata</strong> &ndash; Uploads your photos &amp; videos in their full resolution, with all metadata &ndash; information about your photos &amp; videos, e.g. where you took them.</p></li>
+<li><p><strong>Save Time</strong> - Stop manually backing up your device to iTunes. Are you still using a USB cable? Stop manually backing up your photos &amp; videos by importing them into iPhoto. You may still import them into iPhoto, but you can do it when you have time, not when you have to - your photos &amp; videos are already safe!</p></li>
+<li><p><strong>Save Money</strong> - Use iCloud Backup to back up everything except your Camera Roll, so there is no need to manually back up your device to iTunes. Turn off the Camera Roll from iCloud Backup, and stay under the 5.0 GB free limit.</p></li>
+<li><p><strong>Archives</strong> - Does not synchronise. Will not download photos or videos from your home storage to your device.</p></li>
+<li><p><strong>Never Deletes</strong> - Will never delete a photo or video from your home storage, or from your device.</p></li>
+<li><p><strong>Smart Archive</strong> - Remembers the previous archive, and will only upload new photos &amp; videos, so it&rsquo;s <em>FAST</em>!</p></li>
+<li><p><strong>Smart Photo View</strong> - Shows you your photos &amp; videos that are in danger of being lost forever (not archived), and the ones that are safe in the event that something happens to your device (archived).</p></li>
+<li><p><strong>Full Resolution and Metadata</strong> - Uploads your photos &amp; videos in their full resolution, with all metadata - information about your photos &amp; videos, e.g. where you took them.</p></li>
 </ol>
 
 
 <p>How does PhotoArchive work?</p>
 
-<p>PhotoArchive archives to your home storage &ndash; NAS (Network Attached Storage) or Mac/PC, using FTP (File Transfer Protocol). Most NAS devices already support FTP, but if you are using a Mac/PC you will need an FTP server.</p>
+<p>PhotoArchive archives to your home storage - NAS (Network Attached Storage) or Mac/PC, using FTP (File Transfer Protocol). Most NAS devices already support FTP, but if you are using a Mac/PC you will need an FTP server.</p>
 
 <p>FTP should only be used on Wi-Fi with WPA2 security, with your storage on the same network. Don&rsquo;t do it over the Internet! Be security smart.</p>
 
 <h2>Design thinking</h2>
 
-<p>The main view that greets the user visually shows them all photos &amp; videos on their iOS device, grouped into state &ndash; not archived, or archived.
+<p>The main view that greets the user visually shows them all photos &amp; videos on their iOS device, grouped into state - not archived, or archived.
 It first shows photos &amp; videos that are not archived (in danger of being lost forever), and then photos &amp; videos that are archived (safe).</p>
 
 <p>The user can either setup their archive destination, or start archiving if already setup and there are new photos or videos.</p>
@@ -177,10 +177,10 @@ It first shows photos &amp; videos that are not archived (in danger of being los
 <p>The Not Archived section photos &amp; videos are shown as large squares up to a certain number, and then get smaller.
 Large squares let you see the few photos &amp; videos that you haven&rsquo;t archived up close.
 If there&rsquo;s lots, then they are shown as small squares to give you a visual sense of how many there are.
-The section header is the PhotoArchive logo on red &ndash; danger!</p>
+The section header is the PhotoArchive logo on red - danger!</p>
 
 <p>The Archived section shows photos &amp; videos as small squares; they are safe, so you don&rsquo;t need to see what they are, just get a visual sense of how many there are.
-The section header is the PhotoArchive logo on blue (this is the app icon) &ndash; safe.</p>
+The section header is the PhotoArchive logo on blue (this is the app icon) - safe.</p>
 
 <p>The design allows both sections to appear together on the main view without much scrolling required.</p>
 
@@ -194,7 +194,7 @@ It would be great to have a few testers, so if you&rsquo;d like to test it out a
 
 <p>Since the purpose of PhotoArchive is to save your irreplaceable memories, i&rsquo;ve thought about adding support for offsite archiving to cloud storage such as Amazon S3 or Glacier.</p>
 
-<p>Amazon Glacier is attractive because of it&rsquo;s extreme lost cost &ndash; USD$0.01 per GB (gigabyte) per month.
+<p>Amazon Glacier is attractive because of it&rsquo;s extreme lost cost - USD$0.01 per GB (gigabyte) per month.
 That&rsquo;s just over USD$10 per month to archive 1TB (terabyte) of photos &amp; videos!</p>
 ]]></content>
   </entry>
@@ -219,7 +219,7 @@ I decided to see how hard it was to quickly implement on iOS with a few thoughts
 
 <p>It turns out it&rsquo;s very simple.</p>
 
-<p>Using Xcode 5.0.2, do File &ndash; New &ndash; Project &ndash; Application: Single View Application.</p>
+<p>Using Xcode 5.0.2, do File - New - Project - Application: Single View Application.</p>
 
 <p>Add a Text Field to the single <strong>View Controller</strong> in <strong>Main.storyboard</strong>. You can add
 Placeholder text to give the user a visual indication of what they should be doing
@@ -243,7 +243,7 @@ like this.</p>
 
 <p>In <strong>ViewController.m</strong>, put the following code into <strong>viewDidLoad</strong>.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -260,14 +260,14 @@ like this.</p>
 </span><span class='line'><span class="p">{</span>
 </span><span class='line'>    <span class="p">[</span><span class="n">super</span> <span class="n">viewDidLoad</span><span class="p">];</span>
 </span><span class='line'>
-</span><span class='line'>    <span class="n">CGSize</span> <span class="n">hideShowSize</span> <span class="o">=</span> <span class="p">[</span><span class="s">@&quot;SHOWX&quot;</span> <span class="nl">sizeWithAttributes:</span><span class="err">@</span><span class="p">{</span><span class="nl">NSFontAttributeName:</span><span class="p">[</span><span class="n">UIFont</span> <span class="nl">systemFontOfSize:</span><span class="mf">14.0f</span><span class="p">]}];</span>
-</span><span class='line'>    <span class="n">UIButton</span> <span class="o">*</span><span class="n">hideShow</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UIButton</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithFrame:</span><span class="n">CGRectMake</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">hideShowSize</span><span class="p">.</span><span class="n">width</span><span class="p">,</span> <span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">frame</span><span class="p">.</span><span class="n">size</span><span class="p">.</span><span class="n">height</span><span class="p">)];</span>
-</span><span class='line'>    <span class="p">[</span><span class="n">hideShow</span><span class="p">.</span><span class="n">titleLabel</span> <span class="nl">setFont:</span><span class="p">[</span><span class="n">UIFont</span> <span class="nl">systemFontOfSize:</span><span class="mf">14.0f</span><span class="p">]];</span>
-</span><span class='line'>    <span class="p">[</span><span class="n">hideShow</span> <span class="nl">setTitle:</span><span class="s">@&quot;HIDE&quot;</span> <span class="nl">forState:</span><span class="n">UIControlStateNormal</span><span class="p">];</span>
-</span><span class='line'>    <span class="p">[</span><span class="n">hideShow</span> <span class="nl">setTitleColor:</span><span class="p">[</span><span class="n">UIColor</span> <span class="n">grayColor</span><span class="p">]</span> <span class="nl">forState:</span><span class="n">UIControlStateNormal</span><span class="p">];</span>
+</span><span class='line'>    <span class="n">CGSize</span> <span class="n">hideShowSize</span> <span class="o">=</span> <span class="p">[</span><span class="s">@&quot;SHOWX&quot;</span> <span class="n">sizeWithAttributes</span><span class="o">:</span><span class="p">@{</span><span class="n">NSFontAttributeName</span><span class="o">:</span><span class="p">[</span><span class="n">UIFont</span> <span class="n">systemFontOfSize</span><span class="o">:</span><span class="mf">14.0f</span><span class="p">]}];</span>
+</span><span class='line'>    <span class="n">UIButton</span> <span class="o">*</span><span class="n">hideShow</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UIButton</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">initWithFrame</span><span class="o">:</span><span class="n">CGRectMake</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">hideShowSize</span><span class="p">.</span><span class="n">width</span><span class="p">,</span> <span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">frame</span><span class="p">.</span><span class="n">size</span><span class="p">.</span><span class="n">height</span><span class="p">)];</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">hideShow</span><span class="p">.</span><span class="n">titleLabel</span> <span class="n">setFont</span><span class="o">:</span><span class="p">[</span><span class="n">UIFont</span> <span class="n">systemFontOfSize</span><span class="o">:</span><span class="mf">14.0f</span><span class="p">]];</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">hideShow</span> <span class="n">setTitle</span><span class="o">:</span><span class="s">@&quot;HIDE&quot;</span> <span class="n">forState</span><span class="o">:</span><span class="n">UIControlStateNormal</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">hideShow</span> <span class="n">setTitleColor</span><span class="o">:</span><span class="p">[</span><span class="n">UIColor</span> <span class="n">grayColor</span><span class="p">]</span> <span class="n">forState</span><span class="o">:</span><span class="n">UIControlStateNormal</span><span class="p">];</span>
 </span><span class='line'>    <span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">rightView</span> <span class="o">=</span> <span class="n">hideShow</span><span class="p">;</span>
 </span><span class='line'>    <span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">rightViewMode</span> <span class="o">=</span> <span class="n">UITextFieldViewModeAlways</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">[</span><span class="n">hideShow</span> <span class="nl">addTarget:</span><span class="n">self</span> <span class="nl">action:</span><span class="k">@selector</span><span class="p">(</span><span class="nl">hideShow:</span><span class="p">)</span> <span class="nl">forControlEvents:</span><span class="n">UIControlEventTouchUpInside</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">hideShow</span> <span class="n">addTarget</span><span class="o">:</span><span class="n">self</span> <span class="n">action</span><span class="o">:</span><span class="k">@selector</span><span class="p">(</span><span class="n">hideShow</span><span class="o">:</span><span class="p">)</span> <span class="n">forControlEvents</span><span class="o">:</span><span class="n">UIControlEventTouchUpInside</span><span class="p">];</span>
 </span><span class='line'><span class="p">}</span>
 </span></code></pre></td></tr></table></div></figure>
 
@@ -361,7 +361,7 @@ food for an adult (based on 2,000 calories a day).</p>
 
 <p>By the end of the year I had run in the City to Surf 12 kilometers (I finished in
 1 hour, 14 minutes, 1 second), and finished the year strong with an arbitrary
-goal &ndash; run 5 kilometers every day for 5 days.
+goal - run 5 kilometers every day for 5 days.
 I had also run 2.8 kilometers in 4 minutes, 39 seconds per kilometer.</p>
 
 <p>I also lost 12.8 kilograms.</p>
@@ -380,7 +380,7 @@ I loved, and it&rsquo;s why I kept doing it. It&rsquo;s not about the numbers.</
     <link href="http://www.peterboni.net/blog/2013/12/07/a-cloud-backend-using-nodejs-on-aws/"/>
     <updated>2013-12-07T07:00:00+08:00</updated>
     <id>http://www.peterboni.net/blog/2013/12/07/a-cloud-backend-using-nodejs-on-aws</id>
-    <content type="html"><![CDATA[<p>What?! You&rsquo;re building an awesome mobile app, like this one &ndash;
+    <content type="html"><![CDATA[<p>What?! You&rsquo;re building an awesome mobile app, like this one -
 <a href="http://www.peterboni.net/blog/2013/06/29/ios-7-dynamic-type/">iOS 7 Dynamic Type</a>, and <a href="http://www.peterboni.net/blog/2013/06/24/ios-7-userxlistview/">iOS 7 UserXListView</a>,
 and get to the point where you need a <em>backend</em>.
 Oh no! Your complexity just increased exponentially.</p>
@@ -423,7 +423,7 @@ of reusable components. There are currently over 50 <em>thousand</em>, with over
 </ol>
 
 
-<p>The goal is to build a cloud backend &ndash; expose a RESTful web API that supports OAuth 2.0, with a database.
+<p>The goal is to build a cloud backend - expose a RESTful web API that supports OAuth 2.0, with a database.
 This blog post should serve as the foundation to start you on that journey.</p>
 
 <p>We will be using OS X Mavericks (Version 10.9), Terminal, and <a href="http://www.barebones.com/products/textwrangler/">TextWrangler</a>
@@ -550,7 +550,7 @@ JSON data object.</p>
 <h2>AWS</h2>
 
 <p>With <a href="http://aws.amazon.com">AWS</a> (Amazon Web Services) we can easily deploy our backend to the cloud while
-still keeping flexibility and control &ndash; things that a BaaS takes away by abstracting the complexity.</p>
+still keeping flexibility and control - things that a BaaS takes away by abstracting the complexity.</p>
 
 <p>First sign up for the very generous <a href="http://aws.amazon.com/free/">AWS Free Usage Tier</a>.
 This simple tutorial should not result in charges to your account.</p>
@@ -560,8 +560,8 @@ which is an AWS <em>Application Container</em>. The <a href="http://docs.aws.ama
 explains what Elastic Beanstalk is.</p>
 
 <ol>
-<li>You deploy your application to EB and it gets a unique URL &ndash; <a href="http://myapp.elasticbeanstalk.com">http://myapp.elasticbeanstalk.com</a></li>
-<li>An Auto Scaling Group is created with at least 1 <a href="http://aws.amazon.com/ec2/">EC2</a> Instance (basically a VM &ndash; Virtual Machine).</li>
+<li>You deploy your application to EB and it gets a unique URL - <a href="http://myapp.elasticbeanstalk.com">http://myapp.elasticbeanstalk.com</a></li>
+<li>An Auto Scaling Group is created with at least 1 <a href="http://aws.amazon.com/ec2/">EC2</a> Instance (basically a VM - Virtual Machine).</li>
 <li>Traffic to your application URL first goes through the ELB (Elastic Load Balancer), and then to an EC2 Instance.</li>
 </ol>
 
@@ -836,7 +836,7 @@ Enter &lsquo;eb stop&rsquo;, and then &lsquo;y&rsquo; to terminate the environme
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>If you get stuck, you can always try checking out the Amazon documentation &ndash;
+<p>If you get stuck, you can always try checking out the Amazon documentation -
 <a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_nodejs_express.html">Deploying an Express Application to AWS Elastic Beanstalk</a>.</p>
 
 <p>I may cover topics like adding a custom domain name, SSL, OAuth 2.0 support, a
@@ -858,9 +858,9 @@ database, or web pages to your cloud backend in future posts if there is interes
 
 <p>The incoming message simply read &lsquo;you got 10 minutes for a chat tonight ?&rsquo;. Immediately I smiled as the message was all lowercase. To me it&rsquo;s kind of like people on LinkedIn using all lowercase for their <em>name</em>. Yes, they do exist.</p>
 
-<p>I replied asking if it could wait until tomorrow. The reply was one word, all lowercase &ndash; &lsquo;can&rsquo;. At this point I was amused enough to make fun of him. I replied &lsquo;Like I said &hellip; war-era Centurion model Cylon&rsquo;. The reply came back, once again one word, all lowercase &ndash; &lsquo;efficiency&rsquo;.</p>
+<p>I replied asking if it could wait until tomorrow. The reply was one word, all lowercase - &lsquo;can&rsquo;. At this point I was amused enough to make fun of him. I replied &lsquo;Like I said &hellip; war-era Centurion model Cylon&rsquo;. The reply came back, once again one word, all lowercase - &lsquo;efficiency&rsquo;.</p>
 
-<p>I thought about this for a moment. We were communicating but the replies weren&rsquo;t what I expected, i.e. a few well constructed words or sentences. I shot back &lsquo;Where&rsquo;s the passion or love in efficiency?&rsquo;. The reply came and I laughed out loud &ndash; &lsquo;it&rsquo;s in there cylon style&rsquo;.</p>
+<p>I thought about this for a moment. We were communicating but the replies weren&rsquo;t what I expected, i.e. a few well constructed words or sentences. I shot back &lsquo;Where&rsquo;s the passion or love in efficiency?&rsquo;. The reply came and I laughed out loud - &lsquo;it&rsquo;s in there cylon style&rsquo;.</p>
 
 <p>Touché Cylon.</p>
 
@@ -880,13 +880,13 @@ database, or web pages to your cloud backend in future posts if there is interes
 <!--more-->
 
 
-<p>It all started innocently enough on January 1, 2013 when I installed the first health app on my iPhone &ndash; RunKeeper, that I had heard about from a friend. I didn&rsquo;t think I was <em>that</em> unfit as I cycled regularly, and was able to do 80km rides at a decent pace. I wanted to try something different, and decided to try running as I had never been a runner. I actually didn&rsquo;t like it as I thought that I couldn&rsquo;t do it &ndash; that I wasn&rsquo;t built for it. I&rsquo;m 189 cm (6 feet 2.4 inches), and was about 98 kg. Overweight for sure, but at the time not really concerned about it. My first run was the day after, January 2 when I ran 2.55 km at a pace of 6:42 per km, on a completely flat course.</p>
+<p>It all started innocently enough on January 1, 2013 when I installed the first health app on my iPhone - RunKeeper, that I had heard about from a friend. I didn&rsquo;t think I was <em>that</em> unfit as I cycled regularly, and was able to do 80km rides at a decent pace. I wanted to try something different, and decided to try running as I had never been a runner. I actually didn&rsquo;t like it as I thought that I couldn&rsquo;t do it - that I wasn&rsquo;t built for it. I&rsquo;m 189 cm (6 feet 2.4 inches), and was about 98 kg. Overweight for sure, but at the time not really concerned about it. My first run was the day after, January 2 when I ran 2.55 km at a pace of 6:42 per km, on a completely flat course.</p>
 
 <p>RunKeeper gave me all sorts of rich feedback. Realtime audio feedback on my run. Visual statistics after my run and of all previous runs. I could easily hear, see and track my progress. The social networking that was built in took the feedback to the next level. Likes and comments on my runs, as well as being able to view friends runs, combined with the leaderboard, gave me more motivation. I was really <a href="http://www.peterboni.net/blog/categories/running/">enjoying running</a>. I wasn&rsquo;t conscious of why I kept coming back and using RunKeeper until I experienced a talk from <a href="http://drjasonfox.com/">Dr Jason Fox</a> (a &lsquo;motivation strategy and design expert&rsquo;) at a technology conference later in the year.</p>
 
 <blockquote><p>RunKeeper had designed running to be inherently motivating. It reduced the latency between the effort and feedback. It enhanced the visibility of, and gave me a clear sense of progress. The more visible my progress, the more motivated I became. The more I ran.</p></blockquote>
 
-<p>After RunKeeper came Strava for my cycling. I think RunKeeper supported cycling as a different activity type but I knew friends using Strava for cycling. If you were around and using the Internet in the late 90s you will remember ICQ starting the IM (Instant Messaging) wars. Some friends were on RunKeeper, and some were on Strava. I was stuck with both, which really means three apps, as Strava has two &ndash; one for cycling and one for running. All this cardio meant that weights were next. Thoughts of figuring out how to do the exercises properly again, and setting up and recording scheduled routines did not motivate me at all. That&rsquo;s when a friend put me on to GymGoal 2 which managed it all for me, and gave me visual help and feedback.</p>
+<p>After RunKeeper came Strava for my cycling. I think RunKeeper supported cycling as a different activity type but I knew friends using Strava for cycling. If you were around and using the Internet in the late 90s you will remember ICQ starting the IM (Instant Messaging) wars. Some friends were on RunKeeper, and some were on Strava. I was stuck with both, which really means three apps, as Strava has two - one for cycling and one for running. All this cardio meant that weights were next. Thoughts of figuring out how to do the exercises properly again, and setting up and recording scheduled routines did not motivate me at all. That&rsquo;s when a friend put me on to GymGoal 2 which managed it all for me, and gave me visual help and feedback.</p>
 
 <p>With 4 fitness apps installed and being used regularly next came changing what I put into my body. My wife installed and started using MyNetDiary which is essentially calorie counting, with once again, plenty of feedback that gave me a sense of progress. I could visually see how many calories I was consuming against how many I should consume to meet my target weight. What it did more than that though was teach me about what I was eating. I was shocked at a few things, for example almonds &hellip; holy crap! It hasn&rsquo;t changed what I eat, as I still enjoy beer and chocolate, but it has changed my behaviour. I now think about the quality and quantity of what I will put into my body.</p>
 
@@ -930,7 +930,7 @@ database, or web pages to your cloud backend in future posts if there is interes
 
 <p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-09-22-design-little-things-matter/img_2357.jpg" width="600" height="400" title="Sennheiser OCX 685i In-Ear Sports Headphones" ></p>
 
-<p>The ear clip design, combined with the lightweight cord and clip means that they stay secure while running. No more falling out. The remote and microphone work &ndash; I have full control over music. I can also use Siri to listen to incoming messages, and dictate a reply. I can even use Siri to <a href="https://twitter.com/peterboni/status/379924494527131649">Tweet</a>. The headphones are also sweat and water resistant. Nearly perfect.</p>
+<p>The ear clip design, combined with the lightweight cord and clip means that they stay secure while running. No more falling out. The remote and microphone work - I have full control over music. I can also use Siri to listen to incoming messages, and dictate a reply. I can even use Siri to <a href="https://twitter.com/peterboni/status/379924494527131649">Tweet</a>. The headphones are also sweat and water resistant. Nearly perfect.</p>
 
 <blockquote><p>The only problem I have with them is the <em>design</em> of the remote, which detracts from the overall experience of using the product.</p></blockquote>
 
@@ -940,7 +940,7 @@ database, or web pages to your cloud backend in future posts if there is interes
 
 <p>Can you guess what the problem is? When I&rsquo;m running and listening to music, I&rsquo;m watching the road ahead. I move my fingers to the remote near my neck, grab it, and feel for the controls. They&rsquo;re all placed together and feel like they blend into each other. It feels like one button. This is the exact opposite experience with the Apple EarPods remote. On the Apple EarPods remote the clear indent in the middle means I feel immediately by touch the distinction between the 3 buttons, and hence how to activate the different functions that the 3 buttons enable.</p>
 
-<p>I was reading this article today &ndash; <a href="http://www.businessweek.com/articles/2013-09-20/apple-ceo-tim-cooks-complete-interview-with-bloomberg-businessweek">Tim Cook: The Complete Interview</a>, and there are a few really good quotes from Tim Cook that I think are relevant.</p>
+<p>I was reading this article today - <a href="http://www.businessweek.com/articles/2013-09-20/apple-ceo-tim-cooks-complete-interview-with-bloomberg-businessweek">Tim Cook: The Complete Interview</a>, and there are a few really good quotes from Tim Cook that I think are relevant.</p>
 
 <blockquote><p>&lsquo;We’re a product company, and so the products show the values of a company. They speak to innovation. They speak to caring about every detail. They’re a reminder of how incredibly important experience is &hellip; every detail has been thought through. The experience is an “Aha” moment.&rsquo;</p></blockquote>
 
@@ -948,7 +948,7 @@ database, or web pages to your cloud backend in future posts if there is interes
 
 <blockquote><p>&lsquo;Nobody worries about buttons and finishes. Nobody really worries about the experience, and we do. We’re really proud that we do.&rsquo;</p></blockquote>
 
-<p>Design is important, and only going to become more so &ndash; <a href="http://www.fastcodesign.com/3017485/the-3-future-waves-in-design-and-how-to-ride-them">The 3 Future Waves In Design, And How To Ride Them</a>.</p>
+<p>Design is important, and only going to become more so - <a href="http://www.fastcodesign.com/3017485/the-3-future-waves-in-design-and-how-to-ride-them">The 3 Future Waves In Design, And How To Ride Them</a>.</p>
 ]]></content>
   </entry>
   
@@ -1059,7 +1059,7 @@ money value is formatting itself in front of their eyes.</p>
 
 <p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-07-04-ios-formatted-currency-input/4.png" width="396" height="744" title="Tap 3, Changes to $1.23" ></p>
 
-<p>5. The user taps some more numbers &ndash; 4, 5, and then 6. The display value changes to $1,234.56</p>
+<p>5. The user taps some more numbers - 4, 5, and then 6. The display value changes to $1,234.56</p>
 
 <p>We have a comma! The money value is formatted.</p>
 
@@ -1088,7 +1088,7 @@ didn&rsquo;t trap the paste and format the value before updating the display val
 
 <h2>The Code</h2>
 
-<p>Go get it &ndash; <a href="https://github.com/peterboni/FormattedCurrencyInput">FormattedCurrencyInput on GitHub</a>.<br/>
+<p>Go get it - <a href="https://github.com/peterboni/FormattedCurrencyInput">FormattedCurrencyInput on GitHub</a>.<br/>
 Fork it, or submit a Pull Request, and let&rsquo;s make it better for others together!</p>
 ]]></content>
   </entry>
@@ -1112,7 +1112,7 @@ size. It looks <strong>stunning</strong>, but there&rsquo;s work to make your ap
 <h2>Default Size</h2>
 
 <p>Here&rsquo;s what <a href="http://www.peterboni.net/blog/2013/06/24/ios-7-userxlistview/">UserXListView</a> looks like with the Text Size
-(Settings &ndash; General &ndash; Text Size) set to the default size in the <em>iPhone Retina (3.5-inch)</em>
+(Settings - General - Text Size) set to the default size in the <em>iPhone Retina (3.5-inch)</em>
 iOS Simulator.</p>
 
 <p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-06-29-ios-7-dynamic-type/1-text-size-normal.png" width="500" height="713" title="Text Size Default" ></p>
@@ -1150,7 +1150,7 @@ Layout Constraints, which are very powerful.</p>
 
 <p><img class="fancybox center" src="http://www.peterboni.net/media/images/2013-06-29-ios-7-dynamic-type/7-userxlistview-cell-layout.png" width="381" height="674" title="UserXListView Cell Layout" ></p>
 
-<p>iOS 7 has defined Text Styles &ndash; Body, Caption 1, Caption 2, Footnote, Headline 1,
+<p>iOS 7 has defined Text Styles - Body, Caption 1, Caption 2, Footnote, Headline 1,
 Headline 2, Subhead 1, and Subhead 2. We assign a Text Style to each label in the cell
 layout via the attribute inspector as shown below.</p>
 
@@ -1276,7 +1276,7 @@ the Metro apps I&rsquo;ve used feel dull. iOS 7 feels surprisingly refreshing.</
 <!--more-->
 
 
-<p>One of the views in the app I&rsquo;m building needs a list of <em>things</em> that the user creates &ndash;
+<p>One of the views in the app I&rsquo;m building needs a list of <em>things</em> that the user creates -
 a typical pattern in many apps. iOS has a UITableViewController, so technically it&rsquo;s an
 easy problem to solve. In terms of the design of the UI and UX it&rsquo;s a little bit more complicated.</p>
 
@@ -1482,11 +1482,11 @@ two UICollectionViewControllers.</p>
 
 <p>There&rsquo;s an obvious and defined order to it all. You know where you sit. You know your place, because its there, day after day. It doesn&rsquo;t move, even though your work and the people who you work with does. You are the master of your own domain. It contains your stuff, your possessions. It has your personal touch. Outside battles and war rage, but inside your domain its peaceful. You have focus because of consistency.</p>
 
-<p>Some companies have non traditional work environments. One style is ABW &ndash; Activity Based Working. When you come into work, you don&rsquo;t have an assigned desk. You have a locker like you did in school that contains your work tools and minimal possessions. Your first task for the day is to find a desk. This is more complicated than it sounds. What time did you get in? What activity are you doing today?</p>
+<p>Some companies have non traditional work environments. One style is ABW - Activity Based Working. When you come into work, you don&rsquo;t have an assigned desk. You have a locker like you did in school that contains your work tools and minimal possessions. Your first task for the day is to find a desk. This is more complicated than it sounds. What time did you get in? What activity are you doing today?</p>
 
 <p>Teams migrate in packs. One lone wolf can disrupt the established base of a team, and set them on a random migration path, which in turn has a ripple effect in the office ecosystem across a floor, and into other floors. Overt (mostly silent) psychological wars are fought over areas by teams posturing, and positioning of physical objects like whiteboards, agile card walls, posters, or pictures. Some teams are firmly entrenched, and won&rsquo;t be moved, even by the occasional interloper.</p>
 
-<p>Once you select a desk, if you don&rsquo;t immediately clean it, you&rsquo;re touching potentially multiple people&rsquo;s germs all over the desk, keyboard, mouse and phone, and then yourself &ndash; your face, your food, and other people. This all takes time that&rsquo;s not spent working, which can be frustrating. Sometimes you think &ldquo;I sat here yesterday. Maybe I don&rsquo;t need to clean everything today.&rdquo; As you sit there in this foreign, sparse, sterile, non personal environment, the people around you may or may not be different from yesterday. It depends what the people who come in after you do. Where will they go when they come in? What complex logic (or not for that matter) will they follow to select their desk?</p>
+<p>Once you select a desk, if you don&rsquo;t immediately clean it, you&rsquo;re touching potentially multiple people&rsquo;s germs all over the desk, keyboard, mouse and phone, and then yourself - your face, your food, and other people. This all takes time that&rsquo;s not spent working, which can be frustrating. Sometimes you think &ldquo;I sat here yesterday. Maybe I don&rsquo;t need to clean everything today.&rdquo; As you sit there in this foreign, sparse, sterile, non personal environment, the people around you may or may not be different from yesterday. It depends what the people who come in after you do. Where will they go when they come in? What complex logic (or not for that matter) will they follow to select their desk?</p>
 
 <p>The environment is mostly not peaceful, or conducive to solitary productive thinking work. There&rsquo;s more noise. People are more chatty. It&rsquo;s harder to concentrate for lengthy periods at a time, even in so called designated quiet work styled areas. It&rsquo;s exhausting.</p>
 
@@ -1518,7 +1518,7 @@ two UICollectionViewControllers.</p>
 
 <p>A few more days passed, and it was the end of the first week. The feeling of strangeness was still there, but so too was the feeling of being relaxed at my core. I resolved to fight like hell to keep it. I started to change my habits. I made time for breakfast in the morning. I resolved not to rush. I made time for exercise; riding, running, walking and started weights again after many years. I made time for my family. I made time for meditation. I&rsquo;ve made time for thinking, writing and doing. There&rsquo;s only so many hours in a day, so I stopped doing things that didn&rsquo;t add value, and just added noise to my life. It&rsquo;s a liberating feeling.</p>
 
-<p>It&rsquo;s affected me in other ways too. I had one of my best runs in my first week back at work. Relaxed. Smooth. Good pace and rhythm. But still competitive. I still increased my pace, clawing at the road, gasping for breath for the last couple hundred metres. A neighbour would have seen this person run up the road, collapse on the lawn, gasping for breath, scrambling at his iPhone to press finish on Strava. As I lay there on the lawn, the beats from the earbuds combining with the pounding of my ears, sweat pouring off my face and down my neck, the wind hitting me, I felt alive. I felt great. It&rsquo;s reflected in my edited Strava Name for the run &ndash; &ldquo;BOOM FEEL MY RYTHM STICK BOUNCE !&rdquo;.</p>
+<p>It&rsquo;s affected me in other ways too. I had one of my best runs in my first week back at work. Relaxed. Smooth. Good pace and rhythm. But still competitive. I still increased my pace, clawing at the road, gasping for breath for the last couple hundred metres. A neighbour would have seen this person run up the road, collapse on the lawn, gasping for breath, scrambling at his iPhone to press finish on Strava. As I lay there on the lawn, the beats from the earbuds combining with the pounding of my ears, sweat pouring off my face and down my neck, the wind hitting me, I felt alive. I felt great. It&rsquo;s reflected in my edited Strava Name for the run - &ldquo;BOOM FEEL MY RYTHM STICK BOUNCE !&rdquo;.</p>
 
 <p><a href="http://vimeo.com/65576562">This Is Water</a></p>
 ]]></content>
@@ -1542,7 +1542,7 @@ two UICollectionViewControllers.</p>
 
 <blockquote><p>To me rapid development meant quickly building working application software that fulfilled a need with simple, powerful tools. It meant building and joining together the parts in an easily learned, understood, and consistent way that supported change.</p></blockquote>
 
-<p>Where did I find myself after a few experiences of rapid application development? I found myself in the distinctly non-rapid world of enterprise systems development. There was titanic Sun, IBM, Oracle and Microsoft technologies. I found myself submerged in Sun Java, J2SE, J2EE, IBM WebSphere, Oracle Database, and Microsoft .NET and Servers. Within each one I used a dizzying array of technologies &ndash; to use an abstract term to describe the things you could use and the ways you could use them. There were plenty of acronyms that made you feel accomplished if you knew what they stood for, even if you didn&rsquo;t know what they did.</p>
+<p>Where did I find myself after a few experiences of rapid application development? I found myself in the distinctly non-rapid world of enterprise systems development. There was titanic Sun, IBM, Oracle and Microsoft technologies. I found myself submerged in Sun Java, J2SE, J2EE, IBM WebSphere, Oracle Database, and Microsoft .NET and Servers. Within each one I used a dizzying array of technologies - to use an abstract term to describe the things you could use and the ways you could use them. There were plenty of acronyms that made you feel accomplished if you knew what they stood for, even if you didn&rsquo;t know what they did.</p>
 
 <p>My view of web application architecture had exploded from a few technologies to many, many layers of them. ColdFusion was replaced by an astoundingly complex maze of choices. Want to display a database field on the screen? Oh, not so quick Mr Simple Developer. We need to do it in a modern, best practice, scalable way. I did not feel productive.</p>
 

@@ -33,17 +33,15 @@
 <!--fancyBox-->
 <link href="/media/fancybox/jquery.fancybox.css" rel="stylesheet" type="text/css">
   
-  <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-42113178-1']);
-    _gaq.push(['_trackPageview']);
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script>
+  ga('create', 'UA-42113178-1', 'peterboni.net');
+  ga('send', 'pageview');
+</script>
 
 
 </head>
@@ -247,7 +245,7 @@ My DSLR body and lenses produce superior quality, but are usually left at home g
 <p>When I take new photos or videos, often of my family, I worry that if something were to happen to my iPhone, those irreplaceable memories will be lost forever.</p>
 
 <p>There are many solutions for this need, for example iCloud Backup, the Dropbox app, or the Amazon Cloud Drive app, but they all have varying costs and limitations.
-I wanted a simple solution for me, and that&rsquo;s why I decided to build an app as a side project &ndash; PhotoArchive for iPhone.
+I wanted a simple solution for me, and that&rsquo;s why I decided to build an app as a side project - PhotoArchive for iPhone.
 When released, PhotoArchive will be free for everyone on the App Store.</p>
 
 </div>
@@ -384,7 +382,7 @@ food for an adult (based on 2,000 calories a day).</p>
   </header>
 
 
-  <div class="entry-content"><p>What?! You&rsquo;re building an awesome mobile app, like this one &ndash;
+  <div class="entry-content"><p>What?! You&rsquo;re building an awesome mobile app, like this one -
 <a href="/blog/2013/06/29/ios-7-dynamic-type/">iOS 7 Dynamic Type</a>, and <a href="/blog/2013/06/24/ios-7-userxlistview/">iOS 7 UserXListView</a>,
 and get to the point where you need a <em>backend</em>.
 Oh no! Your complexity just increased exponentially.</p>
@@ -537,7 +535,7 @@ Let&rsquo;s get started.</p>
   
   <div class="pagination">
     
-      <a class="prev" href="/blog/page/2/">&larr; Older</a>
+      <a class="prev" href="/posts/2">&larr; Older</a>
     
     <a href="/blog/archives">Blog Archives</a>
     
@@ -631,7 +629,7 @@ Let&rsquo;s get started.</p>
 
 
 
-<!--fancyBox-->
+<!-- fancybox -->
 <script src="/javascripts/libs/jquery.min.js"></script>
 <script src="/media/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
 <script src="/media/fancybox/activate.js" type="text/javascript"></script>

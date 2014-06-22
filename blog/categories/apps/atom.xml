@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Apps | Peter Boni]]></title>
+  <title><![CDATA[Category: apps | Peter Boni]]></title>
   <link href="http://www.peterboni.net/blog/categories/apps/atom.xml" rel="self"/>
   <link href="http://www.peterboni.net/"/>
-  <updated>2014-06-22T08:59:21+08:00</updated>
+  <updated>2014-06-22T14:26:14+08:00</updated>
   <id>http://www.peterboni.net/</id>
   <author>
     <name><![CDATA[Peter Boni]]></name>
@@ -41,7 +41,7 @@ My DSLR body and lenses produce superior quality, but are usually left at home g
 <p>When I take new photos or videos, often of my family, I worry that if something were to happen to my iPhone, those irreplaceable memories will be lost forever.</p>
 
 <p>There are many solutions for this need, for example iCloud Backup, the Dropbox app, or the Amazon Cloud Drive app, but they all have varying costs and limitations.
-I wanted a simple solution for me, and that&rsquo;s why I decided to build an app as a side project &ndash; PhotoArchive for iPhone.
+I wanted a simple solution for me, and that&rsquo;s why I decided to build an app as a side project - PhotoArchive for iPhone.
 When released, PhotoArchive will be free for everyone on the App Store.</p>
 
 <!--more-->
@@ -69,7 +69,7 @@ Because it&rsquo;s a tedious manual process I don&rsquo;t do it as often as I sh
 <p>What PhotoArchive does is copy new photos &amp; videos from your iOS device to an FTP server, over Wi-Fi.
 The Western Digital My Book NAS, like most NAS, supports FTP (File Transfer Protocol).</p>
 
-<p>This means that when I get home I can effortlessly back up new photos &amp; videos I&rsquo;ve taken that day &ndash; no turning on computers, no USB cables etc.</p>
+<p>This means that when I get home I can effortlessly back up new photos &amp; videos I&rsquo;ve taken that day - no turning on computers, no USB cables etc.</p>
 
 <h2>What it does (marketing version)</h2>
 
@@ -78,25 +78,25 @@ The Western Digital My Book NAS, like most NAS, supports FTP (File Transfer Prot
 <blockquote><p>PhotoArchive saves your irreplaceable memories, your photos &amp; videos from your iPhone, iPad, or iPod touch to your home storage over Wi-Fi.</p></blockquote>
 
 <ol>
-<li><p><strong>Save Time</strong> &ndash; Stop manually backing up your device to iTunes. Are you still using a USB cable? Stop manually backing up your photos &amp; videos by importing them into iPhoto. You may still import them into iPhoto, but you can do it when you have time, not when you have to &ndash; your photos &amp; videos are already safe!</p></li>
-<li><p><strong>Save Money</strong> &ndash; Use iCloud Backup to back up everything except your Camera Roll, so there is no need to manually back up your device to iTunes. Turn off the Camera Roll from iCloud Backup, and stay under the 5.0 GB free limit.</p></li>
-<li><p><strong>Archives</strong> &ndash; Does not synchronise. Will not download photos or videos from your home storage to your device.</p></li>
-<li><p><strong>Never Deletes</strong> &ndash; Will never delete a photo or video from your home storage, or from your device.</p></li>
-<li><p><strong>Smart Archive</strong> &ndash; Remembers the previous archive, and will only upload new photos &amp; videos, so it&rsquo;s <em>FAST</em>!</p></li>
-<li><p><strong>Smart Photo View</strong> &ndash; Shows you your photos &amp; videos that are in danger of being lost forever (not archived), and the ones that are safe in the event that something happens to your device (archived).</p></li>
-<li><p><strong>Full Resolution and Metadata</strong> &ndash; Uploads your photos &amp; videos in their full resolution, with all metadata &ndash; information about your photos &amp; videos, e.g. where you took them.</p></li>
+<li><p><strong>Save Time</strong> - Stop manually backing up your device to iTunes. Are you still using a USB cable? Stop manually backing up your photos &amp; videos by importing them into iPhoto. You may still import them into iPhoto, but you can do it when you have time, not when you have to - your photos &amp; videos are already safe!</p></li>
+<li><p><strong>Save Money</strong> - Use iCloud Backup to back up everything except your Camera Roll, so there is no need to manually back up your device to iTunes. Turn off the Camera Roll from iCloud Backup, and stay under the 5.0 GB free limit.</p></li>
+<li><p><strong>Archives</strong> - Does not synchronise. Will not download photos or videos from your home storage to your device.</p></li>
+<li><p><strong>Never Deletes</strong> - Will never delete a photo or video from your home storage, or from your device.</p></li>
+<li><p><strong>Smart Archive</strong> - Remembers the previous archive, and will only upload new photos &amp; videos, so it&rsquo;s <em>FAST</em>!</p></li>
+<li><p><strong>Smart Photo View</strong> - Shows you your photos &amp; videos that are in danger of being lost forever (not archived), and the ones that are safe in the event that something happens to your device (archived).</p></li>
+<li><p><strong>Full Resolution and Metadata</strong> - Uploads your photos &amp; videos in their full resolution, with all metadata - information about your photos &amp; videos, e.g. where you took them.</p></li>
 </ol>
 
 
 <p>How does PhotoArchive work?</p>
 
-<p>PhotoArchive archives to your home storage &ndash; NAS (Network Attached Storage) or Mac/PC, using FTP (File Transfer Protocol). Most NAS devices already support FTP, but if you are using a Mac/PC you will need an FTP server.</p>
+<p>PhotoArchive archives to your home storage - NAS (Network Attached Storage) or Mac/PC, using FTP (File Transfer Protocol). Most NAS devices already support FTP, but if you are using a Mac/PC you will need an FTP server.</p>
 
 <p>FTP should only be used on Wi-Fi with WPA2 security, with your storage on the same network. Don&rsquo;t do it over the Internet! Be security smart.</p>
 
 <h2>Design thinking</h2>
 
-<p>The main view that greets the user visually shows them all photos &amp; videos on their iOS device, grouped into state &ndash; not archived, or archived.
+<p>The main view that greets the user visually shows them all photos &amp; videos on their iOS device, grouped into state - not archived, or archived.
 It first shows photos &amp; videos that are not archived (in danger of being lost forever), and then photos &amp; videos that are archived (safe).</p>
 
 <p>The user can either setup their archive destination, or start archiving if already setup and there are new photos or videos.</p>
@@ -106,10 +106,10 @@ It first shows photos &amp; videos that are not archived (in danger of being los
 <p>The Not Archived section photos &amp; videos are shown as large squares up to a certain number, and then get smaller.
 Large squares let you see the few photos &amp; videos that you haven&rsquo;t archived up close.
 If there&rsquo;s lots, then they are shown as small squares to give you a visual sense of how many there are.
-The section header is the PhotoArchive logo on red &ndash; danger!</p>
+The section header is the PhotoArchive logo on red - danger!</p>
 
 <p>The Archived section shows photos &amp; videos as small squares; they are safe, so you don&rsquo;t need to see what they are, just get a visual sense of how many there are.
-The section header is the PhotoArchive logo on blue (this is the app icon) &ndash; safe.</p>
+The section header is the PhotoArchive logo on blue (this is the app icon) - safe.</p>
 
 <p>The design allows both sections to appear together on the main view without much scrolling required.</p>
 
@@ -123,7 +123,7 @@ It would be great to have a few testers, so if you&rsquo;d like to test it out a
 
 <p>Since the purpose of PhotoArchive is to save your irreplaceable memories, i&rsquo;ve thought about adding support for offsite archiving to cloud storage such as Amazon S3 or Glacier.</p>
 
-<p>Amazon Glacier is attractive because of it&rsquo;s extreme lost cost &ndash; USD$0.01 per GB (gigabyte) per month.
+<p>Amazon Glacier is attractive because of it&rsquo;s extreme lost cost - USD$0.01 per GB (gigabyte) per month.
 That&rsquo;s just over USD$10 per month to archive 1TB (terabyte) of photos &amp; videos!</p>
 ]]></content>
   </entry>
@@ -277,7 +277,7 @@ MAC OS X system.</p>
 
 <p><img class="fancybox" src="/media/images/2012-09-01-demon-hacker/run.png" title="Demon Hacker" ></p>
 
-<p>Here&rsquo;s the proof &ndash; the help screen. You have to admit, it&rsquo;s very helpful :)</p>
+<p>Here&rsquo;s the proof - the help screen. You have to admit, it&rsquo;s very helpful :)</p>
 
 <p><img class="fancybox" src="/media/images/2012-09-01-demon-hacker/run-help.png" title="Demon Hacker" ></p>
 
@@ -308,15 +308,9 @@ for games by editing the DEMON.DAT text file.</p>
 <span class='line-number'>15</span>
 <span class='line-number'>16</span>
 <span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>{&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;pre>&lt;code>Alone in the Dark
-</span><span class='line'>&lt;/code>&lt;/pre>
-</span><span class='line'>
-</span><span class='line'>&lt;p>save[0..5].itd
+</pre></td><td class='code'><pre><code class=''><span class='line'>{
+</span><span class='line'>    Alone in the Dark
+</span><span class='line'>save[0..5].itd
 </span><span class='line'>save??.itd
 </span><span class='line'>//25700 oil for the lamp
 </span><span class='line'>19856,64

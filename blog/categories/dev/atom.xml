@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Dev | Peter Boni]]></title>
+  <title><![CDATA[Category: dev | Peter Boni]]></title>
   <link href="http://www.peterboni.net/blog/categories/dev/atom.xml" rel="self"/>
   <link href="http://www.peterboni.net/"/>
-  <updated>2014-06-22T08:59:21+08:00</updated>
+  <updated>2014-06-22T14:26:14+08:00</updated>
   <id>http://www.peterboni.net/</id>
   <author>
     <name><![CDATA[Peter Boni]]></name>
@@ -28,7 +28,7 @@ My DSLR body and lenses produce superior quality, but are usually left at home g
 <p>When I take new photos or videos, often of my family, I worry that if something were to happen to my iPhone, those irreplaceable memories will be lost forever.</p>
 
 <p>There are many solutions for this need, for example iCloud Backup, the Dropbox app, or the Amazon Cloud Drive app, but they all have varying costs and limitations.
-I wanted a simple solution for me, and that&rsquo;s why I decided to build an app as a side project &ndash; PhotoArchive for iPhone.
+I wanted a simple solution for me, and that&rsquo;s why I decided to build an app as a side project - PhotoArchive for iPhone.
 When released, PhotoArchive will be free for everyone on the App Store.</p>
 
 <!--more-->
@@ -56,7 +56,7 @@ Because it&rsquo;s a tedious manual process I don&rsquo;t do it as often as I sh
 <p>What PhotoArchive does is copy new photos &amp; videos from your iOS device to an FTP server, over Wi-Fi.
 The Western Digital My Book NAS, like most NAS, supports FTP (File Transfer Protocol).</p>
 
-<p>This means that when I get home I can effortlessly back up new photos &amp; videos I&rsquo;ve taken that day &ndash; no turning on computers, no USB cables etc.</p>
+<p>This means that when I get home I can effortlessly back up new photos &amp; videos I&rsquo;ve taken that day - no turning on computers, no USB cables etc.</p>
 
 <h2>What it does (marketing version)</h2>
 
@@ -65,25 +65,25 @@ The Western Digital My Book NAS, like most NAS, supports FTP (File Transfer Prot
 <blockquote><p>PhotoArchive saves your irreplaceable memories, your photos &amp; videos from your iPhone, iPad, or iPod touch to your home storage over Wi-Fi.</p></blockquote>
 
 <ol>
-<li><p><strong>Save Time</strong> &ndash; Stop manually backing up your device to iTunes. Are you still using a USB cable? Stop manually backing up your photos &amp; videos by importing them into iPhoto. You may still import them into iPhoto, but you can do it when you have time, not when you have to &ndash; your photos &amp; videos are already safe!</p></li>
-<li><p><strong>Save Money</strong> &ndash; Use iCloud Backup to back up everything except your Camera Roll, so there is no need to manually back up your device to iTunes. Turn off the Camera Roll from iCloud Backup, and stay under the 5.0 GB free limit.</p></li>
-<li><p><strong>Archives</strong> &ndash; Does not synchronise. Will not download photos or videos from your home storage to your device.</p></li>
-<li><p><strong>Never Deletes</strong> &ndash; Will never delete a photo or video from your home storage, or from your device.</p></li>
-<li><p><strong>Smart Archive</strong> &ndash; Remembers the previous archive, and will only upload new photos &amp; videos, so it&rsquo;s <em>FAST</em>!</p></li>
-<li><p><strong>Smart Photo View</strong> &ndash; Shows you your photos &amp; videos that are in danger of being lost forever (not archived), and the ones that are safe in the event that something happens to your device (archived).</p></li>
-<li><p><strong>Full Resolution and Metadata</strong> &ndash; Uploads your photos &amp; videos in their full resolution, with all metadata &ndash; information about your photos &amp; videos, e.g. where you took them.</p></li>
+<li><p><strong>Save Time</strong> - Stop manually backing up your device to iTunes. Are you still using a USB cable? Stop manually backing up your photos &amp; videos by importing them into iPhoto. You may still import them into iPhoto, but you can do it when you have time, not when you have to - your photos &amp; videos are already safe!</p></li>
+<li><p><strong>Save Money</strong> - Use iCloud Backup to back up everything except your Camera Roll, so there is no need to manually back up your device to iTunes. Turn off the Camera Roll from iCloud Backup, and stay under the 5.0 GB free limit.</p></li>
+<li><p><strong>Archives</strong> - Does not synchronise. Will not download photos or videos from your home storage to your device.</p></li>
+<li><p><strong>Never Deletes</strong> - Will never delete a photo or video from your home storage, or from your device.</p></li>
+<li><p><strong>Smart Archive</strong> - Remembers the previous archive, and will only upload new photos &amp; videos, so it&rsquo;s <em>FAST</em>!</p></li>
+<li><p><strong>Smart Photo View</strong> - Shows you your photos &amp; videos that are in danger of being lost forever (not archived), and the ones that are safe in the event that something happens to your device (archived).</p></li>
+<li><p><strong>Full Resolution and Metadata</strong> - Uploads your photos &amp; videos in their full resolution, with all metadata - information about your photos &amp; videos, e.g. where you took them.</p></li>
 </ol>
 
 
 <p>How does PhotoArchive work?</p>
 
-<p>PhotoArchive archives to your home storage &ndash; NAS (Network Attached Storage) or Mac/PC, using FTP (File Transfer Protocol). Most NAS devices already support FTP, but if you are using a Mac/PC you will need an FTP server.</p>
+<p>PhotoArchive archives to your home storage - NAS (Network Attached Storage) or Mac/PC, using FTP (File Transfer Protocol). Most NAS devices already support FTP, but if you are using a Mac/PC you will need an FTP server.</p>
 
 <p>FTP should only be used on Wi-Fi with WPA2 security, with your storage on the same network. Don&rsquo;t do it over the Internet! Be security smart.</p>
 
 <h2>Design thinking</h2>
 
-<p>The main view that greets the user visually shows them all photos &amp; videos on their iOS device, grouped into state &ndash; not archived, or archived.
+<p>The main view that greets the user visually shows them all photos &amp; videos on their iOS device, grouped into state - not archived, or archived.
 It first shows photos &amp; videos that are not archived (in danger of being lost forever), and then photos &amp; videos that are archived (safe).</p>
 
 <p>The user can either setup their archive destination, or start archiving if already setup and there are new photos or videos.</p>
@@ -93,10 +93,10 @@ It first shows photos &amp; videos that are not archived (in danger of being los
 <p>The Not Archived section photos &amp; videos are shown as large squares up to a certain number, and then get smaller.
 Large squares let you see the few photos &amp; videos that you haven&rsquo;t archived up close.
 If there&rsquo;s lots, then they are shown as small squares to give you a visual sense of how many there are.
-The section header is the PhotoArchive logo on red &ndash; danger!</p>
+The section header is the PhotoArchive logo on red - danger!</p>
 
 <p>The Archived section shows photos &amp; videos as small squares; they are safe, so you don&rsquo;t need to see what they are, just get a visual sense of how many there are.
-The section header is the PhotoArchive logo on blue (this is the app icon) &ndash; safe.</p>
+The section header is the PhotoArchive logo on blue (this is the app icon) - safe.</p>
 
 <p>The design allows both sections to appear together on the main view without much scrolling required.</p>
 
@@ -110,7 +110,7 @@ It would be great to have a few testers, so if you&rsquo;d like to test it out a
 
 <p>Since the purpose of PhotoArchive is to save your irreplaceable memories, i&rsquo;ve thought about adding support for offsite archiving to cloud storage such as Amazon S3 or Glacier.</p>
 
-<p>Amazon Glacier is attractive because of it&rsquo;s extreme lost cost &ndash; USD$0.01 per GB (gigabyte) per month.
+<p>Amazon Glacier is attractive because of it&rsquo;s extreme lost cost - USD$0.01 per GB (gigabyte) per month.
 That&rsquo;s just over USD$10 per month to archive 1TB (terabyte) of photos &amp; videos!</p>
 ]]></content>
   </entry>
@@ -135,7 +135,7 @@ I decided to see how hard it was to quickly implement on iOS with a few thoughts
 
 <p>It turns out it&rsquo;s very simple.</p>
 
-<p>Using Xcode 5.0.2, do File &ndash; New &ndash; Project &ndash; Application: Single View Application.</p>
+<p>Using Xcode 5.0.2, do File - New - Project - Application: Single View Application.</p>
 
 <p>Add a Text Field to the single <strong>View Controller</strong> in <strong>Main.storyboard</strong>. You can add
 Placeholder text to give the user a visual indication of what they should be doing
@@ -158,39 +158,20 @@ like this.</p>
 
 <p>In <strong>ViewController.m</strong>, put the following code into <strong>viewDidLoad</strong>.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">viewDidLoad</span>
-</span><span class='line'><span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="p">[</span><span class="n">super</span> <span class="n">viewDidLoad</span><span class="p">];</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">CGSize</span> <span class="n">hideShowSize</span> <span class="o">=</span> <span class="p">[</span><span class="s">@&quot;SHOWX&quot;</span> <span class="nl">sizeWithAttributes:</span><span class="err">@</span><span class="p">{</span><span class="nl">NSFontAttributeName:</span><span class="p">[</span><span class="n">UIFont</span> <span class="nl">systemFontOfSize:</span><span class="mf">14.0f</span><span class="p">]}];</span>
-</span><span class='line'><span class="n">UIButton</span> <span class="o">*</span><span class="n">hideShow</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UIButton</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithFrame:</span><span class="n">CGRectMake</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">hideShowSize</span><span class="p">.</span><span class="n">width</span><span class="p">,</span> <span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">frame</span><span class="p">.</span><span class="n">size</span><span class="p">.</span><span class="n">height</span><span class="p">)];</span>
-</span><span class='line'><span class="p">[</span><span class="n">hideShow</span><span class="p">.</span><span class="n">titleLabel</span> <span class="nl">setFont:</span><span class="p">[</span><span class="n">UIFont</span> <span class="nl">systemFontOfSize:</span><span class="mf">14.0f</span><span class="p">]];</span>
-</span><span class='line'><span class="p">[</span><span class="n">hideShow</span> <span class="nl">setTitle:</span><span class="s">@&quot;HIDE&quot;</span> <span class="nl">forState:</span><span class="n">UIControlStateNormal</span><span class="p">];</span>
-</span><span class='line'><span class="p">[</span><span class="n">hideShow</span> <span class="nl">setTitleColor:</span><span class="p">[</span><span class="n">UIColor</span> <span class="n">grayColor</span><span class="p">]</span> <span class="nl">forState:</span><span class="n">UIControlStateNormal</span><span class="p">];</span>
-</span><span class='line'><span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">rightView</span> <span class="o">=</span> <span class="n">hideShow</span><span class="p">;</span>
-</span><span class='line'><span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">rightViewMode</span> <span class="o">=</span> <span class="n">UITextFieldViewModeAlways</span><span class="p">;</span>
-</span><span class='line'><span class="p">[</span><span class="n">hideShow</span> <span class="nl">addTarget:</span><span class="n">self</span> <span class="nl">action:</span><span class="k">@selector</span><span class="p">(</span><span class="nl">hideShow:</span><span class="p">)</span> <span class="nl">forControlEvents:</span><span class="n">UIControlEventTouchUpInside</span><span class="p">];</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<pre><code class="objc">- (void)viewDidLoad
+{
+    [super viewDidLoad];
+
+    CGSize hideShowSize = [@"SHOWX" sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14.0f]}];
+    UIButton *hideShow = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, hideShowSize.width, self.password.frame.size.height)];
+    [hideShow.titleLabel setFont:[UIFont systemFontOfSize:14.0f]];
+    [hideShow setTitle:@"HIDE" forState:UIControlStateNormal];
+    [hideShow setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+    self.password.rightView = hideShow;
+    self.password.rightViewMode = UITextFieldViewModeAlways;
+    [hideShow addTarget:self action:@selector(hideShow:) forControlEvents:UIControlEventTouchUpInside];
+}
+</code></pre>
 
 <p>And then create <strong>hideShow</strong>.</p>
 
@@ -209,27 +190,21 @@ like this.</p>
 <span class='line-number'>13</span>
 <span class='line-number'>14</span>
 <span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nl">hideShow:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="n">sender</span>
-</span><span class='line'><span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">UIButton</span> <span class="o">*</span><span class="n">hideShow</span> <span class="o">=</span> <span class="p">(</span><span class="n">UIButton</span> <span class="o">*</span><span class="p">)</span><span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">rightView</span><span class="p">;</span>
-</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">secureTextEntry</span><span class="p">)</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">hideShow:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">sender</span>
 </span><span class='line'><span class="p">{</span>
-</span><span class='line'>    <span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">secureTextEntry</span> <span class="o">=</span> <span class="n">YES</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">[</span><span class="n">hideShow</span> <span class="nl">setTitle:</span><span class="s">@&quot;SHOW&quot;</span> <span class="nl">forState:</span><span class="n">UIControlStateNormal</span><span class="p">];</span>
+</span><span class='line'>    <span class="n">UIButton</span> <span class="o">&lt;</span><span class="n">em</span><span class="o">&gt;</span><span class="n">hideShow</span> <span class="o">=</span> <span class="p">(</span><span class="n">UIButton</span> <span class="o">&lt;/</span><span class="n">em</span><span class="o">&gt;</span><span class="p">)</span><span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">rightView</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">secureTextEntry</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">secureTextEntry</span> <span class="o">=</span> <span class="nb">YES</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">[</span><span class="n">hideShow</span> <span class="n">setTitle</span><span class="o">:</span><span class="p">@</span><span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">SHOW</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span> <span class="n">forState</span><span class="o">:</span><span class="n">UIControlStateNormal</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">else</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">secureTextEntry</span> <span class="o">=</span> <span class="nb">NO</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">[</span><span class="n">hideShow</span> <span class="n">setTitle</span><span class="o">:</span><span class="p">@</span><span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">HIDE</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span> <span class="n">forState</span><span class="o">:</span><span class="n">UIControlStateNormal</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">password</span> <span class="n">becomeFirstResponder</span><span class="p">];</span>
 </span><span class='line'><span class="p">}</span>
-</span><span class='line'><span class="k">else</span>
-</span><span class='line'><span class="p">{</span>
-</span><span class='line'>    <span class="n">self</span><span class="p">.</span><span class="n">password</span><span class="p">.</span><span class="n">secureTextEntry</span> <span class="o">=</span> <span class="n">NO</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">[</span><span class="n">hideShow</span> <span class="nl">setTitle:</span><span class="s">@&quot;HIDE&quot;</span> <span class="nl">forState:</span><span class="n">UIControlStateNormal</span><span class="p">];</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'><span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">password</span> <span class="n">becomeFirstResponder</span><span class="p">];</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>You should get something like this.</p>
@@ -269,7 +244,7 @@ Safari Password AutoFill (and generator) features to native apps.</p>
     <link href="http://www.peterboni.net/blog/2013/12/07/a-cloud-backend-using-nodejs-on-aws/"/>
     <updated>2013-12-07T07:00:00+08:00</updated>
     <id>http://www.peterboni.net/blog/2013/12/07/a-cloud-backend-using-nodejs-on-aws</id>
-    <content type="html"><![CDATA[<p>What?! You&rsquo;re building an awesome mobile app, like this one &ndash;
+    <content type="html"><![CDATA[<p>What?! You&rsquo;re building an awesome mobile app, like this one -
 <a href="/blog/2013/06/29/ios-7-dynamic-type/">iOS 7 Dynamic Type</a>, and <a href="/blog/2013/06/24/ios-7-userxlistview/">iOS 7 UserXListView</a>,
 and get to the point where you need a <em>backend</em>.
 Oh no! Your complexity just increased exponentially.</p>
@@ -312,7 +287,7 @@ of reusable components. There are currently over 50 <em>thousand</em>, with over
 </ol>
 
 
-<p>The goal is to build a cloud backend &ndash; expose a RESTful web API that supports OAuth 2.0, with a database.
+<p>The goal is to build a cloud backend - expose a RESTful web API that supports OAuth 2.0, with a database.
 This blog post should serve as the foundation to start you on that journey.</p>
 
 <p>We will be using OS X Mavericks (Version 10.9), Terminal, and <a href="http://www.barebones.com/products/textwrangler/">TextWrangler</a>
@@ -342,29 +317,17 @@ which is available free from the App Store.</p>
 <span class='line-number'>10</span>
 <span class='line-number'>11</span>
 <span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
 </pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="p">{</span>
 </span><span class='line'>  <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">name</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span><span class="o">:</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">cloudbackend</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;,</span>
 </span><span class='line'>  <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">description</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span><span class="o">:</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;,</span>
 </span><span class='line'>  <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">version</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span><span class="o">:</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="mf">0.0</span><span class="p">.</span><span class="mi">1</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;,</span>
 </span><span class='line'>  <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="kr">private</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-</span><span class='line'>  <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">scripts</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span><span class="o">:</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="s2">&quot;start&quot;</span><span class="o">:</span> <span class="s2">&quot;node app&quot;</span>
-</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="p">},</span>
-</span><span class='line'>  <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">dependencies</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span><span class="o">:</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="s2">&quot;express&quot;</span><span class="o">:</span> <span class="s2">&quot;3.x&quot;</span>
-</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="p">}</span>
+</span><span class='line'>  <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">scripts</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">start</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span><span class="o">:</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">node</span> <span class="nx">app</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">},</span>
+</span><span class='line'>  <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">dependencies</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">express</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span><span class="o">:</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="mi">3</span><span class="p">.</span><span class="nx">x</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
 </span><span class='line'><span class="p">}</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
@@ -383,10 +346,10 @@ application framework. Enter &lsquo;npm install&rsquo;.</p>
 </pre></td><td class='code'><pre><code class='console'><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span> npm install
 </span><span class='line'><span class="go">npm http GET &lt;a href=&quot;https://registry.npmjs.org/express&quot;&gt;https://registry.npmjs.org/express&lt;/a&gt;</span>
 </span><span class='line'><span class="go">&amp;hellip;</span>
-</span><span class='line'><span class="go">&lt;a href=&quot;&amp;#109;&amp;#x61;&amp;#105;&amp;#108;&amp;#116;&amp;#x6f;&amp;#x3a;&amp;#x65;&amp;#x78;&amp;#x70;&amp;#114;&amp;#101;&amp;#115;&amp;#115;&amp;#64;&amp;#x33;&amp;#46;&amp;#52;&amp;#46;&amp;#54;&quot;&gt;&amp;#x65;&amp;#x78;&amp;#x70;&amp;#114;&amp;#101;&amp;#x73;&amp;#115;&amp;#64;&amp;#x33;&amp;#x2e;&amp;#52;&amp;#x2e;&amp;#54;&lt;/a&gt; node_modules/express</span>
-</span><span class='line'><span class="go">├── &lt;a href=&quot;&amp;#109;&amp;#x61;&amp;#x69;&amp;#x6c;&amp;#116;&amp;#111;&amp;#58;&amp;#109;&amp;#101;&amp;#116;&amp;#104;&amp;#x6f;&amp;#100;&amp;#x73;&amp;#x40;&amp;#48;&amp;#x2e;&amp;#x31;&amp;#x2e;&amp;#48;&quot;&gt;&amp;#109;&amp;#x65;&amp;#x74;&amp;#x68;&amp;#111;&amp;#x64;&amp;#115;&amp;#x40;&amp;#x30;&amp;#46;&amp;#x31;&amp;#x2e;&amp;#x30;&lt;/a&gt;</span>
+</span><span class='line'><span class="go">&lt;a href=&quot;&amp;#x6d;&amp;#x61;&amp;#x69;&amp;#x6c;&amp;#116;&amp;#111;&amp;#x3a;&amp;#101;&amp;#x78;&amp;#x70;&amp;#x72;&amp;#x65;&amp;#x73;&amp;#115;&amp;#64;&amp;#51;&amp;#x2e;&amp;#x34;&amp;#x2e;&amp;#x36;&quot;&gt;&amp;#101;&amp;#120;&amp;#112;&amp;#x72;&amp;#101;&amp;#x73;&amp;#115;&amp;#x40;&amp;#x33;&amp;#x2e;&amp;#52;&amp;#46;&amp;#54;&lt;/a&gt; node_modules/express</span>
+</span><span class='line'><span class="go">├── &lt;a href=&quot;&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#x74;&amp;#111;&amp;#x3a;&amp;#109;&amp;#x65;&amp;#116;&amp;#x68;&amp;#x6f;&amp;#100;&amp;#x73;&amp;#64;&amp;#x30;&amp;#46;&amp;#49;&amp;#x2e;&amp;#48;&quot;&gt;&amp;#109;&amp;#101;&amp;#116;&amp;#104;&amp;#111;&amp;#100;&amp;#x73;&amp;#x40;&amp;#48;&amp;#46;&amp;#x31;&amp;#46;&amp;#48;&lt;/a&gt;</span>
 </span><span class='line'><span class="go">&amp;hellip;</span>
-</span><span class='line'><span class="go">└── &lt;a href=&quot;&amp;#109;&amp;#97;&amp;#105;&amp;#x6c;&amp;#116;&amp;#111;&amp;#x3a;&amp;#99;&amp;#111;&amp;#110;&amp;#110;&amp;#x65;&amp;#x63;&amp;#x74;&amp;#64;&amp;#50;&amp;#46;&amp;#49;&amp;#49;&amp;#46;&amp;#x32;&quot;&gt;&amp;#x63;&amp;#111;&amp;#x6e;&amp;#110;&amp;#x65;&amp;#99;&amp;#116;&amp;#64;&amp;#50;&amp;#x2e;&amp;#x31;&amp;#49;&amp;#x2e;&amp;#50;&lt;/a&gt; (uid2@0.0.3, pause@0.0.1, qs@0.6.5, bytes@0.2.1, raw-body@1.1.2, negotiator@0.3.0, &lt;a href=&quot;&amp;#x6d;&amp;#x61;&amp;#x69;&amp;#x6c;&amp;#x74;&amp;#111;&amp;#58;&amp;#109;&amp;#x75;&amp;#x6c;&amp;#116;&amp;#105;&amp;#x70;&amp;#x61;&amp;#114;&amp;#x74;&amp;#121;&amp;#64;&amp;#x32;&amp;#x2e;&amp;#50;&amp;#46;&amp;#48;&quot;&gt;&amp;#109;&amp;#x75;&amp;#108;&amp;#x74;&amp;#105;&amp;#112;&amp;#x61;&amp;#114;&amp;#x74;&amp;#121;&amp;#x40;&amp;#x32;&amp;#46;&amp;#x32;&amp;#x2e;&amp;#48;&lt;/a&gt;)</span>
+</span><span class='line'><span class="go">└── &lt;a href=&quot;&amp;#x6d;&amp;#97;&amp;#x69;&amp;#x6c;&amp;#x74;&amp;#x6f;&amp;#58;&amp;#x63;&amp;#111;&amp;#x6e;&amp;#110;&amp;#x65;&amp;#99;&amp;#x74;&amp;#x40;&amp;#50;&amp;#x2e;&amp;#x31;&amp;#49;&amp;#x2e;&amp;#x32;&quot;&gt;&amp;#99;&amp;#111;&amp;#x6e;&amp;#110;&amp;#x65;&amp;#99;&amp;#116;&amp;#x40;&amp;#50;&amp;#46;&amp;#49;&amp;#x31;&amp;#x2e;&amp;#50;&lt;/a&gt; (uid2@0.0.3, pause@0.0.1, qs@0.6.5, bytes@0.2.1, raw-body@1.1.2, negotiator@0.3.0, &lt;a href=&quot;&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#116;&amp;#111;&amp;#58;&amp;#x6d;&amp;#117;&amp;#x6c;&amp;#116;&amp;#105;&amp;#112;&amp;#x61;&amp;#114;&amp;#116;&amp;#121;&amp;#x40;&amp;#50;&amp;#46;&amp;#x32;&amp;#x2e;&amp;#48;&quot;&gt;&amp;#x6d;&amp;#117;&amp;#108;&amp;#x74;&amp;#x69;&amp;#x70;&amp;#97;&amp;#x72;&amp;#116;&amp;#121;&amp;#x40;&amp;#50;&amp;#46;&amp;#x32;&amp;#46;&amp;#x30;&lt;/a&gt;)</span>
 </span><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
@@ -408,12 +371,8 @@ which returns a JSON data object. A simple test.</p>
 <span class='line-number'>12</span>
 <span class='line-number'>13</span>
 <span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">express</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;),</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;http&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">express</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;),</span>
+</span><span class='line'>    <span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">http</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;);</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
 </span><span class='line'>
@@ -450,7 +409,7 @@ JSON data object.</p>
 <h2>AWS</h2>
 
 <p>With <a href="http://aws.amazon.com">AWS</a> (Amazon Web Services) we can easily deploy our backend to the cloud while
-still keeping flexibility and control &ndash; things that a BaaS takes away by abstracting the complexity.</p>
+still keeping flexibility and control - things that a BaaS takes away by abstracting the complexity.</p>
 
 <p>First sign up for the very generous <a href="http://aws.amazon.com/free/">AWS Free Usage Tier</a>.
 This simple tutorial should not result in charges to your account.</p>
@@ -460,8 +419,8 @@ which is an AWS <em>Application Container</em>. The <a href="http://docs.aws.ama
 explains what Elastic Beanstalk is.</p>
 
 <ol>
-<li>You deploy your application to EB and it gets a unique URL &ndash; <a href="http://myapp.elasticbeanstalk.com">http://myapp.elasticbeanstalk.com</a></li>
-<li>An Auto Scaling Group is created with at least 1 <a href="http://aws.amazon.com/ec2/">EC2</a> Instance (basically a VM &ndash; Virtual Machine).</li>
+<li>You deploy your application to EB and it gets a unique URL - <a href="http://myapp.elasticbeanstalk.com">http://myapp.elasticbeanstalk.com</a></li>
+<li>An Auto Scaling Group is created with at least 1 <a href="http://aws.amazon.com/ec2/">EC2</a> Instance (basically a VM - Virtual Machine).</li>
 <li>Traffic to your application URL first goes through the ELB (Elastic Load Balancer), and then to an EC2 Instance.</li>
 </ol>
 
@@ -662,7 +621,7 @@ can be found at the URL given after you enter &lsquo;eb init&rsquo;.</li>
 </span><span class='line'><span class="go">remote: error: Unable to deploy application version: No Environment found for EnvironmentName = &amp;lsquo;cloudbackend-env&amp;rsquo;.</span>
 </span><span class='line'><span class="go">remote:</span>
 </span><span class='line'><span class="go">To &lt;a href=&quot;https://...:...@git.elasticbeanstalk.ap-southeast-2.amazonaws.com/v1/repos/.../commitid/.../environment/...&quot;&gt;https://...:...@git.elasticbeanstalk.ap-southeast-2.amazonaws.com/v1/repos/.../commitid/.../environment/...&lt;/a&gt;</span>
-</span><span class='line'><span class="go"> * [new branch]      HEAD &amp;ndash;&gt; master&lt;/p&gt;</span>
+</span><span class='line'><span class="go"> * [new branch]      HEAD -&gt; master&lt;/p&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="go">&lt;p&gt;Waiting for environment &amp;ldquo;cloudbackend-env&amp;rdquo; to launch.</span>
 </span><span class='line'><span class="go">2013-12-07 08:21:09 INFO    createEnvironment is starting.</span>
@@ -731,7 +690,7 @@ Enter &lsquo;eb stop&rsquo;, and then &lsquo;y&rsquo; to terminate the environme
 </span><span class='line'><span class="gp">peters-mac-mini:cloudbackend peterboni$</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p>If you get stuck, you can always try checking out the Amazon documentation &ndash;
+<p>If you get stuck, you can always try checking out the Amazon documentation -
 <a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_nodejs_express.html">Deploying an Express Application to AWS Elastic Beanstalk</a>.</p>
 
 <p>I may cover topics like adding a custom domain name, SSL, OAuth 2.0 support, a
@@ -777,7 +736,7 @@ money value is formatting itself in front of their eyes.</p>
 
 <p><img class="fancybox center" src="/media/images/2013-07-04-ios-formatted-currency-input/4.png" width="396" height="744" title="Tap 3, Changes to $1.23" ></p>
 
-<p>5. The user taps some more numbers &ndash; 4, 5, and then 6. The display value changes to $1,234.56</p>
+<p>5. The user taps some more numbers - 4, 5, and then 6. The display value changes to $1,234.56</p>
 
 <p>We have a comma! The money value is formatted.</p>
 
@@ -806,7 +765,7 @@ didn&rsquo;t trap the paste and format the value before updating the display val
 
 <h2>The Code</h2>
 
-<p>Go get it &ndash; <a href="https://github.com/peterboni/FormattedCurrencyInput">FormattedCurrencyInput on GitHub</a>.<br/>
+<p>Go get it - <a href="https://github.com/peterboni/FormattedCurrencyInput">FormattedCurrencyInput on GitHub</a>.<br/>
 Fork it, or submit a Pull Request, and let&rsquo;s make it better for others together!</p>
 ]]></content>
   </entry>
@@ -830,7 +789,7 @@ size. It looks <strong>stunning</strong>, but there&rsquo;s work to make your ap
 <h2>Default Size</h2>
 
 <p>Here&rsquo;s what <a href="/blog/2013/06/24/ios-7-userxlistview/">UserXListView</a> looks like with the Text Size
-(Settings &ndash; General &ndash; Text Size) set to the default size in the <em>iPhone Retina (3.5-inch)</em>
+(Settings - General - Text Size) set to the default size in the <em>iPhone Retina (3.5-inch)</em>
 iOS Simulator.</p>
 
 <p><img class="fancybox center" src="/media/images/2013-06-29-ios-7-dynamic-type/1-text-size-normal.png" width="500" height="713" title="Text Size Default" ></p>
@@ -868,7 +827,7 @@ Layout Constraints, which are very powerful.</p>
 
 <p><img class="fancybox center" src="/media/images/2013-06-29-ios-7-dynamic-type/7-userxlistview-cell-layout.png" width="381" height="674" title="UserXListView Cell Layout" ></p>
 
-<p>iOS 7 has defined Text Styles &ndash; Body, Caption 1, Caption 2, Footnote, Headline 1,
+<p>iOS 7 has defined Text Styles - Body, Caption 1, Caption 2, Footnote, Headline 1,
 Headline 2, Subhead 1, and Subhead 2. We assign a Text Style to each label in the cell
 layout via the attribute inspector as shown below.</p>
 
@@ -897,19 +856,13 @@ UIContentSizeCategoryDidChangeNotification.</p>
 <span class='line-number'>10</span>
 <span class='line-number'>11</span>
 <span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">viewDidLoad</span> <span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="p">[</span><span class="n">super</span> <span class="n">viewDidLoad</span><span class="p">];</span>
-</span><span class='line'><span class="p">[[</span><span class="n">NSNotificationCenter</span> <span class="n">defaultCenter</span><span class="p">]</span> <span class="nl">addObserver:</span><span class="n">self</span> <span class="nl">selector:</span><span class="k">@selector</span><span class="p">(</span><span class="nl">preferredContentSizeChanged:</span><span class="p">)</span> <span class="nl">name:</span><span class="n">UIContentSizeCategoryDidChangeNotification</span> <span class="nl">object:</span><span class="nb">nil</span><span class="p">];</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">viewDidLoad</span> <span class="p">{</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">super</span> <span class="n">viewDidLoad</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">[[</span><span class="n">NSNotificationCenter</span> <span class="n">defaultCenter</span><span class="p">]</span> <span class="n">addObserver</span><span class="o">:</span><span class="n">self</span> <span class="n">selector</span><span class="o">:</span><span class="k">@selector</span><span class="p">(</span><span class="n">preferredContentSizeChanged</span><span class="o">:</span><span class="p">)</span> <span class="n">name</span><span class="o">:</span><span class="n">UIContentSizeCategoryDidChangeNotification</span> <span class="n">object</span><span class="o">:</span><span class="nb">nil</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="o">&lt;</span><span class="n">ul</span><span class="o">&gt;</span>
-</span><span class='line'><span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nl">preferredContentSizeChanged:</span><span class="p">(</span><span class="n">NSNotification</span> <span class="o">*</span><span class="p">)</span><span class="n">aNotification</span> <span class="p">{</span>
+</span><span class='line'><span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">preferredContentSizeChanged</span><span class="o">:</span><span class="p">(</span><span class="n">NSNotification</span> <span class="o">*</span><span class="p">)</span><span class="n">aNotification</span> <span class="p">{</span>
 </span><span class='line'>  <span class="c1">// adjust the layout of the cells</span>
 </span><span class='line'>  <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">view</span> <span class="n">setNeedsLayout</span><span class="p">];</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
 </span><span class='line'>
@@ -937,13 +890,11 @@ in the cell can change height we need to calculate the total height of the cell 
 <span class='line-number'>13</span>
 <span class='line-number'>14</span>
 <span class='line-number'>15</span>
-<span class='line-number'>16</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="p">(</span><span class="n">CGFloat</span><span class="p">)</span><span class="nl">tableView:</span><span class="p">(</span><span class="n">UITableView</span> <span class="o">&lt;</span><span class="n">em</span><span class="o">&gt;</span><span class="p">)</span><span class="n">tableView</span> <span class="nl">heightForRowAtIndexPath:</span><span class="p">(</span><span class="n">NSIndexPath</span> <span class="o">&lt;/</span><span class="n">em</span><span class="o">&gt;</span><span class="p">)</span><span class="n">indexPath</span> <span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="n">CGFloat</span><span class="p">)</span><span class="nf">tableView:</span><span class="p">(</span><span class="n">UITableView</span> <span class="o">&lt;</span><span class="n">em</span><span class="o">&gt;</span><span class="p">)</span><span class="nv">tableView</span> <span class="nf">heightForRowAtIndexPath:</span><span class="p">(</span><span class="n">NSIndexPath</span> <span class="o">&lt;/</span><span class="n">em</span><span class="o">&gt;</span><span class="p">)</span><span class="nv">indexPath</span> <span class="p">{</span>
+</span><span class='line'>    <span class="n">Account</span> <span class="o">*</span><span class="n">account</span> <span class="o">=</span> <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">fetchedResultsController</span> <span class="n">objectAtIndexPath</span><span class="o">:</span><span class="n">indexPath</span><span class="p">];</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
 </span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">Account</span> <span class="o">*</span><span class="n">account</span> <span class="o">=</span> <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">fetchedResultsController</span> <span class="nl">objectAtIndexPath:</span><span class="n">indexPath</span><span class="p">];</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">UIFont</span> <span class="o">*</span><span class="n">nameLabelFont</span> <span class="o">=</span> <span class="p">[</span><span class="n">UIFont</span> <span class="nl">preferredFontForTextStyle:</span><span class="n">UIFontTextStyleHeadline1</span><span class="p">];</span>
-</span><span class='line'><span class="n">CGSize</span> <span class="n">nameLabelFontSize</span> <span class="o">=</span> <span class="p">[[</span><span class="n">account</span> <span class="n">name</span><span class="p">]</span> <span class="nl">sizeWithAttributes:</span><span class="p">[</span><span class="n">NSDictionary</span> <span class="nl">dictionaryWithObject:</span><span class="n">nameLabelFont</span> <span class="nl">forKey:</span><span class="n">NSFontAttributeName</span><span class="p">]];</span>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">UIFont</span> <span class="o">*</span><span class="n">nameLabelFont</span> <span class="o">=</span> <span class="p">[</span><span class="n">UIFont</span> <span class="n">preferredFontForTextStyle</span><span class="o">:</span><span class="n">UIFontTextStyleHeadline1</span><span class="p">];</span>
+</span><span class='line'><span class="n">CGSize</span> <span class="n">nameLabelFontSize</span> <span class="o">=</span> <span class="p">[[</span><span class="n">account</span> <span class="n">name</span><span class="p">]</span> <span class="n">sizeWithAttributes</span><span class="o">:</span><span class="p">[</span><span class="n">NSDictionary</span> <span class="n">dictionaryWithObject</span><span class="o">:</span><span class="n">nameLabelFont</span> <span class="n">forKey</span><span class="o">:</span><span class="n">NSFontAttributeName</span><span class="p">]];</span>
 </span><span class='line'>
 </span><span class='line'><span class="c1">// ...</span>
 </span><span class='line'>
@@ -971,15 +922,13 @@ the Storyboard) the cell label Text Style values.</p>
 <span class='line-number'>10</span>
 <span class='line-number'>11</span>
 <span class='line-number'>12</span>
-<span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="p">(</span><span class="n">UITableViewCell</span> <span class="o">&lt;</span><span class="n">em</span><span class="o">&gt;</span><span class="p">)</span><span class="nl">tableView:</span><span class="p">(</span><span class="n">UITableView</span> <span class="o">&lt;/</span><span class="n">em</span><span class="o">&gt;</span><span class="p">)</span><span class="n">tableView</span> <span class="nl">cellForRowAtIndexPath:</span><span class="p">(</span><span class="n">NSIndexPath</span> <span class="o">*</span><span class="p">)</span><span class="n">indexPath</span> <span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="n">UITableViewCell</span> <span class="o">&lt;</span><span class="n">em</span><span class="o">&gt;</span><span class="p">)</span><span class="nf">tableView:</span><span class="p">(</span><span class="n">UITableView</span> <span class="o">&lt;/</span><span class="n">em</span><span class="o">&gt;</span><span class="p">)</span><span class="nv">tableView</span> <span class="nf">cellForRowAtIndexPath:</span><span class="p">(</span><span class="n">NSIndexPath</span> <span class="o">&lt;</span><span class="n">em</span><span class="o">&gt;</span><span class="p">)</span><span class="nv">indexPath</span> <span class="p">{</span>
+</span><span class='line'>    <span class="n">AccountCell</span> <span class="o">&lt;/</span><span class="n">em</span><span class="o">&gt;</span><span class="n">cell</span> <span class="o">=</span> <span class="p">(</span><span class="n">AccountCell</span> <span class="o">*</span><span class="p">)[</span><span class="n">tableView</span> <span class="n">dequeueReusableCellWithIdentifier</span><span class="o">:</span><span class="p">@</span><span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">AccountCell</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;];</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
 </span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">AccountCell</span> <span class="o">*</span><span class="n">cell</span> <span class="o">=</span> <span class="p">(</span><span class="n">AccountCell</span> <span class="o">*</span><span class="p">)[</span><span class="n">tableView</span> <span class="nl">dequeueReusableCellWithIdentifier:</span><span class="s">@&quot;AccountCell&quot;</span><span class="p">];</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">Account</span> <span class="o">*</span><span class="n">account</span> <span class="o">=</span> <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">fetchedResultsController</span> <span class="nl">objectAtIndexPath:</span><span class="n">indexPath</span><span class="p">];</span>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">Account</span> <span class="o">*</span><span class="n">account</span> <span class="o">=</span> <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">fetchedResultsController</span> <span class="n">objectAtIndexPath</span><span class="o">:</span><span class="n">indexPath</span><span class="p">];</span>
 </span><span class='line'>
 </span><span class='line'><span class="n">cell</span><span class="p">.</span><span class="n">nameLabel</span><span class="p">.</span><span class="n">text</span> <span class="o">=</span> <span class="p">[</span><span class="n">account</span> <span class="n">name</span><span class="p">];</span>
-</span><span class='line'><span class="n">cell</span><span class="p">.</span><span class="n">nameLabel</span><span class="p">.</span><span class="n">font</span> <span class="o">=</span> <span class="p">[</span><span class="n">UIFont</span> <span class="nl">preferredFontForTextStyle:</span><span class="n">UIFontTextStyleHeadline1</span><span class="p">];</span>
+</span><span class='line'><span class="n">cell</span><span class="p">.</span><span class="n">nameLabel</span><span class="p">.</span><span class="n">font</span> <span class="o">=</span> <span class="p">[</span><span class="n">UIFont</span> <span class="n">preferredFontForTextStyle</span><span class="o">:</span><span class="n">UIFontTextStyleHeadline1</span><span class="p">];</span>
 </span><span class='line'>
 </span><span class='line'><span class="c1">// ...</span>
 </span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
