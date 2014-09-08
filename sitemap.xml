@@ -3,6 +3,12 @@
   
   
   <url>
+    <loc>http://www.peterboni.net/blog/2014/09/08/city-to-surf/</loc>
+    <lastmod>2014-09-08T07:00:00+08:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http://www.peterboni.net/blog/2014/06/27/running/</loc>
     <lastmod>2014-06-27T07:00:00+08:00</lastmod>
     <priority>0.8</priority>
@@ -155,35 +161,35 @@
   
   <url>
     <loc>http://www.peterboni.net/blog/archives/</loc>
-    <lastmod>2014-07-10T09:38:45+08:00</lastmod>
+    <lastmod>2014-09-08T20:55:25+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://www.peterboni.net/</loc>
-    <lastmod>2014-07-10T09:38:45+08:00</lastmod>
+    <lastmod>2014-09-08T20:55:25+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>http://www.peterboni.net/photoarchive/</loc>
-    <lastmod>2014-07-10T09:38:45+08:00</lastmod>
+    <lastmod>2014-09-08T20:55:25+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://www.peterboni.net/about/</loc>
-    <lastmod>2014-07-10T09:38:45+08:00</lastmod>
+    <lastmod>2014-09-08T20:55:25+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://www.peterboni.net/photoarchive/mac-osx.html</loc>
-    <lastmod>2014-07-10T09:38:45+08:00</lastmod>
+    <lastmod>2014-09-08T20:55:25+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
