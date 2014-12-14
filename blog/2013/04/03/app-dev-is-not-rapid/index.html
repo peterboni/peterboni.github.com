@@ -1,272 +1,190 @@
-
 <!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <title>App Dev Is Not Rapid - Peter Boni</title>
-  <meta name="author" content="Peter Boni">
 
-  
-  <meta name="description" content="Application Development is not Rapid. There, I finally typed it. It feels like a weight off my fingers. I have been creating applications for over 20 &hellip;">
-  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Trying to not take myself too seriously.">
 
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>App Dev is not Rapid - Peter Boni</title>
 
-  
-  <link rel="canonical" href="http://www.peterboni.net/blog/2013/04/03/app-dev-is-not-rapid">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/atom.xml" rel="alternate" title="Peter Boni" type="application/atom+xml">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+    <link rel="canonical" href="http://www.peterboni.net/blog/2013/04/03/app-dev-is-not-rapid/">
 
-<!--fancyBox-->
-<link href="/media/fancybox/jquery.fancybox.css" rel="stylesheet" type="text/css">
-  
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
 
-  ga('create', 'UA-42113178-1', 'peterboni.net');
-  ga('send', 'pageview');
-</script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/clean-blog.min.css">
 
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
 </head>
 
-<body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">Peter Boni</a></h1>
-  
-    <h2>Trying to not take myself too seriously.</h2>
-  
-</hgroup>
 
-</header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="https://www.google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:www.peterboni.net" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-  <li><a href="/about">About</a></li>
-</ul>
+<body>
 
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Peter Boni</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
 </nav>
-  <div id="main">
-    <div id="content">
-      <div>
-<article class="hentry" role="article">
-  
-  <header>
-    
-      <h1 class="entry-title">App Dev Is Not Rapid</h1>
-    
-    
-      <p class="meta">
-        
 
 
+    <!-- Post Header -->
+<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>App Dev is not Rapid</h1>
+                    
+                    <span class="meta">April 3, 2013</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
 
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
+				<p>Application Development is not Rapid. There, I finally typed it. It feels like a weight off my fingers. I have been creating applications for over 20 years, and do a damn good job of it. I’m not arrogant, there are many developers that are smarter, more creative, or more productive. If I was to describe myself as a developer in one word I’d say simple, which is kind of funny, because fear of being labelled that has stopped me writing this in the past. This is a post based on my thoughts and feelings at the state of application development.</p>
 
+<p>I have written before about why I <a href="/blog/2013/02/24/creating-software/">create software</a>, and my struggle with software development complexity. I’m going to tell a story about my experience with the Technology, and it’s contribution to the People, Process and Technology triad when building applications.</p>
 
+<p>My first job out of university was doing Microsoft Access ‘database’ development for a large mining company. I put database in quotes because I didn’t think of Access as strictly a database at the time. We built tables with constraints and relationships, queries, forms, reports, and logic (macros and VBA). Mostly via point and click, and writing simple code. We built applications. It was and still is amazing to me how much two Access developers built, with one of them being so naive and inexperienced.</p>
 
+<p>I then progressed to building a web application, using HTML, CSS, JavaScript, ColdFusion (version 4.0 from 1999) and SQL Server. There’s a few more technologies there than my Microsoft Access experience, but ColdFusion rocked. It joined the other technologies together seamlessly, and it made creating an application rapid. I felt productive.</p>
 
-  
+<blockquote>
+  <p>To me rapid development meant quickly building working application software that fulfilled a need with simple, powerful tools. It meant building and joining together the parts in an easily learned, understood, and consistent way that supported change.</p>
+</blockquote>
 
-
-<time datetime="2013-04-03T07:00:00+08:00" pubdate data-updated="true">April  3, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-<div class="entry-content"><p>Application Development is not Rapid. There, I finally typed it. It feels like a weight off my fingers. I have been creating applications for over 20 years, and do a damn good job of it. I&rsquo;m not arrogant, there are many developers that are smarter, more creative, or more productive. If I was to describe myself as a developer in one word I&rsquo;d say simple, which is kind of funny, because fear of being labelled that has stopped me writing this in the past. This is a post based on my thoughts and feelings at the state of application development.</p>
-
-<!--more-->
-
-
-<p>I have written before about why I <a href="/blog/2013/02/24/creating-software/">create software</a>, and my struggle with software development complexity. I&rsquo;m going to tell a story about my experience with the Technology, and it&rsquo;s contribution to the People, Process and Technology triad when building applications.</p>
-
-<p>My first job out of university was doing Microsoft Access &lsquo;database&rsquo; development for a large mining company. I put database in quotes because I didn&rsquo;t think of Access as strictly a database at the time. We built tables with constraints and relationships, queries, forms, reports, and logic (macros and VBA). Mostly via point and click, and writing simple code. We built applications. It was and still is amazing to me how much two Access developers built, with one of them being so naive and inexperienced.</p>
-
-<p>I then progressed to building a web application, using HTML, CSS, JavaScript, ColdFusion (version 4.0 from 1999) and SQL Server. There&rsquo;s a few more technologies there than my Microsoft Access experience, but ColdFusion rocked. It joined the other technologies together seamlessly, and it made creating an application rapid. I felt productive.</p>
-
-<blockquote><p>To me rapid development meant quickly building working application software that fulfilled a need with simple, powerful tools. It meant building and joining together the parts in an easily learned, understood, and consistent way that supported change.</p></blockquote>
-
-<p>Where did I find myself after a few experiences of rapid application development? I found myself in the distinctly non-rapid world of enterprise systems development. There was titanic Sun, IBM, Oracle and Microsoft technologies. I found myself submerged in Sun Java, J2SE, J2EE, IBM WebSphere, Oracle Database, and Microsoft .NET and Servers. Within each one I used a dizzying array of technologies - to use an abstract term to describe the things you could use and the ways you could use them. There were plenty of acronyms that made you feel accomplished if you knew what they stood for, even if you didn&rsquo;t know what they did.</p>
+<p>Where did I find myself after a few experiences of rapid application development? I found myself in the distinctly non-rapid world of enterprise systems development. There was titanic Sun, IBM, Oracle and Microsoft technologies. I found myself submerged in Sun Java, J2SE, J2EE, IBM WebSphere, Oracle Database, and Microsoft .NET and Servers. Within each one I used a dizzying array of technologies - to use an abstract term to describe the things you could use and the ways you could use them. There were plenty of acronyms that made you feel accomplished if you knew what they stood for, even if you didn’t know what they did.</p>
 
 <p>My view of web application architecture had exploded from a few technologies to many, many layers of them. ColdFusion was replaced by an astoundingly complex maze of choices. Want to display a database field on the screen? Oh, not so quick Mr Simple Developer. We need to do it in a modern, best practice, scalable way. I did not feel productive.</p>
 
-<p>This is where some people would stop me in my story, call me a non-believer, and then begin to preach the virtues of their given religion. I have no desire to go into any of them here. All I will say is that I&rsquo;ve seen people wield them as weapons, instead of collaborating with people to use them. The criteria I evaluate technology by is pretty simple. Can I understand it? Does it make sense in my gut? This may seem like a simpletons view, but it&rsquo;s proven correct time and again. Is it simple to understand and work with quickly? How many layers of abstraction or indirection are there? What value do they add? Is there a simpler way to do it? Would other people understand what it&rsquo;s doing? How about in 5 years? Is it closed, open, popular? What does it feel like to use?</p>
+<p>This is where some people would stop me in my story, call me a non-believer, and then begin to preach the virtues of their given religion. I have no desire to go into any of them here. All I will say is that I’ve seen people wield them as weapons, instead of collaborating with people to use them. The criteria I evaluate technology by is pretty simple. Can I understand it? Does it make sense in my gut? This may seem like a simpletons view, but it’s proven correct time and again. Is it simple to understand and work with quickly? How many layers of abstraction or indirection are there? What value do they add? Is there a simpler way to do it? Would other people understand what it’s doing? How about in 5 years? Is it closed, open, popular? What does it feel like to use?</p>
 
-<p>Microsoft Access and ColdFusion still exist 13 years after I used them. Access 2013 looks like it&rsquo;s been given new Metro (sorry, Windows 8-style UI) and web coats, but underneath it looks like the same animal that has not evolved in over a decade. There are rapid application development platforms and tools out there, but why haven&rsquo;t they evolved, and become more widely used for application development? particularly enterprise systems development?</p>
-</div>
-
-
-  <footer>
-    <p class="meta">
-      
-  
-
-<span class="byline author vcard">Posted by <span class="fn">Peter Boni</span></span>
-
-      
+<p>Microsoft Access and ColdFusion still exist 13 years after I used them. Access 2013 looks like it’s been given new Metro (sorry, Windows 8-style UI) and web coats, but underneath it looks like the same animal that has not evolved in over a decade. There are rapid application development platforms and tools out there, but why haven’t they evolved, and become more widely used for application development? particularly enterprise systems development?</p>
 
 
+                <hr>
 
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/blog/2013/03/09/glitch-in-the-matrix/" data-toggle="tooltip" data-placement="top" title="Glitch in the Matrix">&larr; Previous Post</a> 
+                    </li>
+                     
+                    
+                    <li class="next">
+                        <a href="/blog/2013/05/11/this-is-water/" data-toggle="tooltip" data-placement="top" title="This Is Water">Next Post &rarr;</a>
+                    </li>
+                     
+                </ul>
 
-
-
-
-
-  
-
-
-<time datetime="2013-04-03T07:00:00+08:00" pubdate data-updated="true">April  3, 2013</time>
-      
-
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/dev/'>dev</a>
-  
-</span>
-
-
-    </p>
-    
-      <div class="sharing">
-  
-  <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.peterboni.net/blog/2013/04/03/app-dev-is-not-rapid/" data-via="peterboni" data-counturl="http://www.peterboni.net/blog/2013/04/03/app-dev-is-not-rapid/" >Tweet</a>
-  
-  
-  
-  <div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
-  
-</div>
-
-    
-    <p class="meta">
-      
-        <a class="basic-alignment left" href="/blog/2013/03/09/glitch-in-the-matrix/" title="Previous Post: Glitch in the Matrix">&laquo; Glitch in the Matrix</a>
-      
-      
-        <a class="basic-alignment right" href="/blog/2013/05/11/this-is-water/" title="Next Post: This Is Water">This Is Water &raquo;</a>
-      
-    </p>
-  </footer>
+            </div>
+        </div>
+    </div>
 </article>
 
-</div>
+<hr>
 
-<aside class="sidebar">
-  
-    <section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/2014/09/08/city-to-surf/">City to Surf</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/06/27/running/">Running</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/05/19/circular/">Circular</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/04/26/photoarchive-1-dot-3/">PhotoArchive 1.3</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/03/03/running-conversation/">Running Conversation</a>
-      </li>
-    
-  </ul>
-</section>
-
-<section>
-  <h1>Latest Tweets</h1>
-  <p><a class="twitter-timeline" href="https://twitter.com/peterboni" data-widget-id="310642022870564864">Tweets by @peterboni</a></p>
-  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-</section>
-
-
-
-
-
-  
-</aside>
-
-
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://twitter.com/peterboni">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://au.linkedin.com/in/peterboni">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; Peter Boni 2014</p>
+            </div>
+        </div>
     </div>
-  </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2014 - Peter Boni -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
-
 </footer>
-  
 
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
 
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js "></script>
 
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) {return;}
-  js = d.createElement(s); js.id = id; js.async = true;
-  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+<!-- Custom Theme JavaScript -->
+<script src="/js/clean-blog.min.js "></script>
 
-
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = '//platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
-
-
-
-
-<!-- fancybox -->
-<script src="/javascripts/libs/jquery.min.js"></script>
-<script src="/media/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
-<script src="/media/fancybox/activate.js" type="text/javascript"></script>
 
 </body>
+
 </html>

@@ -1,413 +1,289 @@
-
 <!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <title>iOS 7 Dynamic Type - Peter Boni</title>
-  <meta name="author" content="Peter Boni">
 
-  
-  <meta name="description" content="iOS 7 introduces Dynamic Type, which if apps choose to support it, gives the user
-control over text size in an app. Web pages have had this feature &hellip;">
-  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Trying to not take myself too seriously.">
 
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>iOS 7 Dynamic Type - Peter Boni</title>
 
-  
-  <link rel="canonical" href="http://www.peterboni.net/blog/2013/06/29/ios-7-dynamic-type">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/atom.xml" rel="alternate" title="Peter Boni" type="application/atom+xml">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+    <link rel="canonical" href="http://www.peterboni.net/blog/2013/06/29/ios-7-dynamic-type/">
 
-<!--fancyBox-->
-<link href="/media/fancybox/jquery.fancybox.css" rel="stylesheet" type="text/css">
-  
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
 
-  ga('create', 'UA-42113178-1', 'peterboni.net');
-  ga('send', 'pageview');
-</script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/clean-blog.min.css">
 
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
 </head>
 
-<body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">Peter Boni</a></h1>
-  
-    <h2>Trying to not take myself too seriously.</h2>
-  
-</hgroup>
 
-</header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="https://www.google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:www.peterboni.net" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-  <li><a href="/about">About</a></li>
-</ul>
+<body>
 
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Peter Boni</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
 </nav>
-  <div id="main">
-    <div id="content">
-      <div>
-<article class="hentry" role="article">
-  
-  <header>
-    
-      <h1 class="entry-title">iOS 7 Dynamic Type</h1>
-    
-    
-      <p class="meta">
-        
 
 
+    <!-- Post Header -->
+<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>iOS 7 Dynamic Type</h1>
+                    
+                    <span class="meta">June 29, 2013</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
 
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-
-
-
-
-  
-
-
-<time datetime="2013-06-29T07:00:00+08:00" pubdate data-updated="true">June 29, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-<div class="entry-content"><p>iOS 7 introduces Dynamic Type, which if apps choose to support it, gives the user
+				<p>iOS 7 introduces Dynamic Type, which if apps choose to support it, gives the user
 control over text size in an app. Web pages have had this feature for free since the early
 days of the web, but web browsers moved away from dynamic text sizing.
 <a href="http://www.codinghorror.com/blog/2009/01/the-two-types-of-browser-zoom.html">The Two Types of Browser Zoom</a>.</p>
 
 <p>iOS7 Dynamic Type automatically adjusts weight, letter spacing, and line height for every font
-size. It looks <strong>stunning</strong>, but there&rsquo;s work to make your app support it.</p>
+size. It looks <strong>stunning</strong>, but there’s work to make your app support it.</p>
 
-<!--more-->
+<h2 id="default-size">Default Size</h2>
 
-
-<h2>Default Size</h2>
-
-<p>Here&rsquo;s what <a href="/blog/2013/06/24/ios-7-userxlistview/">UserXListView</a> looks like with the Text Size
+<p>Here’s what <a href="/blog/2013/06/24/ios-7-userxlistview/">UserXListView</a> looks like with the Text Size
 (Settings - General - Text Size) set to the default size in the <em>iPhone Retina (3.5-inch)</em>
 iOS Simulator.</p>
 
-<p><img class="fancybox center" src="/media/images/2013-06-29-ios-7-dynamic-type/1-text-size-normal.png" width="500" height="713" title="Text Size Default" ></p>
+<p><img src="/img/2013-06-29-ios-7-dynamic-type/1-text-size-normal.png" alt="Text Size Default" /></p>
 
-<p>We get 3 and &lsquo;a bit&rsquo; cells in the UITableView.</p>
+<p>We get 3 and ‘a bit’ cells in the UITableView.</p>
 
-<p><img class="fancybox center" src="/media/images/2013-06-29-ios-7-dynamic-type/2-userxlistview-normal.png" width="500" height="713" title="UserXListView Default" ></p>
+<p><img src="/img/2013-06-29-ios-7-dynamic-type/2-userxlistview-normal.png" alt="UserXListView Default" /></p>
 
-<h2>Smallest Size</h2>
+<h2 id="smallest-size">Smallest Size</h2>
 
 <p>Changing the Text Size to the smallest size means we can fit slightly more.</p>
 
-<p><img class="fancybox center" src="/media/images/2013-06-29-ios-7-dynamic-type/3-text-size-small.png" width="500" height="713" title="Text Size Smallest" ></p>
+<p><img src="/img/2013-06-29-ios-7-dynamic-type/3-text-size-small.png" alt="Text Size Smallest" /></p>
 
 <p>Nearly 4 cells in the UITableView.</p>
 
-<p><img class="fancybox center" src="/media/images/2013-06-29-ios-7-dynamic-type/4-userxlistview-small.png" width="500" height="713" title="UserXListView Smallest" ></p>
+<p><img src="/img/2013-06-29-ios-7-dynamic-type/4-userxlistview-small.png" alt="UserXListView Smallest" /></p>
 
-<h2>Largest Size</h2>
+<h2 id="largest-size">Largest Size</h2>
 
 <p>Changing the Text Size to the largest size means we can fit slightly less, but get big
 beautiful type.</p>
 
-<p><img class="fancybox center" src="/media/images/2013-06-29-ios-7-dynamic-type/5-text-size-large.png" width="500" height="713" title="Text Size Largest" ></p>
+<p><img src="/img/2013-06-29-ios-7-dynamic-type/5-text-size-large.png" alt="Text Size Largest" /></p>
 
 <p>3 cells in the UITableView.</p>
 
-<p><img class="fancybox center" src="/media/images/2013-06-29-ios-7-dynamic-type/6-userxlistview-large.png" width="500" height="713" title="UserXListView Largest" ></p>
+<p><img src="/img/2013-06-29-ios-7-dynamic-type/6-userxlistview-large.png" alt="UserXListView Largest" /></p>
 
-<h2>Implementation, The Easy Part</h2>
+<h2 id="implementation-the-easy-part">Implementation, The Easy Part</h2>
 
-<p>That&rsquo;s how it looks, but how hard is it to make your app support it. Let&rsquo;s look at
+<p>That’s how it looks, but how hard is it to make your app support it. Let’s look at
 <a href="/blog/2013/06/24/ios-7-userxlistview/">UserXListView</a>. The cell layout makes use of Auto
 Layout Constraints, which are very powerful.</p>
 
-<p><img class="fancybox center" src="/media/images/2013-06-29-ios-7-dynamic-type/7-userxlistview-cell-layout.png" width="381" height="674" title="UserXListView Cell Layout" ></p>
+<p><img src="/img/2013-06-29-ios-7-dynamic-type/7-userxlistview-cell-layout.png" alt="UserXListView Cell" /></p>
 
 <p>iOS 7 has defined Text Styles - Body, Caption 1, Caption 2, Footnote, Headline 1,
 Headline 2, Subhead 1, and Subhead 2. We assign a Text Style to each label in the cell
 layout via the attribute inspector as shown below.</p>
 
-<p><img class="fancybox center" src="/media/images/2013-06-29-ios-7-dynamic-type/8-userxlistview-cell-label-attribute-inspector.png" width="316" height="196" title="UserXListView Cell Label Attribute Inspector" ></p>
+<p><img src="/img/2013-06-29-ios-7-dynamic-type/8-userxlistview-cell-label-attribute-inspector.png" alt="UserXListView Cell Label Attribute Inspector" /></p>
 
-<p>Once the label Text Styles and Auto Layout Constraints are set, we&rsquo;re ready for the hard
+<p>Once the label Text Styles and Auto Layout Constraints are set, we’re ready for the hard
 part.</p>
 
-<h2>Implementation, The Hard Part</h2>
+<h2 id="implementation-the-hard-part">Implementation, The Hard Part</h2>
 
-<p>Unlike Auto Layout in this example, there&rsquo;s more work to do to support
+<p>Unlike Auto Layout in this example, there’s more work to do to support
 Dynamic Type.</p>
 
 <p>We need to make the Controller aware of a Text Size change by hooking into the
 UIContentSizeCategoryDidChangeNotification.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">viewDidLoad</span> <span class="p">{</span>
-</span><span class='line'>    <span class="p">[</span><span class="n">super</span> <span class="n">viewDidLoad</span><span class="p">];</span>
-</span><span class='line'>    <span class="p">[[</span><span class="n">NSNotificationCenter</span> <span class="n">defaultCenter</span><span class="p">]</span> <span class="nl">addObserver:</span><span class="n">self</span> <span class="nl">selector:</span><span class="k">@selector</span><span class="p">(</span><span class="nl">preferredContentSizeChanged:</span><span class="p">)</span> <span class="nl">name:</span><span class="n">UIContentSizeCategoryDidChangeNotification</span> <span class="nl">object:</span><span class="nb">nil</span><span class="p">];</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">preferredContentSizeChanged:</span><span class="p">(</span><span class="n">NSNotification</span> <span class="o">*</span><span class="p">)</span><span class="nv">aNotification</span> <span class="p">{</span>
-</span><span class='line'>    <span class="c1">// adjust the layout of the cells</span>
-</span><span class='line'>    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">view</span> <span class="n">setNeedsLayout</span><span class="p">];</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="c1">// refresh view...</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">viewDidLoad</span> <span class="p">{</span>
+  <span class="p">[</span><span class="nb">super</span> <span class="n">viewDidLoad</span><span class="p">];</span>
+  <span class="p">[[</span><span class="bp">NSNotificationCenter</span> <span class="n">defaultCenter</span><span class="p">]</span> <span class="nl">addObserver</span><span class="p">:</span><span class="nb">self</span> <span class="nl">selector</span><span class="p">:</span><span class="k">@selector</span><span class="p">(</span><span class="nl">preferredContentSizeChanged</span><span class="p">:)</span> <span class="nl">name</span><span class="p">:</span><span class="n">UIContentSizeCategoryDidChangeNotification</span> <span class="nl">object</span><span class="p">:</span><span class="nb">nil</span><span class="p">];</span>
+<span class="p">}</span>
 
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">preferredContentSizeChanged:</span><span class="p">(</span><span class="bp">NSNotification</span> <span class="o">*</span><span class="p">)</span><span class="nv">aNotification</span> <span class="p">{</span>
+  <span class="c1">// adjust the layout of the cells</span>
+  <span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">view</span> <span class="n">setNeedsLayout</span><span class="p">];</span>
 
-<p>We need to calculate the height of the row/cell based on it&rsquo;s content, and as each label
+  <span class="c1">// refresh view...</span>
+<span class="p">}</span></code></pre></div>
+
+<p>We need to calculate the height of the row/cell based on it’s content, and as each label
 in the cell can change height we need to calculate the total height of the cell required.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="n">CGFloat</span><span class="p">)</span><span class="nf">tableView:</span><span class="p">(</span><span class="n">UITableView</span> <span class="o">*</span><span class="p">)</span><span class="nv">tableView</span> <span class="nf">heightForRowAtIndexPath:</span><span class="p">(</span><span class="n">NSIndexPath</span> <span class="o">*</span><span class="p">)</span><span class="nv">indexPath</span> <span class="p">{</span>
-</span><span class='line'>    <span class="n">Account</span> <span class="o">*</span><span class="n">account</span> <span class="o">=</span> <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">fetchedResultsController</span> <span class="nl">objectAtIndexPath:</span><span class="n">indexPath</span><span class="p">];</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="n">UIFont</span> <span class="o">*</span><span class="n">nameLabelFont</span> <span class="o">=</span> <span class="p">[</span><span class="n">UIFont</span> <span class="nl">preferredFontForTextStyle:</span><span class="n">UIFontTextStyleHeadline1</span><span class="p">];</span>
-</span><span class='line'>    <span class="n">CGSize</span> <span class="n">nameLabelFontSize</span> <span class="o">=</span> <span class="p">[[</span><span class="n">account</span> <span class="n">name</span><span class="p">]</span> <span class="nl">sizeWithAttributes:</span><span class="p">[</span><span class="n">NSDictionary</span> <span class="nl">dictionaryWithObject:</span><span class="n">nameLabelFont</span> <span class="nl">forKey:</span><span class="n">NSFontAttributeName</span><span class="p">]];</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="c1">// ...</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="n">CGFloat</span> <span class="n">PADDING_OUTER</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
-</span><span class='line'>    <span class="n">CGFloat</span> <span class="n">totalHeight</span> <span class="o">=</span> <span class="n">PADDING_OUTER</span> <span class="o">+</span> <span class="n">nameLabelFontSize</span><span class="p">.</span><span class="n">height</span> <span class="o">+</span> <span class="p">...</span> <span class="o">+</span> <span class="n">PADDING_OUTER</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="k">return</span> <span class="n">totalHeight</span><span class="p">;</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span class="p">-</span> <span class="p">(</span><span class="n">CGFloat</span><span class="p">)</span><span class="nf">tableView:</span><span class="p">(</span><span class="bp">UITableView</span> <span class="o">*</span><span class="p">)</span><span class="nv">tableView</span> <span class="nf">heightForRowAtIndexPath:</span><span class="p">(</span><span class="bp">NSIndexPath</span> <span class="o">*</span><span class="p">)</span><span class="nv">indexPath</span> <span class="p">{</span>
+  <span class="n">Account</span> <span class="o">*</span><span class="n">account</span> <span class="o">=</span> <span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">fetchedResultsController</span> <span class="nl">objectAtIndexPath</span><span class="p">:</span><span class="n">indexPath</span><span class="p">];</span>
 
+  <span class="bp">UIFont</span> <span class="o">*</span><span class="n">nameLabelFont</span> <span class="o">=</span> <span class="p">[</span><span class="bp">UIFont</span> <span class="nl">preferredFontForTextStyle</span><span class="p">:</span><span class="n">UIFontTextStyleHeadline1</span><span class="p">];</span>
+  <span class="bp">CGSize</span> <span class="n">nameLabelFontSize</span> <span class="o">=</span> <span class="p">[[</span><span class="n">account</span> <span class="n">name</span><span class="p">]</span> <span class="nl">sizeWithAttributes</span><span class="p">:[</span><span class="bp">NSDictionary</span> <span class="nl">dictionaryWithObject</span><span class="p">:</span><span class="n">nameLabelFont</span> <span class="nl">forKey</span><span class="p">:</span><span class="n">NSFontAttributeName</span><span class="p">]];</span>
+
+  <span class="c1">// ...</span>
+
+  <span class="n">CGFloat</span> <span class="n">PADDING_OUTER</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+  <span class="n">CGFloat</span> <span class="n">totalHeight</span> <span class="o">=</span> <span class="n">PADDING_OUTER</span> <span class="o">+</span> <span class="n">nameLabelFontSize</span><span class="p">.</span><span class="n">height</span> <span class="o">+</span> <span class="p">...</span> <span class="o">+</span> <span class="n">PADDING_OUTER</span><span class="p">;</span>
+
+  <span class="k">return</span> <span class="n">totalHeight</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
 
 <p>We also need to programmatically assign (or re-assign because we already did it in
 the Storyboard) the cell label Text Style values.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="n">UITableViewCell</span> <span class="o">*</span><span class="p">)</span><span class="nf">tableView:</span><span class="p">(</span><span class="n">UITableView</span> <span class="o">*</span><span class="p">)</span><span class="nv">tableView</span> <span class="nf">cellForRowAtIndexPath:</span><span class="p">(</span><span class="n">NSIndexPath</span> <span class="o">*</span><span class="p">)</span><span class="nv">indexPath</span> <span class="p">{</span>
-</span><span class='line'>    <span class="n">AccountCell</span> <span class="o">*</span><span class="n">cell</span> <span class="o">=</span> <span class="p">(</span><span class="n">AccountCell</span> <span class="o">*</span><span class="p">)[</span><span class="n">tableView</span> <span class="nl">dequeueReusableCellWithIdentifier:</span><span class="s">@&quot;AccountCell&quot;</span><span class="p">];</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="n">Account</span> <span class="o">*</span><span class="n">account</span> <span class="o">=</span> <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">fetchedResultsController</span> <span class="nl">objectAtIndexPath:</span><span class="n">indexPath</span><span class="p">];</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="n">cell</span><span class="p">.</span><span class="n">nameLabel</span><span class="p">.</span><span class="n">text</span> <span class="o">=</span> <span class="p">[</span><span class="n">account</span> <span class="n">name</span><span class="p">];</span>
-</span><span class='line'>    <span class="n">cell</span><span class="p">.</span><span class="n">nameLabel</span><span class="p">.</span><span class="n">font</span> <span class="o">=</span> <span class="p">[</span><span class="n">UIFont</span> <span class="nl">preferredFontForTextStyle:</span><span class="n">UIFontTextStyleHeadline1</span><span class="p">];</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="c1">// ...</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span class="p">-</span> <span class="p">(</span><span class="bp">UITableViewCell</span> <span class="o">*</span><span class="p">)</span><span class="nf">tableView:</span><span class="p">(</span><span class="bp">UITableView</span> <span class="o">*</span><span class="p">)</span><span class="nv">tableView</span> <span class="nf">cellForRowAtIndexPath:</span><span class="p">(</span><span class="bp">NSIndexPath</span> <span class="o">*</span><span class="p">)</span><span class="nv">indexPath</span> <span class="p">{</span>
+  <span class="n">AccountCell</span> <span class="o">*</span><span class="n">cell</span> <span class="o">=</span> <span class="p">(</span><span class="n">AccountCell</span> <span class="o">*</span><span class="p">)[</span><span class="n">tableView</span> <span class="nl">dequeueReusableCellWithIdentifier</span><span class="p">:</span><span class="s">@&quot;AccountCell&quot;</span><span class="p">];</span>
 
+  <span class="n">Account</span> <span class="o">*</span><span class="n">account</span> <span class="o">=</span> <span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">fetchedResultsController</span> <span class="nl">objectAtIndexPath</span><span class="p">:</span><span class="n">indexPath</span><span class="p">];</span>
 
-<h2>Final Thoughts</h2>
+  <span class="n">cell</span><span class="p">.</span><span class="n">nameLabel</span><span class="p">.</span><span class="n">text</span> <span class="o">=</span> <span class="p">[</span><span class="n">account</span> <span class="n">name</span><span class="p">];</span>
+  <span class="n">cell</span><span class="p">.</span><span class="n">nameLabel</span><span class="p">.</span><span class="n">font</span> <span class="o">=</span> <span class="p">[</span><span class="bp">UIFont</span> <span class="nl">preferredFontForTextStyle</span><span class="p">:</span><span class="n">UIFontTextStyleHeadline1</span><span class="p">];</span>
 
-<p>That&rsquo;s it. iOS 7 determines and applies the font attributes for each label based on the
+  <span class="c1">// ...</span>
+<span class="p">}</span></code></pre></div>
+
+<h2 id="final-thoughts">Final Thoughts</h2>
+
+<p>That’s it. iOS 7 determines and applies the font attributes for each label based on the
 Text Style for each label, and the iOS 7 Text Size system setting selected by the user,
-and it&rsquo;s left to us (the developer) to cater for the changes in the layout to the view.</p>
+and it’s left to us (the developer) to cater for the changes in the layout to the view.</p>
 
-<p>As you can see there&rsquo;s a bit of extra work to support Dynamic Type. It would be nice if
+<p>As you can see there’s a bit of extra work to support Dynamic Type. It would be nice if
 it was a bit smarter, a bit more automatic, but with great power comes great responsibility.</p>
-</div>
-
-
-  <footer>
-    <p class="meta">
-      
-  
-
-<span class="byline author vcard">Posted by <span class="fn">Peter Boni</span></span>
-
-      
 
 
 
+                <hr>
 
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/blog/2013/06/24/ios-7-userxlistview/" data-toggle="tooltip" data-placement="top" title="iOS 7 UserXListView">&larr; Previous Post</a> 
+                    </li>
+                     
+                    
+                    <li class="next">
+                        <a href="/blog/2013/07/04/ios-formatted-currency-input/" data-toggle="tooltip" data-placement="top" title="iOS Formatted Currency Input">Next Post &rarr;</a>
+                    </li>
+                     
+                </ul>
 
-
-
-
-  
-
-
-<time datetime="2013-06-29T07:00:00+08:00" pubdate data-updated="true">June 29, 2013</time>
-      
-
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/dev/'>dev</a>, <a class='category' href='/blog/categories/mobile/'>mobile</a>
-  
-</span>
-
-
-    </p>
-    
-      <div class="sharing">
-  
-  <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.peterboni.net/blog/2013/06/29/ios-7-dynamic-type/" data-via="peterboni" data-counturl="http://www.peterboni.net/blog/2013/06/29/ios-7-dynamic-type/" >Tweet</a>
-  
-  
-  
-  <div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
-  
-</div>
-
-    
-    <p class="meta">
-      
-        <a class="basic-alignment left" href="/blog/2013/06/24/ios-7-userxlistview/" title="Previous Post: iOS 7 UserXListView">&laquo; iOS 7 UserXListView</a>
-      
-      
-        <a class="basic-alignment right" href="/blog/2013/07/04/ios-formatted-currency-input/" title="Next Post: iOS Formatted Currency Input">iOS Formatted Currency Input &raquo;</a>
-      
-    </p>
-  </footer>
+            </div>
+        </div>
+    </div>
 </article>
 
-</div>
+<hr>
 
-<aside class="sidebar">
-  
-    <section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/2014/09/08/city-to-surf/">City to Surf</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/06/27/running/">Running</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/05/19/circular/">Circular</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/04/26/photoarchive-1-dot-3/">PhotoArchive 1.3</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/03/03/running-conversation/">Running Conversation</a>
-      </li>
-    
-  </ul>
-</section>
-
-<section>
-  <h1>Latest Tweets</h1>
-  <p><a class="twitter-timeline" href="https://twitter.com/peterboni" data-widget-id="310642022870564864">Tweets by @peterboni</a></p>
-  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-</section>
-
-
-
-
-
-  
-</aside>
-
-
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://twitter.com/peterboni">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://au.linkedin.com/in/peterboni">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; Peter Boni 2014</p>
+            </div>
+        </div>
     </div>
-  </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2014 - Peter Boni -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
-
 </footer>
-  
 
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
 
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js "></script>
 
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) {return;}
-  js = d.createElement(s); js.id = id; js.async = true;
-  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+<!-- Custom Theme JavaScript -->
+<script src="/js/clean-blog.min.js "></script>
 
-
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = '//platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
-
-
-
-
-<!-- fancybox -->
-<script src="/javascripts/libs/jquery.min.js"></script>
-<script src="/media/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
-<script src="/media/fancybox/activate.js" type="text/javascript"></script>
 
 </body>
+
 </html>
