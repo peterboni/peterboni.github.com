@@ -5,9 +5,73 @@
     <description>Trying to not take myself too seriously.</description>
     <link>http://www.peterboni.net/</link>
     <atom:link href="http://www.peterboni.net/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 14 Dec 2014 10:52:37 +0800</pubDate>
-    <lastBuildDate>Sun, 14 Dec 2014 10:52:37 +0800</lastBuildDate>
+    <pubDate>Sat, 20 Dec 2014 10:54:20 +0800</pubDate>
+    <lastBuildDate>Sat, 20 Dec 2014 10:54:20 +0800</lastBuildDate>
     <generator>Jekyll v2.5.2</generator>
+    
+      <item>
+        <title>Consistency</title>
+        <description>&lt;p&gt;In &lt;a href=&quot;/blog/2014/01/01/running-numbers/&quot;&gt;January&lt;/a&gt; I paid RunKeeper to use the data I gave them the previous year, and give me insight.
+The numbers and charts were disappointing.
+This wasn’t &lt;em&gt;insight&lt;/em&gt;.
+I wrote that what mattered was the &lt;em&gt;experience&lt;/em&gt;.
+One year later and RunKeeper still charge you for insight.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/2014-12-20-consistency/rk-insights1.png&quot; /&gt;
+&lt;img src=&quot;/img/2014-12-20-consistency/rk-insights2.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I discovered that RunKeeper enables you to export your data.
+‘Get your export on’ as RunKeeper says.
+I downloaded my activity data as &lt;a href=&quot;http://en.wikipedia.org/wiki/Comma-separated_values&quot;&gt;CSV&lt;/a&gt;, and attempted to analyse it.&lt;/p&gt;
+
+&lt;p&gt;What do you do with lots of data? Add up the numbers of course.
+I wanted to compare the last 2 years.
+The numbers didn’t tell me anything interesting that I didn’t already know.
+More workouts means more duration and calories burned.
+Less cycling means less distance and climb.&lt;/p&gt;
+
+&lt;p&gt;It was time to visualise the data for 2014 with some charts.
+Maybe charts would give me &lt;em&gt;insight&lt;/em&gt;.
+First I charted workout duration, with a linear trend line.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/2014-12-20-consistency/workouts-duration.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The trend line showed me that my workout time had increased during the year.
+This combined with the distribution of the data points showed me a picture of &lt;em&gt;consistency&lt;/em&gt; over the year.
+A sudden realisation, I knew this already!&lt;/p&gt;
+
+&lt;p&gt;The only visual I had been looking at in the RunKeeper app during the year was the ‘workouts per week’ chart.
+I had been aiming for at least 3 workouts per week.
+If I fell behind I would workout more.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/2014-12-20-consistency/rk-workouts-weekly.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Next I charted workouts per week, with a monthly moving average trend line.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/2014-12-20-consistency/workouts-weekly.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This chart showed me a picture of where my consistency changed.
+In February I went on a work trip to New Zealand and San Francisco.
+In April I had a few weeks holiday.
+Of course the data doesn’t tell the full story.
+I did a lot of walking in New Zealand and San Francisco which I didn’t record in RunKeeper.&lt;/p&gt;
+
+&lt;p&gt;With the coming wave of wearable devices we will be capturing more data about ourselves than ever before.
+This will create many possibilities, and many questions.&lt;/p&gt;
+
+&lt;p&gt;It’s clear that &lt;em&gt;experience&lt;/em&gt; is critical, but so is &lt;em&gt;consistency&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;You don’t need to pay for &lt;em&gt;insight&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Just do it.&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 20 Dec 2014 07:00:00 +0800</pubDate>
+        <link>http://www.peterboni.net/blog/2014/12/20/consistency/</link>
+        <guid isPermaLink="true">http://www.peterboni.net/blog/2014/12/20/consistency/</guid>
+        
+        
+      </item>
     
       <item>
         <title>City to Surf</title>
@@ -719,32 +783,6 @@ database, or web pages to your cloud backend in future posts if there is interes
         
         
         <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Cylon Style</title>
-        <description>&lt;p&gt;I received a message on May 7, 2013 that turned into a short lesson about differences, with a rather funny ending. I saved a photo of the conversation and still think about it even now.&lt;/p&gt;
-
-&lt;p&gt;First, some background. This person has the soul of a &lt;a href=&quot;http://en.wikipedia.org/wiki/Cylon_(Battlestar_Galactica)&quot;&gt;Cylon&lt;/a&gt;. Not one of the new humanoid models, but one of the early toaster models. He’s quietly confident and communicates with the minimum amount of words available in our language to convey meaning.&lt;/p&gt;
-
-&lt;p&gt;The incoming message simply read ‘you got 10 minutes for a chat tonight ?’. Immediately I smiled as the message was all lowercase. To me it’s kind of like people on LinkedIn using all lowercase for their &lt;em&gt;name&lt;/em&gt;. Yes, they do exist.&lt;/p&gt;
-
-&lt;p&gt;I replied asking if it could wait until tomorrow. The reply was one word, all lowercase - ‘can’. At this point I was amused enough to make fun of him. I replied ‘Like I said … war-era Centurion model Cylon’. The reply came back, once again one word, all lowercase - ‘efficiency’.&lt;/p&gt;
-
-&lt;p&gt;I thought about this for a moment. We were communicating but the replies weren’t what I expected, i.e. a few well constructed words or sentences. I shot back ‘Where’s the passion or love in efficiency?’. The reply came and I laughed out loud - ‘it’s in there cylon style’.&lt;/p&gt;
-
-&lt;p&gt;Touché Cylon.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/2013-10-19-cylon-style/photo.png&quot; alt=&quot;Cylon Style&quot; /&gt;&lt;/p&gt;
-
-</description>
-        <pubDate>Sat, 19 Oct 2013 07:00:00 +0800</pubDate>
-        <link>http://www.peterboni.net/blog/2013/10/19/cylon-style/</link>
-        <guid isPermaLink="true">http://www.peterboni.net/blog/2013/10/19/cylon-style/</guid>
-        
-        
-        <category>life</category>
         
       </item>
     
