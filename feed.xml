@@ -5,8 +5,8 @@
     <description>Trying to not take myself too seriously.</description>
     <link>http://www.peterboni.net/</link>
     <atom:link href="http://www.peterboni.net/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 25 Dec 2014 07:53:17 +0800</pubDate>
-    <lastBuildDate>Thu, 25 Dec 2014 07:53:17 +0800</lastBuildDate>
+    <pubDate>Fri, 02 Jan 2015 09:43:43 +0800</pubDate>
+    <lastBuildDate>Fri, 02 Jan 2015 09:43:43 +0800</lastBuildDate>
     <generator>Jekyll v2.5.2</generator>
     
       <item>
@@ -150,8 +150,9 @@ This will create many possibilities, and many questions.&lt;/p&gt;
 
 &lt;p&gt;Google &lt;a href=&quot;http://googleblog.blogspot.com.au/2014/03/save-more-with-google-drive.html&quot;&gt;recently lowered&lt;/a&gt; the price of their monthly storage plans making it extremely cheap to have an active (not cold like Amazon S3 Glacier Storage) offsite backup of your irreplaceable memories, your photos &amp;amp; videos.&lt;/p&gt;
 
-&lt;style&gt;.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }&lt;/style&gt;
-&lt;div class=&quot;embed-container&quot;&gt;&lt;iframe src=&quot;http://www.youtube.com/embed/EzUwVVtSrxs&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+&lt;div class=&quot;embed-responsive embed-responsive-16by9&quot;&gt;
+  &lt;iframe class=&quot;embed-responsive-item&quot; src=&quot;http://www.youtube.com/embed/EzUwVVtSrxs&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
 
 </description>
         <pubDate>Sat, 26 Apr 2014 07:00:00 +0800</pubDate>
