@@ -5,44 +5,28 @@
     <description>Trying to not take myself too seriously.</description>
     <link>http://www.peterboni.net/</link>
     <atom:link href="http://www.peterboni.net/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 02 Jan 2015 09:43:43 +0800</pubDate>
-    <lastBuildDate>Fri, 02 Jan 2015 09:43:43 +0800</lastBuildDate>
+    <pubDate>Tue, 06 Jan 2015 08:01:58 +0800</pubDate>
+    <lastBuildDate>Tue, 06 Jan 2015 08:01:58 +0800</lastBuildDate>
     <generator>Jekyll v2.5.2</generator>
     
       <item>
         <title>Consistency</title>
-        <description>&lt;p&gt;In &lt;a href=&quot;/blog/2014/01/01/running-numbers/&quot;&gt;January&lt;/a&gt; I paid RunKeeper to use the data I gave them the previous year, and give me insight.
-The numbers and charts were disappointing.
-This wasn’t &lt;em&gt;insight&lt;/em&gt;.
-I wrote that what mattered was the &lt;em&gt;experience&lt;/em&gt;.
-One year later and RunKeeper still charge you for insight.&lt;/p&gt;
+        <description>&lt;p&gt;In &lt;a href=&quot;/blog/2014/01/01/running-numbers/&quot;&gt;January&lt;/a&gt; I paid RunKeeper to use the data I gave them the previous year, and give me insight. The numbers and charts were disappointing. This wasn’t insight I thought to myself. I wrote that what mattered was the experience. One year later and RunKeeper still charge you for insight.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/img/2014-12-20-consistency/rk-insights1.png&quot; /&gt;
 &lt;img src=&quot;/img/2014-12-20-consistency/rk-insights2.png&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;I discovered that RunKeeper enables you to export your data.
-‘Get your export on’ as RunKeeper says.
-I downloaded my activity data as &lt;a href=&quot;http://en.wikipedia.org/wiki/Comma-separated_values&quot;&gt;CSV&lt;/a&gt;, and attempted to analyse it.&lt;/p&gt;
+&lt;p&gt;I discovered that RunKeeper enables you to export your data. ‘Get your export on’ as RunKeeper says. I downloaded my activity data as &lt;a href=&quot;http://en.wikipedia.org/wiki/Comma-separated_values&quot;&gt;CSV&lt;/a&gt;, and attempted to analyse it.&lt;/p&gt;
 
-&lt;p&gt;What do you do with lots of data? Add up the numbers of course.
-I wanted to compare the last 2 years.
-The numbers didn’t tell me anything interesting that I didn’t already know.
-More workouts means more duration and calories burned.
-Less cycling means less distance and climb.&lt;/p&gt;
+&lt;p&gt;What do you do with lots of data? Add up the numbers of course. I wanted to compare the last 2 years. The numbers were again disappointing. They didn’t tell me anything interesting that I didn’t already know. More workouts meant more duration and calories burned. Less cycling meant less distance and climb.&lt;/p&gt;
 
-&lt;p&gt;It was time to visualise the data for 2014 with some charts.
-Maybe charts would give me &lt;em&gt;insight&lt;/em&gt;.
-First I charted workout duration, with a linear trend line.&lt;/p&gt;
+&lt;p&gt;It was time to visualise the data for 2014 with some charts. Maybe charts would give me *insight. First I charted workout duration, with a linear trend line.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/img/2014-12-20-consistency/workouts-duration.png&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;The trend line showed me that my workout time had increased during the year.
-This combined with the distribution of the data points showed me a picture of &lt;em&gt;consistency&lt;/em&gt; over the year.
-A sudden realisation, I knew this already!&lt;/p&gt;
+&lt;p&gt;The trend line showed me that my workout time had increased during the year. Combined with the data points a picture of &lt;em&gt;consistency&lt;/em&gt; over the year emerged. I had a sudden realisation. I knew this already!&lt;/p&gt;
 
-&lt;p&gt;The only visual I had been looking at in the RunKeeper app during the year was the ‘workouts per week’ chart.
-I had been aiming for at least 3 workouts per week.
-If I fell behind I would workout more.&lt;/p&gt;
+&lt;p&gt;The RunKeeper app has a ‘workouts per week’ chart on the ‘Me’ tab. It’s a simple and effective visual of how many workouts you do per week, for the last 10 weeks. I realised that I had been using it during the year to motivate myself. I had been aiming for at least 3 workouts per week. If I fell behind one week, I would workout more the next.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/img/2014-12-20-consistency/rk-workouts-weekly.png&quot; /&gt;&lt;/p&gt;
 
@@ -50,20 +34,9 @@ If I fell behind I would workout more.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/img/2014-12-20-consistency/workouts-weekly.png&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;This chart showed me a picture of where my consistency changed.
-In February I went on a work trip to New Zealand and San Francisco.
-In April I had a few weeks holiday.
-Of course the data doesn’t tell the full story.
-I did a lot of walking in New Zealand and San Francisco which I didn’t record in RunKeeper.&lt;/p&gt;
+&lt;p&gt;This chart showed me a picture of where my consistency changed. In February I went on a work trip to New Zealand and San Francisco, and in April I had a few weeks holiday. Of course the data doesn’t tell the full story. I did a lot of walking in New Zealand and San Francisco which I didn’t record in RunKeeper.&lt;/p&gt;
 
-&lt;p&gt;With the coming wave of wearable devices we will be capturing more data about ourselves than ever before.
-This will create many possibilities, and many questions.&lt;/p&gt;
-
-&lt;p&gt;It’s clear that &lt;em&gt;experience&lt;/em&gt; is critical, but so is &lt;em&gt;consistency&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;You don’t need to pay for &lt;em&gt;insight&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Just do it.&lt;/p&gt;
+&lt;p&gt;The wearable devices wave is coming. We will be capturing more data about ourselves than ever before. This will create many possibilities, and raise many more questions. We need to use these devices to enhance our &lt;em&gt;experience&lt;/em&gt;, and drive our &lt;em&gt;consistency&lt;/em&gt;. And remember you don’t need to pay for &lt;em&gt;insight&lt;/em&gt;. Just do it.&lt;/p&gt;
 
 </description>
         <pubDate>Sat, 20 Dec 2014 07:00:00 +0800</pubDate>
