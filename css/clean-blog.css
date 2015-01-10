@@ -1,3 +1,9 @@
+/*!
+ * Clean Blog v1.0.0 (http://startbootstrap.com)
+ * Copyright 2015 Start Bootstrap
+ * Licensed under Apache 2.0 (https://github.com/IronSummitMedia/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
 body {
   font-family: 'Lora', 'Times New Roman', serif;
   font-size: 20px;
@@ -32,11 +38,7 @@ a img:focus {
 }
 blockquote {
   color: #808080;
-  font-size: 20px;
   font-style: italic;
-}
-blockquote p {
-  margin: 0;
 }
 hr.small {
   max-width: 100px;
@@ -398,4 +400,43 @@ img::-moz-selection {
 }
 body {
   webkit-tap-highlight-color: #0085a1;
+}
+body {
+  color: rgba(0, 0, 0, 0.8);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: .01em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+blockquote {
+  border-left: 3px solid rgba(0, 0, 0, 0.8);
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 20px;
+  margin-left: 0;
+  margin-bottom: 30px;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+}
+blockquote p {
+  margin: 0;
+}
+blockquote cite {
+  color: #808080;
+  font-size: small;
+}
+.img-light-border {
+  border: 1px solid #E8E8E8;
+}
+.img-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
