@@ -94,19 +94,14 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-				<p>iOS 7 introduces Dynamic Type, which if apps choose to support it, gives the user
-control over text size in an app. Web pages have had this feature for free since the early
-days of the web, but web browsers moved away from dynamic text sizing.
+				<p>iOS 7 introduces Dynamic Type, which if apps choose to support it, gives the user control over text size in an app. Web pages have had this feature for free since the early days of the web, but web browsers moved away from dynamic text sizing.
 <a href="http://www.codinghorror.com/blog/2009/01/the-two-types-of-browser-zoom.html">The Two Types of Browser Zoom</a>.</p>
 
-<p>iOS7 Dynamic Type automatically adjusts weight, letter spacing, and line height for every font
-size. It looks <strong>stunning</strong>, but there’s work to make your app support it.</p>
+<p>iOS7 Dynamic Type automatically adjusts weight, letter spacing, and line height for every font size. It looks <em>*stunning</em>, but there’s work to make your app support it.</p>
 
 <h2 id="default-size">Default Size</h2>
 
-<p>Here’s what <a href="/blog/2013/06/24/ios-7-userxlistview/">UserXListView</a> looks like with the Text Size
-(Settings - General - Text Size) set to the default size in the <em>iPhone Retina (3.5-inch)</em>
-iOS Simulator.</p>
+<p>Here’s what <a href="/blog/2013/06/24/ios-7-userxlistview/">UserXListView</a> looks like with the Text Size (Settings - General - Text Size) set to the default size in the <em>iPhone Retina (3.5-inch)</em> iOS Simulator.</p>
 
 <p><img src="/img/2013-06-29-ios-7-dynamic-type/1-text-size-normal.png" alt="Text Size Default" /></p>
 
@@ -137,28 +132,21 @@ beautiful type.</p>
 
 <h2 id="implementation-the-easy-part">Implementation, The Easy Part</h2>
 
-<p>That’s how it looks, but how hard is it to make your app support it. Let’s look at
-<a href="/blog/2013/06/24/ios-7-userxlistview/">UserXListView</a>. The cell layout makes use of Auto
-Layout Constraints, which are very powerful.</p>
+<p>That’s how it looks, but how hard is it to make your app support it. Let’s look at <a href="/blog/2013/06/24/ios-7-userxlistview/">UserXListView</a>. The cell layout makes use of Auto Layout Constraints, which are very powerful.</p>
 
 <p><img src="/img/2013-06-29-ios-7-dynamic-type/7-userxlistview-cell-layout.png" alt="UserXListView Cell" /></p>
 
-<p>iOS 7 has defined Text Styles - Body, Caption 1, Caption 2, Footnote, Headline 1,
-Headline 2, Subhead 1, and Subhead 2. We assign a Text Style to each label in the cell
-layout via the attribute inspector as shown below.</p>
+<p>iOS 7 has defined Text Styles - Body, Caption 1, Caption 2, Footnote, Headline 1, Headline 2, Subhead 1, and Subhead 2. We assign a Text Style to each label in the cell layout via the attribute inspector as shown below.</p>
 
 <p><img src="/img/2013-06-29-ios-7-dynamic-type/8-userxlistview-cell-label-attribute-inspector.png" alt="UserXListView Cell Label Attribute Inspector" /></p>
 
-<p>Once the label Text Styles and Auto Layout Constraints are set, we’re ready for the hard
-part.</p>
+<p>Once the label Text Styles and Auto Layout Constraints are set, we’re ready for the hard part.</p>
 
 <h2 id="implementation-the-hard-part">Implementation, The Hard Part</h2>
 
-<p>Unlike Auto Layout in this example, there’s more work to do to support
-Dynamic Type.</p>
+<p>Unlike Auto Layout in this example, there’s more work to do to support Dynamic Type.</p>
 
-<p>We need to make the Controller aware of a Text Size change by hooking into the
-UIContentSizeCategoryDidChangeNotification.</p>
+<p>We need to make the Controller aware of a Text Size change by hooking into the UIContentSizeCategoryDidChangeNotification.</p>
 
 <div class="highlight"><pre><code class="language-objc" data-lang="objc"><span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">viewDidLoad</span> <span class="p">{</span>
   <span class="p">[</span><span class="nb">super</span> <span class="n">viewDidLoad</span><span class="p">];</span>
@@ -172,8 +160,7 @@ UIContentSizeCategoryDidChangeNotification.</p>
   <span class="c1">// refresh view...</span>
 <span class="p">}</span></code></pre></div>
 
-<p>We need to calculate the height of the row/cell based on it’s content, and as each label
-in the cell can change height we need to calculate the total height of the cell required.</p>
+<p>We need to calculate the height of the row/cell based on it’s content, and as each label in the cell can change height we need to calculate the total height of the cell required.</p>
 
 <div class="highlight"><pre><code class="language-objc" data-lang="objc"><span class="p">-</span> <span class="p">(</span><span class="n">CGFloat</span><span class="p">)</span><span class="nf">tableView:</span><span class="p">(</span><span class="bp">UITableView</span> <span class="o">*</span><span class="p">)</span><span class="nv">tableView</span> <span class="nf">heightForRowAtIndexPath:</span><span class="p">(</span><span class="bp">NSIndexPath</span> <span class="o">*</span><span class="p">)</span><span class="nv">indexPath</span> <span class="p">{</span>
   <span class="n">Account</span> <span class="o">*</span><span class="n">account</span> <span class="o">=</span> <span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">fetchedResultsController</span> <span class="nl">objectAtIndexPath</span><span class="p">:</span><span class="n">indexPath</span><span class="p">];</span>
@@ -189,8 +176,7 @@ in the cell can change height we need to calculate the total height of the cell 
   <span class="k">return</span> <span class="n">totalHeight</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
-<p>We also need to programmatically assign (or re-assign because we already did it in
-the Storyboard) the cell label Text Style values.</p>
+<p>We also need to programmatically assign (or re-assign because we already did it in the Storyboard) the cell label Text Style values.</p>
 
 <div class="highlight"><pre><code class="language-objc" data-lang="objc"><span class="p">-</span> <span class="p">(</span><span class="bp">UITableViewCell</span> <span class="o">*</span><span class="p">)</span><span class="nf">tableView:</span><span class="p">(</span><span class="bp">UITableView</span> <span class="o">*</span><span class="p">)</span><span class="nv">tableView</span> <span class="nf">cellForRowAtIndexPath:</span><span class="p">(</span><span class="bp">NSIndexPath</span> <span class="o">*</span><span class="p">)</span><span class="nv">indexPath</span> <span class="p">{</span>
   <span class="n">AccountCell</span> <span class="o">*</span><span class="n">cell</span> <span class="o">=</span> <span class="p">(</span><span class="n">AccountCell</span> <span class="o">*</span><span class="p">)[</span><span class="n">tableView</span> <span class="nl">dequeueReusableCellWithIdentifier</span><span class="p">:</span><span class="s">@&quot;AccountCell&quot;</span><span class="p">];</span>
@@ -205,12 +191,9 @@ the Storyboard) the cell label Text Style values.</p>
 
 <h2 id="final-thoughts">Final Thoughts</h2>
 
-<p>That’s it. iOS 7 determines and applies the font attributes for each label based on the
-Text Style for each label, and the iOS 7 Text Size system setting selected by the user,
-and it’s left to us (the developer) to cater for the changes in the layout to the view.</p>
+<p>That’s it. iOS 7 determines and applies the font attributes for each label based on the Text Style for each label, and the iOS 7 Text Size system setting selected by the user, and it’s left to us (the developer) to cater for the changes in the layout to the view.</p>
 
-<p>As you can see there’s a bit of extra work to support Dynamic Type. It would be nice if
-it was a bit smarter, a bit more automatic, but with great power comes great responsibility.</p>
+<p>As you can see there’s a bit of extra work to support Dynamic Type. It would be nice if it was a bit smarter, a bit more automatic, but with great power comes great responsibility.</p>
 
 
 

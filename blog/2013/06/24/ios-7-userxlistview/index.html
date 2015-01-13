@@ -94,50 +94,35 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-				<p>I believe the best way to understand something is to get your hands dirty, so I decided
-to build the front end part of an app idea that I’ve had for a while as an iOS 7 app.</p>
+				<p>I believe the best way to understand something is to get your hands dirty, so I decided to build the front end part of an app idea that I’ve had for a while as an iOS 7 app.</p>
 
-<p>While using iOS 7 for the last week or so, I’ve been thinking about the UI and UX.
-Of course, Metro (design language) has been around for a while thanks to Microsoft, but
-the Metro apps I’ve used feel dull. iOS 7 feels surprisingly refreshing.</p>
+<p>While using iOS 7 for the last week or so, I’ve been thinking about the UI and UX. Of course, Metro (design language) has been around for a while thanks to Microsoft, but the Metro apps I’ve used feel dull. iOS 7 feels surprisingly refreshing.</p>
 
-<p>One of the views in the app I’m building needs a list of <em>things</em> that the user creates -
-a typical pattern in many apps. iOS has a UITableViewController, so technically it’s an
-easy problem to solve. In terms of the design of the UI and UX it’s a little bit more complicated.</p>
+<p>One of the views in the app I’m building needs a list of <em>things</em> that the user creates - a typical pattern in many apps. iOS has a UITableViewController, so technically it’s an easy problem to solve. In terms of the design of the UI and UX it’s a little bit more complicated.</p>
 
-<p>Let me talk you through what I call the UserXListView(tm) pattern in 7 images of the
-iOS 7 app I’ve started building.</p>
+<p>Let me talk you through what I call the UserXListView(tm) pattern in 7 images of the iOS 7 app I’ve started building.</p>
 
 <h2 id="empty-list-view">1. Empty List View</h2>
 
-<p>Ok. We have a list view. That + in the top right corner is staring at her.
-Tap me! Tap me!</p>
+<p>Ok. We have a list view. That + in the top right corner is staring at her. Tap me! Tap me!</p>
 
 <p><img src="/img/2013-06-24-ios-7-userxlistview/app-1-list-view.png" alt="1. Empty List View" /></p>
 
 <h2 id="add-item-with-default-icon-and-colour">2. Add Item (with default Icon and Colour)</h2>
 
-<p>She taps +. She knows that she’s going to create something. What’s the first
-decision? What to name it? No. The first decision is an emotional one. What’s this thing
-going to look like.</p>
+<p>She taps +. She knows that she’s going to create something. What’s the first decision? What to name it? No. The first decision is an emotional one. What’s this thing going to look like.</p>
 
 <p><img src="/img/2013-06-24-ios-7-userxlistview/app-2-add-item.png" alt="2. Add Item (with default Icon and Colour)" /></p>
 
-<p>Technically this is a modal segue; either Cancel and go back, or enter the required
-information and Save.</p>
+<p>Technically this is a modal segue; either Cancel and go back, or enter the required information and Save.</p>
 
 <h2 id="item-icon">3. Item Icon</h2>
 
-<p>She taps Change Icon. This is where it gets interesting. The icons are in groups and are
-all black so that they are easy for her to judge equally. In this instance there’s only one
-group of simple icons from The Noun Project, that are visually related to the thing that
-she is creating.</p>
+<p>She taps Change Icon. This is where it gets interesting. The icons are in groups and are all black so that they are easy for her to judge equally. In this instance there’s only one group of simple icons from The Noun Project, that are visually related to the thing that she is creating.</p>
 
 <p><img src="/img/2013-06-24-ios-7-userxlistview/app-3-icons.png" alt="3. Item Icon" /></p>
 
-<p>Once again this is a modal segue; either Cancel and go back, or give the required
-information, which in this instance is selecting an icon. We use a UICollectionViewController
-that’s dynamic. We define the icon groups and icons as follows.</p>
+<p>Once again this is a modal segue; either Cancel and go back, or give the required information, which in this instance is selecting an icon. We use a UICollectionViewController that’s dynamic. We define the icon groups and icons as follows.</p>
 
 <div class="highlight"><pre><code class="language-objc" data-lang="objc"><span class="n">icons</span> <span class="o">=</span> <span class="p">[</span><span class="bp">NSArray</span> <span class="nl">arrayWithObjects</span><span class="p">:</span>
           <span class="p">[</span><span class="bp">NSArray</span> <span class="nl">arrayWithObjects</span><span class="p">:</span><span class="s">@&quot;The Noun Project&quot;</span><span class="p">,</span> <span class="s">@&quot;airplane&quot;</span><span class="p">,</span> <span class="s">@&quot;beachumbrella&quot;</span><span class="p">,</span> <span class="s">@&quot;bucket&quot;</span><span class="p">,</span> <span class="s">@&quot;car&quot;</span><span class="p">,</span> <span class="s">@&quot;cocktail&quot;</span><span class="p">,</span> <span class="s">@&quot;coins&quot;</span><span class="p">,</span> <span class="s">@&quot;college&quot;</span><span class="p">,</span> <span class="s">@&quot;creditcard&quot;</span><span class="p">,</span> <span class="s">@&quot;house&quot;</span><span class="p">,</span> <span class="s">@&quot;island&quot;</span><span class="p">,</span> <span class="s">@&quot;piggybank&quot;</span><span class="p">,</span> <span class="s">@&quot;rain&quot;</span><span class="p">,</span> <span class="s">@&quot;ring&quot;</span><span class="p">,</span> <span class="s">@&quot;sailboat&quot;</span><span class="p">,</span> <span class="s">@&quot;school&quot;</span><span class="p">,</span> <span class="s">@&quot;shoppingbag&quot;</span><span class="p">,</span> <span class="s">@&quot;smartcard&quot;</span><span class="p">,</span> <span class="s">@&quot;stroller&quot;</span><span class="p">,</span> <span class="s">@&quot;tree&quot;</span><span class="p">,</span> <span class="s">@&quot;umbrella&quot;</span><span class="p">,</span> <span class="s">@&quot;wallet&quot;</span><span class="p">,</span> <span class="nb">nil</span><span class="p">],</span>
@@ -145,19 +130,11 @@ that’s dynamic. We define the icon groups and icons as follows.</p>
 
 <h2 id="item-icon-colour">4. Item Icon Colour</h2>
 
-<p>She taps the piggy bank icon (they’re cute). Now she can personalise the icon even further
-by selecting a colour from different groups of colour palettes. She can select a colour
-from the same palette to match all her <em>things</em>, or mix and match colours from different
-colour palettes. The choice is hers. If she doesn’t like the icon in any of these colours
-she can either tap &lt; Icon, or as a nice feature of iOS 7, swipe left to right inside where
-the icons are located and the view will slide off the top to the right and she will be taken
-back to the black icons.</p>
+<p>She taps the piggy bank icon (they’re cute). Now she can personalise the icon even further by selecting a colour from different groups of colour palettes. She can select a colour from the same palette to match all her <em>things</em>, or mix and match colours from different colour palettes. The choice is hers. If she doesn’t like the icon in any of these colours she can either tap &lt; Icon, or as a nice feature of iOS 7, swipe left to right inside where the icons are located and the view will slide off the top to the right and she will be taken back to the black icons.</p>
 
 <p><img src="/img/2013-06-24-ios-7-userxlistview/app-4-colours.png" alt="4. Item Icon Colour" /></p>
 
-<p>This time we do a push segue. We use a UICollectionViewController that’s dynamic, and some
-Core Graphics help. In the app we only store one black piggy bank icon .png file, and at
-runtime dynamically colour each piggy bank. We define the colour groups and colours as follows.</p>
+<p>This time we do a push segue. We use a UICollectionViewController that’s dynamic, and some Core Graphics help. In the app we only store one black piggy bank icon .png file, and at runtime dynamically colour each piggy bank. We define the colour groups and colours as follows.</p>
 
 <div class="highlight"><pre><code class="language-objc" data-lang="objc"><span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="bp">NSArray</span> <span class="nl">arrayWithObjects</span><span class="p">:</span>
            <span class="p">[</span><span class="bp">NSArray</span> <span class="nl">arrayWithObjects</span><span class="p">:</span><span class="s">@&quot;Winter Sunset&quot;</span><span class="p">,</span> <span class="s">@&quot;#A8AB9B&quot;</span><span class="p">,</span> <span class="s">@&quot;#172A38&quot;</span><span class="p">,</span> <span class="s">@&quot;#EC4B5D&quot;</span><span class="p">,</span> <span class="s">@&quot;#F48773&quot;</span><span class="p">,</span> <span class="s">@&quot;#E0C590&quot;</span><span class="p">,</span> <span class="nb">nil</span><span class="p">],</span>
@@ -185,34 +162,27 @@ runtime dynamically colour each piggy bank. We define the colour groups and colo
 
 <h2 id="add-item-with-selected-icon-and-colour">5. Add Item (with selected Icon and Colour)</h2>
 
-<p>She taps the red piggy bank in the Ocean Five colour group, and is taken back to the
-2. Add Item view, with her red piggy bank there waiting for her. She can now enter the
-other information and tap Save.</p>
+<p>She taps the red piggy bank in the Ocean Five colour group, and is taken back to the 2. Add Item view, with her red piggy bank there waiting for her. She can now enter the other information and tap Save.</p>
 
 <p><img src="/img/2013-06-24-ios-7-userxlistview/app-5-add-item.png" alt="5. Add Item (with selected Icon and Colour)" /></p>
 
 <h2 id="item-in-list-view">6. Item in List View</h2>
 
-<p>She taps Save, and her new red piggy bank is waiting for her in the list view. All that’s
-left to do is to add some more.</p>
+<p>She taps Save, and her new red piggy bank is waiting for her in the list view. All that’s left to do is to add some more.</p>
 
 <p><img src="/img/2013-06-24-ios-7-userxlistview/app-6-list-view.png" alt="6. Item in List View" /></p>
 
 <h2 id="list-view-with-items">7. List View with Items</h2>
 
-<p>As she looks at the list of her <em>things</em>, she instantly recognises and associates with each
-one, as it has her personal identifying touch.</p>
+<p>As she looks at the list of her <em>things</em>, she instantly recognises and associates with each one, as it has her personal identifying touch.</p>
 
 <p><img src="/img/2013-06-24-ios-7-userxlistview/app-7-list-view-lots.png" alt="7. List View with Items" /></p>
 
-<p>As you can see it’s easy to give the user power over their <em>things</em> by a simple mobile
-UI and UX pattern, hereby called the UserXListView(tm) pattern.</p>
+<p>As you can see it’s easy to give the user power over their <em>things</em> by a simple mobile UI and UX pattern, hereby called the UserXListView(tm) pattern.</p>
 
 <h2 id="storyboard">Storyboard</h2>
 
-<p>For reference here’s how the views hang together in the Storyboard. Excluding the
-UINavigationControlers we have a UITableViewController, UIViewController, and
-two UICollectionViewControllers.</p>
+<p>For reference here’s how the views hang together in the Storyboard. Excluding the UINavigationControlers we have a UITableViewController, UIViewController, and two UICollectionViewControllers.</p>
 
 <p><img src="/img/2013-06-24-ios-7-userxlistview/storyboard.png" alt="Xcode5 Storyboard" /></p>
 

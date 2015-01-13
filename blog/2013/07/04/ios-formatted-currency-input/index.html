@@ -94,18 +94,13 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-				<p>You’re building an iOS app, and need the user to enter a money value. You start by using
-a UITextField. If you want a basic user experience, then you’re done.</p>
+				<p>You’re building an iOS app, and need the user to enter a money value. You start by using a UITextField. If you want a basic user experience, then you’re done.</p>
 
-<p>If you want to give the user <em>something better</em>, then the pain begins. The pain is worth
-it because <strong>small details matter</strong>. I’ve taken ideas from a few places and combined them
-into this experience and open source code.</p>
+<p>If you want to give the user <em>something better</em>, then the pain begins. The pain is worth it because <strong>small details matter</strong>. I’ve taken ideas from a few places and combined them into this experience and open source code.</p>
 
 <h2 id="the-experience-in-9-images">The Experience in 9 images</h2>
 
-<p>1. We start and sit there, begging the user to enter something. We’re showing $0.00, so we have
-sent a signal to them that they are entering a money value. The cursor is flashing at them
-after the last 0 at the end of the formatted money value.</p>
+<p>1. We start and sit there, begging the user to enter something. We’re showing $0.00, so we have sent a signal to them that they are entering a money value. The cursor is flashing at them after the last 0 at the end of the formatted money value.</p>
 
 <p><img src="/img/2013-07-04-ios-formatted-currency-input/1.png" alt="Start, Shows $0.00" /></p>
 
@@ -119,8 +114,7 @@ after the last 0 at the end of the formatted money value.</p>
 
 <p>4. The user taps the 3 key on the number pad. The display value changes to $1.23</p>
 
-<p>They haven’t had to enter in a dot. They are just tapping numbers, and the displayed
-money value is formatting itself in front of their eyes.</p>
+<p>They haven’t had to enter in a dot. They are just tapping numbers, and the displayed money value is formatting itself in front of their eyes.</p>
 
 <p><img src="/img/2013-07-04-ios-formatted-currency-input/4.png" alt="Tap 3, Changes to $1.23" /></p>
 
@@ -144,8 +138,7 @@ money value is formatting itself in front of their eyes.</p>
 
 <p>9. The ‘$1,000’ gets pasted in and the display value changes to $1,000.00.</p>
 
-<p>Note that the display value didn’t change to $10.00, which would have happened if we
-didn’t trap the paste and format the value before updating the display value.</p>
+<p>Note that the display value didn’t change to $10.00, which would have happened if we didn’t trap the paste and format the value before updating the display value.</p>
 
 <p>Also note that the user could also paste in ‘1000’ or ‘$1000’.</p>
 
