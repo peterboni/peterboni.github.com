@@ -35,6 +35,8 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <link type="application/atom+xml" rel="alternate" href="http://www.peterboni.net/feed.xml" title="" />
+
 </head>
 
 
@@ -61,9 +63,11 @@
                     <a href="/">Home</a>
                 </li>
                 
+                
                 <li>
                     <a href="/archives/">Archives</a>
                 </li>
+                
                 
             </ul>
         </div>
@@ -143,13 +147,13 @@ which is available free from the App Store.</p>
 
 <p>Create and change to a new folder called <strong>cloudbackend</strong> from your Documents folder.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">peters-mac-mini:Documents peterboni<span class="nv">$ </span>mkdir cloudbackend
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">peters-mac-mini:Documents peterboni<span class="nv">$ </span>mkdir cloudbackend
 peters-mac-mini:Documents peterboni<span class="nv">$ </span><span class="nb">cd </span>cloudbackend/
-peters-mac-mini:cloudbackend peterboni<span class="err">$</span></code></pre></div>
+peters-mac-mini:cloudbackend peterboni<span class="err">$</span></code></pre></figure>
 
 <p>Create a file called <strong>package.json</strong> and put the following JSON data object in it.</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">{</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">{</span>
   <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;cloudbackend&quot;</span><span class="p">,</span>
   <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
   <span class="s2">&quot;version&quot;</span><span class="o">:</span> <span class="s2">&quot;0.0.1&quot;</span><span class="p">,</span>
@@ -160,26 +164,26 @@ peters-mac-mini:cloudbackend peterboni<span class="err">$</span></code></pre></d
   <span class="s2">&quot;dependencies&quot;</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">&quot;express&quot;</span><span class="o">:</span> <span class="s2">&quot;3.x&quot;</span>
   <span class="p">}</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span></code></pre></figure>
 
 <p>Use npm (Node Package Manager) to install <a href="http://expressjs.com">Express</a>, which is the
 dependency you identified in the above package.json file. Express is a web
 application framework. Enter ‘npm install’.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">peters-mac-mini:cloudbackend peterboni<span class="nv">$ </span>npm install
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">peters-mac-mini:cloudbackend peterboni<span class="nv">$ </span>npm install
 npm http GET https://registry.npmjs.org/express
 ...
 express@3.4.6 node_modules/express
 ├── methods@0.1.0
 ...
 └── connect@2.11.2 <span class="o">(</span>uid2@0.0.3, pause@0.0.1, qs@0.6.5, bytes@0.2.1, raw-body@1.1.2, negotiator@0.3.0, multiparty@2.2.0<span class="o">)</span>
-peters-mac-mini:cloudbackend peterboni<span class="err">$</span></code></pre></div>
+peters-mac-mini:cloudbackend peterboni<span class="err">$</span></code></pre></figure>
 
 <p>Create a file called <strong>app.js</strong> with the following content.
 All we are doing here is exposing one HTTP GET method request, available at ‘/test’,
 which returns a JSON data object. A simple test.</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">),</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">),</span>
     <span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;http&#39;</span><span class="p">);</span>
 
 <span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span>
@@ -192,13 +196,13 @@ which returns a JSON data object. A simple test.</p>
 
 <span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="nx">app</span><span class="p">).</span><span class="nx">listen</span><span class="p">(</span><span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;port&#39;</span><span class="p">),</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Cloudbackend listening on port &quot;</span> <span class="o">+</span> <span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;port&#39;</span><span class="p">));</span>
-<span class="p">});</span></code></pre></div>
+<span class="p">});</span></code></pre></figure>
 
 <p>Let’s test it!
 Enter ‘node app’.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">peters-mac-mini:cloudbackend peterboni<span class="nv">$ </span>node app
-Cloudbackend listening on port 3000</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">peters-mac-mini:cloudbackend peterboni<span class="nv">$ </span>node app
+Cloudbackend listening on port 3000</code></pre></figure>
 
 <p>Now open your favourite web browser, and navigate to http://localhost:3000/test</p>
 
@@ -236,7 +240,7 @@ You have a fully <strong>auto load balanced, auto scaled cloud application envir
 <p>Initialise your <strong>cloudbackend</strong> Git repository. Enter ‘git init’, followed by
 the other commands in the following console code block.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">peters-mac-mini:cloudbackend peterboni<span class="nv">$ </span>git init
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">peters-mac-mini:cloudbackend peterboni<span class="nv">$ </span>git init
 Initialized empty Git repository in /Users/peterboni/Documents/cloudbackend/.git/
 peters-mac-mini:cloudbackend peterboni<span class="nv">$ </span>cat &gt; .gitignore <span class="s">&lt;&lt;EOT</span>
 <span class="s">node_modules/</span>
@@ -249,15 +253,15 @@ peters-mac-mini:cloudbackend peterboni<span class="nv">$ </span>git commit -m <s
  <span class="m">2</span> files changed, <span class="m">26</span> insertions<span class="o">(</span>+<span class="o">)</span>
  create mode <span class="m">100644</span> app.js
  create mode <span class="m">100644</span> package.json
-peters-mac-mini:cloudbackend peterboni<span class="err">$</span></code></pre></div>
+peters-mac-mini:cloudbackend peterboni<span class="err">$</span></code></pre></figure>
 
 <p>Next download and extract the <a href="http://aws.amazon.com/code/6752709412171743">AWS Elastic Beanstalk Command Line Tool</a> to
 your Documents folder (the cloudbackend folder should be in your Documents folder).</p>
 
 <p>Next add the appropriate EB Python folder to your PATH.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">peters-mac-mini:cloudbackend peterboni<span class="nv">$ </span><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/Users/peterboni/Documents/AWS-ElasticBeanstalk-CLI-2.5.1/eb/macosx/python2.7/
-peters-mac-mini:cloudbackend peterboni<span class="err">$</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">peters-mac-mini:cloudbackend peterboni<span class="nv">$ </span><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/Users/peterboni/Documents/AWS-ElasticBeanstalk-CLI-2.5.1/eb/macosx/python2.7/
+peters-mac-mini:cloudbackend peterboni<span class="err">$</span></code></pre></figure>
 
 <p>If you have OS X Mavericks (Version 10.9) then you already have Python 2.7.5, else you
 will need to download and install it.</p>
@@ -276,7 +280,7 @@ can be found at the URL given after you enter ‘eb init’.</li>
   <li>Enter ‘1’, for ‘Create a default instance profile’.</li>
 </ol>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">peters-mac-mini:cloudbackend peterboni<span class="nv">$ </span>eb init
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">peters-mac-mini:cloudbackend peterboni<span class="nv">$ </span>eb init
 To get your AWS Access Key ID and Secret Access Key,
   visit <span class="s2">&quot;https://aws-portal.amazon.com/gp/aws/securityCredentials&quot;</span>.
 Enter your AWS Access Key ID <span class="o">(</span>current value is <span class="s2">&quot;AKIAJ*****GBOHQ&quot;</span><span class="o">)</span>: <span class="o">[</span>enter yours here<span class="o">]</span>
@@ -319,7 +323,7 @@ Attach an instance profile <span class="o">(</span>current value is <span class=
 Select <span class="o">(</span><span class="m">1</span> to 3<span class="o">)</span>: 1
 Updated AWS Credential file at <span class="s2">&quot;/Users/peterboni/.elasticbeanstalk/aws_credential_file&quot;</span>.
 
-peters-mac-mini:cloudbackend peterboni<span class="err">$</span></code></pre></div>
+peters-mac-mini:cloudbackend peterboni<span class="err">$</span></code></pre></figure>
 
 <p>Now we just start it. Be patient as this will take a few minutes.</p>
 
@@ -328,7 +332,7 @@ peters-mac-mini:cloudbackend peterboni<span class="err">$</span></code></pre></d
   <li>Enter ‘y’, to ‘deploy the latest Git commit to your environment’.</li>
 </ol>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">peters-mac-mini:cloudbackend peterboni<span class="nv">$ </span>eb start
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">peters-mac-mini:cloudbackend peterboni<span class="nv">$ </span>eb start
 Starting application <span class="s2">&quot;cloudbackend&quot;</span>.
 Would you like to deploy the latest Git commit to your environment? <span class="o">[</span>y/n<span class="o">]</span>: y
 remote:
@@ -351,7 +355,7 @@ Waiting <span class="k">for</span> environment <span class="s2">&quot;cloudbacke
 2013-12-07 08:23:14 INFO  Created CloudWatch alarm named: awseb-e-ib22smbwaz-stack-AWSEBCloudwatchAlarmLow-1OAGDWAQFGJTO
 2013-12-07 08:27:02 INFO  Successfully launched environment: cloudbackend-env
 Application is available at <span class="s2">&quot;cloudbackend-env-yey9npuvjz.elasticbeanstalk.com&quot;</span>.
-peters-mac-mini:cloudbackend peterboni<span class="err">$</span></code></pre></div>
+peters-mac-mini:cloudbackend peterboni<span class="err">$</span></code></pre></figure>
 
 <p>Let’s test it!</p>
 
@@ -371,7 +375,7 @@ Application is available at “cloudbackend-env-*.elasticbeanstalk.com”.</p>
 <p>Lastly if you want to stop and delete the environment, use the following EB command.
 Enter ‘eb stop’, and then ‘y’ to terminate the environment.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">peters-mac-mini:cloudbackend peterboni<span class="nv">$ </span>eb stop
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">peters-mac-mini:cloudbackend peterboni<span class="nv">$ </span>eb stop
 Terminate environment? <span class="o">[</span>y/n<span class="o">]</span>: y
 Stopping environment <span class="s2">&quot;cloudbackend-env&quot;</span>. This may take a few minutes.
 2013-12-07 09:24:44 INFO  terminateEnvironment is starting.
@@ -386,7 +390,7 @@ Stopping environment <span class="s2">&quot;cloudbackend-env&quot;</span>. This 
 2013-12-07 09:26:25 INFO  Deleted load balancer named: awseb-e-i-AWSEBLoa-SNLC5NAHWZWP
 2013-12-07 09:26:28 INFO  Deleting SNS topic <span class="k">for</span> environment cloudbackend-env.
 Stop of environment <span class="s2">&quot;cloudbackend-env&quot;</span> has completed.
-peters-mac-mini:cloudbackend peterboni<span class="err">$</span></code></pre></div>
+peters-mac-mini:cloudbackend peterboni<span class="err">$</span></code></pre></figure>
 
 <p>If you get stuck, you can always try checking out the Amazon documentation -
 <a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_nodejs_express.html">Deploying an Express Application to AWS Elastic Beanstalk</a>.</p>
@@ -465,7 +469,7 @@ database, or web pages to your cloud backend in future posts if there is interes
                         </a>
                     </li>
                 </ul>
-                <p class="copyright text-muted">Copyright &copy; Peter Boni 2015</p>
+                <p class="copyright text-muted">Copyright &copy; Peter Boni 2016</p>
             </div>
         </div>
     </div>
