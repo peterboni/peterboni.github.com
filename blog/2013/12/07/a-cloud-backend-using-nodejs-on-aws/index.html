@@ -1,102 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
 
 <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Trying to not take myself too seriously.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>A Cloud Backend using Node.js on AWS - Peter Boni</title>
+  <title>
+    A Cloud Backend using Node.js on AWS - Peter Boni
+    
+  </title>
 
-    <link rel="canonical" href="http://www.peterboni.net/blog/2013/12/07/a-cloud-backend-using-nodejs-on-aws/">
+  <meta name="description" content="What?! You’re building an awesome mobile app, like this one - iOS 7 Dynamic Type, and iOS 7 UserXListView, and get to the point where you need a backend. Oh ...">
 
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/clean-blog.css">
+  <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
 
-    <!-- Pygments Github CSS -->
-    <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="stylesheet" href="/assets/vendor/fontawesome-free/css/all.min.css">
 
-    <!-- Custom Fonts -->
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <link type="application/atom+xml" rel="alternate" href="http://www.peterboni.net/feed.xml" title="Peter Boni" />
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://www.peterboni.net/blog/2013/12/07/a-cloud-backend-using-nodejs-on-aws/">
+  <link rel="alternate" type="application/rss+xml" title="Peter Boni" href="/feed.xml">
 
 </head>
 
 
 <body>
 
-    <!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">Peter Boni</a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="/">Home</a>
-                </li>
-                
-				
-                <li>
-                    <a href="/archives/">Archives</a>
-                </li>
-				
-                
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="/">Peter Boni</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/posts">Posts</a>
+        </li>
+      </ul>
     </div>
-    <!-- /.container -->
+  </div>
 </nav>
 
 
-    <!-- Post Header -->
-<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+  <!-- Page Header -->
+
+<header class="masthead" style="background-image: url('/img/home-bg.jpg')">
+  
+    <div class="overlay"></div>
     <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="post-heading">
-                    <h1>A Cloud Backend using Node.js on AWS</h1>
-                    
-                    <span class="meta">December 7, 2013</span>
-                </div>
-            </div>
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>A Cloud Backend using Node.js on AWS</h1>
+            
+            <span class="meta">
+              December 07, 2013 &middot; <span class="reading-time" title="Estimated read time">
+  
+   15 mins  read </span>
+
+            </span>
+          </div>
         </div>
+      </div>
     </div>
-</header>
+  </header>
 
-<!-- Post Content -->
-<article>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
 
-				<p>What?! You’re building an awesome mobile app, like this one -
+        <p>What?! You’re building an awesome mobile app, like this one -
 <a href="/blog/2013/06/29/ios-7-dynamic-type/">iOS 7 Dynamic Type</a>, and <a href="/blog/2013/06/24/ios-7-userxlistview/">iOS 7 UserXListView</a>,
 and get to the point where you need a <em>backend</em>.
 Oh no! Your complexity just increased exponentially.</p>
@@ -145,22 +128,22 @@ which is available free from the App Store.</p>
 
 <p>Create and change to a new folder called <strong>cloudbackend</strong> from your Documents folder.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">peters-mac-mini:Documents peterboni<span class="nv">$ </span>mkdir cloudbackend
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">peters-mac-mini:Documents peterboni<span class="nv">$ </span><span class="nb">mkdir </span>cloudbackend
 peters-mac-mini:Documents peterboni<span class="nv">$ </span><span class="nb">cd </span>cloudbackend/
 peters-mac-mini:cloudbackend peterboni<span class="err">$</span></code></pre></figure>
 
 <p>Create a file called <strong>package.json</strong> and put the following JSON data object in it.</p>
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">{</span>
-  <span class="s2">"name"</span><span class="err">:</span> <span class="s2">"cloudbackend"</span><span class="p">,</span>
-  <span class="s2">"description"</span><span class="err">:</span> <span class="s2">""</span><span class="p">,</span>
-  <span class="s2">"version"</span><span class="err">:</span> <span class="s2">"0.0.1"</span><span class="p">,</span>
-  <span class="s2">"private"</span><span class="err">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="s2">"scripts"</span><span class="err">:</span> <span class="p">{</span>
-    <span class="s2">"start"</span><span class="err">:</span> <span class="s2">"node app"</span>
+  <span class="dl">"</span><span class="s2">name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">cloudbackend</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">description</span><span class="dl">"</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">version</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0.0.1</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">private</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">scripts</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">start</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">node app</span><span class="dl">"</span>
   <span class="p">},</span>
-  <span class="s2">"dependencies"</span><span class="err">:</span> <span class="p">{</span>
-    <span class="s2">"express"</span><span class="err">:</span> <span class="s2">"3.x"</span>
+  <span class="dl">"</span><span class="s2">dependencies</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">express</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">3.x</span><span class="dl">"</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre></figure>
 
@@ -168,8 +151,8 @@ peters-mac-mini:cloudbackend peterboni<span class="err">$</span></code></pre></f
 dependency you identified in the above package.json file. Express is a web
 application framework. Enter ‘npm install’.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">peters-mac-mini:cloudbackend peterboni<span class="nv">$ </span>npm install
-npm http GET https://registry.npmjs.org/express
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">peters-mac-mini:cloudbackend peterboni<span class="nv">$ </span>npm <span class="nb">install
+</span>npm http GET https://registry.npmjs.org/express
 ...
 express@3.4.6 node_modules/express
 ├── methods@0.1.0
@@ -181,19 +164,19 @@ peters-mac-mini:cloudbackend peterboni<span class="err">$</span></code></pre></f
 All we are doing here is exposing one HTTP GET method request, available at ‘/test’,
 which returns a JSON data object. A simple test.</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'express'</span><span class="p">),</span>
-    <span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'http'</span><span class="p">);</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">express</span><span class="dl">'</span><span class="p">),</span>
+    <span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">http</span><span class="dl">'</span><span class="p">);</span>
 
 <span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span>
 
-<span class="nx">app</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">'port'</span><span class="p">,</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">PORT</span> <span class="o">||</span> <span class="mi">3000</span><span class="p">);</span>
+<span class="nx">app</span><span class="p">.</span><span class="kd">set</span><span class="p">(</span><span class="dl">'</span><span class="s1">port</span><span class="dl">'</span><span class="p">,</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">PORT</span> <span class="o">||</span> <span class="mi">3000</span><span class="p">);</span>
 
-<span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'/test'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">({</span><span class="s1">'message'</span><span class="p">:</span><span class="s1">'hi'</span><span class="p">});</span>
+<span class="nx">app</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">/test</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">({</span><span class="dl">'</span><span class="s1">message</span><span class="dl">'</span><span class="p">:</span><span class="dl">'</span><span class="s1">hi</span><span class="dl">'</span><span class="p">});</span>
 <span class="p">});</span>
 
-<span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="nx">app</span><span class="p">).</span><span class="nx">listen</span><span class="p">(</span><span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'port'</span><span class="p">),</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Cloudbackend listening on port "</span> <span class="o">+</span> <span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'port'</span><span class="p">));</span>
+<span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="nx">app</span><span class="p">).</span><span class="nx">listen</span><span class="p">(</span><span class="nx">app</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">port</span><span class="dl">'</span><span class="p">),</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Cloudbackend listening on port </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">app</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">port</span><span class="dl">'</span><span class="p">));</span>
 <span class="p">});</span></code></pre></figure>
 
 <p>Let’s test it!
@@ -240,13 +223,13 @@ the other commands in the following console code block.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">peters-mac-mini:cloudbackend peterboni<span class="nv">$ </span>git init
 Initialized empty Git repository <span class="k">in</span> /Users/peterboni/Documents/cloudbackend/.git/
-peters-mac-mini:cloudbackend peterboni<span class="nv">$ </span>cat &gt; .gitignore <span class="sh">&lt;&lt;EOT
+peters-mac-mini:cloudbackend peterboni<span class="nv">$ </span><span class="nb">cat</span> <span class="o">&gt;</span> .gitignore <span class="o">&lt;&lt;</span><span class="no">EOT</span><span class="sh">
 node_modules/
 .gitignore
 .elasticbeanstalk/
-EOT
-</span>peters-mac-mini:cloudbackend peterboni<span class="nv">$ </span>git add .
-peters-mac-mini:cloudbackend peterboni<span class="nv">$ </span>git commit -m <span class="s2">"initial app"</span>
+</span><span class="no">EOT
+</span>peters-mac-mini:cloudbackend peterboni<span class="nv">$ </span>git add <span class="nb">.</span>
+peters-mac-mini:cloudbackend peterboni<span class="nv">$ </span>git commit <span class="nt">-m</span> <span class="s2">"initial app"</span>
 <span class="o">[</span>master <span class="o">(</span>root-commit<span class="o">)</span> 889e876] initial app
  2 files changed, 26 insertions<span class="o">(</span>+<span class="o">)</span>
  create mode 100644 app.js
@@ -280,7 +263,7 @@ can be found at the URL given after you enter ‘eb init’.</li>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">peters-mac-mini:cloudbackend peterboni<span class="nv">$ </span>eb init
 To get your AWS Access Key ID and Secret Access Key,
-  visit <span class="s2">"https://aws-portal.amazon.com/gp/aws/securityCredentials"</span>.
+  visit <span class="s2">"https://aws-portal.amazon.com/gp/aws/securityCredentials"</span><span class="nb">.</span>
 Enter your AWS Access Key ID <span class="o">(</span>current value is <span class="s2">"AKIAJ*****GBOHQ"</span><span class="o">)</span>: <span class="o">[</span>enter yours here]
 Enter your AWS Secret Access Key <span class="o">(</span>current value is <span class="s2">"MhYxu*****rJfZx"</span><span class="o">)</span>: <span class="o">[</span>enter yours here]
 Select an AWS Elastic Beanstalk service region.
@@ -319,7 +302,7 @@ Attach an instance profile <span class="o">(</span>current value is <span class=
 2<span class="o">)</span> aws-elasticbeanstalk-ec2-role
 3<span class="o">)</span> <span class="o">[</span>Other instance profile]
 Select <span class="o">(</span>1 to 3<span class="o">)</span>: 1
-Updated AWS Credential file at <span class="s2">"/Users/peterboni/.elasticbeanstalk/aws_credential_file"</span>.
+Updated AWS Credential file at <span class="s2">"/Users/peterboni/.elasticbeanstalk/aws_credential_file"</span><span class="nb">.</span>
 
 peters-mac-mini:cloudbackend peterboni<span class="err">$</span></code></pre></figure>
 
@@ -331,10 +314,10 @@ peters-mac-mini:cloudbackend peterboni<span class="err">$</span></code></pre></f
 </ol>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">peters-mac-mini:cloudbackend peterboni<span class="nv">$ </span>eb start
-Starting application <span class="s2">"cloudbackend"</span>.
+Starting application <span class="s2">"cloudbackend"</span><span class="nb">.</span>
 Would you like to deploy the latest Git commit to your environment? <span class="o">[</span>y/n]: y
 remote:
-remote: error: Unable to deploy application version: No Environment found <span class="k">for </span>EnvironmentName <span class="o">=</span> <span class="s1">'cloudbackend-env'</span>.
+remote: error: Unable to deploy application version: No Environment found <span class="k">for </span>EnvironmentName <span class="o">=</span> <span class="s1">'cloudbackend-env'</span><span class="nb">.</span>
 remote:
 To https://...:...@git.elasticbeanstalk.ap-southeast-2.amazonaws.com/v1/repos/.../commitid/.../environment/...
  <span class="k">*</span> <span class="o">[</span>new branch]      HEAD -&gt; master
@@ -352,7 +335,7 @@ Waiting <span class="k">for </span>environment <span class="s2">"cloudbackend-en
 2013-12-07 08:23:14 INFO  Created CloudWatch alarm named: awseb-e-ib22smbwaz-stack-AWSEBCloudwatchAlarmHigh-1AAZW8L054YWY
 2013-12-07 08:23:14 INFO  Created CloudWatch alarm named: awseb-e-ib22smbwaz-stack-AWSEBCloudwatchAlarmLow-1OAGDWAQFGJTO
 2013-12-07 08:27:02 INFO  Successfully launched environment: cloudbackend-env
-Application is available at <span class="s2">"cloudbackend-env-yey9npuvjz.elasticbeanstalk.com"</span>.
+Application is available at <span class="s2">"cloudbackend-env-yey9npuvjz.elasticbeanstalk.com"</span><span class="nb">.</span>
 peters-mac-mini:cloudbackend peterboni<span class="err">$</span></code></pre></figure>
 
 <p>Let’s test it!</p>
@@ -375,7 +358,7 @@ Enter ‘eb stop’, and then ‘y’ to terminate the environment.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">peters-mac-mini:cloudbackend peterboni<span class="nv">$ </span>eb stop
 Terminate environment? <span class="o">[</span>y/n]: y
-Stopping environment <span class="s2">"cloudbackend-env"</span>. This may take a few minutes.
+Stopping environment <span class="s2">"cloudbackend-env"</span><span class="nb">.</span> This may take a few minutes.
 2013-12-07 09:24:44 INFO  terminateEnvironment is starting.
 2013-12-07 09:24:57 INFO  Deleted CloudWatch alarm named: awseb-e-ib22smbwaz-stack-AWSEBCloudwatchAlarmLow-1OAGDWAQFGJTO
 2013-12-07 09:24:57 INFO  Deleted CloudWatch alarm named: awseb-e-ib22smbwaz-stack-AWSEBCloudwatchAlarmHigh-1AAZW8L054YWY
@@ -398,84 +381,83 @@ database, or web pages to your cloud backend in future posts if there is interes
 
 
 
-                <hr>
+        <hr>
 
-                <ul class="pager">
-                    
-                    <li class="previous">
-                        <a href="/blog/2013/10/19/cylon-style/" data-toggle="tooltip" data-placement="top" title="Cylon Style">&larr; Previous Post</a>
-                    </li>
-                    
-                    
-                    <li class="next">
-                        <a href="/blog/2014/01/01/running-numbers/" data-toggle="tooltip" data-placement="top" title="Running Numbers">Next Post &rarr;</a>
-                    </li>
-                    
-                </ul>
+        <div class="clearfix">
 
-            </div>
+          
+          <a class="btn btn-primary float-left" href="/blog/2013/10/19/cylon-style/" data-toggle="tooltip" data-placement="top" title="Cylon Style">&larr; Previous<span class="d-none d-md-inline">
+              Post</span></a>
+          
+          
+          <a class="btn btn-primary float-right" href="/blog/2014/01/01/running-numbers/" data-toggle="tooltip" data-placement="top" title="Running Numbers">Next<span class="d-none d-md-inline">
+              Post</span> &rarr;</a>
+          
+
         </div>
+
+      </div>
     </div>
-</article>
+  </div>
+
+
+  <!-- Footer -->
 
 <hr>
 
-
-    <!-- Footer -->
 <footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <ul class="list-inline text-center">
-                    <li>
-                        <a href="/feed.xml">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    <li>
-                        <a href="https://au.linkedin.com/in/peterboni">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                    
-                    
-                </ul>
-                <p class="copyright text-muted">Copyright &copy; Peter Boni 2017</p>
-            </div>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="https://www.linkedin.com/in/peterboni">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://github.com/peterboni">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; Peter Boni 2019</p>
+      </div>
     </div>
+  </div>
 </footer>
 
-<!-- jQuery -->
-<script src="/js/jquery.min.js "></script>
 
-<!-- Bootstrap Core JavaScript -->
-<script src="/js/bootstrap.min.js "></script>
+  <script src="/assets/vendor/jquery/jquery.min.js"></script>
+<script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/startbootstrap-clean-blog/js/clean-blog.min.js"></script>
 
-<!-- Custom Theme JavaScript -->
-<script src="/js/clean-blog.min.js "></script>
+<script src="/assets/scripts.js"></script>
 
 
-    
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-42113178-1"></script>
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  ga('create', 'UA-42113178-1', 'auto');
-  ga('send', 'pageview');
-
+  gtag('config', 'UA-42113178-1');
 </script>
 
 

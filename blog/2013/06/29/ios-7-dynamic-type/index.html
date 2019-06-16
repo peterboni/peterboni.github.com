@@ -1,102 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
 
 <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Trying to not take myself too seriously.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>iOS 7 Dynamic Type - Peter Boni</title>
+  <title>
+    iOS 7 Dynamic Type - Peter Boni
+    
+  </title>
 
-    <link rel="canonical" href="http://www.peterboni.net/blog/2013/06/29/ios-7-dynamic-type/">
+  <meta name="description" content="iOS 7 introduces Dynamic Type, which if apps choose to support it, gives the user control over text size in an app. Web pages have had this feature for free ...">
 
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/clean-blog.css">
+  <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
 
-    <!-- Pygments Github CSS -->
-    <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="stylesheet" href="/assets/vendor/fontawesome-free/css/all.min.css">
 
-    <!-- Custom Fonts -->
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <link type="application/atom+xml" rel="alternate" href="http://www.peterboni.net/feed.xml" title="Peter Boni" />
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://www.peterboni.net/blog/2013/06/29/ios-7-dynamic-type/">
+  <link rel="alternate" type="application/rss+xml" title="Peter Boni" href="/feed.xml">
 
 </head>
 
 
 <body>
 
-    <!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">Peter Boni</a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="/">Home</a>
-                </li>
-                
-				
-                <li>
-                    <a href="/archives/">Archives</a>
-                </li>
-				
-                
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="/">Peter Boni</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/posts">Posts</a>
+        </li>
+      </ul>
     </div>
-    <!-- /.container -->
+  </div>
 </nav>
 
 
-    <!-- Post Header -->
-<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+  <!-- Page Header -->
+
+<header class="masthead" style="background-image: url('/img/home-bg.jpg')">
+  
+    <div class="overlay"></div>
     <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="post-heading">
-                    <h1>iOS 7 Dynamic Type</h1>
-                    
-                    <span class="meta">June 29, 2013</span>
-                </div>
-            </div>
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>iOS 7 Dynamic Type</h1>
+            
+            <span class="meta">
+              June 29, 2013 &middot; <span class="reading-time" title="Estimated read time">
+  
+   5 mins  read </span>
+
+            </span>
+          </div>
         </div>
+      </div>
     </div>
-</header>
+  </header>
 
-<!-- Post Content -->
-<article>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
 
-				<p>iOS 7 introduces Dynamic Type, which if apps choose to support it, gives the user control over text size in an app. Web pages have had this feature for free since the early days of the web, but web browsers moved away from dynamic text sizing.
+        <p>iOS 7 introduces Dynamic Type, which if apps choose to support it, gives the user control over text size in an app. Web pages have had this feature for free since the early days of the web, but web browsers moved away from dynamic text sizing.
 <a href="http://www.codinghorror.com/blog/2009/01/the-two-types-of-browser-zoom.html">The Two Types of Browser Zoom</a>.</p>
 
 <p>iOS7 Dynamic Type automatically adjusts weight, letter spacing, and line height for every font size. It looks <em>*stunning</em>, but there’s work to make your app support it.</p>
@@ -155,12 +138,12 @@ beautiful type.</p>
   <span class="p">[[</span><span class="n">NSNotificationCenter</span> <span class="nf">defaultCenter</span><span class="p">]</span> <span class="nf">addObserver</span><span class="p">:</span><span class="n">self</span> <span class="nf">selector</span><span class="p">:</span><span class="k">@selector</span><span class="p">(</span><span class="n">preferredContentSizeChanged</span><span class="o">:</span><span class="p">)</span> <span class="n">name</span><span class="o">:</span><span class="n">UIContentSizeCategoryDidChangeNotification</span> <span class="n">object</span><span class="o">:</span><span class="nb">nil</span><span class="p">];</span>
 <span class="p">}</span>
 
-<span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">preferredContentSizeChanged</span><span class="o">:</span><span class="p">(</span><span class="n">NSNotification</span> <span class="o">*</span><span class="p">)</span><span class="n">aNotification</span> <span class="p">{</span>
-  <span class="c1">// adjust the layout of the cells
-</span>  <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">view</span> <span class="nf">setNeedsLayout</span><span class="p">];</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">preferredContentSizeChanged</span><span class="p">:(</span><span class="n">NSNotification</span> <span class="o">*</span><span class="p">)</span><span class="nv">aNotification</span> <span class="p">{</span>
+  <span class="c1">// adjust the layout of the cells</span>
+  <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">view</span> <span class="nf">setNeedsLayout</span><span class="p">];</span>
 
-  <span class="c1">// refresh view...
-</span><span class="p">}</span></code></pre></figure>
+  <span class="c1">// refresh view...</span>
+<span class="p">}</span></code></pre></figure>
 
 <p>We need to calculate the height of the row/cell based on it’s content, and as each label in the cell can change height we need to calculate the total height of the cell required.</p>
 
@@ -170,8 +153,8 @@ beautiful type.</p>
   <span class="n">UIFont</span> <span class="o">*</span><span class="n">nameLabelFont</span> <span class="o">=</span> <span class="p">[</span><span class="n">UIFont</span> <span class="nf">preferredFontForTextStyle</span><span class="p">:</span><span class="n">UIFontTextStyleHeadline1</span><span class="p">];</span>
   <span class="n">CGSize</span> <span class="n">nameLabelFontSize</span> <span class="o">=</span> <span class="p">[[</span><span class="n">account</span> <span class="nf">name</span><span class="p">]</span> <span class="nf">sizeWithAttributes</span><span class="p">:[</span><span class="n">NSDictionary</span> <span class="nf">dictionaryWithObject</span><span class="p">:</span><span class="n">nameLabelFont</span> <span class="nf">forKey</span><span class="p">:</span><span class="n">NSFontAttributeName</span><span class="p">]];</span>
 
-  <span class="c1">// ...
-</span>
+  <span class="c1">// ...</span>
+
   <span class="n">CGFloat</span> <span class="n">PADDING_OUTER</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
   <span class="n">CGFloat</span> <span class="n">totalHeight</span> <span class="o">=</span> <span class="n">PADDING_OUTER</span> <span class="o">+</span> <span class="n">nameLabelFontSize</span><span class="p">.</span><span class="n">height</span> <span class="o">+</span> <span class="p">...</span> <span class="o">+</span> <span class="n">PADDING_OUTER</span><span class="p">;</span>
 
@@ -188,8 +171,8 @@ beautiful type.</p>
   <span class="n">cell</span><span class="p">.</span><span class="n">nameLabel</span><span class="p">.</span><span class="n">text</span> <span class="o">=</span> <span class="p">[</span><span class="n">account</span> <span class="nf">name</span><span class="p">];</span>
   <span class="n">cell</span><span class="p">.</span><span class="n">nameLabel</span><span class="p">.</span><span class="n">font</span> <span class="o">=</span> <span class="p">[</span><span class="n">UIFont</span> <span class="nf">preferredFontForTextStyle</span><span class="p">:</span><span class="n">UIFontTextStyleHeadline1</span><span class="p">];</span>
 
-  <span class="c1">// ...
-</span><span class="p">}</span></code></pre></figure>
+  <span class="c1">// ...</span>
+<span class="p">}</span></code></pre></figure>
 
 <h2 id="final-thoughts">Final Thoughts</h2>
 
@@ -199,84 +182,83 @@ beautiful type.</p>
 
 
 
-                <hr>
+        <hr>
 
-                <ul class="pager">
-                    
-                    <li class="previous">
-                        <a href="/blog/2013/06/24/ios-7-userxlistview/" data-toggle="tooltip" data-placement="top" title="iOS 7 UserXListView">&larr; Previous Post</a>
-                    </li>
-                    
-                    
-                    <li class="next">
-                        <a href="/blog/2013/07/04/ios-formatted-currency-input/" data-toggle="tooltip" data-placement="top" title="iOS Formatted Currency Input">Next Post &rarr;</a>
-                    </li>
-                    
-                </ul>
+        <div class="clearfix">
 
-            </div>
+          
+          <a class="btn btn-primary float-left" href="/blog/2013/06/24/ios-7-userxlistview/" data-toggle="tooltip" data-placement="top" title="iOS 7 UserXListView">&larr; Previous<span class="d-none d-md-inline">
+              Post</span></a>
+          
+          
+          <a class="btn btn-primary float-right" href="/blog/2013/07/04/ios-formatted-currency-input/" data-toggle="tooltip" data-placement="top" title="iOS Formatted Currency Input">Next<span class="d-none d-md-inline">
+              Post</span> &rarr;</a>
+          
+
         </div>
+
+      </div>
     </div>
-</article>
+  </div>
+
+
+  <!-- Footer -->
 
 <hr>
 
-
-    <!-- Footer -->
 <footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <ul class="list-inline text-center">
-                    <li>
-                        <a href="/feed.xml">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    <li>
-                        <a href="https://au.linkedin.com/in/peterboni">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                    
-                    
-                </ul>
-                <p class="copyright text-muted">Copyright &copy; Peter Boni 2017</p>
-            </div>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="https://www.linkedin.com/in/peterboni">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://github.com/peterboni">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; Peter Boni 2019</p>
+      </div>
     </div>
+  </div>
 </footer>
 
-<!-- jQuery -->
-<script src="/js/jquery.min.js "></script>
 
-<!-- Bootstrap Core JavaScript -->
-<script src="/js/bootstrap.min.js "></script>
+  <script src="/assets/vendor/jquery/jquery.min.js"></script>
+<script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/startbootstrap-clean-blog/js/clean-blog.min.js"></script>
 
-<!-- Custom Theme JavaScript -->
-<script src="/js/clean-blog.min.js "></script>
+<script src="/assets/scripts.js"></script>
 
 
-    
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-42113178-1"></script>
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  ga('create', 'UA-42113178-1', 'auto');
-  ga('send', 'pageview');
-
+  gtag('config', 'UA-42113178-1');
 </script>
 
 
