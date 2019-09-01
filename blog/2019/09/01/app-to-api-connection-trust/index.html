@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>
+    App to API Connection Trust - Peter Boni
+    
+  </title>
+
+  <meta name="description" content="Why">
+
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="/assets/vendor/fontawesome-free/css/all.min.css">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://www.peterboni.net/blog/2019/09/01/app-to-api-connection-trust/">
+  <link rel="alternate" type="application/rss+xml" title="Peter Boni" href="/feed.xml">
+
+</head>
+
+
+<body>
+
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="/">Peter Boni</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/posts">Posts</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+
+<header class="masthead" style="background-image: url('/img/home-bg.jpg')">
+  
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>App to API Connection Trust</h1>
+            
+            <h2 class="subheading">I fight—for the users!</h2>
+            
+            <span class="meta">
+              September 01, 2019 &middot; <span class="reading-time" title="Estimated read time">
+  
+   15 mins  read </span>
+
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        <h1 id="why">Why</h1>
+
+<p>I’ve been sporadically building a mobile app as a side project.
+For years. Yes, years.
+I’ve been building it for a few reasons.
+One of them is that it’s a way to escape and relax.
+Another is that it’s a way to stay curious and keep learning.
+The rest of the reasons and the mobile app however is a post for another time.
+Let’s get to <em>this</em> post.</p>
+
+<p>As part of building the mobile app I needed to retrieve weather data for the users current location.
+A design decision I made is that the mobile app is fully native to the iOS platform and Apple ecosystem.
+Therefore one constraint is that I didn’t want to introduce a separate identity system that would have impacted the user experience, and also meant I had to deal with the corresponding security concerns.
+I wanted a way to retrieve the weather data in the most <em>trusted</em> way possible - to respect the user, their data (current location), and hence their privacy.</p>
+
+<h1 id="solution">Solution</h1>
+
+<p>Here’s the solution that I designed and built with full credit to <a href="https://twitter.com/graefoster">Graeme Foster</a>
+for giving me the concept for the critical part - <em>how</em> to secure the app to the API.</p>
+
+<p><img class="mx-auto d-block" src="/img/2019-09-01-app-to-api-connection-trust/concept.png" /></p>
+
+<p>The solution is as follows:</p>
+
+<ol>
+  <li>
+    <p>Part 1: <strong>HTTPS and MSTA</strong>: When calling the API from the app implement SSL/TLS (no brainer), but more importantly MSTA (Manual Server Trust Authentication), i.e. SSL Pinning, to prevent MITM (Man In The Middle) attacks. Don’t you love acronyms!</p>
+  </li>
+  <li>
+    <p>Part 2: <strong>Secure App to API</strong>: When calling the API from the app implement a trusted connection - this involves the app ‘registering’ with the API and being given a SecretKey via a trusted secure channel, that it uses on subsequent API calls. See <a href="https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html">APNs (Apple Push Notification service)</a> which I use for this, and explain in more detail below.</p>
+  </li>
+</ol>
+
+<p>APNs delivery of remote notifications comes with some pretty heavy disclaimers in the Apple documentation linked to above, but I still decided to use it to implement the second part of the connection trust because:</p>
+
+<ol>
+  <li>
+    <p>The pattern only relies on using the remote notification occasionally, i.e. when the device token changes.</p>
+  </li>
+  <li>
+    <p>The app feature is optional - it reduces the user experience slightly, but it doesn’t really matter if it doesn’t work. For example, the user could decide to not give the app notification permission.</p>
+  </li>
+  <li>
+    <p>It’s an Apple built and operated method to deliver data to an app on a device via a trusted secure channel.</p>
+  </li>
+</ol>
+
+<p>The following two sections go into detail on how to implement the two parts of the solution.</p>
+
+<p>Note that only <strong>simplified non-production code snippets</strong> are shown for brevity. This is not industrialised and tested code.</p>
+
+<h1 id="msta-manual-server-trust-authentication">MSTA (Manual Server Trust Authentication)</h1>
+
+<p>MSTA is pretty simple when calling APIs using the standard Foundation <code class="highlighter-rouge">URLSession</code> request. It may be easier with a third party library, but I prefer to minimise use of dependencies.</p>
+
+<p>See the Apple documentation <a href="https://developer.apple.com/documentation/foundation/url_loading_system/handling_an_authentication_challenge/performing_manual_server_trust_authentication">Performing Manual Server Trust Authentication</a> which clearly documents when and how you can perform MSTA for this scenario.</p>
+
+<blockquote>
+  <p>You want to reject credentials that would otherwise be accepted by the system. For example, you want to “pin” your app to a set of specific keys or certificates under your control, rather than accept any valid credential.</p>
+</blockquote>
+
+<p>Here is a Swift code snippet that performs the MSTA. It has the API host hard-coded to 192.168.0.7, i.e. the API is local.</p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">struct</span> <span class="kt">Certificates</span> <span class="p">{</span>
+
+    <span class="kd">static</span> <span class="k">let</span> <span class="nv">localhost</span> <span class="o">=</span> <span class="kt">Certificates</span><span class="o">.</span><span class="nf">certificate</span><span class="p">(</span><span class="nv">filename</span><span class="p">:</span> <span class="s">"localhost"</span><span class="p">)</span>
+    
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">certificate</span><span class="p">(</span><span class="nv">filename</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SecCertificate</span> <span class="p">{</span>
+        
+        <span class="k">let</span> <span class="nv">filePath</span> <span class="o">=</span> <span class="kt">Bundle</span><span class="o">.</span><span class="n">main</span><span class="o">.</span><span class="nf">path</span><span class="p">(</span><span class="nv">forResource</span><span class="p">:</span> <span class="n">filename</span><span class="p">,</span> <span class="nv">ofType</span><span class="p">:</span> <span class="s">"der"</span><span class="p">)</span><span class="o">!</span>
+        <span class="k">let</span> <span class="nv">data</span> <span class="o">=</span> <span class="k">try!</span> <span class="kt">Data</span><span class="p">(</span><span class="nv">contentsOf</span><span class="p">:</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">fileURLWithPath</span><span class="p">:</span> <span class="n">filePath</span><span class="p">))</span>
+        <span class="k">let</span> <span class="nv">certificate</span> <span class="o">=</span> <span class="kt">SecCertificateCreateWithData</span><span class="p">(</span><span class="kc">nil</span><span class="p">,</span> <span class="n">data</span> <span class="k">as</span> <span class="kt">CFData</span><span class="p">)</span><span class="o">!</span>
+        
+        <span class="k">return</span> <span class="n">certificate</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">extension</span> <span class="kt">APIHelper</span><span class="p">:</span> <span class="kt">URLSessionDelegate</span> <span class="p">{</span>
+
+    <span class="kd">func</span> <span class="nf">urlSession</span><span class="p">(</span><span class="n">_</span> <span class="nv">session</span><span class="p">:</span> <span class="kt">URLSession</span><span class="p">,</span>
+                    <span class="n">didReceive</span> <span class="nv">challenge</span><span class="p">:</span> <span class="kt">URLAuthenticationChallenge</span><span class="p">,</span>
+                    <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">URLSession</span><span class="o">.</span><span class="kt">AuthChallengeDisposition</span><span class="p">,</span> <span class="kt">URLCredential</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="p">{</span>
+        
+        <span class="k">let</span> <span class="nv">protectionSpace</span> <span class="o">=</span> <span class="n">challenge</span><span class="o">.</span><span class="n">protectionSpace</span>
+
+        <span class="c1">// 1</span>
+        <span class="k">guard</span> <span class="n">protectionSpace</span><span class="o">.</span><span class="n">authenticationMethod</span> <span class="o">==</span>
+            <span class="kt">NSURLAuthenticationMethodServerTrust</span><span class="p">,</span>
+            <span class="n">protectionSpace</span><span class="o">.</span><span class="n">host</span><span class="o">.</span><span class="nf">contains</span><span class="p">(</span><span class="s">"192.168.0.7"</span><span class="p">)</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="nf">completionHandler</span><span class="p">(</span><span class="o">.</span><span class="n">performDefaultHandling</span><span class="p">,</span> <span class="kc">nil</span><span class="p">)</span>
+                <span class="k">return</span>
+        <span class="p">}</span>
+
+        <span class="c1">// 2</span>
+        <span class="k">guard</span> <span class="k">let</span> <span class="nv">serverTrust</span> <span class="o">=</span> <span class="n">protectionSpace</span><span class="o">.</span><span class="n">serverTrust</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nf">completionHandler</span><span class="p">(</span><span class="o">.</span><span class="n">performDefaultHandling</span><span class="p">,</span> <span class="kc">nil</span><span class="p">)</span>
+            <span class="k">return</span>
+        <span class="p">}</span>
+
+        <span class="c1">// 3</span>
+        <span class="k">if</span> <span class="nf">checkValidity</span><span class="p">(</span><span class="nv">of</span><span class="p">:</span> <span class="n">serverTrust</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">let</span> <span class="nv">credential</span> <span class="o">=</span> <span class="kt">URLCredential</span><span class="p">(</span><span class="nv">trust</span><span class="p">:</span> <span class="n">serverTrust</span><span class="p">)</span>
+            <span class="nf">completionHandler</span><span class="p">(</span><span class="o">.</span><span class="n">useCredential</span><span class="p">,</span> <span class="n">credential</span><span class="p">)</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nf">completionHandler</span><span class="p">(</span><span class="o">.</span><span class="n">cancelAuthenticationChallenge</span><span class="p">,</span> <span class="kc">nil</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    
+    <span class="kd">func</span> <span class="nf">checkValidity</span><span class="p">(</span><span class="nv">of</span><span class="p">:</span> <span class="kt">SecTrust</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="p">{</span>
+
+        <span class="k">let</span> <span class="nv">bundleCert</span> <span class="o">=</span> <span class="kt">Certificates</span><span class="o">.</span><span class="n">localhost</span>
+        <span class="k">let</span> <span class="nv">serverCert</span> <span class="o">=</span> <span class="kt">SecTrustGetCertificateAtIndex</span><span class="p">(</span><span class="n">of</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+        <span class="k">let</span> <span class="nv">bundleCertData</span> <span class="o">=</span> <span class="kt">SecCertificateCopyData</span><span class="p">(</span><span class="n">bundleCert</span><span class="p">)</span> <span class="k">as</span> <span class="kt">NSData</span>
+        <span class="k">let</span> <span class="nv">serverCertData</span> <span class="o">=</span> <span class="kt">SecCertificateCopyData</span><span class="p">(</span><span class="n">serverCert</span><span class="o">!</span><span class="p">)</span> <span class="k">as</span> <span class="kt">NSData</span>
+
+        <span class="k">if</span> <span class="o">!</span><span class="n">serverCertData</span><span class="o">.</span><span class="nf">isEqual</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="n">bundleCertData</span> <span class="k">as</span> <span class="kt">Data</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="kc">false</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="kc">true</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>And here is an explainer of what’s happening in the code snippet:</p>
+
+<ol>
+  <li>
+    <p>The challenge type is server trust, and not some other kind of challenge. The challenge’s host name matches the host that you want to perform manual credential evaluation for.</p>
+  </li>
+  <li>
+    <p>Attempt to get the serverTrust property from the protection space. Fall back to default handling if the property is nil.</p>
+  </li>
+  <li>
+    <p>Pass the server trust to a private helper method checkValidity(of:) that compares the certificate in the server trust to known-good values stored in the app bundle.</p>
+  </li>
+</ol>
+
+<p>I also found the following tutorial <a href="https://www.raywenderlich.com/1484288-preventing-man-in-the-middle-attacks-in-ios-with-ssl-pinning">Preventing Man-in-the-Middle Attacks in iOS with SSL Pinning</a> useful to understand how to retrieve the certificate from the API server and add it to the Xcode project.</p>
+
+<p>The following terminal snippet copies the certificate output to openssl x509, specifies DER encoding and outputs it to a new file named <code class="highlighter-rouge">localhost.der</code>.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>openssl s_client <span class="nt">-connect</span> 192.168.0.7:5001 &lt;/dev/null <span class="se">\</span>
+    | openssl x509 <span class="nt">-outform</span> DER <span class="nt">-out</span> localhost.der</code></pre></figure>
+
+<h1 id="secure-app-to-api">Secure App to API</h1>
+
+<p>After I implemented MSTA, it was time to build the second part of the solution.
+Here’s a sequence diagram showing detail of the interactions of the components.</p>
+
+<p><img class="mx-auto d-block" src="/img/2019-09-01-app-to-api-connection-trust/sequence.png" /></p>
+
+<p>The following sections show code snippets for how I implemented the main steps in the register process, and then finally authenticating the device/app on subsequent API calls.</p>
+
+<h2 id="register---app-request">Register - App: Request</h2>
+
+<p>The first step is to register the device with the API. You do this from the <code class="highlighter-rouge">didRegisterForRemoteNotificationsWithDeviceToken</code> method in <code class="highlighter-rouge">AppDelegate.swift</code>.</p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span>
+                    <span class="n">didRegisterForRemoteNotificationsWithDeviceToken</span> <span class="nv">deviceToken</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="p">{</span>
+    
+    <span class="n">deviceTokenEncoded</span> <span class="o">=</span> <span class="n">deviceToken</span><span class="o">.</span><span class="nf">hexEncodedString</span><span class="p">()</span>
+    <span class="n">_</span> <span class="o">=</span> <span class="kt">APIHelper</span><span class="o">.</span><span class="nf">register</span><span class="p">(</span><span class="nv">deviceToken</span><span class="p">:</span> <span class="n">deviceTokenEncoded</span><span class="p">)</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Here’s how you turn the <code class="highlighter-rouge">deviceToken</code> as <code class="highlighter-rouge">Data</code> into an API friendly hex string as an extension.</p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">extension</span> <span class="kt">Data</span> <span class="p">{</span>
+    
+    <span class="kd">struct</span> <span class="kt">HexEncodingOptions</span><span class="p">:</span> <span class="kt">OptionSet</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">rawValue</span><span class="p">:</span> <span class="kt">Int</span>
+        <span class="kd">static</span> <span class="k">let</span> <span class="nv">upperCase</span> <span class="o">=</span> <span class="kt">HexEncodingOptions</span><span class="p">(</span><span class="nv">rawValue</span><span class="p">:</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="p">}</span>
+    
+    <span class="kd">func</span> <span class="nf">hexEncodedString</span><span class="p">(</span><span class="nv">options</span><span class="p">:</span> <span class="kt">HexEncodingOptions</span> <span class="o">=</span> <span class="p">[])</span> <span class="o">-&gt;</span> <span class="kt">String</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">format</span> <span class="o">=</span> <span class="n">options</span><span class="o">.</span><span class="nf">contains</span><span class="p">(</span><span class="o">.</span><span class="n">upperCase</span><span class="p">)</span> <span class="p">?</span> <span class="s">"%02hhX"</span> <span class="p">:</span> <span class="s">"%02hhx"</span>
+        <span class="k">return</span> <span class="n">map</span> <span class="p">{</span> <span class="kt">String</span><span class="p">(</span><span class="nv">format</span><span class="p">:</span> <span class="n">format</span><span class="p">,</span> <span class="nv">$0</span><span class="p">)</span> <span class="p">}</span><span class="o">.</span><span class="nf">joined</span><span class="p">()</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<h2 id="register---api-create-secret-key-for-token-send-push-notification">Register - API: Create Secret Key for Token, Send Push Notification</h2>
+
+<p>The next step in the register process is to create the SecretKey from the Token, and send the push notification. I chose to build the API as an AWS Lambda ASP.NET Core Web API project, and use AWS SNS (Simple Notification Service) to send the push notification, so here’s a code snippet from the <code class="highlighter-rouge">RegisterController.cs</code> class.</p>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="p">[</span><span class="n">HttpPost</span><span class="p">]</span>
+<span class="k">public</span> <span class="k">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="n">ActionResult</span><span class="p">&lt;</span><span class="n">Response</span><span class="p">&gt;&gt;</span> <span class="nf">PostAsync</span><span class="p">(</span><span class="n">RegisterRequest</span> <span class="n">registerRequest</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="p">...</span>
+    <span class="k">try</span>	
+    <span class="p">{</span>
+        <span class="n">String</span> <span class="n">secretKey</span> <span class="p">=</span> <span class="n">Hash</span><span class="p">.</span><span class="nf">Create</span><span class="p">(</span><span class="n">registerRequest</span><span class="p">.</span><span class="n">Token</span><span class="p">,</span> <span class="n">Secrets</span><span class="p">.</span><span class="n">SecretKeySalt</span><span class="p">);</span>
+
+        <span class="k">await</span> <span class="nf">RegisterWithSNS</span><span class="p">(</span><span class="n">AWSAppSettings</span><span class="p">.</span><span class="n">SNSApplicationARN</span><span class="p">,</span> <span class="n">registerRequest</span><span class="p">.</span><span class="n">Token</span><span class="p">);</span>
+        <span class="k">await</span> <span class="nf">Publish</span><span class="p">(</span><span class="n">secretKey</span><span class="p">);</span>
+    <span class="p">}</span>  
+    <span class="k">catch</span><span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span>
+<span class="p">...</span></code></pre></figure>
+
+<p>Here’s how I hashed the token with a salt.</p>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="nf">Create</span><span class="p">(</span><span class="kt">string</span> <span class="k">value</span><span class="p">,</span> <span class="kt">string</span> <span class="n">salt</span><span class="p">)</span>  
+<span class="p">{</span>  
+    <span class="kt">var</span> <span class="n">valueBytes</span> <span class="p">=</span> <span class="n">KeyDerivation</span><span class="p">.</span><span class="nf">Pbkdf2</span><span class="p">(</span>  
+                        <span class="n">password</span><span class="p">:</span> <span class="k">value</span><span class="p">,</span>  
+                        <span class="n">salt</span><span class="p">:</span> <span class="n">Encoding</span><span class="p">.</span><span class="n">UTF8</span><span class="p">.</span><span class="nf">GetBytes</span><span class="p">(</span><span class="n">salt</span><span class="p">),</span>  
+                        <span class="n">prf</span><span class="p">:</span> <span class="n">KeyDerivationPrf</span><span class="p">.</span><span class="n">HMACSHA512</span><span class="p">,</span>  
+                        <span class="n">iterationCount</span><span class="p">:</span> <span class="m">10000</span><span class="p">,</span>  
+                        <span class="n">numBytesRequested</span><span class="p">:</span> <span class="m">256</span> <span class="p">/</span> <span class="m">8</span><span class="p">);</span>  
+
+    <span class="k">return</span> <span class="n">Convert</span><span class="p">.</span><span class="nf">ToBase64String</span><span class="p">(</span><span class="n">valueBytes</span><span class="p">);</span>  
+<span class="p">}</span></code></pre></figure>
+
+<h2 id="register---app-receive-push-notification">Register - App: Receive Push Notification</h2>
+
+<p>The last step in the register process is to accept the SecretKey from APNs in the app, and securely store both the Token and SecretKey in the Keychain for use on subsequent API calls. Here’s a code snippet from the <code class="highlighter-rouge">didReceiveRemoteNotification</code> method in <code class="highlighter-rouge">AppDelegate.swift</code>.</p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span>
+                    <span class="n">didReceiveRemoteNotification</span> <span class="nv">userInfo</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">],</span>
+                    <span class="n">fetchCompletionHandler</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">UIBackgroundFetchResult</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="p">{</span>
+    
+    <span class="k">if</span> <span class="k">let</span> <span class="nv">deviceToken</span> <span class="o">=</span> <span class="n">deviceTokenEncoded</span><span class="p">,</span>
+        <span class="k">let</span> <span class="nv">secretKey</span> <span class="o">=</span> <span class="n">userInfo</span><span class="p">[</span><span class="s">"secretKey"</span><span class="p">]</span> <span class="k">as?</span> <span class="kt">String</span> <span class="p">{</span>
+    
+        <span class="k">if</span> <span class="kt">KeychainHelper</span><span class="o">.</span><span class="nf">get</span><span class="p">(</span><span class="nv">account</span><span class="p">:</span> <span class="n">deviceToken</span><span class="p">)</span> <span class="o">==</span> <span class="kc">nil</span> <span class="p">{</span>
+            <span class="n">_</span> <span class="o">=</span> <span class="kt">KeychainHelper</span><span class="o">.</span><span class="nf">add</span><span class="p">(</span><span class="nv">account</span><span class="p">:</span> <span class="n">deviceToken</span><span class="p">,</span> <span class="nv">password</span><span class="p">:</span> <span class="n">secretKey</span><span class="p">)</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="n">_</span> <span class="o">=</span> <span class="kt">KeychainHelper</span><span class="o">.</span><span class="nf">update</span><span class="p">(</span><span class="nv">account</span><span class="p">:</span> <span class="n">deviceToken</span><span class="p">,</span> <span class="nv">password</span><span class="p">:</span> <span class="n">secretKey</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<h2 id="subsequent-api-calls">Subsequent API Calls</h2>
+
+<p>Once the Register Process has been done, this is how I authenticate the device/app on subsequent API calls.
+Here’s a code snippet from the <code class="highlighter-rouge">WeatherController.cs</code> class.</p>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="p">[</span><span class="n">HttpPost</span><span class="p">]</span>
+<span class="k">public</span> <span class="k">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="n">ActionResult</span><span class="p">&lt;</span><span class="n">Response</span><span class="p">&gt;&gt;</span> <span class="nf">PostAsync</span><span class="p">(</span>
+    <span class="n">WeatherRequest</span> <span class="n">weatherRequest</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="p">...</span>
+    <span class="k">if</span> <span class="p">(!</span><span class="n">Hash</span><span class="p">.</span><span class="nf">Validate</span><span class="p">(</span>
+            <span class="n">weatherRequest</span><span class="p">.</span><span class="n">Token</span><span class="p">,</span>
+            <span class="n">Secrets</span><span class="p">.</span><span class="n">SecretKeySalt</span><span class="p">,</span>
+            <span class="n">weatherRequest</span><span class="p">.</span><span class="n">SecretKey</span><span class="p">))</span> <span class="p">{</span>
+
+        <span class="c1">// Authentication failed</span>
+        <span class="p">...</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Authentication successful</span>
+<span class="p">...</span></code></pre></figure>
+
+<p>Here’s how <code class="highlighter-rouge">Validate</code> works in combination with the has <code class="highlighter-rouge">Create</code> method above.</p>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="nf">Validate</span><span class="p">(</span><span class="kt">string</span> <span class="k">value</span><span class="p">,</span> <span class="kt">string</span> <span class="n">salt</span><span class="p">,</span> <span class="kt">string</span> <span class="n">hash</span><span class="p">)</span>  
+    <span class="p">=&gt;</span> <span class="nf">Create</span><span class="p">(</span><span class="k">value</span><span class="p">,</span> <span class="n">salt</span><span class="p">)</span> <span class="p">==</span> <span class="n">hash</span><span class="p">;</span>  </code></pre></figure>
+
+<h1 id="a-final-note">A Final Note</h1>
+
+<p>This article is concerned with respecting the user, their data, and hence their privacy.
+Processing and storing user data securely is <strong>not</strong> easy.</p>
+
+<p>If you are building a mobile app to provide an experience, start from the user’s perspective and strongly assess <em>what</em> user data you need to process and store, and <em>how</em> you should do it.</p>
+
+<p>If you need to store data for a backup, sync across devices or sharing to other users, Apple (and others) provide increasingly capable Backend as a Service (BaaS) offerings.</p>
+
+
+        <hr>
+
+        <div class="clearfix">
+
+          
+          <a class="btn btn-primary float-left" href="/blog/2019/08/12/people-over-resources/" data-toggle="tooltip" data-placement="top" title="People over resources">&larr; Previous<span class="d-none d-md-inline">
+              Post</span></a>
+          
+          
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="https://www.linkedin.com/in/peterboni">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://github.com/peterboni">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; Peter Boni 2019</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="/assets/vendor/jquery/jquery.min.js"></script>
+<script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/startbootstrap-clean-blog/js/clean-blog.min.js"></script>
+
+<script src="/assets/scripts.js"></script>
+
+
+
+
+</body>
+
+</html>
